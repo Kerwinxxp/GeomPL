@@ -1,115 +1,114 @@
-# GeoBayes — MLLM 地理定位攻击者建模 & 逐线索位置隐私泄露
+# GeoBayes — MLLM Geolocation Attacker Modeling & Per-Cue Location-Privacy Leakage
 
-用多模态大模型(GPT-4o)作为"位置隐私攻击者",研究图像中**哪些视觉线索泄露了地理位置、各自泄露多少**。
+Using a multimodal LLM (GPT-4o) as a **location-privacy attacker** to study *which visual cues in an image leak geographic location, and how much each one leaks*.
 
-仓库包含两条独立的线:
+The repo contains two independent lines of work:
 
-| 线 | 目录 | 状态 | 说明 |
+| Line | Directory | Status | Description |
 |---|---|---|---|
-| **① 逐线索 mPL 泄露研究**（当前主线）| `cue_extract/` + `clue_leak/` | 活跃 | 提取图中定位线索 → SAM 掩码 → 逐条/组合遮蔽 → 用 mPL 量化每条线索的位置泄露 |
-| **② GeoBayes 论文复现**（存档）| `geobayes/` + `scripts/` | 冻结 | 复现 GeoBayes(AAAI-26)训练-free 贝叶斯地理定位;详见 [`REPRODUCTION_REPORT.md`](REPRODUCTION_REPORT.md) |
+| **① Per-cue mPL leakage study** (current focus) | `cue_extract/` + `clue_leak/` | active | Extract location cues → SAM masks → per-cue / combination ablation → quantify each cue's leakage with mPL |
+| **② GeoBayes paper reproduction** (archived) | `geobayes/` + `scripts/` | frozen | Reproduction of GeoBayes (AAAI-26), a training-free Bayesian geolocation method; see [`REPRODUCTION_REPORT.md`](REPRODUCTION_REPORT.md) |
 
-> 度量定义:**mPL**(metric-normalized posterior leakage,Chen et al. 2026)= 逐候选对 `|Δln后验-odds − Δln先验-odds| / 地理距离`。这里先验 = 遮掉线索后的图、后验 = 原图,mPL 越大 = 该线索携带的位置信息越多。
+> **Metric — mPL** (metric-normalized posterior leakage, Chen et al. 2026) = per candidate pair, `|Δln posterior-odds − Δln prior-odds| / geographic distance`. Here **prior = image with the cue masked out**, **posterior = full image**; larger mPL ⇒ the cue carries more location information.
 
 ---
 
-## 快速试用（无需下载数据集 / API / GPU）
+## Quick start (no dataset / API / GPU needed)
 
-仓库自带 **5 张样例图**(`data/sample_images/`)及其**预算好的结果**(线索标注 + 消融 + 后验),clone 后装好 `matplotlib` 即可直接复现单图 mPL 图:
+The repo ships **5 sample images** (`data/sample_images/`) with **precomputed results** (cue annotations + ablation + posteriors). After cloning, install `matplotlib` and reproduce the per-image mPL figures directly:
 
 ```bash
-pip install pillow matplotlib pyyaml       # 出图只需这几个
-python -m clue_leak.plot_one_mpl cuba      # 也可 newyork / okazaki / newdelhi / venice
+pip install pillow matplotlib pyyaml       # plotting only needs these
+python -m clue_leak.plot_one_mpl cuba      # also: newyork / okazaki / newdelhi / venice
 # → clue_leak/figures/per_image_mpl/cuba_370717727_mpl.png
-python -m clue_leak.plot_clue_mpl          # 跨样例的线索 mPL 排序图
+python -m clue_leak.plot_clue_mpl          # cross-sample per-cue mPL ranking
 ```
-样例覆盖 5 种典型:Cuba(单点要害)、New York(强文字/冗余)、Okazaki(文化线索)、New Delhi(完美冗余)、Venice(建筑+铭文)。想重跑消融(需 `OPENAI_API_KEY`):`python -m clue_leak.run_combo2 --ids <见 data/subset_sample.jsonl>`——gallery 已固化在 `data/gallery_labels.json`,结果与全量可比。
+The 5 samples cover typical patterns: Cuba (single decisive cue), New York (strong text / redundancy), Okazaki (cultural cue), New Delhi (perfect redundancy), Venice (architecture + inscription). To re-run the ablation (needs `OPENAI_API_KEY`): `python -m clue_leak.run_combo2 --ids <see data/subset_sample.jsonl>` — the candidate gallery is frozen in `data/gallery_labels.json` so results stay comparable to the full run.
 
-## 环境
+## Environment
 
-两套环境(主逻辑纯 Python;线索提取需 GPU 深度模型):
+Two environments (main logic is pure Python; cue extraction needs GPU deep models):
 
 ```bash
-# 主环境（打分/分析/绘图）
+# Main environment (scoring / analysis / plotting)
 pip install -r requirements.txt      # pillow, pyyaml, openai, pytest
-export OPENAI_API_KEY=sk-...          # 攻击者模型（GPT-4o），代码只从环境变量读
+export OPENAI_API_KEY=sk-...          # attacker model (GPT-4o); read only from the environment
 
-# cue_extract GPU 栈（Grounding DINO + SAM 2.1 + RapidOCR + LaMa，需 CUDA）
+# cue_extract GPU stack (Grounding DINO + SAM 2.1 + RapidOCR + LaMa, needs CUDA)
 python -m venv cue_extract/.venv
 cue_extract/.venv/Scripts/pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
 cue_extract/.venv/Scripts/pip install transformers accelerate rapidocr onnxruntime \
     simple-lama-inpainting scipy pillow matplotlib numpy openai pyyaml
 ```
-模型权重(Grounding DINO ~700MB、SAM2.1、PP-OCRv5、LaMa ~200MB)首次运行自动下载到 HuggingFace 缓存。实测显卡:RTX 5080 16GB。
+Model weights (Grounding DINO ~700MB, SAM 2.1, PP-OCRv5, LaMa ~200MB) download to the HuggingFace cache on first run. Tested GPU: RTX 5080 16GB.
 
-## 数据
+## Data
 
-入库的数据:`data/subset_sample.jsonl`(5 张样例)、`data/sample_images/`(样例图)、`data/gallery_labels.json`(固化的 77 候选集)、`data/*_cache.json`(地理编码缓存)。
+Committed data: `data/subset_sample.jsonl` (5 samples), `data/sample_images/` (sample images), `data/gallery_labels.json` (frozen 77-label gallery), `data/*_cache.json` (geocoding caches).
 
-全量复现需源数据集 **IM2GPS3k**(不入库,见 `.gitignore`)。`data/im2gps3k.csv` 放好后:
+Full reproduction needs the **IM2GPS3k** source dataset (not committed, see `.gitignore`). Once `data/im2gps3k.csv` is in place:
 
 ```bash
-python scripts/build_subset.py --n 100    # 从 Flickr 拉图 + 反向地理编码 → data/subset100.jsonl
+python scripts/build_subset.py --n 100    # fetch images from Flickr + reverse-geocode → data/subset100.jsonl
 ```
-地理编码缓存(`data/*_cache.json`)已入库,可直接复用。
 
 ---
 
-## 主线 ① 运行顺序
+## Line ① — run order
 
 ```bash
-# 1) 建候选集几何缓存（gallery 标签 → 坐标，供 mPL 距离矩阵）
+# 1) Build the gallery geometry cache (gallery labels → coords, for the mPL distance matrix)
 python -m clue_leak.prep_geo100
 
-# 2) 线索提取（venv）：VLM 提议 → Grounding DINO 定位 → OCR → SAM 掩码 → VLM 风险审计
+# 2) Cue extraction (venv): VLM proposal → Grounding DINO → OCR → SAM masks → VLM risk audit
 cue_extract/.venv/Scripts/python -m cue_extract.run_extract --ids <id1,id2,...>
-#   产物：cue_extract/results/<id>.json（含每条线索的 mask_rle）
-#   质检总览：python -m cue_extract.contact_sheet → cue_extract/figures/contact_sheet.png
+#   output: cue_extract/results/<id>.json (each cue carries a mask_rle)
+#   QA overview: python -m cue_extract.contact_sheet → cue_extract/figures/contact_sheet.png
 
-# 3) 逐线索 mPL 消融（主环境）：先验=遮子集S的图，后验=原图
+# 3) Per-cue mPL ablation (main env): prior = image with subset S masked, posterior = full image
 python -m clue_leak.run_combo2 --ids <id1,id2,...>
-#   或批量凑 N 张：python -m clue_leak.run_50 --target 50
-#   产物：clue_leak/combo2_results/<id>.json
+#   or batch to N images: python -m clue_leak.run_50 --target 50
+#   output: clue_leak/combo2_results/<id>.json
 
-# 4) 出图
-python -m clue_leak.plot_one_mpl <id前缀>   # 单图：原图+掩码 | 每条线索&组合的 mPL
-python -m clue_leak.plot_clue_mpl           # 跨图：所有线索 mPL 排序
+# 4) Figures
+python -m clue_leak.plot_one_mpl <id-prefix>   # single sample: image + masks | per-cue & combination mPL
+python -m clue_leak.plot_clue_mpl              # across samples: sorted per-cue mPL
 ```
-输出图在 `clue_leak/figures/per_image_mpl/`(每张一个样本)。
+Figures land in `clue_leak/figures/per_image_mpl/` (one per sample).
 
-## 目录结构
+## Repository layout
 
 ```
-cue_extract/        线索提取管线（GPU）
+cue_extract/        Cue-extraction pipeline (GPU)
   proposal / grounding / ocr / sam_mask / verify / merge / rle / prompts / viz
-  run_extract.py    编排器  ·  contact_sheet.py 质检总览  ·  inpaint.py + viz_mask_compare.py 稳健性检查
-clue_leak/          逐线索 mPL 消融
-  combo.py masking.py           子集枚举 + 掩码涂灰
-  run_combo2.py run_50.py       消融运行器 / 批量驱动
-  plot_one_mpl.py plot_clue_mpl.py plot_combo2.py   绘图
-  prep_geo100.py                几何缓存准备
-  cache_fullimage_posterior/    原图后验缓存（可选，run_combo2 缺则现算）
-  combo2_results/               消融结果  ·  figures/  产出图
-geobayes/           【存档】GeoBayes 复现：core(贝叶斯循环)/search/eval/mllm/analysis
-scripts/            【存档】复现用批处理 + 数据构建（build_subset.py 仍在用）
-data/               subset*.jsonl + 地理编码缓存（源图不入库）
-tests/              pytest（主线 + 复现，190 passing）
+  run_extract.py    orchestrator  ·  contact_sheet.py QA overview  ·  inpaint.py + viz_mask_compare.py robustness checks
+clue_leak/          Per-cue mPL ablation
+  combo.py masking.py           subset enumeration + solid masking
+  run_combo2.py run_50.py       ablation runner / batch driver
+  plot_one_mpl.py plot_clue_mpl.py plot_combo2.py   plotting
+  prep_geo100.py                gallery geometry prep
+  cache_fullimage_posterior/    full-image posterior cache (optional; run_combo2 recomputes if absent)
+  combo2_results/               ablation results  ·  figures/  output figures
+geobayes/           [archived] GeoBayes reproduction: core (Bayesian loop) / search / eval / mllm / analysis
+scripts/            [archived] reproduction batch jobs + data building (build_subset.py still used)
+data/               subset*.jsonl + geocoding caches (source images not committed)
+tests/              pytest (main line + reproduction, 190 passing)
 ```
 
-## 测试
+## Tests
 
 ```bash
-python -m pytest tests/ -q          # 全部（含复现存档）
-python -m pytest tests/test_clueleak_combo.py tests/test_cue_extract.py -q   # 仅主线
+python -m pytest tests/ -q          # all (incl. reproduction archive)
+python -m pytest tests/test_clueleak_combo.py tests/test_cue_extract.py -q   # main line only
 ```
 
-## 已知局限（写论文注意）
+## Known limitations (relevant for writing up)
 
-- mPL 是**边际泄露**(leave-one-out),受线索冗余影响;绝对值偏小(全 pair 平均 + 距离归一);
-- 遮蔽组合的价值函数**非单调**,不满足 Shapley 可加性 —— 只报单条 mPL,组合仅作定性;
-- 结论是**特定攻击者(GPT-4o)+ 特定候选集**下的,非普适。
+- mPL is **marginal** leakage (leave-one-out), affected by cue redundancy; absolute values are small (mean over all pairs + distance normalization);
+- the masking-combination value function is **non-monotonic** and violates Shapley additivity — report single-cue mPL only; treat combinations qualitatively;
+- conclusions are specific to **this attacker (GPT-4o) + this candidate gallery**, not universal.
 
-## 参考
+## References
 
 - GeoBayes: Shi et al., AAAI-26
 - mPL: Chen et al., 2026, *Metric-Normalized Posterior Leakage*

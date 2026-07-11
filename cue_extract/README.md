@@ -1,26 +1,26 @@
-# cue_extract — 地理线索提取管线
+# cue_extract — Geolocation Cue Extraction Pipeline
 
-从一张图中提取"可能泄露地理位置的视觉线索",并给出**像素级掩码**。为下游的逐线索 mPL 消融(`clue_leak/`)提供干净的线索区域。
+Extracts "visual cues that may leak geographic location" from an image and produces **pixel-level masks**. Feeds clean cue regions to the downstream per-cue mPL ablation (`clue_leak/`).
 
-## 五阶段（`run_extract.extract_one`）
+## Five stages (`run_extract.extract_one`)
 
 ```
-输入图
- ├─① proposal.py   GPT-4o 按 8 类 checklist 列出候选线索（只说"有什么"，不画框）
- ├─② grounding.py  Grounding DINO 把每条 cue 短语 → bbox（可多实例）
- ├─③ ocr.py        RapidOCR(PP-OCRv5 server) 读文字 → {text,bbox}，按 IoU 并入线索
- ├─④ sam_mask.py   SAM 2.1：bbox → 像素级掩码（RLE）
- └─⑤ verify.py     GPT-4o 审计：risk / geo_specificity / maskable / degenerate
+input image
+ ├─① proposal.py   GPT-4o lists candidate cues by 8-category checklist (says "what", no boxes)
+ ├─② grounding.py  Grounding DINO turns each cue phrase → bbox (multiple instances allowed)
+ ├─③ ocr.py        RapidOCR (PP-OCRv5 server) reads text → {text, bbox}, merged into cues by IoU
+ ├─④ sam_mask.py   SAM 2.1: bbox → pixel-level mask (RLE)
+ └─⑤ verify.py     GPT-4o audit: risk / geo_specificity / maskable / degenerate
 ```
 
-`merge.py` 负责合并逻辑:
-- `prune_uncorroborated_text_boxes` — 文字线索的框必须有 OCR 佐证(否则是 grounding 幻觉框,剔除)
-- `flag_degenerate` — 实例 bbox > 40% 全图 → 标记不遮蔽(治"线索占满全画幅"退化)
-- `assign_maskable` — maskable 由证据决定:有非退化实际框才可遮
+`merge.py` handles the merge logic:
+- `prune_uncorroborated_text_boxes` — a text cue's box must be corroborated by OCR (else it is a grounding hallucination and is dropped)
+- `flag_degenerate` — an instance bbox > 40% of the image is flagged non-maskable (fixes "cue fills the whole frame")
+- `assign_maskable` — maskability is decided by evidence: only cues with a non-degenerate real box are maskable
 
-`rle.py` 极简 RLE 编解码(无 pycocotools 依赖)。`viz.py` 出标注叠加图,`contact_sheet.py` 出全批质检总览,`inpaint.py`+`viz_mask_compare.py` 是灰块 vs LaMa 修复的稳健性对照。
+`rle.py` is a minimal RLE encode/decode (no pycocotools dependency). `viz.py` renders annotation overlays, `contact_sheet.py` produces a batch QA overview, and `inpaint.py` + `viz_mask_compare.py` are the gray-mask vs LaMa-inpaint robustness checks.
 
-## 输出 JSON（`cue_extract/results/<id>.json`）
+## Output JSON (`cue_extract/results/<id>.json`)
 
 ```json
 {
@@ -37,14 +37,14 @@
 }
 ```
 
-## 运行（需 GPU venv，见根 README）
+## Run (needs the GPU venv, see root README)
 
 ```bash
 cue_extract/.venv/Scripts/python -m cue_extract.run_extract --ids <id1,id2,...>
-cue_extract/.venv/Scripts/python -m cue_extract.contact_sheet   # 质检总览
+cue_extract/.venv/Scripts/python -m cue_extract.contact_sheet   # QA overview
 ```
 
-## 已知局限
-- 竖排 CJK 文字(如日文横幅)行式 OCR 读不出——语义线索仍被 proposal 捕获,遮蔽不受影响;
-- 抽象/非视觉短语偶尔 grounding 乱框(已用 OCR 佐证过滤大部分);
-- "整幅即地标"的图 → 无可遮线索(g=0),不进消融。
+## Known limitations
+- Vertical CJK text (e.g. Japanese festival banners) is not read by line-based OCR — the semantic cue is still captured by the proposal step, and masking is unaffected, only the transcription is missing;
+- abstract / non-visual phrases occasionally cause grounding to mis-box (mostly filtered by the OCR-corroboration rule);
+- an image that is "one landmark filling the whole frame" yields no maskable cue (g=0) and is excluded from the ablation.
