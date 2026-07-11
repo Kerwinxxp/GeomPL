@@ -1,0 +1,7 @@
+pillow==12.3.0
+PyYAML==6.0.3
+pytest==9.1.1
+openai>=1.40,<3          # OpenAI 兼容端点（DashScope/SiliconFlow）
+# Phase 3 评测接入时再加：
+# reverse_geocoder==1.5.1   # GT 经纬度 -> 国家（离线）
+# pycountry==24.6.1         # 国名规范化辅助

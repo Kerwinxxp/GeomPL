@@ -1,0 +1,722 @@
+{
+  "clean_gallery_size": 45,
+  "raw_size": 47,
+  "merged_near_duplicates": {
+    "Greater London, United Kingdom": "City of Westminster, United Kingdom",
+    "Versailles, France": "Paris, France"
+  },
+  "min_dist_km": 25.0,
+  "n_images": 50,
+  "prior_map_accuracy": 0.52,
+  "posterior_map_accuracy": 0.46,
+  "random_baseline": 0.022,
+  "cross_entropy_prior": 2.5572,
+  "cross_entropy_posterior": 2.1587,
+  "cross_entropy_uniform": 3.807,
+  "mean_entropy_drop_bits": 1.558,
+  "mpl_median_nats_per_1000km": 7.29,
+  "mpl_mean_nats_per_1000km": 8.89,
+  "mpl_max_nats_per_1000km": 32.93,
+  "per_image": [
+    {
+      "image_id": "103558896_55f8059bc9_35_73293249@N00.jpg",
+      "true": "Toronto, Canada",
+      "prior_prob_true": 0.11067553191489361,
+      "post_prob_true": 0.3271407763431703,
+      "prior_entropy": 5.25429971656747,
+      "post_entropy": 2.8396688855921886,
+      "mpl_nats_per_1000km": 32.92739886250302,
+      "sup_pair": [
+        "New York, United States",
+        "Town of Hyde Park, United States"
+      ],
+      "sup_pair_km": 120.0
+    },
+    {
+      "image_id": "499393661_a7da0fd73e_206_8255645@N03.jpg",
+      "true": "Saalbach-Hinterglemm, Austria",
+      "prior_prob_true": 0.14742553191489363,
+      "post_prob_true": 0.5539777079590426,
+      "prior_entropy": 4.77845336957115,
+      "post_entropy": 1.2637335528205984,
+      "mpl_nats_per_1000km": 31.206806783015917,
+      "sup_pair": [
+        "Saalbach-Hinterglemm, Austria",
+        "Venice, Italy"
+      ],
+      "sup_pair_km": 219.9
+    },
+    {
+      "image_id": "227569033_4e625d93c3_74_48637819@N00.jpg",
+      "true": "Leh, India",
+      "prior_prob_true": 0.14268359643102269,
+      "post_prob_true": 0.5030104845434924,
+      "prior_entropy": 5.1891299515975,
+      "post_entropy": 2.799197427984354,
+      "mpl_nats_per_1000km": 24.318740643030484,
+      "sup_pair": [
+        "Seraing, Belgium",
+        "Spa, Belgium"
+      ],
+      "sup_pair_km": 28.5
+    },
+    {
+      "image_id": "321720530_f2a31b2549_128_81421684@N00.jpg",
+      "true": "Chaoyang District, China",
+      "prior_prob_true": 0.09952665551039923,
+      "post_prob_true": 0.25839882787499086,
+      "prior_entropy": 5.234085692154806,
+      "post_entropy": 3.9356590595009595,
+      "mpl_nats_per_1000km": 20.218578248905363,
+      "sup_pair": [
+        "New York, United States",
+        "Town of Hyde Park, United States"
+      ],
+      "sup_pair_km": 120.0
+    },
+    {
+      "image_id": "415509863_2bc4e21172_131_7132415@N03.jpg",
+      "true": "Petra Sub-District, Jordan",
+      "prior_prob_true": 0.2488762361402457,
+      "post_prob_true": 0.9601314766665793,
+      "prior_entropy": 4.83152688550431,
+      "post_entropy": 0.4239448447687554,
+      "mpl_nats_per_1000km": 16.734508805244975,
+      "sup_pair": [
+        "Hof HaCarmel Regional Council, Israel",
+        "Petra Sub-District, Jordan"
+      ],
+      "sup_pair_km": 265.1
+    },
+    {
+      "image_id": "244035501_3708124424_87_40829484@N00.jpg",
+      "true": "New York, United States",
+      "prior_prob_true": 0.17507899726142828,
+      "post_prob_true": 0.5865289195807428,
+      "prior_entropy": 4.908775270144222,
+      "post_entropy": 2.712101868808901,
+      "mpl_nats_per_1000km": 16.17486259912429,
+      "sup_pair": [
+        "New York, United States",
+        "Town of Hyde Park, United States"
+      ],
+      "sup_pair_km": 120.0
+    },
+    {
+      "image_id": "766351079_af0294281f_1240_16836474@N00.jpg",
+      "true": "Villa de Leyva, Colombia",
+      "prior_prob_true": 0.03309219858156028,
+      "post_prob_true": 0.0242282973707321,
+      "prior_entropy": 5.209976798501457,
+      "post_entropy": 4.209946828914518,
+      "mpl_nats_per_1000km": 14.794138080412818,
+      "sup_pair": [
+        "Italy",
+        "Rome, Italy"
+      ],
+      "sup_pair_km": 84.3
+    },
+    {
+      "image_id": "1397742163_1a6b87eb5a_1164_7885919@N07.jpg",
+      "true": "Paris, France",
+      "prior_prob_true": 0.16314405746036048,
+      "post_prob_true": 0.840210937758398,
+      "prior_entropy": 4.884061413316513,
+      "post_entropy": 1.225525898488192,
+      "mpl_nats_per_1000km": 14.444112234897505,
+      "sup_pair": [
+        "Biwer, Luxembourg",
+        "Paris, France"
+      ],
+      "sup_pair_km": 307.6
+    },
+    {
+      "image_id": "217552984_53e8b16fed_71_84498284@N00.jpg",
+      "true": "Rome, Italy",
+      "prior_prob_true": 0.11724672396787375,
+      "post_prob_true": 0.3016315496617963,
+      "prior_entropy": 4.804740306736109,
+      "post_entropy": 2.296170826552436,
+      "mpl_nats_per_1000km": 13.554471633027113,
+      "sup_pair": [
+        "Saalbach-Hinterglemm, Austria",
+        "Venice, Italy"
+      ],
+      "sup_pair_km": 219.9
+    },
+    {
+      "image_id": "919126362_49e364686c_1300_50994135@N00.jpg",
+      "true": "Argyll and Bute, United Kingdom",
+      "prior_prob_true": 0.12292553191489361,
+      "post_prob_true": 0.6835441127794094,
+      "prior_entropy": 5.196510301663631,
+      "post_entropy": 2.379230734241362,
+      "mpl_nats_per_1000km": 12.328448400344014,
+      "sup_pair": [
+        "Italy",
+        "Rome, Italy"
+      ],
+      "sup_pair_km": 84.3
+    },
+    {
+      "image_id": "1297522299_1d487977b3_1008_85417391@N00.jpg",
+      "true": "Vernon, United States",
+      "prior_prob_true": 0.039365929265887,
+      "post_prob_true": 0.044275036156278,
+      "prior_entropy": 5.292581113016246,
+      "post_entropy": 4.789947828083969,
+      "mpl_nats_per_1000km": 12.159370321515244,
+      "sup_pair": [
+        "Seraing, Belgium",
+        "Spa, Belgium"
+      ],
+      "sup_pair_km": 28.5
+    },
+    {
+      "image_id": "203414504_6dce8e2783_60_40829484@N00.jpg",
+      "true": "Spa, Belgium",
+      "prior_prob_true": 0.04548300317926144,
+      "post_prob_true": 0.04933208355164165,
+      "prior_entropy": 5.341719086776219,
+      "post_entropy": 5.008498592427154,
+      "mpl_nats_per_1000km": 12.159370321515244,
+      "sup_pair": [
+        "Seraing, Belgium",
+        "Spa, Belgium"
+      ],
+      "sup_pair_km": 28.5
+    },
+    {
+      "image_id": "307499425_ed6d8712bd_111_73293249@N00.jpg",
+      "true": "Entremont, Switzerland",
+      "prior_prob_true": 0.08511688993958497,
+      "post_prob_true": 0.18052896324803147,
+      "prior_entropy": 4.920697925195347,
+      "post_entropy": 3.570568515804506,
+      "mpl_nats_per_1000km": 12.159370321515242,
+      "sup_pair": [
+        "Seraing, Belgium",
+        "Spa, Belgium"
+      ],
+      "sup_pair_km": 28.5
+    },
+    {
+      "image_id": "241921396_742fe1f0fd_90_82981539@N00.jpg",
+      "true": "Kyoto, Japan",
+      "prior_prob_true": 0.04709219858156028,
+      "post_prob_true": 0.038970963294065686,
+      "prior_entropy": 5.433581332209178,
+      "post_entropy": 4.373196506223442,
+      "mpl_nats_per_1000km": 12.159370321515233,
+      "sup_pair": [
+        "Seraing, Belgium",
+        "Spa, Belgium"
+      ],
+      "sup_pair_km": 28.5
+    },
+    {
+      "image_id": "880710221_64f0fdd8f2_1137_85417391@N00.jpg",
+      "true": "Jefferson County, United States",
+      "prior_prob_true": 0.020842198581560285,
+      "post_prob_true": 0.015231249475524292,
+      "prior_entropy": 5.150848696789181,
+      "post_entropy": 3.8028598726282223,
+      "mpl_nats_per_1000km": 11.978370280349544,
+      "sup_pair": [
+        "Saalbach-Hinterglemm, Austria",
+        "Venice, Italy"
+      ],
+      "sup_pair_km": 219.9
+    },
+    {
+      "image_id": "171046893_b97c4f0aa5_73_30571787@N00.jpg",
+      "true": "City of Westminster, United Kingdom",
+      "prior_prob_true": 0.17260364114937488,
+      "post_prob_true": 0.9184647963681977,
+      "prior_entropy": 4.829397242369813,
+      "post_entropy": 0.7355341700139149,
+      "mpl_nats_per_1000km": 11.013538832100126,
+      "sup_pair": [
+        "City of Westminster, United Kingdom",
+        "Paris, France"
+      ],
+      "sup_pair_km": 341.6
+    },
+    {
+      "image_id": "381147491_751c8c119c_181_57253263@N00.jpg",
+      "true": "Cambridge, United States",
+      "prior_prob_true": 0.03726763717805151,
+      "post_prob_true": 0.0579129945050101,
+      "prior_entropy": 5.224130213768621,
+      "post_entropy": 4.399986775018448,
+      "mpl_nats_per_1000km": 10.92662325759612,
+      "sup_pair": [
+        "Budapest, Hungary",
+        "Subotica, Serbia"
+      ],
+      "sup_pair_km": 158.6
+    },
+    {
+      "image_id": "494612871_db624a92e7_216_62126383@N00.jpg",
+      "true": "Hof HaCarmel Regional Council, Israel",
+      "prior_prob_true": 0.01483729662077597,
+      "post_prob_true": 0.014340251347933543,
+      "prior_entropy": 4.986530936925642,
+      "post_entropy": 3.7452739588670902,
+      "mpl_nats_per_1000km": 10.684655280298147,
+      "sup_pair": [
+        "Italy",
+        "Rome, Italy"
+      ],
+      "sup_pair_km": 84.3
+    },
+    {
+      "image_id": "520721897_11b0c68892_243_70323761@N00.jpg",
+      "true": "Town of Hyde Park, United States",
+      "prior_prob_true": 0.053042981579323155,
+      "post_prob_true": 0.018762854052859598,
+      "prior_entropy": 5.174073995077502,
+      "post_entropy": 3.969183141414558,
+      "mpl_nats_per_1000km": 10.684655280298147,
+      "sup_pair": [
+        "Italy",
+        "Rome, Italy"
+      ],
+      "sup_pair_km": 84.3
+    },
+    {
+      "image_id": "166869956_84928fd11b_60_55085284@N00.jpg",
+      "true": "Paris, France",
+      "prior_prob_true": 0.20307328605200947,
+      "post_prob_true": 0.35956532218245185,
+      "prior_entropy": 4.829612452607693,
+      "post_entropy": 3.3193587780493146,
+      "mpl_nats_per_1000km": 10.684655280298143,
+      "sup_pair": [
+        "Italy",
+        "Rome, Italy"
+      ],
+      "sup_pair_km": 84.3
+    },
+    {
+      "image_id": "483717602_2445d0d4ae_206_40425693@N00.jpg",
+      "true": "Italy",
+      "prior_prob_true": 0.10637147786083956,
+      "post_prob_true": 0.13951468679022694,
+      "prior_entropy": 4.84533059317312,
+      "post_entropy": 3.845004668548666,
+      "mpl_nats_per_1000km": 9.45660811606543,
+      "sup_pair": [
+        "Saalbach-Hinterglemm, Austria",
+        "Venice, Italy"
+      ],
+      "sup_pair_km": 219.9
+    },
+    {
+      "image_id": "311344213_4b003f4ab1_114_63163416@N00.jpg",
+      "true": "New Delhi, India",
+      "prior_prob_true": 0.27605053191489365,
+      "post_prob_true": 0.6140381382938817,
+      "prior_entropy": 4.785841021624732,
+      "post_entropy": 2.5556547370273988,
+      "mpl_nats_per_1000km": 9.04086216025228,
+      "sup_pair": [
+        "Italy",
+        "Rome, Italy"
+      ],
+      "sup_pair_km": 84.3
+    },
+    {
+      "image_id": "43779838_1ef2e1f024_30_88483799@N00.jpg",
+      "true": "Sussex County, United States",
+      "prior_prob_true": 0.14297098646034817,
+      "post_prob_true": 0.13031677359155786,
+      "prior_entropy": 4.9955305227870115,
+      "post_entropy": 4.3375850801970515,
+      "mpl_nats_per_1000km": 8.628731102704439,
+      "sup_pair": [
+        "Hof HaCarmel Regional Council, Israel",
+        "Petra Sub-District, Jordan"
+      ],
+      "sup_pair_km": 265.1
+    },
+    {
+      "image_id": "415005347_2f1a541aef_183_7132415@N03.jpg",
+      "true": "Mont Dore, France",
+      "prior_prob_true": 0.012675531914893618,
+      "post_prob_true": 0.0015368154915476663,
+      "prior_entropy": 5.194858997377196,
+      "post_entropy": 3.369986257771242,
+      "mpl_nats_per_1000km": 7.880506763387859,
+      "sup_pair": [
+        "Saalbach-Hinterglemm, Austria",
+        "Venice, Italy"
+      ],
+      "sup_pair_km": 219.9
+    },
+    {
+      "image_id": "320631397_d6abc1ed08_129_82927779@N00.jpg",
+      "true": "Cederberg Local Municipality, South Africa",
+      "prior_prob_true": 0.11207110153514677,
+      "post_prob_true": 0.2540461407076483,
+      "prior_entropy": 5.233294858226767,
+      "post_entropy": 2.880592416786269,
+      "mpl_nats_per_1000km": 7.321347602294678,
+      "sup_pair": [
+        "Hof HaCarmel Regional Council, Israel",
+        "Petra Sub-District, Jordan"
+      ],
+      "sup_pair_km": 265.1
+    },
+    {
+      "image_id": "104419192_8551684362_41_64825499@N00.jpg",
+      "true": "City of Westminster, United Kingdom",
+      "prior_prob_true": 0.08117893268224624,
+      "post_prob_true": 0.06118139376642469,
+      "prior_entropy": 4.802405089268375,
+      "post_entropy": 3.7432662091980147,
+      "mpl_nats_per_1000km": 7.25006622231683,
+      "sup_pair": [
+        "Saalbach-Hinterglemm, Austria",
+        "Venice, Italy"
+      ],
+      "sup_pair_km": 219.9
+    },
+    {
+      "image_id": "847733166_0573338bfb_1321_89904893@N00.jpg",
+      "true": "Venice, Italy",
+      "prior_prob_true": 0.09320659700365101,
+      "post_prob_true": 0.20441297605495468,
+      "prior_entropy": 4.858320648580434,
+      "post_entropy": 3.5082877577678686,
+      "mpl_nats_per_1000km": 6.304405410710288,
+      "sup_pair": [
+        "Saalbach-Hinterglemm, Austria",
+        "Venice, Italy"
+      ],
+      "sup_pair_km": 219.9
+    },
+    {
+      "image_id": "468278910_539810ce41_193_64825499@N00.jpg",
+      "true": "Mexico",
+      "prior_prob_true": 0.060919359075387446,
+      "post_prob_true": 0.2700039292778772,
+      "prior_entropy": 5.248555593385597,
+      "post_entropy": 2.9870579038779055,
+      "mpl_nats_per_1000km": 6.304405410710288,
+      "sup_pair": [
+        "Saalbach-Hinterglemm, Austria",
+        "Venice, Italy"
+      ],
+      "sup_pair_km": 219.9
+    },
+    {
+      "image_id": "379001279_fa81cf9ee0_155_87409164@N00.jpg",
+      "true": "Singapore, Singapore",
+      "prior_prob_true": 0.021729879740980573,
+      "post_prob_true": 0.00046372770186667317,
+      "prior_entropy": 5.069405655296427,
+      "post_entropy": 0.24951110316593,
+      "mpl_nats_per_1000km": 6.054721257656669,
+      "sup_pair": [
+        "Leh, India",
+        "New Delhi, India"
+      ],
+      "sup_pair_km": 618.2
+    },
+    {
+      "image_id": "199528247_66da61f266_70_85971448@N00.jpg",
+      "true": "Çavuşin Köyü, Turkey",
+      "prior_prob_true": 0.13406189555125725,
+      "post_prob_true": 0.25221556098198056,
+      "prior_entropy": 5.193817088404126,
+      "post_entropy": 3.0723679300434905,
+      "mpl_nats_per_1000km": 5.776736642544389,
+      "sup_pair": [
+        "New York, United States",
+        "Town of Hyde Park, United States"
+      ],
+      "sup_pair_km": 120.0
+    },
+    {
+      "image_id": "276477189_7baf796f9d_83_12814307@N00.jpg",
+      "true": "Seraing, Belgium",
+      "prior_prob_true": 0.16226039430021474,
+      "post_prob_true": 0.2755433379558091,
+      "prior_entropy": 4.870904668692834,
+      "post_entropy": 3.1497377487620963,
+      "mpl_nats_per_1000km": 5.682356357384414,
+      "sup_pair": [
+        "City of Westminster, United Kingdom",
+        "Paris, France"
+      ],
+      "sup_pair_km": 341.6
+    },
+    {
+      "image_id": "453636890_c425e657ab_239_55126705@N00.jpg",
+      "true": "Tinum, Mexico",
+      "prior_prob_true": 0.2274987026466009,
+      "post_prob_true": 0.6693541414905653,
+      "prior_entropy": 4.442635337104816,
+      "post_entropy": 1.0419238755848048,
+      "mpl_nats_per_1000km": 5.184894488477606,
+      "sup_pair": [
+        "Jefferson County, United States",
+        "Tinum, Mexico"
+      ],
+      "sup_pair_km": 1163.1
+    },
+    {
+      "image_id": "271517794_bcd0d062eb_79_40829484@N00.jpg",
+      "true": "New York, United States",
+      "prior_prob_true": 0.034811496827174326,
+      "post_prob_true": 0.04017731652119315,
+      "prior_entropy": 5.414276794433754,
+      "post_entropy": 5.0417495577167655,
+      "mpl_nats_per_1000km": 4.7065806014751495,
+      "sup_pair": [
+        "Hof HaCarmel Regional Council, Israel",
+        "Petra Sub-District, Jordan"
+      ],
+      "sup_pair_km": 265.1
+    },
+    {
+      "image_id": "297636665_27042e8d0d_109_41894169878@N01.jpg",
+      "true": "Colorado, Costa Rica",
+      "prior_prob_true": 0.06314553191489362,
+      "post_prob_true": 0.12471643502758986,
+      "prior_entropy": 5.375066414993137,
+      "post_entropy": 5.009122014410426,
+      "mpl_nats_per_1000km": 4.7065806014751495,
+      "sup_pair": [
+        "Hof HaCarmel Regional Council, Israel",
+        "Petra Sub-District, Jordan"
+      ],
+      "sup_pair_km": 265.1
+    },
+    {
+      "image_id": "279684899_63d5dc5c9d_89_25304693@N00.jpg",
+      "true": "Anaheim, United States",
+      "prior_prob_true": 0.13206732295966975,
+      "post_prob_true": 0.7780946198969025,
+      "prior_entropy": 5.190900658490221,
+      "post_entropy": 1.8490305083869532,
+      "mpl_nats_per_1000km": 4.043715649781071,
+      "sup_pair": [
+        "New York, United States",
+        "Town of Hyde Park, United States"
+      ],
+      "sup_pair_km": 120.0
+    },
+    {
+      "image_id": "484245503_2c1739bf8b_213_50435419@N00.jpg",
+      "true": "Buenos Aires, Argentina",
+      "prior_prob_true": 0.02779983359087127,
+      "post_prob_true": 0.013888548488731953,
+      "prior_entropy": 5.394009775134777,
+      "post_entropy": 5.00289238377586,
+      "mpl_nats_per_1000km": 4.028821410867471,
+      "sup_pair": [
+        "Ashland, United States",
+        "Toronto, Canada"
+      ],
+      "sup_pair_km": 395.7
+    },
+    {
+      "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+      "true": "Cuba",
+      "prior_prob_true": 0.1579255319148936,
+      "post_prob_true": 0.1978968281544495,
+      "prior_entropy": 5.199569880264344,
+      "post_entropy": 4.940932598494335,
+      "mpl_nats_per_1000km": 3.68351433048839,
+      "sup_pair": [
+        "Biwer, Luxembourg",
+        "Spa, Belgium"
+      ],
+      "sup_pair_km": 94.1
+    },
+    {
+      "image_id": "149866866_e6a46a330b_52_63163416@N00.jpg",
+      "true": "Istanbul, Turkey",
+      "prior_prob_true": 0.14268359643102269,
+      "post_prob_true": 0.35131530338898326,
+      "prior_entropy": 5.056262564404056,
+      "post_entropy": 3.383354470142975,
+      "mpl_nats_per_1000km": 3.3991971010653854,
+      "sup_pair": [
+        "Hof HaCarmel Regional Council, Israel",
+        "Petra Sub-District, Jordan"
+      ],
+      "sup_pair_km": 265.1
+    },
+    {
+      "image_id": "719864111_79743ec39e_1210_7132415@N03.jpg",
+      "true": "Paris, France",
+      "prior_prob_true": 0.086316180108857,
+      "post_prob_true": 0.20620299467945222,
+      "prior_entropy": 5.2273354468926145,
+      "post_entropy": 4.76360210856876,
+      "mpl_nats_per_1000km": 3.2409280544763597,
+      "sup_pair": [
+        "Paris, France",
+        "Seraing, Belgium"
+      ],
+      "sup_pair_km": 301.0
+    },
+    {
+      "image_id": "280870957_b4e009f8da_102_36093984@N00.jpg",
+      "true": "Subotica, Serbia",
+      "prior_prob_true": 0.014628430465618255,
+      "post_prob_true": 0.008828885356274964,
+      "prior_entropy": 5.099409469149098,
+      "post_entropy": 4.345593089713018,
+      "mpl_nats_per_1000km": 3.152202705355144,
+      "sup_pair": [
+        "Saalbach-Hinterglemm, Austria",
+        "Venice, Italy"
+      ],
+      "sup_pair_km": 219.9
+    },
+    {
+      "image_id": "486597679_e1a557718f_198_51162504@N00.jpg",
+      "true": "Seville, Spain",
+      "prior_prob_true": 0.029249061326658325,
+      "post_prob_true": 0.02707818050031226,
+      "prior_entropy": 5.064432408262113,
+      "post_entropy": 4.5978586848534535,
+      "mpl_nats_per_1000km": 3.1522027053551427,
+      "sup_pair": [
+        "Saalbach-Hinterglemm, Austria",
+        "Venice, Italy"
+      ],
+      "sup_pair_km": 219.9
+    },
+    {
+      "image_id": "449901053_f0d3dbb166_164_55126705@N00.jpg",
+      "true": "Cahuita, Costa Rica",
+      "prior_prob_true": 0.09952665551039923,
+      "post_prob_true": 0.4410698967727952,
+      "prior_entropy": 5.158862906121429,
+      "post_entropy": 2.226872532310934,
+      "mpl_nats_per_1000km": 2.8883683212721953,
+      "sup_pair": [
+        "New York, United States",
+        "Town of Hyde Park, United States"
+      ],
+      "sup_pair_km": 120.0
+    },
+    {
+      "image_id": "266287734_114d6cc260_94_40829484@N00.jpg",
+      "true": "Biwer, Luxembourg",
+      "prior_prob_true": 0.152494497432135,
+      "post_prob_true": 0.1590795927499538,
+      "prior_entropy": 5.054250447922364,
+      "post_entropy": 4.93065016641598,
+      "mpl_nats_per_1000km": 2.888368321272193,
+      "sup_pair": [
+        "New York, United States",
+        "Town of Hyde Park, United States"
+      ],
+      "sup_pair_km": 120.0
+    },
+    {
+      "image_id": "668488293_1b39338210_1369_81421684@N00.jpg",
+      "true": "Grafenegg, Austria",
+      "prior_prob_true": 0.04636303191489362,
+      "post_prob_true": 0.06004275544505832,
+      "prior_entropy": 4.939947148453912,
+      "post_entropy": 4.396336721144843,
+      "mpl_nats_per_1000km": 2.1853246515192244,
+      "sup_pair": [
+        "Budapest, Hungary",
+        "Subotica, Serbia"
+      ],
+      "sup_pair_km": 158.6
+    },
+    {
+      "image_id": "1300123632_36361364c9_1048_50435419@N00.jpg",
+      "true": "Waukesha, United States",
+      "prior_prob_true": 0.0433452399440907,
+      "post_prob_true": 0.04640850056595254,
+      "prior_entropy": 5.288200394000112,
+      "post_entropy": 5.330654608086924,
+      "mpl_nats_per_1000km": 2.1853246515192235,
+      "sup_pair": [
+        "Budapest, Hungary",
+        "Subotica, Serbia"
+      ],
+      "sup_pair_km": 158.6
+    },
+    {
+      "image_id": "446976495_afc37707e4_246_55126705@N00.jpg",
+      "true": "Distrito de Cusco, Peru",
+      "prior_prob_true": 0.1579255319148936,
+      "post_prob_true": 0.4353837194444907,
+      "prior_entropy": 5.199569880264344,
+      "post_entropy": 3.9551189204887724,
+      "mpl_nats_per_1000km": 1.5761013526775711,
+      "sup_pair": [
+        "Saalbach-Hinterglemm, Austria",
+        "Venice, Italy"
+      ],
+      "sup_pair_km": 219.9
+    },
+    {
+      "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+      "true": "Budapest, Hungary",
+      "prior_prob_true": 0.11647816349384098,
+      "post_prob_true": 0.12512887605599515,
+      "prior_entropy": 5.17397073015412,
+      "post_entropy": 5.065239753013259,
+      "mpl_nats_per_1000km": 1.307383500409764,
+      "sup_pair": [
+        "Hof HaCarmel Regional Council, Israel",
+        "Petra Sub-District, Jordan"
+      ],
+      "sup_pair_km": 265.1
+    },
+    {
+      "image_id": "468114689_6f7d634bae_220_7885919@N07.jpg",
+      "true": "Paris, France",
+      "prior_prob_true": 0.1307958152110027,
+      "post_prob_true": 0.1883530249147922,
+      "prior_entropy": 5.214571753485341,
+      "post_entropy": 4.7853929636316686,
+      "mpl_nats_per_1000km": 1.0294406160541705,
+      "sup_pair": [
+        "Hof HaCarmel Regional Council, Israel",
+        "Çavuşin Köyü, Turkey"
+      ],
+      "sup_pair_km": 673.3
+    },
+    {
+      "image_id": "1296438631_17517c359d_1035_43935788@N00.jpg",
+      "true": "Ashland, United States",
+      "prior_prob_true": 0.024039989746218918,
+      "post_prob_true": 0.024039989746218918,
+      "prior_entropy": 5.175404956967156,
+      "post_entropy": 5.175404956967156,
+      "mpl_nats_per_1000km": 0.0,
+      "sup_pair": [
+        "Anaheim, United States",
+        "Argyll and Bute, United Kingdom"
+      ],
+      "sup_pair_km": 8121.0
+    },
+    {
+      "image_id": "1182903598_51bdaa7836_1385_15376845@N00.jpg",
+      "true": "East Granby, United States",
+      "prior_prob_true": 0.06980606288834494,
+      "post_prob_true": 0.06980606288834494,
+      "prior_entropy": 4.840507964076844,
+      "post_entropy": 4.840507964076844,
+      "mpl_nats_per_1000km": 0.0,
+      "sup_pair": [
+        "Anaheim, United States",
+        "Argyll and Bute, United Kingdom"
+      ],
+      "sup_pair_km": 8121.0
+    }
+  ]
+}

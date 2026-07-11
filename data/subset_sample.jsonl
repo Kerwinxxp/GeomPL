@@ -1,0 +1,5 @@
+{"image_id": "181848051_3f34be1b5d_68_70323761@N00.jpg", "path": "data/sample_images/181848051_3f34be1b5d_68_70323761@N00.jpg", "lat": 40.698096, "lon": -73.997163, "gt_country": "United States", "gt_code": "us"}
+{"image_id": "261517384_292417efcc_117_60558526@N00.jpg", "path": "data/sample_images/261517384_292417efcc_117_60558526@N00.jpg", "lat": 34.954337, "lon": 137.162418, "gt_country": "Japan", "gt_code": "jp"}
+{"image_id": "311344213_4b003f4ab1_114_63163416@N00.jpg", "path": "data/sample_images/311344213_4b003f4ab1_114_63163416@N00.jpg", "lat": 28.597936, "lon": 77.19552, "gt_country": "India", "gt_code": "in"}
+{"image_id": "370717727_f9564e3587_150_13527886@N00.jpg", "path": "data/sample_images/370717727_f9564e3587_150_13527886@N00.jpg", "lat": 21.953235, "lon": -78.728027, "gt_country": "Cuba", "gt_code": "cu"}
+{"image_id": "847733166_0573338bfb_1321_89904893@N00.jpg", "path": "data/sample_images/847733166_0573338bfb_1321_89904893@N00.jpg", "lat": 45.429197, "lon": 12.327432, "gt_country": "Italy", "gt_code": "it"}

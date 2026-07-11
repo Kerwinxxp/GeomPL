@@ -1,0 +1,543 @@
+{
+  "gallery_mode": "full",
+  "prior_only": false,
+  "k_hard_negatives": 5,
+  "candidate_set_size": 47,
+  "random_baseline_note": "1/47",
+  "model": "gpt-4o",
+  "n": 50,
+  "n_errors": 0,
+  "prior_map_accuracy": 0.52,
+  "posterior_map_accuracy": 0.44,
+  "random_baseline": 0.021,
+  "mean_prior_prob_true": 0.092,
+  "mean_posterior_prob_true": 0.23,
+  "mean_prior_rank_true": 4.9,
+  "mean_posterior_rank_true": 5.6,
+  "mean_kl_post_vs_prior_bits": 0.73,
+  "mean_entropy_drop_bits": 1.559,
+  "reliability_by_confidence": {
+    "0-20%": {
+      "n": 20,
+      "acc": 0.3
+    },
+    "20-40%": {
+      "n": 17,
+      "acc": 0.294
+    },
+    "40-60%": {
+      "n": 5,
+      "acc": 1.0
+    },
+    "60-80%": {
+      "n": 5,
+      "acc": 1.0
+    },
+    "80-100%": {
+      "n": 3,
+      "acc": 0.333
+    }
+  },
+  "per_image": [
+    {
+      "image_id": "483717602_2445d0d4ae_206_40425693@N00.jpg",
+      "true": "Italy",
+      "prior_prob_true": 0.10637147786083956,
+      "post_prob_true": 0.13951468679022694,
+      "prior_entropy": 4.873519207319181,
+      "post_entropy": 3.84731539469016,
+      "prior_rank": 2,
+      "post_rank": 2
+    },
+    {
+      "image_id": "217552984_53e8b16fed_71_84498284@N00.jpg",
+      "true": "Rome, Italy",
+      "prior_prob_true": 0.11724672396787375,
+      "post_prob_true": 0.3016315496617963,
+      "prior_entropy": 4.910283493998333,
+      "post_entropy": 2.3222013969130892,
+      "prior_rank": 2,
+      "post_rank": 2
+    },
+    {
+      "image_id": "415005347_2f1a541aef_183_7132415@N03.jpg",
+      "true": "Mont Dore, France",
+      "prior_prob_true": 0.012675531914893618,
+      "post_prob_true": 0.0015368154915476663,
+      "prior_entropy": 5.245561125036771,
+      "post_entropy": 3.377406659376361,
+      "prior_rank": 32,
+      "post_rank": 39
+    },
+    {
+      "image_id": "1296438631_17517c359d_1035_43935788@N00.jpg",
+      "true": "Ashland, United States",
+      "prior_prob_true": 0.024039989746218918,
+      "post_prob_true": 0.024039989746218918,
+      "prior_entropy": 5.22433600028938,
+      "post_entropy": 5.22433600028938,
+      "prior_rank": 10,
+      "post_rank": 10
+    },
+    {
+      "image_id": "321720530_f2a31b2549_128_81421684@N00.jpg",
+      "true": "Chaoyang District, China",
+      "prior_prob_true": 0.09952665551039923,
+      "post_prob_true": 0.25839882787499086,
+      "prior_entropy": 5.31023786504752,
+      "post_entropy": 4.00174511165249,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "381147491_751c8c119c_181_57253263@N00.jpg",
+      "true": "Cambridge, United States",
+      "prior_prob_true": 0.03726763717805151,
+      "post_prob_true": 0.0579129945050101,
+      "prior_entropy": 5.305839215697259,
+      "post_entropy": 4.49165029542104,
+      "prior_rank": 5,
+      "post_rank": 4
+    },
+    {
+      "image_id": "880710221_64f0fdd8f2_1137_85417391@N00.jpg",
+      "true": "Jefferson County, United States",
+      "prior_prob_true": 0.020842198581560285,
+      "post_prob_true": 0.015231249475524292,
+      "prior_entropy": 5.193384157782089,
+      "post_entropy": 3.8095548700989452,
+      "prior_rank": 16,
+      "post_rank": 17
+    },
+    {
+      "image_id": "446976495_afc37707e4_246_55126705@N00.jpg",
+      "true": "Distrito de Cusco, Peru",
+      "prior_prob_true": 0.1579255319148936,
+      "post_prob_true": 0.4353837194444907,
+      "prior_entropy": 5.271272007923919,
+      "post_entropy": 4.014772646906357,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "199528247_66da61f266_70_85971448@N00.jpg",
+      "true": "Çavuşin Köyü, Turkey",
+      "prior_prob_true": 0.13406189555125725,
+      "post_prob_true": 0.25221556098198056,
+      "prior_entropy": 5.25491315545764,
+      "post_entropy": 3.077706002769565,
+      "prior_rank": 1,
+      "post_rank": 2
+    },
+    {
+      "image_id": "847733166_0573338bfb_1321_89904893@N00.jpg",
+      "true": "Venice, Italy",
+      "prior_prob_true": 0.09320659700365101,
+      "post_prob_true": 0.20441297605495468,
+      "prior_entropy": 4.999194373873144,
+      "post_entropy": 3.6184302938265356,
+      "prior_rank": 3,
+      "post_rank": 3
+    },
+    {
+      "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+      "true": "Budapest, Hungary",
+      "prior_prob_true": 0.11647816349384098,
+      "post_prob_true": 0.12512887605599515,
+      "prior_entropy": 5.289877295200015,
+      "post_entropy": 5.189754578596603,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "271517794_bcd0d062eb_79_40829484@N00.jpg",
+      "true": "New York, United States",
+      "prior_prob_true": 0.034811496827174326,
+      "post_prob_true": 0.04017731652119315,
+      "prior_entropy": 5.48475085191789,
+      "post_entropy": 5.1856060315040295,
+      "prior_rank": 6,
+      "post_rank": 7
+    },
+    {
+      "image_id": "766351079_af0294281f_1240_16836474@N00.jpg",
+      "true": "Villa de Leyva, Colombia",
+      "prior_prob_true": 0.03309219858156028,
+      "post_prob_true": 0.0242282973707321,
+      "prior_entropy": 5.255234481716587,
+      "post_entropy": 4.246533981412223,
+      "prior_rank": 7,
+      "post_rank": 10
+    },
+    {
+      "image_id": "104419192_8551684362_41_64825499@N00.jpg",
+      "true": "Greater London, United Kingdom",
+      "prior_prob_true": 0.04058946634112312,
+      "post_prob_true": 0.030590696883212344,
+      "prior_entropy": 4.9486973808623755,
+      "post_entropy": 3.853521000697172,
+      "prior_rank": 10,
+      "post_rank": 10
+    },
+    {
+      "image_id": "1300123632_36361364c9_1048_50435419@N00.jpg",
+      "true": "Waukesha, United States",
+      "prior_prob_true": 0.0433452399440907,
+      "post_prob_true": 0.04640850056595254,
+      "prior_entropy": 5.4043550764042125,
+      "post_entropy": 5.418592864263984,
+      "prior_rank": 2,
+      "post_rank": 1
+    },
+    {
+      "image_id": "166869956_84928fd11b_60_55085284@N00.jpg",
+      "true": "Paris, France",
+      "prior_prob_true": 0.06264775413711585,
+      "post_prob_true": 0.11092527401437688,
+      "prior_entropy": 5.104822943978352,
+      "post_entropy": 3.779191879017104,
+      "prior_rank": 2,
+      "post_rank": 3
+    },
+    {
+      "image_id": "244035501_3708124424_87_40829484@N00.jpg",
+      "true": "New York, United States",
+      "prior_prob_true": 0.17507899726142828,
+      "post_prob_true": 0.5865289195807428,
+      "prior_entropy": 5.0233934604138,
+      "post_entropy": 2.809454712494771,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "494612871_db624a92e7_216_62126383@N00.jpg",
+      "true": "Hof HaCarmel Regional Council, Israel",
+      "prior_prob_true": 0.01483729662077597,
+      "post_prob_true": 0.014340251347933543,
+      "prior_entropy": 5.045880123408746,
+      "post_entropy": 3.7858343147552636,
+      "prior_rank": 22,
+      "post_rank": 6
+    },
+    {
+      "image_id": "297636665_27042e8d0d_109_41894169878@N01.jpg",
+      "true": "Colorado, Costa Rica",
+      "prior_prob_true": 0.06314553191489362,
+      "post_prob_true": 0.12471643502758986,
+      "prior_entropy": 5.439488542652711,
+      "post_entropy": 5.054107367424821,
+      "prior_rank": 2,
+      "post_rank": 2
+    },
+    {
+      "image_id": "227569033_4e625d93c3_74_48637819@N00.jpg",
+      "true": "Leh, India",
+      "prior_prob_true": 0.14268359643102269,
+      "post_prob_true": 0.5030104845434924,
+      "prior_entropy": 5.254057885708687,
+      "post_entropy": 2.8027738981005976,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "171046893_b97c4f0aa5_73_30571787@N00.jpg",
+      "true": "City of Westminster, United Kingdom",
+      "prior_prob_true": 0.09135336696644,
+      "post_prob_true": 0.6747408151251189,
+      "prior_entropy": 5.08324986295811,
+      "post_entropy": 1.5123046840972931,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "1182903598_51bdaa7836_1385_15376845@N00.jpg",
+      "true": "East Granby, United States",
+      "prior_prob_true": 0.06980606288834494,
+      "post_prob_true": 0.06980606288834494,
+      "prior_entropy": 4.876900357223144,
+      "post_entropy": 4.876900357223144,
+      "prior_rank": 2,
+      "post_rank": 2
+    },
+    {
+      "image_id": "43779838_1ef2e1f024_30_88483799@N00.jpg",
+      "true": "Sussex County, United States",
+      "prior_prob_true": 0.14297098646034817,
+      "post_prob_true": 0.13031677359155786,
+      "prior_entropy": 5.03286901408295,
+      "post_entropy": 4.354601930387886,
+      "prior_rank": 1,
+      "post_rank": 4
+    },
+    {
+      "image_id": "1297522299_1d487977b3_1008_85417391@N00.jpg",
+      "true": "Vernon, United States",
+      "prior_prob_true": 0.039365929265887,
+      "post_prob_true": 0.044275036156278,
+      "prior_entropy": 5.320243505576483,
+      "post_entropy": 4.79952367433059,
+      "prior_rank": 7,
+      "post_rank": 9
+    },
+    {
+      "image_id": "719864111_79743ec39e_1210_7132415@N03.jpg",
+      "true": "Versailles, France",
+      "prior_prob_true": 0.05170460168233548,
+      "post_prob_true": 0.1621264862129926,
+      "prior_entropy": 5.403207579707547,
+      "post_entropy": 5.0351408290075605,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+      "true": "Cuba",
+      "prior_prob_true": 0.1579255319148936,
+      "post_prob_true": 0.1978968281544495,
+      "prior_entropy": 5.271272007923919,
+      "post_entropy": 4.97927852400329,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "307499425_ed6d8712bd_111_73293249@N00.jpg",
+      "true": "Entremont, Switzerland",
+      "prior_prob_true": 0.08511688993958497,
+      "post_prob_true": 0.18052896324803147,
+      "prior_entropy": 4.946597583719119,
+      "post_entropy": 3.5754238619251884,
+      "prior_rank": 2,
+      "post_rank": 2
+    },
+    {
+      "image_id": "149866866_e6a46a330b_52_63163416@N00.jpg",
+      "true": "Istanbul, Turkey",
+      "prior_prob_true": 0.14268359643102269,
+      "post_prob_true": 0.35131530338898326,
+      "prior_entropy": 5.121190498515243,
+      "post_entropy": 3.4158172431735907,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "484245503_2c1739bf8b_213_50435419@N00.jpg",
+      "true": "Buenos Aires, Argentina",
+      "prior_prob_true": 0.02779983359087127,
+      "post_prob_true": 0.013888548488731953,
+      "prior_entropy": 5.48330966815748,
+      "post_entropy": 5.089296993076306,
+      "prior_rank": 5,
+      "post_rank": 18
+    },
+    {
+      "image_id": "276477189_7baf796f9d_83_12814307@N00.jpg",
+      "true": "Seraing, Belgium",
+      "prior_prob_true": 0.16226039430021474,
+      "post_prob_true": 0.2755433379558091,
+      "prior_entropy": 4.9445334018569955,
+      "post_entropy": 3.3257743749863273,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "468278910_539810ce41_193_64825499@N00.jpg",
+      "true": "Mexico",
+      "prior_prob_true": 0.060919359075387446,
+      "post_prob_true": 0.2700039292778772,
+      "prior_entropy": 5.2986527827735665,
+      "post_entropy": 2.98951110496376,
+      "prior_rank": 2,
+      "post_rank": 1
+    },
+    {
+      "image_id": "379001279_fa81cf9ee0_155_87409164@N00.jpg",
+      "true": "Singapore, Singapore",
+      "prior_prob_true": 0.021729879740980573,
+      "post_prob_true": 0.00046372770186667317,
+      "prior_entropy": 5.1137164786081755,
+      "post_entropy": 0.2501797557681101,
+      "prior_rank": 21,
+      "post_rank": 26
+    },
+    {
+      "image_id": "320631397_d6abc1ed08_129_82927779@N00.jpg",
+      "true": "Cederberg Local Municipality, South Africa",
+      "prior_prob_true": 0.11207110153514677,
+      "post_prob_true": 0.2540461407076483,
+      "prior_entropy": 5.284617239050899,
+      "post_entropy": 2.8831631723237936,
+      "prior_rank": 1,
+      "post_rank": 2
+    },
+    {
+      "image_id": "415509863_2bc4e21172_131_7132415@N03.jpg",
+      "true": "Petra Sub-District, Jordan",
+      "prior_prob_true": 0.2488762361402457,
+      "post_prob_true": 0.9601314766665793,
+      "prior_entropy": 4.888440280769518,
+      "post_entropy": 0.4257833073816397,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "311344213_4b003f4ab1_114_63163416@N00.jpg",
+      "true": "New Delhi, India",
+      "prior_prob_true": 0.27605053191489365,
+      "post_prob_true": 0.6140381382938817,
+      "prior_entropy": 4.848793149284306,
+      "post_entropy": 2.5741057151497,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "280870957_b4e009f8da_102_36093984@N00.jpg",
+      "true": "Subotica, Serbia",
+      "prior_prob_true": 0.014628430465618255,
+      "post_prob_true": 0.008828885356274964,
+      "prior_entropy": 5.15792319101157,
+      "post_entropy": 4.3809086311381185,
+      "prior_rank": 38,
+      "post_rank": 26
+    },
+    {
+      "image_id": "1397742163_1a6b87eb5a_1164_7885919@N07.jpg",
+      "true": "Paris, France",
+      "prior_prob_true": 0.0503618376473777,
+      "post_prob_true": 0.024402380995107553,
+      "prior_entropy": 5.105286276486551,
+      "post_entropy": 1.4064866990577547,
+      "prior_rank": 3,
+      "post_rank": 3
+    },
+    {
+      "image_id": "449901053_f0d3dbb166_164_55126705@N00.jpg",
+      "true": "Cahuita, Costa Rica",
+      "prior_prob_true": 0.09952665551039923,
+      "post_prob_true": 0.4410698967727952,
+      "prior_entropy": 5.204609977601228,
+      "post_entropy": 2.2310524076515534,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "266287734_114d6cc260_94_40829484@N00.jpg",
+      "true": "Biwer, Luxembourg",
+      "prior_prob_true": 0.152494497432135,
+      "post_prob_true": 0.1590795927499538,
+      "prior_entropy": 5.12353878247849,
+      "post_entropy": 4.9969796522595225,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "486597679_e1a557718f_198_51162504@N00.jpg",
+      "true": "Seville, Spain",
+      "prior_prob_true": 0.029249061326658325,
+      "post_prob_true": 0.02707818050031226,
+      "prior_entropy": 5.210252182980511,
+      "post_entropy": 4.732855638644271,
+      "prior_rank": 16,
+      "post_rank": 16
+    },
+    {
+      "image_id": "241921396_742fe1f0fd_90_82981539@N00.jpg",
+      "true": "Kyoto, Japan",
+      "prior_prob_true": 0.04709219858156028,
+      "post_prob_true": 0.038970963294065686,
+      "prior_entropy": 5.509950126535419,
+      "post_entropy": 4.396676761026715,
+      "prior_rank": 1,
+      "post_rank": 3
+    },
+    {
+      "image_id": "499393661_a7da0fd73e_206_8255645@N03.jpg",
+      "true": "Saalbach-Hinterglemm, Austria",
+      "prior_prob_true": 0.14742553191489363,
+      "post_prob_true": 0.5539777079590426,
+      "prior_entropy": 4.845488830564058,
+      "post_entropy": 1.2639972024886819,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "453636890_c425e657ab_239_55126705@N00.jpg",
+      "true": "Tinum, Mexico",
+      "prior_prob_true": 0.2274987026466009,
+      "post_prob_true": 0.6693541414905653,
+      "prior_entropy": 4.492142342813171,
+      "post_entropy": 1.0424192091136093,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "668488293_1b39338210_1369_81421684@N00.jpg",
+      "true": "Grafenegg, Austria",
+      "prior_prob_true": 0.04636303191489362,
+      "post_prob_true": 0.06004275544505832,
+      "prior_entropy": 5.094774276113487,
+      "post_entropy": 4.596846631268696,
+      "prior_rank": 2,
+      "post_rank": 2
+    },
+    {
+      "image_id": "919126362_49e364686c_1300_50994135@N00.jpg",
+      "true": "Argyll and Bute, United Kingdom",
+      "prior_prob_true": 0.12292553191489361,
+      "post_prob_true": 0.6835441127794094,
+      "prior_entropy": 5.279879095989872,
+      "post_entropy": 2.403326411879155,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "203414504_6dce8e2783_60_40829484@N00.jpg",
+      "true": "Spa, Belgium",
+      "prior_prob_true": 0.04548300317926144,
+      "post_prob_true": 0.04933208355164165,
+      "prior_entropy": 5.411007421332346,
+      "post_entropy": 5.061639069657645,
+      "prior_rank": 1,
+      "post_rank": 11
+    },
+    {
+      "image_id": "103558896_55f8059bc9_35_73293249@N00.jpg",
+      "true": "Toronto, Canada",
+      "prior_prob_true": 0.11067553191489361,
+      "post_prob_true": 0.3271407763431703,
+      "prior_entropy": 5.3388197909727655,
+      "post_entropy": 2.8589861798473835,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "279684899_63d5dc5c9d_89_25304693@N00.jpg",
+      "true": "Anaheim, United States",
+      "prior_prob_true": 0.13206732295966975,
+      "post_prob_true": 0.7780946198969025,
+      "prior_entropy": 5.280363980179645,
+      "post_entropy": 1.8739965721817289,
+      "prior_rank": 1,
+      "post_rank": 1
+    },
+    {
+      "image_id": "520721897_11b0c68892_243_70323761@N00.jpg",
+      "true": "Town of Hyde Park, United States",
+      "prior_prob_true": 0.053042981579323155,
+      "post_prob_true": 0.018762854052859598,
+      "prior_entropy": 5.332839889017792,
+      "post_entropy": 4.3139148598486186,
+      "prior_rank": 1,
+      "post_rank": 17
+    },
+    {
+      "image_id": "468114689_6f7d634bae_220_7885919@N07.jpg",
+      "true": "Paris, France",
+      "prior_prob_true": 0.09788409545080522,
+      "post_prob_true": 0.1409583742374694,
+      "prior_entropy": 5.376014143819072,
+      "post_entropy": 5.017878708835196,
+      "prior_rank": 1,
+      "post_rank": 1
+    }
+  ]
+}

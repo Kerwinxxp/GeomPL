@@ -1,0 +1,44 @@
+{
+  "model": "gpt-4o",
+  "n_run": 50,
+  "n_errors": 0,
+  "errors": [],
+  "n_country_level": 46,
+  "non_country_level": [
+    "271517794_bcd0d062eb_79_40829484@N00.jpg",
+    "166869956_84928fd11b_60_55085284@N00.jpg",
+    "244035501_3708124424_87_40829484@N00.jpg",
+    "311344213_4b003f4ab1_114_63163416@N00.jpg"
+  ],
+  "prior_top_k_recall": {
+    "1": 0.6086956521739131,
+    "3": 0.7608695652173914,
+    "5": 0.8043478260869565
+  },
+  "prior_support_coverage": 0.8043478260869565,
+  "final_map_country_accuracy": 0.391304347826087,
+  "mean_entropy_prior_bits": 2.3152364373528904,
+  "mean_entropy_final_bits": 1.8660351569663098,
+  "mean_kl_final_vs_prior_bits": 0.38020601553693417,
+  "n_same_support": 48,
+  "event_counts": {
+    "enhance_flag": 150,
+    "key_evidence": 42,
+    "replace_gated": 41,
+    "replace": 4,
+    "support_changed": 4,
+    "threshold_crossed": 7
+  },
+  "judge_c_hist": {
+    "1": 3,
+    "2": 60,
+    "3": 662,
+    "4": 470,
+    "5": 46
+  },
+  "judge_alpha_mean": 0.5327961321514908,
+  "judge_alpha_min_max": [
+    0.2,
+    0.9
+  ]
+}

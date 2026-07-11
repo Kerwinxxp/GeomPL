@@ -1,0 +1,92 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---- Virtual env（cue_extract GPU 栈，~4.4GB，按 README 重建）----
+cue_extract/.venv/
+.venv/
+venv/
+
+# ---- 本地模型权重缓存（首次运行自动下载）----
+*.onnx
+*.pth
+*.safetensors
+
+# ---- 源数据集（体积大 / 版权，按 README 单独获取）----
+data/im2gps3k/
+data/im2gps3k.csv
+data/im2gps3k_places365.csv
+data/samples/
+# 但保留 5 张可直接运行的样例图（data/sample_images/ + data/subset_sample.jsonl 入库）
+!data/sample_images/
+
+# ---- 运行时缓存（API 响应，体积大且无需入库）----
+.mllm_cache/
+.search_cache/
+
+# ---- 密钥（代码用环境变量读取，切勿提交）----
+.env
+*.key
+secrets*.json
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ================= 精简仓库：只保留 5 张样例 + 少量关键图 =================
+# （本地文件不删，仅不入库。样例前缀：181848051 261517384 311344213 370717727 847733166）
+
+# GeoBayes 复现的存档输出（可重生成；见 REPRODUCTION_REPORT.md）
+/results/
+/results_v0/
+/results_v1/
+/results_v1final/
+/results_zeroshot/
+/results_singlelevel/
+/results_baseline/
+/results_closedset/
+/results_closedset_gallery/
+/results_closedset_gallery_prioronly/
+
+# 消融结果 JSON —— 仅 5 样例
+clue_leak/combo2_results/*
+!clue_leak/combo2_results/181848051*
+!clue_leak/combo2_results/261517384*
+!clue_leak/combo2_results/311344213*
+!clue_leak/combo2_results/370717727*
+!clue_leak/combo2_results/847733166*
+
+# 线索标注 JSON —— 仅 5 样例
+cue_extract/results/*
+!cue_extract/results/181848051*
+!cue_extract/results/261517384*
+!cue_extract/results/311344213*
+!cue_extract/results/370717727*
+!cue_extract/results/847733166*
+
+# 原图后验缓存 —— 仅 5 样例
+clue_leak/cache_fullimage_posterior/*
+!clue_leak/cache_fullimage_posterior/181848051*
+!clue_leak/cache_fullimage_posterior/261517384*
+!clue_leak/cache_fullimage_posterior/311344213*
+!clue_leak/cache_fullimage_posterior/370717727*
+!clue_leak/cache_fullimage_posterior/847733166*
+
+# 单图 mPL 图 —— 仅 5 样例
+clue_leak/figures/per_image_mpl/*
+!clue_leak/figures/per_image_mpl/*181848051*
+!clue_leak/figures/per_image_mpl/*261517384*
+!clue_leak/figures/per_image_mpl/*311344213*
+!clue_leak/figures/per_image_mpl/*370717727*
+!clue_leak/figures/per_image_mpl/*847733166*
+
+# cue_extract 图 —— 只留 contact_sheet
+cue_extract/figures/*
+!cue_extract/figures/contact_sheet.png
+
+# clue_leak/figures 顶层 —— 只留 clue_mpl_ranking.png
+clue_leak/figures/*.pdf
+clue_leak/figures/combo2_leakage_5imgs.png

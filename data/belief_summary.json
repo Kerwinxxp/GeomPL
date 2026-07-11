@@ -1,0 +1,19 @@
+{
+  "granularity": "city",
+  "model": "gpt-4o",
+  "n_run": 50,
+  "n_errors": 0,
+  "mean_prior_entropy_bits": 2.316,
+  "mean_posterior_entropy_bits": 2.138,
+  "mean_entropy_drop_bits": 0.178,
+  "mean_info_gain_kl_bits": 0.159,
+  "n_same_support": 50,
+  "distance_accuracy_pct": {
+    "1": 4.0,
+    "25": 28.0,
+    "200": 40.0,
+    "750": 68.0,
+    "2500": 84.0
+  },
+  "n_distance_scored": 50
+}

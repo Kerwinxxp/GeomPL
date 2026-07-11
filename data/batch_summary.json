@@ -1,0 +1,56 @@
+{
+  "model": "gpt-4o",
+  "v2": {
+    "enable_hierarchy": true,
+    "enable_enhance": true
+  },
+  "n_run": 50,
+  "n_errors": 0,
+  "errors": [],
+  "n_country_level": 46,
+  "non_country_level": [
+    "271517794_bcd0d062eb_79_40829484@N00.jpg",
+    "166869956_84928fd11b_60_55085284@N00.jpg",
+    "244035501_3708124424_87_40829484@N00.jpg",
+    "311344213_4b003f4ab1_114_63163416@N00.jpg"
+  ],
+  "prior_top_k_recall": {
+    "1": 0.6086956521739131,
+    "3": 0.7608695652173914,
+    "5": 0.8043478260869565
+  },
+  "prior_support_coverage": 0.8043478260869565,
+  "country_map_accuracy": 0.391304347826087,
+  "n_transitions": 11,
+  "n_reached_city_or_street": 11,
+  "final_level_dist": {
+    "country": 39,
+    "city": 7,
+    "street": 4
+  },
+  "n_enhance_calls": 144,
+  "mean_entropy_prior_bits": 2.3152364373528904,
+  "mean_entropy_final_bits": 1.942614461098863,
+  "mean_kl_final_vs_prior_bits": 0.2092300133120649,
+  "n_same_support": 42,
+  "event_counts": {
+    "enhance": 144,
+    "enhance_flag": 54,
+    "key_evidence": 72,
+    "threshold_crossed": 8,
+    "transition": 11,
+    "bbox_fallback": 39
+  },
+  "judge_c_hist": {
+    "1": 136,
+    "2": 284,
+    "3": 1449,
+    "4": 197,
+    "5": 36
+  },
+  "judge_alpha_mean": 0.42921027592768796,
+  "judge_alpha_min_max": [
+    0.2,
+    0.9
+  ]
+}

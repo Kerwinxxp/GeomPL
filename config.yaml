@@ -1,0 +1,49 @@
+# GeoBayes 复现配置（全部超参集中于此；来源标签见 docs/paper_to_code_map.md）
+
+# ---- Eq.5 先验 [paper] ----
+tau_p: 0.6
+temperature_scaling: 1.5
+
+# ---- 控制流 ----
+tau_stop: 0.7            # 停止阈值，= tau_transition [assumption]
+tau_transition: 0.7      # [paper]
+tau_enhance: 0.05        # [paper]
+# Replace 在 v1（无搜索）实测为纯负资产：50 图两轮批量中共触发 29 次级联，
+# 先验正确时 9 次毁 8 次、全程零拯救（flip gained=0）。论文中其恢复力来自
+# WebSearch 生成的新假设集，v1 缺该机制 → 研究默认关闭；v2 接搜索后再启用。
+max_replace: 0           # [deviation, empirically justified]（论文语义下应为无界；代码默认 2）
+replace_requires_refutation: true   # Replace 证伪门 [assumption, map §5#19]：有 c>=4 支持证据时不触发
+max_tasks_per_level: 6   # [assumption]
+key_evidence_bits: 1.0   # key evidence 判定 |log2 W| >= 1 bit [assumption]
+bbox_padding: 0.10       # [inferred]
+
+# ---- Hypothesize ----
+k: 5                     # 候选数 [assumption]（Fig.4=5, Table3 到 Top-5）
+hypothesis_granularity: city   # country | city | place —— 单层候选粒度
+                               # city/place + enable_hierarchy:false = 同支撑的细粒度先验↔后验
+                               # （研究目标形态，见 REPRODUCTION_REPORT §1）
+
+# ---- 层级/增强开关 ----
+# 研究目标 = 一个先验 + 看完所有线索后的一个后验，同一批候选上可比。
+# 层级转移会整体替换候选集、破坏同支撑，故关闭；粒度直接由上面 hypothesis_granularity 控制。
+enable_hierarchy: false   # 关：单层，先验与后验同支撑
+enable_enhance: false     # 关：仅用图像视觉线索更新（自足攻击者，无外部检索噪声）；
+                          # 若要"强攻击者"可置 true（需 TAVILY_API_KEY，同支撑仍保持）
+max_enhance_per_level: 3  # 每层 Enhance 检索次数上限 [assumption]
+verify_with_context: false
+search_cache_dir: .search_cache
+search_max_results: 3
+# 检索后端：Tavily 文本检索（key 从 TAVILY_API_KEY 读取）为主；
+# SerpApi Google Lens 图像检索（SERPAPI_API_KEY）可选，无 key 时 image_search 返回空并回退文本检索。
+
+# ---- MLLM 后端 ----
+# 方案 A（当前）：OpenAI —— api_key 从 OPENAI_API_KEY 环境变量读取
+#   注意：GPT-4o 非论文模型，Table 3 锚点不可对拍；bbox grounding 较弱（已有回退兜底）
+model: gpt-4o
+base_url: https://api.openai.com/v1
+# 方案 B（论文锚点校验用）：DashScope Qwen2.5-VL-7B —— api_key 从 DASHSCOPE_API_KEY 读取
+# model: qwen2.5-vl-7b-instruct
+# base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+decode_temperature: 0.0  # 贪心解码，可复现 [inferred]
+max_pixels: 1003520      # 1280*28*28，本地 smart_resize 后上传（坐标一致性 + 控 token）
+cache_dir: .mllm_cache

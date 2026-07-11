@@ -1,0 +1,38 @@
+{
+  "k_hard_negatives": 5,
+  "candidate_set_size": 6,
+  "model": "gpt-4o",
+  "n": 50,
+  "n_errors": 0,
+  "prior_map_accuracy": 0.74,
+  "posterior_map_accuracy": 0.66,
+  "random_baseline": 0.167,
+  "mean_prior_prob_true": 0.383,
+  "mean_posterior_prob_true": 0.486,
+  "mean_prior_rank_true": 1.66,
+  "mean_posterior_rank_true": 1.7,
+  "mean_kl_post_vs_prior_bits": 0.263,
+  "mean_entropy_drop_bits": 0.616,
+  "reliability_by_confidence": {
+    "0-20%": {
+      "n": 1,
+      "acc": 0.0
+    },
+    "20-40%": {
+      "n": 13,
+      "acc": 0.538
+    },
+    "40-60%": {
+      "n": 12,
+      "acc": 0.5
+    },
+    "60-80%": {
+      "n": 14,
+      "acc": 0.857
+    },
+    "80-100%": {
+      "n": 10,
+      "acc": 0.8
+    }
+  }
+}
