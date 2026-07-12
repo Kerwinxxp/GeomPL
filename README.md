@@ -34,13 +34,13 @@ Two environments (main logic is pure Python; cue extraction needs GPU deep model
 pip install -r requirements.txt      # pillow, pyyaml, openai, pytest
 export OPENAI_API_KEY=sk-...          # attacker model (GPT-4o); read only from the environment
 
-# cue_extract GPU stack (Grounding DINO + SAM 2.1 + RapidOCR + LaMa, needs CUDA)
+# cue_extract GPU stack (SAM 3 + LaMa, needs CUDA)
 python -m venv cue_extract/.venv
 cue_extract/.venv/Scripts/pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
-cue_extract/.venv/Scripts/pip install "transformers>=5.13" accelerate rapidocr onnxruntime \
+cue_extract/.venv/Scripts/pip install "transformers>=5.13" accelerate \
     simple-lama-inpainting scipy "pillow>=10.4" matplotlib numpy openai pyyaml
 ```
-`transformers>=5.13` ships SAM 3 support natively (`Sam3Model`). `pillow>=10.4` is required — older Pillow (9.x) renders digit glyphs as boxes, breaking the Set-of-Mark overlay. Model weights (SAM 3 ~840MB / Grounding DINO / SAM 2.1 / PP-OCRv5 / LaMa) download to the HuggingFace cache on first run; **SAM 3 is gated** — accept the license at <https://huggingface.co/facebook/sam3> and `huggingface-cli login` first. Tested GPU: RTX 5080 16GB (SAM 3 uses ~3.4 GB).
+`transformers>=5.13` ships SAM 3 support natively (`Sam3Model`). `pillow>=10.4` is required — older Pillow (9.x) renders digit glyphs as boxes, breaking numbered-badge overlays. Model weights (SAM 3 ~840MB, LaMa ~200MB) download to the HuggingFace cache on first run; **SAM 3 is gated** — accept the license at <https://huggingface.co/facebook/sam3> and `huggingface-cli login` first. Tested GPU: RTX 5080 16GB (SAM 3 uses ~3.4 GB).
 
 ## Data
 
@@ -65,7 +65,6 @@ python -m clue_leak.prep_geo100
 #    Needs: accept the gated model at https://huggingface.co/facebook/sam3 + huggingface-cli login.
 cue_extract/.venv/Scripts/python -m cue_extract.run_extract_sam3 --ids <id1,id2,...>
 #   output: cue_extract/results_sam3/<id>.json (each cue carries a mask_rle)
-#   (legacy detector-based 5-stage: python -m cue_extract.run_extract → cue_extract/results/)
 
 # 3) Per-cue mPL ablation (main env): prior = image with subset S masked, posterior = full image
 python -m clue_leak.run_combo2 --ids <id1,id2,...> \
@@ -83,9 +82,10 @@ Figures land in `clue_leak/figures/per_image_mpl/` (one per sample).
 ## Repository layout
 
 ```
-cue_extract/        Cue-extraction pipeline (GPU)
-  proposal / grounding / ocr / sam_mask / verify / merge / rle / prompts / viz
-  run_extract.py    orchestrator  ·  contact_sheet.py QA overview  ·  inpaint.py + viz_mask_compare.py robustness checks
+cue_extract/        Cue-extraction pipeline (GPU): route-B + SAM 3
+  grounded / sam3_seg / merge / rle / prompts / viz
+  run_extract_sam3.py  orchestrator  ·  contact_sheet.py QA overview
+  viz_compare_sam3.py  old-vs-SAM3 comparison  ·  inpaint.py + viz_mask_compare.py robustness check
 clue_leak/          Per-cue mPL ablation
   combo.py masking.py           subset enumeration + solid masking
   run_combo2.py run_50.py       ablation runner / batch driver
@@ -116,4 +116,4 @@ python -m pytest tests/test_clueleak_combo.py tests/test_cue_extract.py -q   # m
 
 - GeoBayes: Shi et al., AAAI-26
 - mPL: Chen et al., 2026, *Metric-Normalized Posterior Leakage*
-- Grounding DINO · SAM 2.1 · PaddleOCR/RapidOCR · LaMa · IM2GPS3k
+- SAM 3 (`facebook/sam3`) · LaMa · IM2GPS3k
