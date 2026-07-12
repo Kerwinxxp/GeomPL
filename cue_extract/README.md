@@ -2,6 +2,35 @@
 
 Extracts "visual cues that may leak geographic location" from an image and produces **pixel-level masks**. Feeds clean cue regions to the downstream per-cue mPL ablation (`clue_leak/`).
 
+## ⭐ Recommended pipeline: route-B + SAM 3 (`run_extract_sam3.py`)
+
+The current best extractor. Two models, each doing what it is good at:
+
+```
+① GPT-4o (clean image)  → geo-reasoning: names the location cues it actually uses,
+                            + segment_query (a concrete object noun), reasoning, confidence
+② SAM 3 (facebook/sam3) → segments each cue by its text phrase → precise instance masks
+③ flag_degenerate + assign_maskable
+```
+GPT-4o does the semantics ("what / why"); SAM 3 does the localization ("where", pixel-precise). This fixed the failure modes of the earlier detector-based pipeline (mis-localized boxes, blurry masks, missed small cues). `grounded.py` parses the VLM output; `sam3_seg.segment_with_fallback` tries `segment_query → name → morphological variants` for high recall.
+
+**Prerequisites:**
+- Use **high-resolution images** (see root README — the sample images ship at 1024px; low-res 500px badly hurts recall). `client.prepare` keeps up to ~1MP.
+- **SAM 3 is a gated model.** Accept the license once at <https://huggingface.co/facebook/sam3> and `huggingface-cli login`; then `transformers>=5.13` loads it natively (`Sam3Model`, ~840M params, ~3.4 GB VRAM).
+
+```bash
+cue_extract/.venv/Scripts/python -m cue_extract.run_extract_sam3 --ids <id1,id2,...>
+#   → cue_extract/results_sam3/<id>.json  (same schema as below; used by clue_leak.run_combo2 --cue_dir)
+```
+
+`run_extract_som.py` (Set-of-Mark: SAM auto-seg + numbered marks) and `run_extract_b.py` (VLM draws boxes) are earlier variants kept for reference — SAM 3 supersedes both.
+
+---
+
+## Legacy pipeline: detector-based 5-stage (`run_extract.py`)
+
+The original approach (kept for the archived comparison). Extracts cues and masks via a fixed 5-stage detector chain.
+
 ## Five stages (`run_extract.extract_one`)
 
 ```

@@ -90,3 +90,14 @@ cue_extract/figures/*
 # clue_leak/figures 顶层 —— 只留 clue_mpl_ranking.png
 clue_leak/figures/*.pdf
 clue_leak/figures/combo2_leakage_5imgs.png
+
+# ================= route-B + SAM3 管线（当前推荐)：留最终产物，去探索中间物 =================
+# 探索性提取变体（route B / Set-of-Mark，已被 SAM3 取代，不入库）
+cue_extract/results_b/
+cue_extract/results_som/
+cue_extract/figures_b/
+cue_extract/figures_som/
+cue_extract/figures_sam3/_marked/
+
+# 允许 SAM3 vs 旧管线对比图入库（cue_extract/figures/* 默认被忽略）
+!cue_extract/figures/compare_sam3_vs_old.png

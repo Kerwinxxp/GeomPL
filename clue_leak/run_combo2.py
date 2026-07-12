@@ -70,9 +70,14 @@ def subsets_for(m):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ids", required=True)
+    ap.add_argument("--cue_dir", default=CUEDIR, help="线索标注目录(默认旧 5 阶段;SAM3 用 results_sam3)")
+    ap.add_argument("--out_dir", default=OUTDIR, help="消融结果输出目录")
+    ap.add_argument("--post_dir", default=POSTDIR, help="原图后验缓存目录;换分辨率时指到新目录以重算")
     args = ap.parse_args()
     ids = [x for x in args.ids.split(",") if x]
-    os.makedirs(OUTDIR, exist_ok=True)
+    _abs = lambda p: p if os.path.isabs(p) else os.path.join(ROOT, p)
+    cue_dir, out_dir, post_dir = _abs(args.cue_dir), _abs(args.out_dir), _abs(args.post_dir)
+    os.makedirs(out_dir, exist_ok=True); os.makedirs(post_dir, exist_ok=True)
 
     client = build_client(load_config(os.path.join(ROOT, "config.yaml")))
     subset = load_subsets()                 # 合并所有 data/subset*.jsonl(样例或全量都能找到图)
@@ -88,10 +93,10 @@ def main():
 
     t0 = time.time()
     for i, iid in enumerate(ids, 1):
-        out = os.path.join(OUTDIR, iid + ".json")
+        out = os.path.join(out_dir, iid + ".json")
         if os.path.exists(out):
             print(f"[{i}] cached {iid[:22]}", flush=True); continue
-        rec = json.load(open(os.path.join(CUEDIR, iid + ".json"), encoding="utf-8"))
+        rec = json.load(open(os.path.join(cue_dir, iid + ".json"), encoding="utf-8"))
         cues = maskable_cues(rec)
         m = len(cues)
         if m < 1:
@@ -100,12 +105,14 @@ def main():
         p = p if os.path.isabs(p) else os.path.join(ROOT, p)
         img = client.prepare(Image.open(p))
         tl = label_of(subset[iid])
-        # 原图后验:优先复用预算好的缓存;缺失则现算(自洽,不依赖已删的 run_leak100)
-        post_cache = os.path.join(POSTDIR, iid + ".json")
+        # 原图后验:优先复用缓存(须同分辨率!);缺失则现算并存
+        post_cache = os.path.join(post_dir, iid + ".json")
         if os.path.exists(post_cache):
             posterior = json.load(open(post_cache, encoding="utf-8"))["posterior"]
         else:
             posterior = client.score_candidates(img, gallery)["prior"]
+            json.dump({"posterior": posterior, "true_label": tl},
+                      open(post_cache, "w", encoding="utf-8"), ensure_ascii=False)
         # 预解码每条线索的掩码并集(图尺寸)
         decoded = [[rle_to_mask(r) for r in c["masks"]] for c in cues]
 

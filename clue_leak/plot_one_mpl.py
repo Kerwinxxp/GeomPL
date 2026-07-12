@@ -26,9 +26,12 @@ from geobayes.eval.candidates import cluster_representatives, merge_distribution
 from geobayes.eval.metrics import haversine_km
 
 BASE = os.path.dirname(__file__)
-INDIR = os.path.join(BASE, "combo2_results")
-CUEDIR = os.path.join(ROOT, "cue_extract", "results")
-OUTDIR = os.path.join(BASE, "figures", "per_image_mpl")
+# 目录可用环境变量覆盖(便于对比不同提取管线,如 SAM3):
+#   CLUE_COMBO_DIR / CLUE_CUE_DIR / CLUE_FIG_DIR(相对 ROOT 或绝对)
+_R = lambda p: p if os.path.isabs(p) else os.path.join(ROOT, p)
+INDIR = _R(os.environ.get("CLUE_COMBO_DIR", os.path.join(BASE, "combo2_results")))
+CUEDIR = _R(os.environ.get("CLUE_CUE_DIR", os.path.join(ROOT, "cue_extract", "results")))
+OUTDIR = _R(os.environ.get("CLUE_FIG_DIR", os.path.join(BASE, "figures", "per_image_mpl")))
 COLORS = ["#E53935", "#1E88E5", "#43A047", "#FB8C00", "#8E24AA", "#00ACC1"]
 COMBO_COLOR = "#54626F"
 

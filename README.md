@@ -37,10 +37,10 @@ export OPENAI_API_KEY=sk-...          # attacker model (GPT-4o); read only from 
 # cue_extract GPU stack (Grounding DINO + SAM 2.1 + RapidOCR + LaMa, needs CUDA)
 python -m venv cue_extract/.venv
 cue_extract/.venv/Scripts/pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
-cue_extract/.venv/Scripts/pip install transformers accelerate rapidocr onnxruntime \
-    simple-lama-inpainting scipy pillow matplotlib numpy openai pyyaml
+cue_extract/.venv/Scripts/pip install "transformers>=5.13" accelerate rapidocr onnxruntime \
+    simple-lama-inpainting scipy "pillow>=10.4" matplotlib numpy openai pyyaml
 ```
-Model weights (Grounding DINO ~700MB, SAM 2.1, PP-OCRv5, LaMa ~200MB) download to the HuggingFace cache on first run. Tested GPU: RTX 5080 16GB.
+`transformers>=5.13` ships SAM 3 support natively (`Sam3Model`). `pillow>=10.4` is required — older Pillow (9.x) renders digit glyphs as boxes, breaking the Set-of-Mark overlay. Model weights (SAM 3 ~840MB / Grounding DINO / SAM 2.1 / PP-OCRv5 / LaMa) download to the HuggingFace cache on first run; **SAM 3 is gated** — accept the license at <https://huggingface.co/facebook/sam3> and `huggingface-cli login` first. Tested GPU: RTX 5080 16GB (SAM 3 uses ~3.4 GB).
 
 ## Data
 
@@ -60,13 +60,17 @@ python scripts/build_subset.py --n 100    # fetch images from Flickr + reverse-g
 # 1) Build the gallery geometry cache (gallery labels → coords, for the mPL distance matrix)
 python -m clue_leak.prep_geo100
 
-# 2) Cue extraction (venv): VLM proposal → Grounding DINO → OCR → SAM masks → VLM risk audit
-cue_extract/.venv/Scripts/python -m cue_extract.run_extract --ids <id1,id2,...>
-#   output: cue_extract/results/<id>.json (each cue carries a mask_rle)
-#   QA overview: python -m cue_extract.contact_sheet → cue_extract/figures/contact_sheet.png
+# 2) Cue extraction (venv). RECOMMENDED: route-B + SAM 3 (see cue_extract/README).
+#    GPT-4o names the cues + reasoning → SAM 3 segments each by text → precise masks.
+#    Needs: accept the gated model at https://huggingface.co/facebook/sam3 + huggingface-cli login.
+cue_extract/.venv/Scripts/python -m cue_extract.run_extract_sam3 --ids <id1,id2,...>
+#   output: cue_extract/results_sam3/<id>.json (each cue carries a mask_rle)
+#   (legacy detector-based 5-stage: python -m cue_extract.run_extract → cue_extract/results/)
 
 # 3) Per-cue mPL ablation (main env): prior = image with subset S masked, posterior = full image
-python -m clue_leak.run_combo2 --ids <id1,id2,...>
+python -m clue_leak.run_combo2 --ids <id1,id2,...> \
+       --cue_dir cue_extract/results_sam3 --out_dir clue_leak/combo2_sam3_results \
+       --post_dir clue_leak/cache_post_hires   # separate posterior cache per resolution
 #   or batch to N images: python -m clue_leak.run_50 --target 50
 #   output: clue_leak/combo2_results/<id>.json
 
