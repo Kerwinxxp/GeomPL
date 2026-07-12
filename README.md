@@ -71,13 +71,13 @@ python -m clue_leak.run_combo2 --ids <id1,id2,...> \
        --cue_dir cue_extract/results_sam3 --out_dir clue_leak/combo2_sam3_results \
        --post_dir clue_leak/cache_post_hires   # separate posterior cache per resolution
 #   or batch to N images: python -m clue_leak.run_50 --target 50
-#   output: clue_leak/combo2_results/<id>.json
+#   output: clue_leak/combo2_sam3_results/<id>.json
 
 # 4) Figures
-python -m clue_leak.plot_one_mpl <id-prefix>   # single sample: image + masks | per-cue & combination mPL
+python -m clue_leak.plot_one_mpl cuba          # single sample (place name or image-id prefix): image + masks | per-cue & combination mPL
 python -m clue_leak.plot_clue_mpl              # across samples: sorted per-cue mPL
 ```
-Figures land in `clue_leak/figures/per_image_mpl/` (one per sample).
+Figures land in `clue_leak/figures/per_image_mpl_sam3/` (one per sample).
 
 ## Repository layout
 
@@ -91,8 +91,8 @@ clue_leak/          Per-cue mPL ablation
   run_combo2.py run_50.py       ablation runner / batch driver
   plot_one_mpl.py plot_clue_mpl.py plot_combo2.py   plotting
   prep_geo100.py                gallery geometry prep
-  cache_fullimage_posterior/    full-image posterior cache (optional; run_combo2 recomputes if absent)
-  combo2_results/               ablation results  ·  figures/  output figures
+  cache_post_hires/             full-image posterior cache (optional; run_combo2 recomputes if absent)
+  combo2_sam3_results/          ablation results  ·  figures/per_image_mpl_sam3/  output figures
 geobayes/           [archived] GeoBayes reproduction: core (Bayesian loop) / search / eval / mllm / analysis
 scripts/            [archived] reproduction batch jobs + data building (build_subset.py still used)
 data/               subset*.jsonl + geocoding caches (source images not committed)

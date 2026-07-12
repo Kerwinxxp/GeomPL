@@ -10,6 +10,7 @@ import glob
 import json
 import math
 import os
+import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,9 +30,9 @@ BASE = os.path.dirname(__file__)
 # 目录可用环境变量覆盖(便于对比不同提取管线,如 SAM3):
 #   CLUE_COMBO_DIR / CLUE_CUE_DIR / CLUE_FIG_DIR(相对 ROOT 或绝对)
 _R = lambda p: p if os.path.isabs(p) else os.path.join(ROOT, p)
-INDIR = _R(os.environ.get("CLUE_COMBO_DIR", os.path.join(BASE, "combo2_results")))
-CUEDIR = _R(os.environ.get("CLUE_CUE_DIR", os.path.join(ROOT, "cue_extract", "results")))
-OUTDIR = _R(os.environ.get("CLUE_FIG_DIR", os.path.join(BASE, "figures", "per_image_mpl")))
+INDIR = _R(os.environ.get("CLUE_COMBO_DIR", os.path.join(BASE, "combo2_sam3_results")))
+CUEDIR = _R(os.environ.get("CLUE_CUE_DIR", os.path.join(ROOT, "cue_extract", "results_sam3")))
+OUTDIR = _R(os.environ.get("CLUE_FIG_DIR", os.path.join(BASE, "figures", "per_image_mpl_sam3")))
 COLORS = ["#E53935", "#1E88E5", "#43A047", "#FB8C00", "#8E24AA", "#00ACC1"]
 COMBO_COLOR = "#54626F"
 
@@ -73,9 +74,25 @@ def mean_mpl(prior, post, rep, clusters, dist):
     return sum(vals) / len(vals) if vals else 0.0
 
 
+def _find_combo(arg):
+    """arg 可为 image_id 前缀(如 370717727)或地名(如 cuba/newyork)。返回 combo json 路径。"""
+    files = sorted(glob.glob(os.path.join(INDIR, "*.json")))
+    hit = [f for f in files if os.path.basename(f).startswith(arg)]        # 先按 id 前缀
+    if not hit:                                                            # 再按地名 slug
+        key = re.sub(r"[^a-z0-9]+", "", arg.lower())
+        hit = [f for f in files
+               if key and key in re.sub(r"[^a-z0-9]+", "",
+                                        json.load(open(f, encoding="utf-8"))["true_label"].lower())]
+    if not hit:
+        raise SystemExit(f"no combo result matches '{arg}' in {INDIR} "
+                         f"(try an image-id prefix or place name: "
+                         f"{[os.path.basename(f)[:12] for f in files]})")
+    return hit[0]
+
+
 def main():
-    pref = sys.argv[1] if len(sys.argv) > 1 else "181848051"
-    combo_f = glob.glob(os.path.join(INDIR, pref + "*.json"))[0]
+    arg = sys.argv[1] if len(sys.argv) > 1 else "181848051"
+    combo_f = _find_combo(arg)
     r = json.load(open(combo_f, encoding="utf-8"))
     iid = r["image_id"]
     cue_rec = json.load(open(os.path.join(CUEDIR, iid + ".json"), encoding="utf-8"))
@@ -163,7 +180,7 @@ def main():
 
     fig.tight_layout()
     os.makedirs(OUTDIR, exist_ok=True)
-    stem = slug(r["true_label"], pref) + "_mpl"
+    stem = slug(r["true_label"], iid.split("_")[0]) + "_mpl"
     out = os.path.join(OUTDIR, stem + ".png")
     fig.savefig(out, bbox_inches="tight")
     plt.close(fig)

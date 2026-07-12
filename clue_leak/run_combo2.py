@@ -1,7 +1,7 @@
 """逐线索 mPL 消融 v2:用 cue_extract 的干净标注 + **不规则 SAM 掩码**(而非方框)。
 
 先验 = 用纯灰按掩码涂掉子集 S 的线索本体(其余可见)→ gallery 打分;
-后验 = 完整原图信念(优先复用 cache_fullimage_posterior/,缺则现算,自洽);
+后验 = 完整原图信念(优先复用 cache_post_hires/,缺则现算,自洽);
 mPL(先验_S → 后验) = 子集 S 的泄露贡献。
 只对 maskable + 非退化 + 有 mask 的线索消融;排除 0 可遮线索的图(g=0 整幅地标图)。
 gallery = subset100 全部唯一 GT 标签。
@@ -29,9 +29,10 @@ from cue_extract.rle import rle_to_mask
 from run import build_client, load_config
 
 LABELS = os.path.join(ROOT, "data", "gt_labels_cache.json")
-CUEDIR = os.path.join(ROOT, "cue_extract", "results")
-POSTDIR = os.path.join(os.path.dirname(__file__), "cache_fullimage_posterior")  # 原图后验缓存(可选,缺则现算)
-OUTDIR = os.path.join(os.path.dirname(__file__), "combo2_results")
+# 默认走 route-B + SAM3 高清管线(可用 --cue_dir/--out_dir/--post_dir 覆盖)
+CUEDIR = os.path.join(ROOT, "cue_extract", "results_sam3")
+POSTDIR = os.path.join(os.path.dirname(__file__), "cache_post_hires")   # 原图后验缓存(可选,缺则现算)
+OUTDIR = os.path.join(os.path.dirname(__file__), "combo2_sam3_results")
 MAX_FULL = 6      # m<=6 枚举全部非空子集;更大只跑单条+全集(避免 2^m 爆炸)
 
 

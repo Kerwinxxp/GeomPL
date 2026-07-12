@@ -17,7 +17,7 @@ from geobayes.eval.metrics import haversine_km
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = os.path.dirname(__file__)
-INDIR = os.path.join(BASE, "combo2_results")
+INDIR = os.path.join(BASE, "combo2_sam3_results")
 OUTDIR = os.path.join(BASE, "figures")
 
 CAT_COLOR = {

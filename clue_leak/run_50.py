@@ -17,8 +17,8 @@ except Exception:
 
 from clue_leak.run_combo2 import maskable_cues, POSTDIR
 
-CUEDIR = os.path.join(ROOT, "cue_extract", "results")
-OUTDIR = os.path.join(os.path.dirname(__file__), "combo2_results")
+CUEDIR = os.path.join(ROOT, "cue_extract", "results_sam3")
+OUTDIR = os.path.join(os.path.dirname(__file__), "combo2_sam3_results")
 
 
 def eligible(max_m: int = 6):

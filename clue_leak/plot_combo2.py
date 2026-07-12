@@ -18,7 +18,7 @@ from geobayes.eval.metrics import haversine_km
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = os.path.dirname(__file__)
 FWD = os.path.join(ROOT, "data", "forward_geocode_cache.json")
-INDIR = os.path.join(BASE, "combo2_results")
+INDIR = os.path.join(BASE, "combo2_sam3_results")
 OUTDIR = os.path.join(BASE, "figures")
 BAR = "#2C6FB0"; BAR2 = "#E19A28"
 plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 9,

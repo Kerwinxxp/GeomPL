@@ -21,14 +21,14 @@ For each image we take the **mean** over all candidate pairs (primary, stable me
 |---|---|
 | `combo.py` | subset enumeration |
 | `masking.py` | solid masking: `mask_solid_from_masks` (irregular SAM masks) / `mask_solid_regions` (bbox) |
-| `run_combo2.py` | ablation runner: reads masks from `cue_extract/results`, scores each subset → `combo2_results/` |
+| `run_combo2.py` | ablation runner: reads masks from `cue_extract/results_sam3`, scores each subset → `combo2_sam3_results/` (dirs overridable via `--cue_dir/--out_dir/--post_dir`) |
 | `run_50.py` | batch driver: picks N images with maskable cues, runs ablation + figures |
 | `plot_one_mpl.py` | single-sample figure: image + masks \| per-cue & combination mPL |
 | `plot_clue_mpl.py` | across images: sorted per-cue mPL bar chart |
 | `plot_combo2.py` | multi-sample multi-panel + redundancy/synergy printout |
 | `prep_geo100.py` | reverse/forward geocoding, builds the gallery geometry cache |
 
-## Output JSON (`combo2_results/<id>.json`)
+## Output JSON (`combo2_sam3_results/<id>.json`)
 
 ```json
 {"image_id":"...", "true_label":"City, Country", "n_maskable": 4,
@@ -42,8 +42,8 @@ For each image we take the **mean** over all candidate pairs (primary, stable me
 
 ```bash
 python -m clue_leak.prep_geo100                       # one-time: geometry cache
-python -m clue_leak.run_combo2 --ids <id1,id2,...>    # ablation (posterior recomputed if not cached)
-python -m clue_leak.plot_one_mpl <id-prefix>          # single-sample figure
+python -m clue_leak.run_combo2 --ids <id1,id2,...>    # ablation (defaults to SAM3 cues; posterior recomputed if not cached)
+python -m clue_leak.plot_one_mpl cuba                 # single-sample figure (place name or image-id prefix)
 ```
 
 ## Reading the numbers
