@@ -11,7 +11,7 @@ The repo contains two independent lines of work:
 | **③ GeoBayes paper reproduction** (archived) | `geobayes/` + `scripts/` | frozen | Reproduction of GeoBayes (AAAI-26), a training-free Bayesian geolocation method; see [`REPRODUCTION_REPORT.md`](REPRODUCTION_REPORT.md) |
 
 > ### Current main line → [`belief_elicit/`](belief_elicit/README.md)
-> Write-up: **[`mPL_to_Shapley.pdf`](mPL_to_Shapley.pdf)** (English) · **[`mPL_to_Shapley_zh.pdf`](mPL_to_Shapley_zh.pdf)** (Chinese)
+> Write-up: **[`mPL_to_Shapley.pdf`](mPL_to_Shapley.pdf)**
 >
 > Key findings on 100 hi-res im2gps3k images (200 images have cue annotations):
 > - Masking effects are **non-additive**: of 239 cue pairs, 182 overlap (sub-additive) and 23 back each other up — so single-cue mPL double-counts shared leakage and is a biased per-cue attribution.

@@ -132,3 +132,6 @@ clue_leak/figures/leavein_vs_out.png
 # GeoCLIP transition-stage figures (superseded by GeoRanker)
 belief_elicit/figures/geoclip_mpl_*.png
 belief_elicit/figures/cue_stats_100.png
+
+# Chinese-language draft (local only, not shipped)
+mPL_to_Shapley_zh.pdf

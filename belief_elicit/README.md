@@ -20,8 +20,7 @@ non-additive, mPL is treated as a set function `v(S)` and attributed to individu
 cues with **Shapley values** (`Σφ_k = v(N)`), with a **Shapley Interaction Index**
 separating overlapping from mutually-backing cues.
 
-Full write-up: [`../mPL_to_Shapley.pdf`](../mPL_to_Shapley.pdf) (English) /
-[`../mPL_to_Shapley_zh.pdf`](../mPL_to_Shapley_zh.pdf) (Chinese).
+Full write-up: [`../mPL_to_Shapley.pdf`](../mPL_to_Shapley.pdf).
 
 ## 2. Current configuration (as of 2026-07-18)
 
