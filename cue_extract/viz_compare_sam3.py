@@ -31,7 +31,7 @@ def load_subsets():
     out = {}
     for f in sorted(glob.glob(os.path.join(ROOT, "data", "subset*.jsonl"))):
         for line in open(f, encoding="utf-8"):
-            it = json.loads(line); out.setdefault(it["image_id"], it)
+            it = json.loads(line); out[it["image_id"]] = it   # 覆盖:后加载(subset_sample 高清)优先
     return out
 
 

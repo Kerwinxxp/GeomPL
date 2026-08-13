@@ -99,7 +99,7 @@ def main():
     subset = {}                             # 合并所有 data/subset*.jsonl(样例集或全量)
     for f in sorted(glob.glob(os.path.join(ROOT, "data", "subset*.jsonl"))):
         for line in open(f, encoding="utf-8"):
-            it = json.loads(line); subset.setdefault(it["image_id"], it)
+            it = json.loads(line); subset[it["image_id"]] = it   # 覆盖:后加载(subset_sample 高清)优先
     p = subset[iid]["path"]
     p = p if os.path.isabs(p) else os.path.join(ROOT, p)
     img = Image.open(p).resize(tuple(cue_rec["image_size"])).convert("RGB")

@@ -6,8 +6,20 @@ The repo contains two independent lines of work:
 
 | Line | Directory | Status | Description |
 |---|---|---|---|
-| **① Per-cue mPL leakage study** (current focus) | `cue_extract/` + `clue_leak/` | active | Extract location cues → SAM masks → per-cue / combination ablation → quantify each cue's leakage with mPL |
-| **② GeoBayes paper reproduction** (archived) | `geobayes/` + `scripts/` | frozen | Reproduction of GeoBayes (AAAI-26), a training-free Bayesian geolocation method; see [`REPRODUCTION_REPORT.md`](REPRODUCTION_REPORT.md) |
+| **① Per-cue leakage: mPL + Shapley attribution** (current focus) | `cue_extract/` + `belief_elicit/` | active | GPT-4o cue naming → SAM 3 masks → subset ablation under a frozen adversary → mPL as a set function → Shapley attribution |
+| **② Earlier per-cue ablation** (superseded) | `clue_leak/` | archived | First-generation ablation with GPT-4o verbalized scores; kept for reference, its mPL values are superseded (see below) |
+| **③ GeoBayes paper reproduction** (archived) | `geobayes/` + `scripts/` | frozen | Reproduction of GeoBayes (AAAI-26), a training-free Bayesian geolocation method; see [`REPRODUCTION_REPORT.md`](REPRODUCTION_REPORT.md) |
+
+> ### Current main line → [`belief_elicit/`](belief_elicit/README.md)
+> Write-up: **[`mPL_to_Shapley.pdf`](mPL_to_Shapley.pdf)** (English) · **[`mPL_to_Shapley_zh.pdf`](mPL_to_Shapley_zh.pdf)** (Chinese)
+>
+> Key findings on 100 hi-res im2gps3k images (200 images have cue annotations):
+> - Masking effects are **non-additive**: of 239 cue pairs, 182 overlap (sub-additive) and 23 back each other up — so single-cue mPL double-counts shared leakage and is a biased per-cue attribution.
+> - **Shapley attribution** fixes this with an exact `Σφ_k = v(N)` on all 80 multi-cue images (full `2^m` lattice, m ≤ 5), roughly halving per-category medians and reordering the top categories.
+> - An **equal-area control** (95 images / 244 cues / 516 random placements) quantifies the masking-artifact floor: only 49 % of single-cue effects exceed their own control, while 70 % of `φ` values exceed the pure-artifact null.
+> - The belief meter is now **GeoRanker** (Qwen2-VL-7B + LoRA), running fully locally with **no API cost**; the geometry uses a 2 km alias dedup so genuinely nearby places stay distinguishable.
+
+> ⚠️ **Superseded results.** Figures and JSONs under `clue_leak/` come from the first-generation setup (GPT-4o verbalized scoring, 25 km cluster merge). That elicitation was later found to be **blind to masking** (0.1-quantized scores with a 0.05 floor), so those mPL numbers should not be used. Use `belief_elicit/` instead.
 
 > **Metric — mPL** (metric-normalized posterior leakage, Chen et al. 2026) = per candidate pair, `|Δln posterior-odds − Δln prior-odds| / geographic distance`. Here **prior = image with the cue masked out**, **posterior = full image**; larger mPL ⇒ the cue carries more location information.
 

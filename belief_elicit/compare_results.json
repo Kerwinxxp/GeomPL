@@ -1,0 +1,93 @@
+{
+ "image_id": "171046893_b97c4f0aa5_73_30571787@N00.jpg",
+ "true_label": "City of Westminster, United Kingdom",
+ "cues": [
+  "Victorian architecture with red brick and white stone",
+  "Traditional British pub sign",
+  "Red telephone box"
+ ],
+ "labels": [
+  "City of Westminster, United Kingdom",
+  "Greater London, United Kingdom",
+  "Argyll and Bute, United Kingdom",
+  "Budapest, Hungary",
+  "Inverclyde, United Kingdom",
+  "Paris, France",
+  "Rome, Italy",
+  "Scotland, United Kingdom",
+  "Versailles, France",
+  "Vienna, Austria",
+  "Alexandria, Egypt",
+  "Bardo, Poland",
+  "Biwer, Luxembourg",
+  "Grafenegg, Austria",
+  "Istanbul, Turkey",
+  "Italy",
+  "Mont Dore, France",
+  "Seraing, Belgium",
+  "Seville, Spain",
+  "Siena, Italy"
+ ],
+ "results": {
+  "logprob": {
+   "full": {
+    "p_true": 0.4885264714311492,
+    "logodds_vs_topdistractor": -1.73964163329689e-07,
+    "top_distractor": "Greater London, United Kingdom",
+    "concentration": 0.71694819811122,
+    "entropy_bits": 1.2233295348916098,
+    "raw": {
+     "City of Westminster, United Kingdom": 0.9999997690927953,
+     "Greater London, United Kingdom": 0.9999999434137637,
+     "Argyll and Bute, United Kingdom": 4.611276796375445e-05,
+     "Budapest, Hungary": 1.5446314383055607e-05,
+     "Inverclyde, United Kingdom": 6.605216531020474e-05,
+     "Paris, France": 3.2563135978776313e-07,
+     "Rome, Italy": 4.6911638017642294e-08,
+     "Scotland, United Kingdom": 0.010013571047867188,
+     "Versailles, France": 3.1428839499731173e-09,
+     "Vienna, Austria": 4.09291232957221e-06,
+     "Alexandria, Egypt": 3.274960183170464e-08,
+     "Bardo, Poland": 5.4845260911330566e-08,
+     "Biwer, Luxembourg": 2.0494177398362836e-08,
+     "Grafenegg, Austria": 7.235329700192723e-10,
+     "Istanbul, Turkey": 3.989718527815977e-07,
+     "Italy": 1.467735442685888e-07,
+     "Mont Dore, France": 4.965280304417082e-07,
+     "Seraing, Belgium": 1.1430735492166713e-07,
+     "Seville, Spain": 1.3574333972561746e-07,
+     "Siena, Italy": 2.981885188622922e-08
+    }
+   },
+   "masked": {
+    "p_true": 0.488760224288063,
+    "logodds_vs_topdistractor": -2.8158865674738833e-06,
+    "top_distractor": "Greater London, United Kingdom",
+    "concentration": 0.7168155740541061,
+    "entropy_bits": 1.2239027265301086,
+    "raw": {
+     "City of Westminster, United Kingdom": 0.9999953621269115,
+     "Greater London, United Kingdom": 0.9999981837774612,
+     "Argyll and Bute, United Kingdom": 0.0010322311409525547,
+     "Budapest, Hungary": 0.0005193047599922378,
+     "Inverclyde, United Kingdom": 0.0023967305650601537,
+     "Paris, France": 9.915273807199053e-05,
+     "Rome, Italy": 3.555984069667314e-06,
+     "Scotland, United Kingdom": 0.004609572907956526,
+     "Versailles, France": 4.2051320747162594e-08,
+     "Vienna, Austria": 0.0002034270609875745,
+     "Alexandria, Egypt": 1.078331559080855e-05,
+     "Bardo, Poland": 1.2289186566965663e-06,
+     "Biwer, Luxembourg": 1.9750540523740148e-07,
+     "Grafenegg, Austria": 4.035542869863084e-09,
+     "Istanbul, Turkey": 0.00023050667746147194,
+     "Italy": 1.553497314502234e-06,
+     "Mont Dore, France": 6.605216531020474e-05,
+     "Seraing, Belgium": 1.9947301075518807e-06,
+     "Seville, Spain": 4.029457861127483e-06,
+     "Siena, Italy": 6.893609324361272e-07
+    }
+   }
+  }
+ }
+}

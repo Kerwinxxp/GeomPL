@@ -101,3 +101,34 @@ cue_extract/figures_sam3/_marked/
 
 # 允许 SAM3 vs 旧管线对比图入库（cue_extract/figures/* 默认被忽略）
 !cue_extract/figures/compare_sam3_vs_old.png
+
+# ================= GeoRanker belief meter (2026-07) =================
+# GPU env (~5 GB), rebuild per belief_elicit/README.md
+belief_elicit/.venv_gr/
+
+# Third-party LoRA checkpoint (13.8 MB) — download from the GeoRanker repo
+belief_elicit/georanker_ckpt/*.safetensors
+
+# SAM3 per-image annotation figures (260 MB for 200 images) — keep a few samples
+cue_extract/figures_sam3/*
+!cue_extract/figures_sam3/cuesSAM3_181848051.png
+!cue_extract/figures_sam3/cuesSAM3_261517384.png
+!cue_extract/figures_sam3/cuesSAM3_311344213.png
+!cue_extract/figures_sam3/cuesSAM3_370717727.png
+!cue_extract/figures_sam3/cuesSAM3_847733166.png
+
+# Superseded 25 km-geometry mPL outputs (kept locally, not shipped)
+clue_leak/figures/net_mpl_sam3/
+
+# Third-party LoRA weights (download separately; see belief_elicit/README.md)
+belief_elicit/georanker_ckpt/adapter_model.safetensors
+
+# Superseded 25 km-geometry per-image mPL figures (regenerate with 2 km geometry)
+clue_leak/figures/per_image_mpl_sam3/
+clue_leak/figures/control_example_*.png
+clue_leak/figures/control_area_sam3.png
+clue_leak/figures/leavein_vs_out.png
+
+# GeoCLIP transition-stage figures (superseded by GeoRanker)
+belief_elicit/figures/geoclip_mpl_*.png
+belief_elicit/figures/cue_stats_100.png

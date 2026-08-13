@@ -1,0 +1,98 @@
+[
+ {
+  "image": "261517384_292417efcc_117_60558526@N00.jpg",
+  "place": "Okazaki",
+  "method": "verbalized",
+  "conc_full": 0.2307110715314229,
+  "p_true_full": 0.29998305084745763,
+  "p_true_masked": 0.20145454545454544,
+  "dlogodds": -0.00020369152469852658,
+  "tv": 0.18610939907550078,
+  "mpl": 0.02682290169073454,
+  "top_distractor": "Kyoto, Japan"
+ },
+ {
+  "image": "261517384_292417efcc_117_60558526@N00.jpg",
+  "place": "Okazaki",
+  "method": "mc_logprob",
+  "conc_full": 0.9211839072008086,
+  "p_true_full": 0.9366423259749174,
+  "p_true_masked": 0.2162385684463025,
+  "dlogodds": -3.9812275554748986,
+  "tv": 0.720403757528615,
+  "mpl": 0.7417131530317288,
+  "top_distractor": "Kyoto, Japan"
+ },
+ {
+  "image": "847733166_0573338bfb_1321_89904893@N00.jpg",
+  "place": "Venice",
+  "method": "verbalized",
+  "conc_full": 0.05587422633742534,
+  "p_true_full": 0.1388125,
+  "p_true_masked": 0.11860000000000001,
+  "dlogodds": -0.00035000136721458075,
+  "tv": 0.08534166666666666,
+  "mpl": 0.2804267861805807,
+  "top_distractor": "Rome, Italy"
+ },
+ {
+  "image": "847733166_0573338bfb_1321_89904893@N00.jpg",
+  "place": "Venice",
+  "method": "mc_logprob",
+  "conc_full": 0.9998649454901065,
+  "p_true_full": 0.9999674173477245,
+  "p_true_masked": 0.9999698345009459,
+  "dlogodds": 0.33971103419155746,
+  "tv": 9.225105168453038e-06,
+  "mpl": 1.7433468996347126,
+  "top_distractor": "Italy"
+ },
+ {
+  "image": "370717727_f9564e3587_150_13527886@N00.jpg",
+  "place": "Cuba",
+  "method": "verbalized",
+  "conc_full": 0.03702999767412596,
+  "p_true_full": 0.1706153846153846,
+  "p_true_masked": 0.16741509433962262,
+  "dlogodds": -0.00022146095319652837,
+  "tv": 0.017423802612481876,
+  "mpl": 0.008094712698777864,
+  "top_distractor": "Argyll and Bute, United Kingdom"
+ },
+ {
+  "image": "370717727_f9564e3587_150_13527886@N00.jpg",
+  "place": "Cuba",
+  "method": "mc_logprob",
+  "conc_full": 0.9999998873740032,
+  "p_true_full": 0.9999999838562071,
+  "p_true_masked": 0.9999751350644347,
+  "dlogodds": -7.361676201992038,
+  "tv": 2.4848791772477406e-05,
+  "mpl": 1.3559824581668447,
+  "top_distractor": "Alexandria, Egypt"
+ },
+ {
+  "image": "181848051_3f34be1b5d_68_70323761@N00.jpg",
+  "place": "New York",
+  "method": "verbalized",
+  "conc_full": 0.25032586430774173,
+  "p_true_full": 0.46649999999999997,
+  "p_true_masked": 0.2855161290322581,
+  "dlogodds": -1.1416031643529827,
+  "tv": 0.18098387096774185,
+  "mpl": 0.18640527491187603,
+  "top_distractor": "Chicago, United States"
+ },
+ {
+  "image": "181848051_3f34be1b5d_68_70323761@N00.jpg",
+  "place": "New York",
+  "method": "mc_logprob",
+  "conc_full": 0.9999999715471215,
+  "p_true_full": 0.999999996173449,
+  "p_true_masked": 0.9999999635641535,
+  "dlogodds": -1.7418355986214813,
+  "tv": 3.260929546260409e-08,
+  "mpl": 4.02479520697396,
+  "top_distractor": "Boulder County, United States"
+ }
+]

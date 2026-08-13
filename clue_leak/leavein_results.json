@@ -1,0 +1,119 @@
+[
+ {
+  "image": "181848051_3f34be1b5d_68_70323761@N00.jpg",
+  "place": "New York",
+  "cue": "Brooklyn Heights Promenade sign",
+  "area_pct": 10.9,
+  "mpl_out": 0.0652535425204019,
+  "mpl_in_vs_uniform": 0.07902152770029136,
+  "mpl_in_vs_full": 0.10916196032305304
+ },
+ {
+  "image": "181848051_3f34be1b5d_68_70323761@N00.jpg",
+  "place": "New York",
+  "cue": "Brooklyn Bridge",
+  "area_pct": 1.9,
+  "mpl_out": 0.06423985563725026,
+  "mpl_in_vs_uniform": 0.07902152770029136,
+  "mpl_in_vs_full": 0.10916196032305304
+ },
+ {
+  "image": "181848051_3f34be1b5d_68_70323761@N00.jpg",
+  "place": "New York",
+  "cue": "Manhattan skyline",
+  "area_pct": 20.7,
+  "mpl_out": 0.056982123477844655,
+  "mpl_in_vs_uniform": 0.06516917799013669,
+  "mpl_in_vs_full": 0.13649842725509767
+ },
+ {
+  "image": "261517384_292417efcc_117_60558526@N00.jpg",
+  "place": "Okazaki",
+  "cue": "Japanese text on festival banners",
+  "area_pct": 12.4,
+  "mpl_out": 0.0,
+  "mpl_in_vs_uniform": 0.0453457483018123,
+  "mpl_in_vs_full": 0.004483990308766112
+ },
+ {
+  "image": "261517384_292417efcc_117_60558526@N00.jpg",
+  "place": "Okazaki",
+  "cue": "Samurai armor on a person",
+  "area_pct": 5.4,
+  "mpl_out": 0.0,
+  "mpl_in_vs_uniform": 0.04530272833557733,
+  "mpl_in_vs_full": 0.004527010275001083
+ },
+ {
+  "image": "261517384_292417efcc_117_60558526@N00.jpg",
+  "place": "Okazaki",
+  "cue": "Cherry blossoms",
+  "area_pct": 25.2,
+  "mpl_out": 0.0,
+  "mpl_in_vs_uniform": 0.0453457483018123,
+  "mpl_in_vs_full": 0.004483990308766112
+ },
+ {
+  "image": "261517384_292417efcc_117_60558526@N00.jpg",
+  "place": "Okazaki",
+  "cue": "Japanese police uniforms",
+  "area_pct": 5.4,
+  "mpl_out": 0.0,
+  "mpl_in_vs_uniform": 0.03135672429135817,
+  "mpl_in_vs_full": 0.018806725259137916
+ },
+ {
+  "image": "311344213_4b003f4ab1_114_63163416@N00.jpg",
+  "place": "New Delhi",
+  "cue": "Qutub Minar",
+  "area_pct": 11.2,
+  "mpl_out": 0.010954346571010527,
+  "mpl_in_vs_uniform": 0.05296078987856387,
+  "mpl_in_vs_full": 0.010954346571010527
+ },
+ {
+  "image": "311344213_4b003f4ab1_114_63163416@N00.jpg",
+  "place": "New Delhi",
+  "cue": "Islamic arch ruins",
+  "area_pct": 4.4,
+  "mpl_out": 0.003800937292658653,
+  "mpl_in_vs_uniform": 0.05474635119016676,
+  "mpl_in_vs_full": 0.05399973448502414
+ },
+ {
+  "image": "370717727_f9564e3587_150_13527886@N00.jpg",
+  "place": "Cuba",
+  "cue": "Stone fortress walls",
+  "area_pct": 17.7,
+  "mpl_out": 0.12802994850374644,
+  "mpl_in_vs_uniform": 0.08353839656796751,
+  "mpl_in_vs_full": 0.05967634318705961
+ },
+ {
+  "image": "370717727_f9564e3587_150_13527886@N00.jpg",
+  "place": "Cuba",
+  "cue": "Lush green landscape",
+  "area_pct": 16.1,
+  "mpl_out": 0.037412817204657084,
+  "mpl_in_vs_uniform": 0.20902692977984952,
+  "mpl_in_vs_full": 0.19791064701920344
+ },
+ {
+  "image": "847733166_0573338bfb_1321_89904893@N00.jpg",
+  "place": "Venice",
+  "cue": "Latin inscription on building",
+  "area_pct": 2.0,
+  "mpl_out": 0.12841586309142072,
+  "mpl_in_vs_uniform": 0.1695243261632976,
+  "mpl_in_vs_full": 0.35615787701221907
+ },
+ {
+  "image": "847733166_0573338bfb_1321_89904893@N00.jpg",
+  "place": "Venice",
+  "cue": "Statues on building facade",
+  "area_pct": 2.0,
+  "mpl_out": 0.10057987335434596,
+  "mpl_in_vs_uniform": 0.17815689668073234,
+  "mpl_in_vs_full": 0.18805992511231215
+ }
+]

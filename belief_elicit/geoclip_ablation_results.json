@@ -1,0 +1,797 @@
+[
+ {
+  "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+  "place": "Okazaki",
+  "true_label": "Okazaki, Japan",
+  "n_maskable": 4,
+  "cue_names": [
+   "Japanese text on festival banners",
+   "Samurai armor on a person",
+   "Cherry blossoms",
+   "Japanese police uniforms"
+  ],
+  "posterior": {
+   "Alexandria, Egypt": 3.016273240064038e-07,
+   "Anaheim, United States": 1.496164941272582e-06,
+   "Anniviers, Switzerland": 6.883490666353964e-09,
+   "Area A (Kicking Horse/Kinbasket Lake), Canada": 6.6746479454593555e-09,
+   "Argyll and Bute, United Kingdom": 5.177481110507642e-09,
+   "Ashland, United States": 5.23160181842286e-09,
+   "Bangkok, Thailand": 7.697221008129418e-05,
+   "Bardo, Poland": 7.26070709333726e-07,
+   "Bermuda": 9.84339791898492e-08,
+   "Biwer, Luxembourg": 7.475479719687428e-07,
+   "Boulder County, United States": 4.016393262418205e-08,
+   "Bristol, United States": 2.1354880530566334e-08,
+   "Budapest, Hungary": 3.5953948099631816e-05,
+   "Buenos Aires, Argentina": 4.585275746649131e-05,
+   "Cahuita, Costa Rica": 7.398512469336538e-09,
+   "Cambridge, United States": 0.00013685254089068621,
+   "Cederberg Local Municipality, South Africa": 4.468934378110134e-08,
+   "Chaoyang District, China": 1.3569633665611036e-05,
+   "Chicago, United States": 2.368927925999742e-05,
+   "City of Westminster, United Kingdom": 8.29299315228127e-05,
+   "Colma, United States": 9.752152254804969e-05,
+   "Colorado, Costa Rica": 2.7981405636978707e-08,
+   "Cuba": 3.507563128835045e-10,
+   "Denizli, Turkey": 3.171990670125524e-08,
+   "Distrito de Cusco, Peru": 7.894957525422797e-05,
+   "East Granby, United States": 5.021997822041158e-07,
+   "Entremont, Switzerland": 9.695841463042143e-09,
+   "George, South Africa": 7.12385528345294e-08,
+   "Gloucester, United States": 1.4947786439734045e-06,
+   "Grafenegg, Austria": 1.0855649179575266e-06,
+   "Greater London, United Kingdom": 0.0007204545545391738,
+   "Hof HaCarmel Regional Council, Israel": 1.9139955043101509e-07,
+   "Inverclyde, United Kingdom": 1.1335398397704921e-07,
+   "Istanbul, Turkey": 8.508492464898154e-05,
+   "Italy": 8.168459686430651e-08,
+   "Jaipur Municipal Corporation, India": 5.301126293488778e-07,
+   "Jefferson County, United States": 9.216276630752418e-09,
+   "Kyoto, Japan": 0.736680269241333,
+   "Leh, India": 9.345342988353877e-08,
+   "Los Altos, United States": 5.109963967697695e-05,
+   "Marmaris, Turkey": 2.763702013908187e-07,
+   "Mexico": 5.227664587437175e-06,
+   "Miami-Dade County, United States": 1.0875679024024976e-08,
+   "Minneapolis, United States": 1.7204388313984964e-06,
+   "Mont Dore, France": 2.032366666071539e-07,
+   "Municipio de Tilcara, Argentina": 6.450875957852986e-07,
+   "New Delhi, India": 1.104550847230712e-05,
+   "New York, United States": 1.8956392523250543e-05,
+   "Newport News, United States": 3.560568075045012e-06,
+   "Okazaki, Japan": 0.26096656918525696,
+   "Paris, France": 4.672890281653963e-05,
+   "Petra Sub-District, Jordan": 1.7881622625282034e-05,
+   "Rome, Italy": 0.00011480152170406654,
+   "Saalbach-Hinterglemm, Austria": 2.175671909299126e-08,
+   "San Jose, United States": 6.0184600442880765e-05,
+   "Scotland, United Kingdom": 2.490730999227253e-08,
+   "Seraing, Belgium": 2.3411980691889767e-06,
+   "Seville, Spain": 3.1121242500375956e-05,
+   "Siena, Italy": 4.340263970448177e-08,
+   "Singapore, Singapore": 7.251902843563585e-06,
+   "Slovenia": 7.937308623695571e-07,
+   "Spa, Belgium": 5.14244902660721e-07,
+   "Subotica, Serbia": 3.709782686200924e-05,
+   "Sussex County, United States": 6.894590569572756e-06,
+   "Tinum, Mexico": 6.929653409315506e-06,
+   "Toronto, Canada": 6.942442269064486e-05,
+   "Town of Hyde Park, United States": 1.8478554011380766e-06,
+   "Vallejo, United States": 5.368314759834902e-06,
+   "Venice, Italy": 1.1800574739595504e-08,
+   "Vernon, United States": 1.403128990773439e-08,
+   "Versailles, France": 0.00043143457151018083,
+   "Vienna, Austria": 8.519839866494294e-06,
+   "Villa de Leyva, Colombia": 6.889943193755244e-08,
+   "Vladivostok, Russia": 5.044353656558087e-06,
+   "Waukesha, United States": 1.2680753513905074e-07,
+   "Wrocław, Poland": 2.8477086289058207e-07,
+   "Çavuşin Köyü, Turkey": 3.226973532832744e-08
+  },
+  "post_p_true": 0.26096656918525696,
+  "post_argmax": "Kyoto, Japan",
+  "per_cue_cov": [
+   0.12432074932074932,
+   0.05429792036934894,
+   0.25183474290617147,
+   0.05382806275663418
+  ],
+  "combos": [
+   {
+    "subset": [
+     0
+    ],
+    "mpl_raw": 0.314315900904464,
+    "mpl": 1.225742865219503,
+    "cov": 0.12432074932074932,
+    "p_true": 0.1304817944765091
+   },
+   {
+    "subset": [
+     1
+    ],
+    "mpl_raw": 0.5022937929636638,
+    "mpl": 9.92695772698528,
+    "cov": 0.05429792036934894,
+    "p_true": 0.09020773321390152
+   },
+   {
+    "subset": [
+     2
+    ],
+    "mpl_raw": 0.4936802076132328,
+    "mpl": 0.2804692245626819,
+    "cov": 0.25183474290617147,
+    "p_true": 0.297899067401886
+   },
+   {
+    "subset": [
+     3
+    ],
+    "mpl_raw": 0.2145765179730472,
+    "mpl": 1.423780406610691,
+    "cov": 0.05382806275663418,
+    "p_true": 0.22735367715358734
+   },
+   {
+    "subset": [
+     0,
+     1
+    ],
+    "mpl_raw": 0.563712950473077,
+    "mpl": 2.430401002948069,
+    "cov": 0.17861866969009826,
+    "p_true": 0.055423803627491
+   },
+   {
+    "subset": [
+     0,
+     2
+    ],
+    "mpl_raw": 0.6039871133182815,
+    "mpl": 1.593278681930629,
+    "cov": 0.3761554922269208,
+    "p_true": 0.0648353323340416
+   },
+   {
+    "subset": [
+     0,
+     3
+    ],
+    "mpl_raw": 0.4461375694414329,
+    "mpl": 1.6423876927963164,
+    "cov": 0.1781488120773835,
+    "p_true": 0.11627364158630371
+   },
+   {
+    "subset": [
+     1,
+     2
+    ],
+    "mpl_raw": 0.7278164413439265,
+    "mpl": 1.293343811672746,
+    "cov": 0.3061326632755204,
+    "p_true": 0.08766401559114456
+   },
+   {
+    "subset": [
+     1,
+     3
+    ],
+    "mpl_raw": 0.4957556918427211,
+    "mpl": 9.397363408467987,
+    "cov": 0.10812598312598312,
+    "p_true": 0.09593677520751953
+   },
+   {
+    "subset": [
+     2,
+     3
+    ],
+    "mpl_raw": 0.552231393414695,
+    "mpl": 0.7516131957308712,
+    "cov": 0.3056628056628057,
+    "p_true": 0.1440449208021164
+   },
+   {
+    "subset": [
+     0,
+     1,
+     2
+    ],
+    "mpl_raw": 0.757603920907578,
+    "mpl": 0.859180661283317,
+    "cov": 0.43045341259626974,
+    "p_true": 0.05574467033147812
+   },
+   {
+    "subset": [
+     0,
+     1,
+     3
+    ],
+    "mpl_raw": 0.6157614339302119,
+    "mpl": 4.614082332726366,
+    "cov": 0.23244673244673245,
+    "p_true": 0.05773761123418808
+   },
+   {
+    "subset": [
+     0,
+     2,
+     3
+    ],
+    "mpl_raw": 0.6889080302860775,
+    "mpl": 0.8385011854338373,
+    "cov": 0.429983554983555,
+    "p_true": 0.03752679377794266
+   },
+   {
+    "subset": [
+     1,
+     2,
+     3
+    ],
+    "mpl_raw": 0.8406889594616506,
+    "mpl": 1.8864744436644465,
+    "cov": 0.3599607260321546,
+    "p_true": 0.048335280269384384
+   },
+   {
+    "subset": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "mpl_raw": 0.9202388476568676,
+    "mpl": 0.49240174272460235,
+    "cov": 0.48428147535290395,
+    "p_true": 0.02817011997103691
+   }
+  ]
+ },
+ {
+  "image_id": "847733166_0573338bfb_1321_89904893@N00.jpg",
+  "place": "Venice",
+  "true_label": "Venice, Italy",
+  "n_maskable": 2,
+  "cue_names": [
+   "Latin inscription on building",
+   "Statues on building facade"
+  ],
+  "posterior": {
+   "Alexandria, Egypt": 0.0018294627079740167,
+   "Anaheim, United States": 0.0001397267187712714,
+   "Anniviers, Switzerland": 3.749373433947767e-07,
+   "Area A (Kicking Horse/Kinbasket Lake), Canada": 1.2365624115773244e-06,
+   "Argyll and Bute, United Kingdom": 7.672961714888515e-07,
+   "Ashland, United States": 1.2700469653736945e-07,
+   "Bangkok, Thailand": 0.012511812150478363,
+   "Bardo, Poland": 9.016982403409202e-06,
+   "Bermuda": 2.3214344764710404e-05,
+   "Biwer, Luxembourg": 5.195800412138851e-08,
+   "Boulder County, United States": 4.889906257687926e-10,
+   "Bristol, United States": 5.52763424366276e-07,
+   "Budapest, Hungary": 0.025965964421629906,
+   "Buenos Aires, Argentina": 0.1211475133895874,
+   "Cahuita, Costa Rica": 1.1087762459283113e-06,
+   "Cambridge, United States": 0.00017270415264647454,
+   "Cederberg Local Municipality, South Africa": 5.469217256859338e-08,
+   "Chaoyang District, China": 1.3310562280821614e-05,
+   "Chicago, United States": 0.00020774225413333625,
+   "City of Westminster, United Kingdom": 0.007775887381285429,
+   "Colma, United States": 5.590342425421113e-06,
+   "Colorado, Costa Rica": 0.00024486344773322344,
+   "Cuba": 2.089878762490116e-06,
+   "Denizli, Turkey": 2.7500741452968214e-06,
+   "Distrito de Cusco, Peru": 9.317689091403736e-07,
+   "East Granby, United States": 1.2056650788849765e-08,
+   "Entremont, Switzerland": 9.879498747977777e-07,
+   "George, South Africa": 1.4617475017075776e-06,
+   "Gloucester, United States": 1.3908914297644515e-05,
+   "Grafenegg, Austria": 3.161760469083674e-05,
+   "Greater London, United Kingdom": 0.18035422265529633,
+   "Hof HaCarmel Regional Council, Israel": 5.522891797227203e-07,
+   "Inverclyde, United Kingdom": 1.589910141319706e-07,
+   "Istanbul, Turkey": 0.009019499644637108,
+   "Italy": 0.00018053100211545825,
+   "Jaipur Municipal Corporation, India": 3.144883885397576e-05,
+   "Jefferson County, United States": 2.0834489689036673e-08,
+   "Kyoto, Japan": 0.0001509988505858928,
+   "Leh, India": 3.9723603549646214e-05,
+   "Los Altos, United States": 6.480121328422683e-07,
+   "Marmaris, Turkey": 5.038755261921324e-05,
+   "Mexico": 0.0003709997108671814,
+   "Miami-Dade County, United States": 6.791547093598638e-06,
+   "Minneapolis, United States": 5.752622769250593e-07,
+   "Mont Dore, France": 3.007890114758993e-08,
+   "Municipio de Tilcara, Argentina": 3.21115912811365e-05,
+   "New Delhi, India": 0.00015854582306928933,
+   "New York, United States": 0.007120620459318161,
+   "Newport News, United States": 6.0139195738884155e-06,
+   "Okazaki, Japan": 4.435183291207068e-05,
+   "Paris, France": 0.0015229074051603675,
+   "Petra Sub-District, Jordan": 8.994883501145523e-06,
+   "Rome, Italy": 0.31204286217689514,
+   "Saalbach-Hinterglemm, Austria": 1.1289657777524553e-05,
+   "San Jose, United States": 0.00040646488196216524,
+   "Scotland, United Kingdom": 4.02894961837319e-08,
+   "Seraing, Belgium": 0.00028641949757002294,
+   "Seville, Spain": 0.00370538467541337,
+   "Siena, Italy": 0.0002261306217405945,
+   "Singapore, Singapore": 0.0028112756554037333,
+   "Slovenia": 2.067487184831407e-05,
+   "Spa, Belgium": 4.561424702842487e-06,
+   "Subotica, Serbia": 0.02916138619184494,
+   "Sussex County, United States": 9.097519978240598e-06,
+   "Tinum, Mexico": 0.00022334697132464498,
+   "Toronto, Canada": 0.000701086362823844,
+   "Town of Hyde Park, United States": 9.430203499505296e-05,
+   "Vallejo, United States": 2.7244230295764282e-05,
+   "Venice, Italy": 0.10315805673599243,
+   "Vernon, United States": 1.3162679124434362e-07,
+   "Versailles, France": 0.012751031666994095,
+   "Vienna, Austria": 0.16434364020824432,
+   "Villa de Leyva, Colombia": 2.3235372736962745e-06,
+   "Vladivostok, Russia": 0.0001252791698789224,
+   "Waukesha, United States": 1.5753575155486033e-07,
+   "Wrocław, Poland": 0.0006826873286627233,
+   "Çavuşin Köyü, Turkey": 2.0600411687610176e-07
+  },
+  "post_p_true": 0.10315805673599243,
+  "post_argmax": "Rome, Italy",
+  "per_cue_cov": [
+   0.019533404578047434,
+   0.02014530474351903
+  ],
+  "combos": [
+   {
+    "subset": [
+     0
+    ],
+    "mpl_raw": 0.33557077621406456,
+    "mpl": 0.48083104385556635,
+    "cov": 0.019533404578047434,
+    "p_true": 0.02154707722365856
+   },
+   {
+    "subset": [
+     1
+    ],
+    "mpl_raw": 0.4196606864477474,
+    "mpl": 0.3981768992476645,
+    "cov": 0.02014530474351903,
+    "p_true": 0.10876525938510895
+   },
+   {
+    "subset": [
+     0,
+     1
+    ],
+    "mpl_raw": 0.48676140710738547,
+    "mpl": 0.6417513222265102,
+    "cov": 0.03967870932156647,
+    "p_true": 0.05317666381597519
+   }
+  ]
+ },
+ {
+  "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+  "place": "Cuba",
+  "true_label": "Cuba",
+  "n_maskable": 2,
+  "cue_names": [
+   "Stone fortress walls",
+   "Lush green landscape"
+  ],
+  "posterior": {
+   "Alexandria, Egypt": 6.4741543610580266e-06,
+   "Anaheim, United States": 9.446711374039296e-06,
+   "Anniviers, Switzerland": 5.40310975338798e-06,
+   "Area A (Kicking Horse/Kinbasket Lake), Canada": 3.6462625985222985e-07,
+   "Argyll and Bute, United Kingdom": 2.8402948373695835e-05,
+   "Ashland, United States": 4.457008628833137e-07,
+   "Bangkok, Thailand": 1.6694929172444972e-06,
+   "Bardo, Poland": 0.022788232192397118,
+   "Bermuda": 0.009965633973479271,
+   "Biwer, Luxembourg": 0.09737598896026611,
+   "Boulder County, United States": 0.0014170283684507012,
+   "Bristol, United States": 7.097480647644261e-06,
+   "Budapest, Hungary": 0.008318264968693256,
+   "Buenos Aires, Argentina": 4.2852439037233125e-06,
+   "Cahuita, Costa Rica": 3.5833518268191256e-06,
+   "Cambridge, United States": 8.911777058528969e-07,
+   "Cederberg Local Municipality, South Africa": 0.00040679951780475676,
+   "Chaoyang District, China": 8.807621270534582e-06,
+   "Chicago, United States": 1.0455967469624738e-07,
+   "City of Westminster, United Kingdom": 1.5264417925209273e-06,
+   "Colma, United States": 0.0001629893231438473,
+   "Colorado, Costa Rica": 0.00014409117284230888,
+   "Cuba": 0.0019215408246964216,
+   "Denizli, Turkey": 0.0692656859755516,
+   "Distrito de Cusco, Peru": 0.0008237666916102171,
+   "East Granby, United States": 3.805064261541702e-05,
+   "Entremont, Switzerland": 2.665317992978089e-07,
+   "George, South Africa": 0.1446152776479721,
+   "Gloucester, United States": 0.00015847149188630283,
+   "Grafenegg, Austria": 0.20233038067817688,
+   "Greater London, United Kingdom": 3.2220975754171377e-06,
+   "Hof HaCarmel Regional Council, Israel": 0.001935252919793129,
+   "Inverclyde, United Kingdom": 1.7153583030449226e-05,
+   "Istanbul, Turkey": 0.00022512604482471943,
+   "Italy": 0.06712502986192703,
+   "Jaipur Municipal Corporation, India": 0.004547495860606432,
+   "Jefferson County, United States": 1.5460007489309646e-05,
+   "Kyoto, Japan": 1.4703109627589583e-05,
+   "Leh, India": 0.00010338449646951631,
+   "Los Altos, United States": 9.504128684056923e-06,
+   "Marmaris, Turkey": 0.0022430652752518654,
+   "Mexico": 0.0004694836097769439,
+   "Miami-Dade County, United States": 0.00011461718531791121,
+   "Minneapolis, United States": 2.598144135390612e-07,
+   "Mont Dore, France": 0.015354430302977562,
+   "Municipio de Tilcara, Argentina": 0.04443392530083656,
+   "New Delhi, India": 1.3590361959359143e-05,
+   "New York, United States": 1.5427016478497535e-05,
+   "Newport News, United States": 0.00013671744090970606,
+   "Okazaki, Japan": 0.00012997412704862654,
+   "Paris, France": 1.9998831248813076e-06,
+   "Petra Sub-District, Jordan": 9.902060810418334e-06,
+   "Rome, Italy": 0.012572950683534145,
+   "Saalbach-Hinterglemm, Austria": 6.351773663482163e-06,
+   "San Jose, United States": 3.5603995911515085e-06,
+   "Scotland, United Kingdom": 0.00022045601508580148,
+   "Seraing, Belgium": 0.00011162470036651939,
+   "Seville, Spain": 0.0003491716634016484,
+   "Siena, Italy": 0.009692215360701084,
+   "Singapore, Singapore": 3.2662719604559243e-06,
+   "Slovenia": 0.06908538192510605,
+   "Spa, Belgium": 0.00010529400606174022,
+   "Subotica, Serbia": 0.02936597727239132,
+   "Sussex County, United States": 0.00012455260730348527,
+   "Tinum, Mexico": 0.007024821359664202,
+   "Toronto, Canada": 5.691854880751634e-07,
+   "Town of Hyde Park, United States": 0.0005421340465545654,
+   "Vallejo, United States": 0.00042391722672618926,
+   "Venice, Italy": 1.3963836863695178e-05,
+   "Vernon, United States": 0.0001561492681503296,
+   "Versailles, France": 0.0002554820093791932,
+   "Vienna, Austria": 0.0001904469245346263,
+   "Villa de Leyva, Colombia": 0.012224785052239895,
+   "Vladivostok, Russia": 0.15828777849674225,
+   "Waukesha, United States": 8.152152020102221e-08,
+   "Wrocław, Poland": 9.303620754508302e-05,
+   "Çavuşin Köyü, Turkey": 0.0024153341073542833
+  },
+  "post_p_true": 0.0019215408246964216,
+  "post_argmax": "Grafenegg, Austria",
+  "per_cue_cov": [
+   0.17715164143735573,
+   0.16063384813384812
+  ],
+  "combos": [
+   {
+    "subset": [
+     0
+    ],
+    "mpl_raw": 0.7814231383396416,
+    "mpl": 1.1667281769676334,
+    "cov": 0.17715164143735573,
+    "p_true": 0.00037966633681207895
+   },
+   {
+    "subset": [
+     1
+    ],
+    "mpl_raw": 1.1642885012334427,
+    "mpl": 0.9578786345580372,
+    "cov": 0.16063384813384812,
+    "p_true": 0.05981200188398361
+   },
+   {
+    "subset": [
+     0,
+     1
+    ],
+    "mpl_raw": 1.5810486447028602,
+    "mpl": 1.0559859396886533,
+    "cov": 0.33778548957120386,
+    "p_true": 0.008640763349831104
+   }
+  ]
+ },
+ {
+  "image_id": "181848051_3f34be1b5d_68_70323761@N00.jpg",
+  "place": "New York",
+  "true_label": "New York, United States",
+  "n_maskable": 3,
+  "cue_names": [
+   "Brooklyn Heights Promenade sign",
+   "Brooklyn Bridge",
+   "Manhattan skyline"
+  ],
+  "posterior": {
+   "Alexandria, Egypt": 1.55414365821116e-08,
+   "Anaheim, United States": 1.747981059452286e-06,
+   "Anniviers, Switzerland": 6.906739180578825e-09,
+   "Area A (Kicking Horse/Kinbasket Lake), Canada": 5.629605226431522e-09,
+   "Argyll and Bute, United Kingdom": 1.5509294826188125e-06,
+   "Ashland, United States": 2.150955680235711e-08,
+   "Bangkok, Thailand": 1.3142153875378426e-05,
+   "Bardo, Poland": 5.856354050592927e-07,
+   "Bermuda": 2.495494982213131e-06,
+   "Biwer, Luxembourg": 2.2349704522639513e-06,
+   "Boulder County, United States": 2.2087773832168978e-09,
+   "Bristol, United States": 5.3895341807219665e-06,
+   "Budapest, Hungary": 8.796176553005353e-05,
+   "Buenos Aires, Argentina": 1.3768984899797942e-05,
+   "Cahuita, Costa Rica": 3.5933187536585365e-09,
+   "Cambridge, United States": 5.7316745369462296e-05,
+   "Cederberg Local Municipality, South Africa": 9.451766658230554e-08,
+   "Chaoyang District, China": 6.289191674113681e-07,
+   "Chicago, United States": 1.835193506849464e-05,
+   "City of Westminster, United Kingdom": 3.1408587801706744e-06,
+   "Colma, United States": 1.408425418958359e-06,
+   "Colorado, Costa Rica": 3.058303832403908e-07,
+   "Cuba": 6.243260486371582e-07,
+   "Denizli, Turkey": 6.01254015464292e-08,
+   "Distrito de Cusco, Peru": 2.7824167414536305e-09,
+   "East Granby, United States": 3.476884913311551e-08,
+   "Entremont, Switzerland": 9.379759191574522e-10,
+   "George, South Africa": 6.6483416958362795e-06,
+   "Gloucester, United States": 5.103647708892822e-06,
+   "Grafenegg, Austria": 1.2683984778050217e-06,
+   "Greater London, United Kingdom": 3.5508712699083844e-06,
+   "Hof HaCarmel Regional Council, Israel": 6.240578898086824e-08,
+   "Inverclyde, United Kingdom": 6.665850833087461e-06,
+   "Istanbul, Turkey": 1.0511377695365809e-05,
+   "Italy": 1.6556772619580329e-09,
+   "Jaipur Municipal Corporation, India": 4.536947244559997e-07,
+   "Jefferson County, United States": 2.6925859856419265e-05,
+   "Kyoto, Japan": 2.6574173261906253e-07,
+   "Leh, India": 8.334932886100432e-07,
+   "Los Altos, United States": 1.6059117058375705e-07,
+   "Marmaris, Turkey": 1.0911152230619336e-06,
+   "Mexico": 3.698600608004199e-07,
+   "Miami-Dade County, United States": 8.997758413897827e-07,
+   "Minneapolis, United States": 7.105539680196671e-06,
+   "Mont Dore, France": 1.2336235499788017e-07,
+   "Municipio de Tilcara, Argentina": 4.6653315166622633e-07,
+   "New Delhi, India": 2.361435633702058e-07,
+   "New York, United States": 0.9982233643531799,
+   "Newport News, United States": 0.00013348202628549188,
+   "Okazaki, Japan": 2.51941264650668e-06,
+   "Paris, France": 1.264564843950211e-06,
+   "Petra Sub-District, Jordan": 1.3513457020053465e-08,
+   "Rome, Italy": 3.070452692099934e-07,
+   "Saalbach-Hinterglemm, Austria": 4.5133694004384495e-10,
+   "San Jose, United States": 5.850135949003743e-07,
+   "Scotland, United Kingdom": 8.060182210556377e-08,
+   "Seraing, Belgium": 1.305593286815565e-05,
+   "Seville, Spain": 5.548054673454317e-07,
+   "Siena, Italy": 2.6357376725627546e-08,
+   "Singapore, Singapore": 9.593273944119574e-07,
+   "Slovenia": 4.293789857001684e-08,
+   "Spa, Belgium": 9.898845299005643e-09,
+   "Subotica, Serbia": 2.9193091904744506e-05,
+   "Sussex County, United States": 2.1415792161860736e-06,
+   "Tinum, Mexico": 6.280686637438748e-09,
+   "Toronto, Canada": 9.717940884002019e-06,
+   "Town of Hyde Park, United States": 0.0005430732853710651,
+   "Vallejo, United States": 7.04505291651003e-05,
+   "Venice, Italy": 5.114122814120492e-06,
+   "Vernon, United States": 6.576323698936903e-07,
+   "Versailles, France": 3.8226903598115314e-07,
+   "Vienna, Austria": 7.845443178666756e-06,
+   "Villa de Leyva, Colombia": 8.422503805505244e-10,
+   "Vladivostok, Russia": 0.000664492545183748,
+   "Waukesha, United States": 1.2042171704251814e-09,
+   "Wrocław, Poland": 6.961915460124146e-06,
+   "Çavuşin Köyü, Turkey": 2.9016513636292984e-08
+  },
+  "post_p_true": 0.9982233643531799,
+  "post_argmax": "New York, United States",
+  "per_cue_cov": [
+   0.10948991082919654,
+   0.019126907519764664,
+   0.20699893132928848
+  ],
+  "combos": [
+   {
+    "subset": [
+     0
+    ],
+    "mpl_raw": 0.9149910112270128,
+    "mpl": 0.0,
+    "cov": 0.10948991082919654,
+    "p_true": 0.9981977343559265
+   },
+   {
+    "subset": [
+     1
+    ],
+    "mpl_raw": 0.2515412894094405,
+    "mpl": 0.03130026983260013,
+    "cov": 0.019126907519764664,
+    "p_true": 0.9964455962181091
+   },
+   {
+    "subset": [
+     2
+    ],
+    "mpl_raw": 0.254747062252447,
+    "mpl": 0.0,
+    "cov": 0.20699893132928848,
+    "p_true": 0.997022807598114
+   },
+   {
+    "subset": [
+     0,
+     1
+    ],
+    "mpl_raw": 0.965748925855232,
+    "mpl": 0.05968663217758768,
+    "cov": 0.12861681834896121,
+    "p_true": 0.9967074394226074
+   },
+   {
+    "subset": [
+     0,
+     2
+    ],
+    "mpl_raw": 0.7885745585558267,
+    "mpl": 0.08400075828494025,
+    "cov": 0.316488842158485,
+    "p_true": 0.9944489002227783
+   },
+   {
+    "subset": [
+     1,
+     2
+    ],
+    "mpl_raw": 0.2508524103997403,
+    "mpl": 0.0,
+    "cov": 0.22570928709321567,
+    "p_true": 0.9971465468406677
+   },
+   {
+    "subset": [
+     0,
+     1,
+     2
+    ],
+    "mpl_raw": 0.7913896948213801,
+    "mpl": 0.0,
+    "cov": 0.3351991979224122,
+    "p_true": 0.9963854551315308
+   }
+  ]
+ },
+ {
+  "image_id": "311344213_4b003f4ab1_114_63163416@N00.jpg",
+  "place": "New Delhi",
+  "true_label": "New Delhi, India",
+  "n_maskable": 2,
+  "cue_names": [
+   "Qutub Minar",
+   "Islamic arch ruins"
+  ],
+  "posterior": {
+   "Alexandria, Egypt": 1.6245978713413933e-06,
+   "Anaheim, United States": 1.6361267896058962e-08,
+   "Anniviers, Switzerland": 3.1684448398294762e-09,
+   "Area A (Kicking Horse/Kinbasket Lake), Canada": 1.34814437391384e-10,
+   "Argyll and Bute, United Kingdom": 2.8280937591773636e-09,
+   "Ashland, United States": 8.672444429258519e-10,
+   "Bangkok, Thailand": 4.1314073314424604e-05,
+   "Bardo, Poland": 1.3951011901269794e-08,
+   "Bermuda": 6.19354345587908e-10,
+   "Biwer, Luxembourg": 4.986926427363869e-09,
+   "Boulder County, United States": 6.442527622496641e-10,
+   "Bristol, United States": 5.910544498277659e-09,
+   "Budapest, Hungary": 1.863524659029281e-07,
+   "Buenos Aires, Argentina": 3.3481526315881638e-06,
+   "Cahuita, Costa Rica": 1.8107429999858482e-09,
+   "Cambridge, United States": 2.433528152323561e-07,
+   "Cederberg Local Municipality, South Africa": 2.0927217292410205e-08,
+   "Chaoyang District, China": 4.530992100626463e-06,
+   "Chicago, United States": 7.581397767353337e-07,
+   "City of Westminster, United Kingdom": 7.832682968000881e-06,
+   "Colma, United States": 1.0334634259479003e-09,
+   "Colorado, Costa Rica": 1.6848687778292515e-08,
+   "Cuba": 6.380944217454498e-09,
+   "Denizli, Turkey": 1.3165059442599159e-07,
+   "Distrito de Cusco, Peru": 1.040531643070608e-07,
+   "East Granby, United States": 5.190867735649363e-09,
+   "Entremont, Switzerland": 8.538903473187531e-10,
+   "George, South Africa": 1.488295153784236e-09,
+   "Gloucester, United States": 1.5171668366065205e-08,
+   "Grafenegg, Austria": 2.7430806515127415e-09,
+   "Greater London, United Kingdom": 1.3944809325039387e-05,
+   "Hof HaCarmel Regional Council, Israel": 2.6735401448263474e-08,
+   "Inverclyde, United Kingdom": 3.337556897520244e-09,
+   "Istanbul, Turkey": 6.070348899811506e-05,
+   "Italy": 9.897709318806847e-10,
+   "Jaipur Municipal Corporation, India": 0.00034537818282842636,
+   "Jefferson County, United States": 3.18373061247712e-08,
+   "Kyoto, Japan": 3.019399485992835e-08,
+   "Leh, India": 7.1418048719351646e-06,
+   "Los Altos, United States": 3.9427345832621086e-09,
+   "Marmaris, Turkey": 1.47130833738629e-07,
+   "Mexico": 7.22765065575004e-08,
+   "Miami-Dade County, United States": 6.03795813347574e-09,
+   "Minneapolis, United States": 4.9066652962892476e-08,
+   "Mont Dore, France": 2.3641375523908437e-09,
+   "Municipio de Tilcara, Argentina": 1.6807868519208569e-07,
+   "New Delhi, India": 0.9994980096817017,
+   "New York, United States": 1.9179956325388048e-06,
+   "Newport News, United States": 5.439473760304736e-09,
+   "Okazaki, Japan": 6.02055081344588e-08,
+   "Paris, France": 2.513498031930794e-07,
+   "Petra Sub-District, Jordan": 3.8563229054489057e-07,
+   "Rome, Italy": 3.8100015444797464e-06,
+   "Saalbach-Hinterglemm, Austria": 2.704354275240295e-11,
+   "San Jose, United States": 2.344627070272054e-08,
+   "Scotland, United Kingdom": 9.452591598346771e-09,
+   "Seraing, Belgium": 2.4794006847628225e-09,
+   "Seville, Spain": 1.0008017170548555e-06,
+   "Siena, Italy": 1.0501787217620517e-09,
+   "Singapore, Singapore": 8.674525133756106e-07,
+   "Slovenia": 4.7543444875453034e-11,
+   "Spa, Belgium": 4.752155113862955e-09,
+   "Subotica, Serbia": 3.2359771751089283e-08,
+   "Sussex County, United States": 1.6169028071999492e-07,
+   "Tinum, Mexico": 4.064829184358132e-08,
+   "Toronto, Canada": 3.4655506624403642e-06,
+   "Town of Hyde Park, United States": 4.5877799337290526e-09,
+   "Vallejo, United States": 3.679521576316347e-09,
+   "Venice, Italy": 1.3425722755755487e-08,
+   "Vernon, United States": 2.1385095083648054e-10,
+   "Versailles, France": 4.333981618032112e-09,
+   "Vienna, Austria": 2.3801771931175608e-07,
+   "Villa de Leyva, Colombia": 2.506143625957691e-10,
+   "Vladivostok, Russia": 3.871936105070972e-09,
+   "Waukesha, United States": 9.395570987891233e-10,
+   "Wrocław, Poland": 4.818335241907334e-07,
+   "Çavuşin Köyü, Turkey": 1.2984232853341382e-06
+  },
+  "post_p_true": 0.9994980096817017,
+  "post_argmax": "New Delhi, India",
+  "per_cue_cov": [
+   0.1119432994872826,
+   0.04391399416909621
+  ],
+  "combos": [
+   {
+    "subset": [
+     0
+    ],
+    "mpl_raw": 0.6102797479715204,
+    "mpl": 4.946208884249401,
+    "cov": 0.1119432994872826,
+    "p_true": 0.9965351819992065
+   },
+   {
+    "subset": [
+     1
+    ],
+    "mpl_raw": 0.24289787192475173,
+    "mpl": 0.0,
+    "cov": 0.04391399416909621,
+    "p_true": 0.9995260238647461
+   },
+   {
+    "subset": [
+     0,
+     1
+    ],
+    "mpl_raw": 0.8267834641592602,
+    "mpl": 0.17187932890936938,
+    "cov": 0.15585729365637882,
+    "p_true": 0.9961981177330017
+   }
+  ]
+ }
+]

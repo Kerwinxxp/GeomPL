@@ -1,0 +1,1244 @@
+[
+ {
+  "label": "Aarhus, Denmark",
+  "gps": [
+   56.1496278,
+   10.2134046
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Accra, Ghana",
+  "gps": [
+   5.5571096,
+   -0.2012376
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Agra, India",
+  "gps": [
+   27.1752554,
+   78.0098161
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Alexandria, Egypt",
+  "gps": [
+   31.1991806,
+   29.8951716
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Alexandria, United States",
+  "gps": [
+   38.8051095,
+   -77.0470229
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Amsterdam, Netherlands",
+  "gps": [
+   52.3730796,
+   4.8924534
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Anaheim, United States",
+  "gps": [
+   33.8347516,
+   -117.911732
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Anniviers, Switzerland",
+  "gps": [
+   46.1535797,
+   7.5921899
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Apache County, United States",
+  "gps": [
+   35.214632,
+   -109.4786676
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Area A (Kicking Horse/Kinbasket Lake), Canada",
+  "gps": [
+   51.613834,
+   -117.2375192
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Arezzo, Italy",
+  "gps": [
+   43.5171442,
+   11.7639282
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Argyll and Bute, United Kingdom",
+  "gps": [
+   56.4603494,
+   -5.8618419
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Ashland, United States",
+  "gps": [
+   40.7887367,
+   -82.2360391
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Bamako, Mali",
+  "gps": [
+   12.649319,
+   -8.000337
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Bangkok, Thailand",
+  "gps": [
+   13.7524938,
+   100.4935089
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Barcelona, Spain",
+  "gps": [
+   41.3825802,
+   2.177073
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Bardo, Poland",
+  "gps": [
+   50.5068014,
+   16.7402729
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Bergen, Norway",
+  "gps": [
+   60.3943055,
+   5.3259192
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Bermuda",
+  "gps": [
+   32.3040273,
+   -64.7563086
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Biwer, Luxembourg",
+  "gps": [
+   49.7075344,
+   6.3569557
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Boulder County, United States",
+  "gps": [
+   40.102555,
+   -105.3632079
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Bristol, United States",
+  "gps": [
+   41.7425538,
+   -71.0856545
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Budapest, Hungary",
+  "gps": [
+   47.4813896,
+   19.1457723
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Buenos Aires, Argentina",
+  "gps": [
+   -34.6095579,
+   -58.3887904
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Cahuita, Costa Rica",
+  "gps": [
+   9.7384806,
+   -82.8407626
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Cambridge, United States",
+  "gps": [
+   42.3656347,
+   -71.1040018
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Cayo, Belize",
+  "gps": [
+   16.9497897,
+   -88.8940646
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Cederberg Local Municipality, South Africa",
+  "gps": [
+   -32.361265,
+   18.8761109
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Chankom, Mexico",
+  "gps": [
+   20.4652687,
+   -88.5759317
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Chaoyang District, China",
+  "gps": [
+   39.9204498,
+   116.4369109
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Chicago, United States",
+  "gps": [
+   41.8755616,
+   -87.6244212
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "City of Novi Sad, Serbia",
+  "gps": [
+   45.2905912,
+   19.8274486
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "City of Westminster, United Kingdom",
+  "gps": [
+   51.4973206,
+   -0.137149
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Colma, United States",
+  "gps": [
+   37.6766821,
+   -122.459603
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Colorado, Costa Rica",
+  "gps": [
+   10.654717,
+   -83.6717193
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Cuba",
+  "gps": [
+   23.0131338,
+   -80.8328748
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Denizli, Turkey",
+  "gps": [
+   37.8275892,
+   29.2389539
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "District de Nosy Be, Madagascar",
+  "gps": [
+   -13.311953,
+   48.2533986
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Distrito de Cusco, Peru",
+  "gps": [
+   -13.497514,
+   -71.9855203
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Dongcheng District, China",
+  "gps": [
+   39.9269012,
+   116.4100395
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "East Granby, United States",
+  "gps": [
+   41.9418011,
+   -72.7275015
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Entremont, Switzerland",
+  "gps": [
+   45.9909131,
+   7.2257498
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Florence, Italy",
+  "gps": [
+   43.7697955,
+   11.2556404
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "George, South Africa",
+  "gps": [
+   -33.9597212,
+   22.4587148
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Glasgow, United Kingdom",
+  "gps": [
+   55.861155,
+   -4.2501687
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Gloucester, United States",
+  "gps": [
+   37.4452288,
+   -76.5594479
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Grad Poreč, Croatia",
+  "gps": [
+   45.2271961,
+   13.5957333
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Grafenegg, Austria",
+  "gps": [
+   48.4394645,
+   15.7301541
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Greater London, United Kingdom",
+  "gps": [
+   51.5074456,
+   -0.1277653
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Haidian District, China",
+  "gps": [
+   39.9580718,
+   116.292405
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Hamden, United States",
+  "gps": [
+   41.3836233,
+   -72.9020069
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Hof HaCarmel Regional Council, Israel",
+  "gps": [
+   32.6239104,
+   34.9853969
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Hong Kong, China",
+  "gps": [
+   22.2818333,
+   114.1582831
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Hægebostad, Norway",
+  "gps": [
+   58.4763867,
+   7.2289212
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Iguerferouane, Morocco",
+  "gps": [
+   31.4114403,
+   -7.6741315
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Improvement District No. 9, Canada",
+  "gps": [
+   51.4881335,
+   -115.9380498
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Inverclyde, United Kingdom",
+  "gps": [
+   55.9,
+   -4.75
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Istanbul, Turkey",
+  "gps": [
+   41.006381,
+   28.9758715
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Italy",
+  "gps": [
+   42.6384261,
+   12.674297
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Jaipur Municipal Corporation, India",
+  "gps": [
+   26.896945,
+   75.8021251
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Jefferson County, United States",
+  "gps": [
+   29.834772,
+   -94.1704496
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Jid Hafs, Bahrain",
+  "gps": [
+   26.2163449,
+   50.5407172
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Kitzbühel, Austria",
+  "gps": [
+   47.4463585,
+   12.3911473
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Koto, Japan",
+  "gps": [
+   35.6727747,
+   139.8169621
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Kuala Lumpur, Malaysia",
+  "gps": [
+   3.1516964,
+   101.6942371
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Kyiv Oblast, Ukraine",
+  "gps": [
+   50.178595,
+   30.4924884
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Kyoto, Japan",
+  "gps": [
+   35.0115754,
+   135.7681441
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "La Plagne-Tarentaise, France",
+  "gps": [
+   45.5685467,
+   6.6946573
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Leh, India",
+  "gps": [
+   34.1642029,
+   77.5848133
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Los Altos, United States",
+  "gps": [
+   37.3790629,
+   -122.116578
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Marmaris, Turkey",
+  "gps": [
+   36.8522547,
+   28.2742661
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Martina Franca, Italy",
+  "gps": [
+   40.7042378,
+   17.3399908
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Mexico",
+  "gps": [
+   23.6585116,
+   -102.0077097
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Miami-Dade County, United States",
+  "gps": [
+   25.6364246,
+   -80.4989467
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Minneapolis, United States",
+  "gps": [
+   44.9772995,
+   -93.2654692
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Mont Dore, France",
+  "gps": [
+   45.5749966,
+   2.8094117
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Morocco",
+  "gps": [
+   28.3347722,
+   -10.3713379
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Municipio de Tilcara, Argentina",
+  "gps": [
+   -23.5769014,
+   -65.393396
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "New Delhi, India",
+  "gps": [
+   28.6138954,
+   77.2090057
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "New Lenox, United States",
+  "gps": [
+   41.5119761,
+   -87.9656098
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "New York, United States",
+  "gps": [
+   40.7127281,
+   -74.0060152
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Newport News, United States",
+  "gps": [
+   36.9775016,
+   -76.42977
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Okazaki, Japan",
+  "gps": [
+   34.9548784,
+   137.1728226
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Omaha, United States",
+  "gps": [
+   41.2587459,
+   -95.9383758
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Oxford, United States",
+  "gps": [
+   34.3663773,
+   -89.5187664
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Palenque, Mexico",
+  "gps": [
+   17.453161,
+   -91.8121241
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Palm Bay, United States",
+  "gps": [
+   27.9946969,
+   -80.6366144
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Paris, France",
+  "gps": [
+   48.8588897,
+   2.320041
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Petra Sub-District, Jordan",
+  "gps": [
+   30.2768572,
+   35.4756005
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Pilsen, Czechia",
+  "gps": [
+   49.7477415,
+   13.3775249
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Reykjavik, Iceland",
+  "gps": [
+   64.145981,
+   -21.9422367
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Roi Et, Thailand",
+  "gps": [
+   15.7486448,
+   103.7013017
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Rome, Italy",
+  "gps": [
+   41.8933203,
+   12.4829321
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Saalbach-Hinterglemm, Austria",
+  "gps": [
+   47.3724977,
+   12.5936777
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Saint-Germain-en-Laye, France",
+  "gps": [
+   48.9312511,
+   2.0912611
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Saint-Ouen-sur-Seine, France",
+  "gps": [
+   48.911729,
+   2.334267
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "San Diego, United States",
+  "gps": [
+   32.7174202,
+   -117.162772
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "San Francisco, United States",
+  "gps": [
+   37.7879363,
+   -122.4075201
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "San Jose, United States",
+  "gps": [
+   37.3361663,
+   -121.890591
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Scotland, United Kingdom",
+  "gps": [
+   56.7861112,
+   -4.1140518
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Seattle, United States",
+  "gps": [
+   47.6038321,
+   -122.330062
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Seoul, South Korea",
+  "gps": [
+   37.5666791,
+   126.9782914
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Seraing, Belgium",
+  "gps": [
+   50.6152381,
+   5.5089437
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Seville, Spain",
+  "gps": [
+   37.3886303,
+   -5.9953403
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Shanghai, China",
+  "gps": [
+   31.2312707,
+   121.4700152
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Sibiu, Romania",
+  "gps": [
+   45.7973912,
+   24.1519202
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Siena, Italy",
+  "gps": [
+   43.1672059,
+   11.467561
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Singapore, Singapore",
+  "gps": [
+   1.2899175,
+   103.8519072
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Slovenia",
+  "gps": [
+   46.1199444,
+   14.8153333
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "South Dublin, Ireland",
+  "gps": [
+   53.2732604,
+   -6.4070767
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Spa, Belgium",
+  "gps": [
+   50.4920654,
+   5.8627569
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Subotica, Serbia",
+  "gps": [
+   46.1002058,
+   19.6653273
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Sussex County, United States",
+  "gps": [
+   36.9096897,
+   -77.2741121
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Székesfehérvár, Hungary",
+  "gps": [
+   47.1910169,
+   18.410811
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Thörl, Austria",
+  "gps": [
+   47.5183601,
+   15.2197291
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Tinum, Mexico",
+  "gps": [
+   20.7412144,
+   -88.4437373
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Toronto, Canada",
+  "gps": [
+   43.6534817,
+   -79.3839347
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Town of Hyde Park, United States",
+  "gps": [
+   41.7905458,
+   -73.9363166
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Tulum, Mexico",
+  "gps": [
+   20.429647,
+   -87.6529306
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Ubud District, Indonesia",
+  "gps": [
+   -8.5170195,
+   115.2550507
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Ulaanbaatar, Mongolia",
+  "gps": [
+   47.9184676,
+   106.9177016
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Ullensvang, Norway",
+  "gps": [
+   60.0757598,
+   6.9349823
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Unorganized Borough, United States",
+  "gps": [
+   63.4174311,
+   -157.671865
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Val de Bagnes, Switzerland",
+  "gps": [
+   46.0099005,
+   7.3064757
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Vallejo, United States",
+  "gps": [
+   38.1040864,
+   -122.2566367
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Venice, Italy",
+  "gps": [
+   45.4046171,
+   12.3105232
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Vernon, United States",
+  "gps": [
+   37.8639924,
+   -94.3800151
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Versailles, France",
+  "gps": [
+   48.8035403,
+   2.1266886
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Vienna, Austria",
+  "gps": [
+   48.2083537,
+   16.3725042
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Villa de Leyva, Colombia",
+  "gps": [
+   5.6619877,
+   -73.5283801
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Vladivostok, Russia",
+  "gps": [
+   43.1150678,
+   131.8855768
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Washington, United States",
+  "gps": [
+   38.8950982,
+   -77.0363849
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Waukesha, United States",
+  "gps": [
+   43.0622536,
+   -88.3123889
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Wolsztyn, Poland",
+  "gps": [
+   52.11725,
+   16.1126622
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Wrocław, Poland",
+  "gps": [
+   51.1263106,
+   16.9781963
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Xicheng District, China",
+  "gps": [
+   39.9108672,
+   116.3599221
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Zipaquirá, Colombia",
+  "gps": [
+   5.0234748,
+   -74.0039818
+  ],
+  "text": null,
+  "ref_image": null
+ },
+ {
+  "label": "Çavuşin Köyü, Turkey",
+  "gps": [
+   38.6781315,
+   34.8413926
+  ],
+  "text": null,
+  "ref_image": null
+ }
+]

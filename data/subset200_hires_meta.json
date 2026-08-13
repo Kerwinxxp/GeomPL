@@ -1,0 +1,10 @@
+{
+  "requested": 200,
+  "kept": 200,
+  "dead": [],
+  "size_tag_counts": {
+    "cached": 100,
+    "_b": 100
+  },
+  "note": "hi-res re-fetch of subset50 via Flickr _b(1024)/_c(800)/orig(500) fallback"
+}

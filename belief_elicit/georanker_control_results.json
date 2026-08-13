@@ -1,0 +1,5389 @@
+[
+ {
+  "image_id": "334797817_910e96579f_137_65367662@N00.jpg",
+  "true_label": "San Jose, United States",
+  "country_hit": true,
+  "n_cues": 1,
+  "vN": 0.019684286526328938,
+  "cues": [
+   {
+    "cue": "yellow calla lily",
+    "category": "environment",
+    "area_frac": 0.05129475776797205,
+    "real_mpl": 0.019684286526328938,
+    "controls": [
+     {
+      "mpl": 0.011473074210221456,
+      "overlap_frac": 0.0,
+      "cov": 0.05129475776797205
+     },
+     {
+      "mpl": 0.019851918949724122,
+      "overlap_frac": 0.0,
+      "cov": 0.05129475776797205
+     },
+     {
+      "mpl": 0.013503896381350402,
+      "overlap_frac": 0.0,
+      "cov": 0.05129475776797205
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+  "true_label": "Bangkok, Thailand",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.07174731765913785,
+  "cues": [
+   {
+    "cue": "Thai text on storefront signs",
+    "category": "text/signage",
+    "area_frac": 0.15294376008661723,
+    "real_mpl": 0.06325809329471191,
+    "controls": [
+     {
+      "mpl": 0.08327618622126907,
+      "overlap_frac": 0.1369335826627041,
+      "cov": 0.15294376008661723
+     },
+     {
+      "mpl": 0.06462381923623815,
+      "overlap_frac": 0.1327595418572812,
+      "cov": 0.15294376008661723
+     },
+     {
+      "mpl": 0.08003941418147281,
+      "overlap_frac": 0.11359234647877918,
+      "cov": 0.15294376008661723
+     }
+    ]
+   },
+   {
+    "cue": "Fujifilm signage",
+    "category": "commercial/cultural",
+    "area_frac": 0.15294376008661723,
+    "real_mpl": 0.06325809329471191,
+    "controls": [
+     {
+      "mpl": 0.07152461813271736,
+      "overlap_frac": 0.1101529368551107,
+      "cov": 0.15294376008661723
+     },
+     {
+      "mpl": 0.07429467441741963,
+      "overlap_frac": 0.11557084182054964,
+      "cov": 0.15294376008661723
+     },
+     {
+      "mpl": 0.07195731803991685,
+      "overlap_frac": 0.12589741877316593,
+      "cov": 0.15294376008661723
+     }
+    ]
+   },
+   {
+    "cue": "Left-hand traffic with vehicles",
+    "category": "vehicles/license plates",
+    "area_frac": 0.018407438050295193,
+    "real_mpl": 0.04452200523358753,
+    "controls": [
+     {
+      "mpl": 0.042074044989973344,
+      "overlap_frac": 0.0,
+      "cov": 0.018407438050295193
+     },
+     {
+      "mpl": 0.04046450470809421,
+      "overlap_frac": 0.0,
+      "cov": 0.018407438050295193
+     },
+     {
+      "mpl": 0.13436915758993084,
+      "overlap_frac": 0.0,
+      "cov": 0.018407438050295193
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "311344213_4b003f4ab1_114_63163416@N00.jpg",
+  "true_label": "New Delhi, India",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.10245269795964876,
+  "cues": [
+   {
+    "cue": "Qutub Minar",
+    "category": "landmarks/buildings",
+    "area_frac": 0.1119432994872826,
+    "real_mpl": 0.09020966000534535,
+    "controls": [
+     {
+      "mpl": 0.08084385812340979,
+      "overlap_frac": 0.0,
+      "cov": 0.1119432994872826
+     },
+     {
+      "mpl": 0.06827974374397473,
+      "overlap_frac": 0.0,
+      "cov": 0.1119432994872826
+     },
+     {
+      "mpl": 0.08238176594259566,
+      "overlap_frac": 0.0,
+      "cov": 0.1119432994872826
+     }
+    ]
+   },
+   {
+    "cue": "Islamic arch ruins",
+    "category": "architecture",
+    "area_frac": 0.04391399416909621,
+    "real_mpl": 0.059195292803985916,
+    "controls": [
+     {
+      "mpl": 0.05201407886028703,
+      "overlap_frac": 0.0,
+      "cov": 0.04391399416909621
+     },
+     {
+      "mpl": 0.053297091811716935,
+      "overlap_frac": 0.0,
+      "cov": 0.04391399416909621
+     },
+     {
+      "mpl": 0.053947059345538104,
+      "overlap_frac": 0.0,
+      "cov": 0.04391399416909621
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "369043327_64ca92b933_146_13527886@N00.jpg",
+  "true_label": "Leh, India",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.12012878215275019,
+  "cues": [
+   {
+    "cue": "Mountainous terrain with barren rocky slopes",
+    "category": "environment",
+    "area_frac": 0.2577692488406774,
+    "real_mpl": 0.09553863821909997,
+    "controls": [
+     {
+      "mpl": 0.091069719189985,
+      "overlap_frac": 0.058373660773989665,
+      "cov": 0.2577692488406774
+     },
+     {
+      "mpl": 0.1045999590485721,
+      "overlap_frac": 0.07468955713287995,
+      "cov": 0.2577692488406774
+     },
+     {
+      "mpl": 0.06983050315775274,
+      "overlap_frac": 0.05990420478579814,
+      "cov": 0.2577692488406774
+     }
+    ]
+   },
+   {
+    "cue": "Sparse tree cover",
+    "category": "environment",
+    "area_frac": 0.02666952666952667,
+    "real_mpl": 0.049899460475241436,
+    "controls": [
+     {
+      "mpl": 0.055628252299630074,
+      "overlap_frac": 0.039927230945997705,
+      "cov": 0.02666952666952667
+     },
+     {
+      "mpl": 0.059744753790726274,
+      "overlap_frac": 0.020968977403293756,
+      "cov": 0.02666952666952667
+     },
+     {
+      "mpl": 0.06872873941305441,
+      "overlap_frac": 0.03963998468019916,
+      "cov": 0.02666952666952667
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "482450631_9a18ceae7e_219_50435419@N00.jpg",
+  "true_label": "Buenos Aires, Argentina",
+  "country_hit": false,
+  "n_cues": 3,
+  "vN": 0.15847210794490996,
+  "cues": [
+   {
+    "cue": "indoor plant",
+    "category": "environment",
+    "area_frac": 0.07459149200220629,
+    "real_mpl": 0.10155076581701261,
+    "controls": [
+     {
+      "mpl": 0.084179967221071,
+      "overlap_frac": 0.10675909878682842,
+      "cov": 0.07459149200220629
+     },
+     {
+      "mpl": 0.19493595947470274,
+      "overlap_frac": 0.0747737338725207,
+      "cov": 0.07459149200220629
+     },
+     {
+      "mpl": 0.0930235335639547,
+      "overlap_frac": 0.059907567879838246,
+      "cov": 0.07459149200220629
+     }
+    ]
+   },
+   {
+    "cue": "window with view of brick building",
+    "category": "architecture",
+    "area_frac": 0.0802494139547711,
+    "real_mpl": 0.12778664238682397,
+    "controls": [
+     {
+      "mpl": 0.13681184912690203,
+      "overlap_frac": 0.0,
+      "cov": 0.0802494139547711
+     },
+     {
+      "mpl": 0.12162750224886343,
+      "overlap_frac": 0.005262310046716426,
+      "cov": 0.0802494139547711
+     },
+     {
+      "mpl": 0.07710604914386875,
+      "overlap_frac": 0.0034366106427535844,
+      "cov": 0.0802494139547711
+     }
+    ]
+   },
+   {
+    "cue": "clothing style",
+    "category": "commercial/cultural",
+    "area_frac": 0.27874494392351534,
+    "real_mpl": 0.08706507602420382,
+    "controls": [
+     {
+      "mpl": 0.09787716002691316,
+      "overlap_frac": 0.15753890549314645,
+      "cov": 0.27874494392351534
+     },
+     {
+      "mpl": 0.09377283291220555,
+      "overlap_frac": 0.15739977326600021,
+      "cov": 0.27874494392351534
+     },
+     {
+      "mpl": 0.09107183436284944,
+      "overlap_frac": 0.15743069153869937,
+      "cov": 0.27874494392351534
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "103558896_55f8059bc9_35_73293249@N00.jpg",
+  "true_label": "Toronto, Canada",
+  "country_hit": false,
+  "n_cues": 2,
+  "vN": 0.1862445298601716,
+  "cues": [
+   {
+    "cue": "distinctive skyscraper with stepped design",
+    "category": "landmarks/buildings",
+    "area_frac": 0.31964601719066005,
+    "real_mpl": 0.1862445298601716,
+    "controls": [
+     {
+      "mpl": 0.10335932102072846,
+      "overlap_frac": 0.6572898645156942,
+      "cov": 0.31964601719066005
+     },
+     {
+      "mpl": 0.10922273066735604,
+      "overlap_frac": 0.6466578291055339,
+      "cov": 0.31964601719066005
+     },
+     {
+      "mpl": 0.09363105428740835,
+      "overlap_frac": 0.6537398611454378,
+      "cov": 0.31964601719066005
+     }
+    ]
+   },
+   {
+    "cue": "golden reflective building",
+    "category": "landmarks/buildings",
+    "area_frac": 0.31964601719066005,
+    "real_mpl": 0.1862445298601716,
+    "controls": [
+     {
+      "mpl": 0.11403274370247642,
+      "overlap_frac": 0.6967173703013009,
+      "cov": 0.31964601719066005
+     },
+     {
+      "mpl": 0.10922273066735604,
+      "overlap_frac": 0.6466578291055339,
+      "cov": 0.31964601719066005
+     },
+     {
+      "mpl": 0.10956590526895114,
+      "overlap_frac": 0.6501943514503337,
+      "cov": 0.31964601719066005
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "357019239_3aa477b691_146_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.2514460158015938,
+  "cues": [
+   {
+    "cue": "Stone cottage with damaged roof",
+    "category": "landmarks/buildings",
+    "area_frac": 0.12166775577225965,
+    "real_mpl": 0.15439546734508,
+    "controls": [
+     {
+      "mpl": 0.1015665602299264,
+      "overlap_frac": 0.0,
+      "cov": 0.12166775577225965
+     },
+     {
+      "mpl": 0.09590373612150017,
+      "overlap_frac": 0.0,
+      "cov": 0.12166775577225965
+     },
+     {
+      "mpl": 0.0833978199509636,
+      "overlap_frac": 0.0,
+      "cov": 0.12166775577225965
+     }
+    ]
+   },
+   {
+    "cue": "Rolling hills and moorland",
+    "category": "environment",
+    "area_frac": 0.09110368285245132,
+    "real_mpl": 0.07712515355482652,
+    "controls": [
+     {
+      "mpl": 0.06910887675003022,
+      "overlap_frac": 0.0,
+      "cov": 0.09110368285245132
+     },
+     {
+      "mpl": 0.06258500214443517,
+      "overlap_frac": 0.0,
+      "cov": 0.09110368285245132
+     },
+     {
+      "mpl": 0.06882227660347362,
+      "overlap_frac": 0.0,
+      "cov": 0.09110368285245132
+     }
+    ]
+   },
+   {
+    "cue": "Overcast sky",
+    "category": "environment",
+    "area_frac": 0.0022934050467477633,
+    "real_mpl": 0.03718399849147276,
+    "controls": [
+     {
+      "mpl": 0.04506911988095545,
+      "overlap_frac": 0.0,
+      "cov": 0.0022934050467477633
+     },
+     {
+      "mpl": 0.04425389277989628,
+      "overlap_frac": 0.0,
+      "cov": 0.0022934050467477633
+     },
+     {
+      "mpl": 0.05094227839035347,
+      "overlap_frac": 0.0,
+      "cov": 0.0022934050467477633
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "203420486_c21ed696cc_65_40829484@N00.jpg",
+  "true_label": "Spa, Belgium",
+  "country_hit": false,
+  "n_cues": 3,
+  "vN": 0.3328759982944539,
+  "cues": [
+   {
+    "cue": "Purple Sumolux banners",
+    "category": "commercial/cultural",
+    "area_frac": 0.09200048262548262,
+    "real_mpl": 0.1502585436393094,
+    "controls": [
+     {
+      "mpl": 0.15945913724413463,
+      "overlap_frac": 0.1507416081186573,
+      "cov": 0.09200048262548262
+     },
+     {
+      "mpl": 0.12091897656755803,
+      "overlap_frac": 0.1322872755659641,
+      "cov": 0.09200048262548262
+     },
+     {
+      "mpl": 0.2031370787860544,
+      "overlap_frac": 0.2052927400468384,
+      "cov": 0.09200048262548262
+     }
+    ]
+   },
+   {
+    "cue": "Dodge race car",
+    "category": "vehicles/license plates",
+    "area_frac": 0.08057978258871117,
+    "real_mpl": 0.28823065722078545,
+    "controls": [
+     {
+      "mpl": 0.23296202578488415,
+      "overlap_frac": 0.11980605714896879,
+      "cov": 0.08057978258871117
+     },
+     {
+      "mpl": 0.14920366250050288,
+      "overlap_frac": 0.11121410363821102,
+      "cov": 0.08057978258871117
+     },
+     {
+      "mpl": 0.0981421112755368,
+      "overlap_frac": 0.09855790655804916,
+      "cov": 0.08057978258871117
+     }
+    ]
+   },
+   {
+    "cue": "French text on worker's shirt",
+    "category": "text/signage",
+    "area_frac": 0.06960723478580622,
+    "real_mpl": 0.24523958335506413,
+    "controls": [
+     {
+      "mpl": 0.12753703204231973,
+      "overlap_frac": 0.10499380932728022,
+      "cov": 0.06960723478580622
+     },
+     {
+      "mpl": 0.1848014080891463,
+      "overlap_frac": 0.11120511762278168,
+      "cov": 0.06960723478580622
+     },
+     {
+      "mpl": 0.15179842775988706,
+      "overlap_frac": 0.11320676846884029,
+      "cov": 0.06960723478580622
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "169956693_5edea53724_78_70323761@N00.jpg",
+  "true_label": "Chicago, United States",
+  "country_hit": true,
+  "n_cues": 1,
+  "vN": 0.4045869226105365,
+  "cues": [
+   {
+    "cue": "Wrigley Field text on cup",
+    "category": "text/signage",
+    "area_frac": 0.20160817705460563,
+    "real_mpl": 0.4045869226105365,
+    "controls": [
+     {
+      "mpl": 0.10144428816506025,
+      "overlap_frac": 0.0,
+      "cov": 0.20160817705460563
+     },
+     {
+      "mpl": 0.11978692920071797,
+      "overlap_frac": 0.0,
+      "cov": 0.20160817705460563
+     },
+     {
+      "mpl": 0.11560216030022276,
+      "overlap_frac": 0.0,
+      "cov": 0.20160817705460563
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+  "true_label": "Slovenia",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 1.3460082584206818,
+  "cues": [
+   {
+    "cue": "Church on an island",
+    "category": "landmarks/buildings",
+    "area_frac": 0.023301158301158302,
+    "real_mpl": 0.4639949116246433,
+    "controls": [
+     {
+      "mpl": 0.22118222755992978,
+      "overlap_frac": 0.0,
+      "cov": 0.023301158301158302
+     },
+     {
+      "mpl": 0.2557361911403428,
+      "overlap_frac": 0.0,
+      "cov": 0.023301158301158302
+     },
+     {
+      "mpl": 0.25336972096318355,
+      "overlap_frac": 0.0,
+      "cov": 0.023301158301158302
+     }
+    ]
+   },
+   {
+    "cue": "Mountainous forested background",
+    "category": "environment",
+    "area_frac": 0.24644098179812465,
+    "real_mpl": 0.3111980072148604,
+    "controls": [
+     {
+      "mpl": 0.32072994306572966,
+      "overlap_frac": 0.0,
+      "cov": 0.24644098179812465
+     },
+     {
+      "mpl": 0.2002207247274593,
+      "overlap_frac": 0.0,
+      "cov": 0.24644098179812465
+     },
+     {
+      "mpl": 0.26303135020897167,
+      "overlap_frac": 0.0,
+      "cov": 0.24644098179812465
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+  "true_label": "New York, United States",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.8231508897804171,
+  "cues": [
+   {
+    "cue": "Equestrian statue",
+    "category": "landmarks/buildings",
+    "area_frac": 0.11178812741312741,
+    "real_mpl": 0.15500846455800465,
+    "controls": [
+     {
+      "mpl": 0.14092968341299558,
+      "overlap_frac": 0.02388661886773058,
+      "cov": 0.11178812741312741
+     },
+     {
+      "mpl": 0.13609220905017347,
+      "overlap_frac": 0.08847942846863516,
+      "cov": 0.11178812741312741
+     },
+     {
+      "mpl": 0.1498072554950465,
+      "overlap_frac": 0.1000565363760183,
+      "cov": 0.11178812741312741
+     }
+    ]
+   },
+   {
+    "cue": "American flag",
+    "category": "commercial/cultural",
+    "area_frac": 0.005683776889134032,
+    "real_mpl": 0.0734001589298367,
+    "controls": [
+     {
+      "mpl": 0.05025017852817514,
+      "overlap_frac": 0.0,
+      "cov": 0.005683776889134032
+     },
+     {
+      "mpl": 0.05429149025213387,
+      "overlap_frac": 0.0,
+      "cov": 0.005683776889134032
+     },
+     {
+      "mpl": 0.05993305616134043,
+      "overlap_frac": 0.0,
+      "cov": 0.005683776889134032
+     }
+    ]
+   },
+   {
+    "cue": "Historic building architecture",
+    "category": "architecture",
+    "area_frac": 0.10064752252252253,
+    "real_mpl": 0.7300481211417795,
+    "controls": [
+     {
+      "mpl": 0.18895198758534373,
+      "overlap_frac": 0.075581561295847,
+      "cov": 0.10064752252252253
+     },
+     {
+      "mpl": 0.18464412116761983,
+      "overlap_frac": 0.07172827172827173,
+      "cov": 0.10064752252252253
+     },
+     {
+      "mpl": 0.16082638547074418,
+      "overlap_frac": 0.14462680176965892,
+      "cov": 0.10064752252252253
+     }
+    ]
+   },
+   {
+    "cue": "Trees with autumn foliage",
+    "category": "environment",
+    "area_frac": 0.2557943785622357,
+    "real_mpl": 0.2728250126148466,
+    "controls": [
+     {
+      "mpl": 0.1302924699926504,
+      "overlap_frac": 0.6617120203052527,
+      "cov": 0.2557943785622357
+     },
+     {
+      "mpl": 0.14809125949976001,
+      "overlap_frac": 0.6648847160296942,
+      "cov": 0.2557943785622357
+     },
+     {
+      "mpl": 0.1302924699926504,
+      "overlap_frac": 0.6617120203052527,
+      "cov": 0.2557943785622357
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+  "true_label": "Cuba",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.5186213193452707,
+  "cues": [
+   {
+    "cue": "Stone fortress walls",
+    "category": "landmarks/buildings",
+    "area_frac": 0.17715164143735573,
+    "real_mpl": 0.38153798581191356,
+    "controls": [
+     {
+      "mpl": 0.08316094089081945,
+      "overlap_frac": 0.09602300573701963,
+      "cov": 0.17715164143735573
+     },
+     {
+      "mpl": 0.06862547509853995,
+      "overlap_frac": 0.09905007639749762,
+      "cov": 0.17715164143735573
+     },
+     {
+      "mpl": 0.09244007714282079,
+      "overlap_frac": 0.1427119670193444,
+      "cov": 0.17715164143735573
+     }
+    ]
+   },
+   {
+    "cue": "Lush green landscape",
+    "category": "environment",
+    "area_frac": 0.16063384813384812,
+    "real_mpl": 0.5441310422226275,
+    "controls": [
+     {
+      "mpl": 0.16934636892736138,
+      "overlap_frac": 0.0,
+      "cov": 0.16063384813384812
+     },
+     {
+      "mpl": 0.14052316463580042,
+      "overlap_frac": 0.0,
+      "cov": 0.16063384813384812
+     },
+     {
+      "mpl": 0.06930557468319555,
+      "overlap_frac": 0.0,
+      "cov": 0.16063384813384812
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "224260045_431e8a656e_72_73293249@N00.jpg",
+  "true_label": "Entremont, Switzerland",
+  "country_hit": true,
+  "n_cues": 1,
+  "vN": 0.024290308835161104,
+  "cues": [
+   {
+    "cue": "Mountain peaks",
+    "category": "environment",
+    "area_frac": 0.004934781720496006,
+    "real_mpl": 0.024290308835161104,
+    "controls": [
+     {
+      "mpl": 0.034214799515812445,
+      "overlap_frac": 0.0,
+      "cov": 0.004934781720496006
+     },
+     {
+      "mpl": 0.038105125079061816,
+      "overlap_frac": 0.0,
+      "cov": 0.004934781720496006
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "1182903598_51bdaa7836_1385_15376845@N00.jpg",
+  "true_label": "East Granby, United States",
+  "country_hit": true,
+  "n_cues": 1,
+  "vN": 0.03102117836623212,
+  "cues": [
+   {
+    "cue": "Red and white checkerboard pattern",
+    "category": "commercial/cultural",
+    "area_frac": 0.013713171079242508,
+    "real_mpl": 0.03102117836623212,
+    "controls": [
+     {
+      "mpl": 0.08503951543989091,
+      "overlap_frac": 0.0,
+      "cov": 0.013713171079242508
+     },
+     {
+      "mpl": 0.04194446324165143,
+      "overlap_frac": 0.0,
+      "cov": 0.013713171079242508
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "379001279_fa81cf9ee0_155_87409164@N00.jpg",
+  "true_label": "Singapore, Singapore",
+  "country_hit": true,
+  "n_cues": 1,
+  "vN": 0.036747633892623636,
+  "cues": [
+   {
+    "cue": "Colorful deity sculptures",
+    "category": "landmarks/buildings",
+    "area_frac": 0.08651636330207758,
+    "real_mpl": 0.036747633892623636,
+    "controls": [
+     {
+      "mpl": 0.038779255445260404,
+      "overlap_frac": 0.00873289945543897,
+      "cov": 0.08651636330207758
+     },
+     {
+      "mpl": 0.05205727312348965,
+      "overlap_frac": 0.0011787754017797848,
+      "cov": 0.08651636330207758
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "449901053_f0d3dbb166_164_55126705@N00.jpg",
+  "true_label": "Cahuita, Costa Rica",
+  "country_hit": true,
+  "n_cues": 1,
+  "vN": 0.03872203426724787,
+  "cues": [
+   {
+    "cue": "Tropical tree leaves",
+    "category": "environment",
+    "area_frac": 0.09071316214173357,
+    "real_mpl": 0.03872203426724787,
+    "controls": [
+     {
+      "mpl": 0.14138368771573445,
+      "overlap_frac": 0.0,
+      "cov": 0.09071316214173357
+     },
+     {
+      "mpl": 0.049578742149487154,
+      "overlap_frac": 0.0,
+      "cov": 0.09071316214173357
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "71812047_61e009056a_35_18684820@N00.jpg",
+  "true_label": "Paris, France",
+  "country_hit": true,
+  "n_cues": 1,
+  "vN": 0.04799671446812804,
+  "cues": [
+   {
+    "cue": "Statue in background",
+    "category": "landmarks/buildings",
+    "area_frac": 0.009724328920757492,
+    "real_mpl": 0.04799671446812804,
+    "controls": [
+     {
+      "mpl": 0.06065056807737384,
+      "overlap_frac": 0.0,
+      "cov": 0.009724328920757492
+     },
+     {
+      "mpl": 0.04081254128985371,
+      "overlap_frac": 0.0,
+      "cov": 0.009724328920757492
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "297636665_27042e8d0d_109_41894169878@N01.jpg",
+  "true_label": "Colorado, Costa Rica",
+  "country_hit": false,
+  "n_cues": 1,
+  "vN": 0.04860984155244572,
+  "cues": [
+   {
+    "cue": "turtle in water",
+    "category": "environment",
+    "area_frac": 0.019791475148618006,
+    "real_mpl": 0.04860984155244572,
+    "controls": [
+     {
+      "mpl": 0.047202661894122096,
+      "overlap_frac": 0.0,
+      "cov": 0.019791475148618006
+     },
+     {
+      "mpl": 0.047044654031843325,
+      "overlap_frac": 0.0,
+      "cov": 0.019791475148618006
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "118159659_c2cc29c6a1_52_18684820@N00.jpg",
+  "true_label": "Bangkok, Thailand",
+  "country_hit": false,
+  "n_cues": 2,
+  "vN": 0.05329395842400697,
+  "cues": [
+   {
+    "cue": "Dried fish on woven bamboo tray",
+    "category": "commercial/cultural",
+    "area_frac": 0.013160162713734143,
+    "real_mpl": 0.041178393832194474,
+    "controls": [
+     {
+      "mpl": 0.026492131146218408,
+      "overlap_frac": 0.0,
+      "cov": 0.013160162713734143
+     },
+     {
+      "mpl": 0.05437651898424981,
+      "overlap_frac": 0.0,
+      "cov": 0.013160162713734143
+     }
+    ]
+   },
+   {
+    "cue": "Stacked dried fish",
+    "category": "commercial/cultural",
+    "area_frac": 0.1498465940430226,
+    "real_mpl": 0.04818836899607214,
+    "controls": [
+     {
+      "mpl": 0.08390906506125351,
+      "overlap_frac": 0.00416978202105021,
+      "cov": 0.1498465940430226
+     },
+     {
+      "mpl": 0.10227497903552998,
+      "overlap_frac": 0.004898295661509557,
+      "cov": 0.1498465940430226
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "320631397_d6abc1ed08_129_82927779@N00.jpg",
+  "true_label": "Cederberg Local Municipality, South Africa",
+  "country_hit": true,
+  "n_cues": 1,
+  "vN": 0.06244576796527005,
+  "cues": [
+   {
+    "cue": "wide-brimmed hat",
+    "category": "commercial/cultural",
+    "area_frac": 0.21397401866151866,
+    "real_mpl": 0.06244576796527005,
+    "controls": [
+     {
+      "mpl": 0.06977067749641841,
+      "overlap_frac": 0.011807984318674606,
+      "cov": 0.21397401866151866
+     },
+     {
+      "mpl": 0.08063166285742127,
+      "overlap_frac": 0.012512838413876898,
+      "cov": 0.21397401866151866
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "311937210_3b4a9ca55c_84_63163416@N00.jpg",
+  "true_label": "Jaipur Municipal Corporation, India",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.06262018962377525,
+  "cues": [
+   {
+    "cue": "Jharokha-style windows",
+    "category": "architecture",
+    "area_frac": 0.009705606380483229,
+    "real_mpl": 0.05195402779888004,
+    "controls": [
+     {
+      "mpl": 0.0455508952570406,
+      "overlap_frac": 0.0,
+      "cov": 0.009705606380483229
+     },
+     {
+      "mpl": 0.03386251778558987,
+      "overlap_frac": 0.0,
+      "cov": 0.009705606380483229
+     }
+    ]
+   },
+   {
+    "cue": "People in traditional Indian attire",
+    "category": "commercial/cultural",
+    "area_frac": 0.019982993197278913,
+    "real_mpl": 0.05083965006653645,
+    "controls": [
+     {
+      "mpl": 0.0480291690154501,
+      "overlap_frac": 0.0,
+      "cov": 0.019982993197278913
+     },
+     {
+      "mpl": 0.044223111670388796,
+      "overlap_frac": 0.0,
+      "cov": 0.019982993197278913
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "359583512_c889dcbcf3_142_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "country_hit": false,
+  "n_cues": 2,
+  "vN": 0.07706999015276929,
+  "cues": [
+   {
+    "cue": "White daisies with yellow centers",
+    "category": "environment",
+    "area_frac": 0.02852469816755531,
+    "real_mpl": 0.05709409568233293,
+    "controls": [
+     {
+      "mpl": 0.0547000075943337,
+      "overlap_frac": 0.0,
+      "cov": 0.02852469816755531
+     },
+     {
+      "mpl": 0.06654661926236467,
+      "overlap_frac": 0.0,
+      "cov": 0.02852469816755531
+     }
+    ]
+   },
+   {
+    "cue": "Rocky ground with small stones",
+    "category": "environment",
+    "area_frac": 0.06054396232967661,
+    "real_mpl": 0.07544504651323891,
+    "controls": [
+     {
+      "mpl": 0.11375063964760572,
+      "overlap_frac": 0.0,
+      "cov": 0.06054396232967661
+     },
+     {
+      "mpl": 0.08843785253319031,
+      "overlap_frac": 0.00016870874543959173,
+      "cov": 0.06054396232967661
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "241921396_742fe1f0fd_90_82981539@N00.jpg",
+  "true_label": "Kyoto, Japan",
+  "country_hit": false,
+  "n_cues": 3,
+  "vN": 0.08245866299332066,
+  "cues": [
+   {
+    "cue": "Moss-covered rocks",
+    "category": "environment",
+    "area_frac": 0.03223499018482166,
+    "real_mpl": 0.06171698029366382,
+    "controls": [
+     {
+      "mpl": 0.050889875264984175,
+      "overlap_frac": 0.0,
+      "cov": 0.03223499018482166
+     },
+     {
+      "mpl": 0.05098011873111224,
+      "overlap_frac": 0.0,
+      "cov": 0.03223499018482166
+     }
+    ]
+   },
+   {
+    "cue": "Small waterfall feature",
+    "category": "environment",
+    "area_frac": 0.03704998333271603,
+    "real_mpl": 0.07998916859759012,
+    "controls": [
+     {
+      "mpl": 0.06932237655131544,
+      "overlap_frac": 0.0,
+      "cov": 0.03704998333271603
+     },
+     {
+      "mpl": 0.08681018440404806,
+      "overlap_frac": 0.0,
+      "cov": 0.03704998333271603
+     }
+    ]
+   },
+   {
+    "cue": "Dense forest with ferns",
+    "category": "environment",
+    "area_frac": 0.028542723804585356,
+    "real_mpl": 0.0829121235780716,
+    "controls": [
+     {
+      "mpl": 0.05266706053067775,
+      "overlap_frac": 0.06982968369829684,
+      "cov": 0.028542723804585356
+     },
+     {
+      "mpl": 0.035106455883514444,
+      "overlap_frac": 0.06950527169505272,
+      "cov": 0.028542723804585356
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "484245503_2c1739bf8b_213_50435419@N00.jpg",
+  "true_label": "Buenos Aires, Argentina",
+  "country_hit": false,
+  "n_cues": 3,
+  "vN": 0.08359735497742396,
+  "cues": [
+   {
+    "cue": "light switch and power outlet",
+    "category": "road/infrastructure",
+    "area_frac": 0.0015599145063430778,
+    "real_mpl": 0.15522362751009722,
+    "controls": [
+     {
+      "mpl": 0.03643889879235599,
+      "overlap_frac": 0.0,
+      "cov": 0.0015599145063430778
+     },
+     {
+      "mpl": 0.033864315844486646,
+      "overlap_frac": 0.0,
+      "cov": 0.0015599145063430778
+     }
+    ]
+   },
+   {
+    "cue": "interior design and furniture",
+    "category": "architecture",
+    "area_frac": 0.10010744162529876,
+    "real_mpl": 0.09358835397079912,
+    "controls": [
+     {
+      "mpl": 0.15613570378707986,
+      "overlap_frac": 0.0,
+      "cov": 0.10010744162529876
+     },
+     {
+      "mpl": 0.17082587476602226,
+      "overlap_frac": 0.0,
+      "cov": 0.10010744162529876
+     }
+    ]
+   },
+   {
+    "cue": "clothing style",
+    "category": "commercial/cultural",
+    "area_frac": 0.20425112612612611,
+    "real_mpl": 0.05206161203071121,
+    "controls": [
+     {
+      "mpl": 0.09971017713140737,
+      "overlap_frac": 0.015309638672836468,
+      "cov": 0.20425112612612611
+     },
+     {
+      "mpl": 0.09425708456591966,
+      "overlap_frac": 0.02400174404703301,
+      "cov": 0.20425112612612611
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "234270041_a4787189dd_82_50994135@N00.jpg",
+  "true_label": "Chicago, United States",
+  "country_hit": true,
+  "n_cues": 1,
+  "vN": 0.08415976014389231,
+  "cues": [
+   {
+    "cue": "Interior decor style",
+    "category": "architecture",
+    "area_frac": 0.084925486711201,
+    "real_mpl": 0.08415976014389231,
+    "controls": [
+     {
+      "mpl": 0.04262819733500928,
+      "overlap_frac": 0.14384725249943622,
+      "cov": 0.084925486711201
+     },
+     {
+      "mpl": 0.04870673555145721,
+      "overlap_frac": 0.14841765015410058,
+      "cov": 0.084925486711201
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "520721897_11b0c68892_243_70323761@N00.jpg",
+  "true_label": "Town of Hyde Park, United States",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.08688751004567953,
+  "cues": [
+   {
+    "cue": "Victorian-style furniture",
+    "category": "architecture",
+    "area_frac": 0.0984642167677882,
+    "real_mpl": 0.07749057267387963,
+    "controls": [
+     {
+      "mpl": 0.06507492686844883,
+      "overlap_frac": 0.1048869438366156,
+      "cov": 0.0984642167677882
+     },
+     {
+      "mpl": 0.07537559242034832,
+      "overlap_frac": 0.10055433989788476,
+      "cov": 0.0984642167677882
+     }
+    ]
+   },
+   {
+    "cue": "Portrait above fireplace",
+    "category": "commercial/cultural",
+    "area_frac": 0.01882813936385365,
+    "real_mpl": 0.07495765247178134,
+    "controls": [
+     {
+      "mpl": 0.04360398702839175,
+      "overlap_frac": 0.0010680500457735734,
+      "cov": 0.01882813936385365
+     },
+     {
+      "mpl": 0.036698631549926856,
+      "overlap_frac": 0.0,
+      "cov": 0.01882813936385365
+     }
+    ]
+   },
+   {
+    "cue": "Classical sculpture",
+    "category": "commercial/cultural",
+    "area_frac": 0.0053160622357050925,
+    "real_mpl": 0.05659429820641667,
+    "controls": [
+     {
+      "mpl": 0.02736058906804319,
+      "overlap_frac": 0.0,
+      "cov": 0.0053160622357050925
+     },
+     {
+      "mpl": 0.03973144724249069,
+      "overlap_frac": 0.0,
+      "cov": 0.0053160622357050925
+     }
+    ]
+   },
+   {
+    "cue": "Dark wood paneling",
+    "category": "architecture",
+    "area_frac": 0.011743886743886744,
+    "real_mpl": 0.05016919542945475,
+    "controls": [
+     {
+      "mpl": 0.04181972560652544,
+      "overlap_frac": 0.0,
+      "cov": 0.011743886743886744
+     },
+     {
+      "mpl": 0.0489877012108,
+      "overlap_frac": 0.0,
+      "cov": 0.011743886743886744
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "166869956_84928fd11b_60_55085284@N00.jpg",
+  "true_label": "Paris, France",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.08710713384143842,
+  "cues": [
+   {
+    "cue": "Golden clock with ornate design",
+    "category": "landmarks/buildings",
+    "area_frac": 0.004396775602132745,
+    "real_mpl": 0.04597937710293411,
+    "controls": [
+     {
+      "mpl": 0.04447459909768532,
+      "overlap_frac": 0.0,
+      "cov": 0.004396775602132745
+     },
+     {
+      "mpl": 0.03175163755355742,
+      "overlap_frac": 0.0,
+      "cov": 0.004396775602132745
+     }
+    ]
+   },
+   {
+    "cue": "Rooftop sculptures and balustrades",
+    "category": "architecture",
+    "area_frac": 0.008572347858062143,
+    "real_mpl": 0.0418306225299627,
+    "controls": [
+     {
+      "mpl": 0.044003112314572636,
+      "overlap_frac": 0.0,
+      "cov": 0.008572347858062143
+     },
+     {
+      "mpl": 0.032472371844156904,
+      "overlap_frac": 0.0,
+      "cov": 0.008572347858062143
+     }
+    ]
+   },
+   {
+    "cue": "French-style windows with wrought iron",
+    "category": "architecture",
+    "area_frac": 0.05751574278359993,
+    "real_mpl": 0.06788693607161513,
+    "controls": [
+     {
+      "mpl": 0.08436788820699533,
+      "overlap_frac": 0.0041456470705758955,
+      "cov": 0.05751574278359993
+     },
+     {
+      "mpl": 0.12319975581279642,
+      "overlap_frac": 0.0025722990859597425,
+      "cov": 0.05751574278359993
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "271517794_bcd0d062eb_79_40829484@N00.jpg",
+  "true_label": "New York, United States",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.09049707610017262,
+  "cues": [
+   {
+    "cue": "White House",
+    "category": "landmarks/buildings",
+    "area_frac": 0.031194459765888336,
+    "real_mpl": 0.09084107589794443,
+    "controls": [
+     {
+      "mpl": 0.1596637955711698,
+      "overlap_frac": 0.0,
+      "cov": 0.031194459765888336
+     },
+     {
+      "mpl": 0.13280497460943408,
+      "overlap_frac": 0.0,
+      "cov": 0.031194459765888336
+     }
+    ]
+   },
+   {
+    "cue": "National Mall greenery",
+    "category": "environment",
+    "area_frac": 0.0946878000449429,
+    "real_mpl": 0.07507294666975478,
+    "controls": [
+     {
+      "mpl": 0.0950677674605767,
+      "overlap_frac": 0.0,
+      "cov": 0.0946878000449429
+     },
+     {
+      "mpl": 0.08920753152784312,
+      "overlap_frac": 0.0,
+      "cov": 0.0946878000449429
+     }
+    ]
+   },
+   {
+    "cue": "Dense urban buildings",
+    "category": "architecture",
+    "area_frac": 0.031194459765888336,
+    "real_mpl": 0.09084107589794443,
+    "controls": [
+     {
+      "mpl": 0.14758820877975476,
+      "overlap_frac": 0.0,
+      "cov": 0.031194459765888336
+     },
+     {
+      "mpl": 0.1277810340003693,
+      "overlap_frac": 0.0,
+      "cov": 0.031194459765888336
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "1397742163_1a6b87eb5a_1164_7885919@N07.jpg",
+  "true_label": "Paris, France",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.09316969755285276,
+  "cues": [
+   {
+    "cue": "Rococo style decor",
+    "category": "architecture",
+    "area_frac": 0.12427733856305286,
+    "real_mpl": 0.0623480251501676,
+    "controls": [
+     {
+      "mpl": 0.17807840450190887,
+      "overlap_frac": 0.21268595380948468,
+      "cov": 0.12427733856305286
+     },
+     {
+      "mpl": 0.1605903767408048,
+      "overlap_frac": 0.19574463713322923,
+      "cov": 0.12427733856305286
+     }
+    ]
+   },
+   {
+    "cue": "French-style furniture",
+    "category": "architecture",
+    "area_frac": 0.07196865232579518,
+    "real_mpl": 0.06094504569056904,
+    "controls": [
+     {
+      "mpl": 0.08233126836462709,
+      "overlap_frac": 0.07726151826423262,
+      "cov": 0.07196865232579518
+     },
+     {
+      "mpl": 0.07654614050900206,
+      "overlap_frac": 0.04674721024713041,
+      "cov": 0.07196865232579518
+     }
+    ]
+   },
+   {
+    "cue": "Large ornate mirror",
+    "category": "architecture",
+    "area_frac": 0.06487993095135952,
+    "real_mpl": 0.03631078630368676,
+    "controls": [
+     {
+      "mpl": 0.09751690008315216,
+      "overlap_frac": 0.13025681393289382,
+      "cov": 0.06487993095135952
+     },
+     {
+      "mpl": 0.0858348352391983,
+      "overlap_frac": 0.12681294893240186,
+      "cov": 0.06487993095135952
+     }
+    ]
+   },
+   {
+    "cue": "Classical paintings",
+    "category": "architecture",
+    "area_frac": 0.020691609977324263,
+    "real_mpl": 0.04916316848604426,
+    "controls": [
+     {
+      "mpl": 0.07732488991017153,
+      "overlap_frac": 0.0,
+      "cov": 0.020691609977324263
+     },
+     {
+      "mpl": 0.049088721131664514,
+      "overlap_frac": 0.0,
+      "cov": 0.020691609977324263
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "337534295_8a12d1be27_145_65367662@N00.jpg",
+  "true_label": "Vallejo, United States",
+  "country_hit": true,
+  "n_cues": 1,
+  "vN": 0.09601311798658266,
+  "cues": [
+   {
+    "cue": "seal in water",
+    "category": "environment",
+    "area_frac": 0.15041109349145063,
+    "real_mpl": 0.09601311798658266,
+    "controls": [
+     {
+      "mpl": 0.02931613564227637,
+      "overlap_frac": 0.03435037960177625,
+      "cov": 0.15041109349145063
+     },
+     {
+      "mpl": 0.027981922458336802,
+      "overlap_frac": 0.03620302726447978,
+      "cov": 0.15041109349145063
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "104419192_8551684362_41_64825499@N00.jpg",
+  "true_label": "Greater London, United Kingdom",
+  "country_hit": false,
+  "n_cues": 2,
+  "vN": 0.09789639933679709,
+  "cues": [
+   {
+    "cue": "Romanesque arches",
+    "category": "architecture",
+    "area_frac": 0.12462462462462462,
+    "real_mpl": 0.11593832295631001,
+    "controls": [
+     {
+      "mpl": 0.08921129992128388,
+      "overlap_frac": 0.02195516760921236,
+      "cov": 0.12462462462462462
+     },
+     {
+      "mpl": 0.1192916547800999,
+      "overlap_frac": 0.03451561347430539,
+      "cov": 0.12462462462462462
+     }
+    ]
+   },
+   {
+    "cue": "Narrow windows",
+    "category": "architecture",
+    "area_frac": 0.01586280157708729,
+    "real_mpl": 0.049127386947874094,
+    "controls": [
+     {
+      "mpl": 0.05102624232184517,
+      "overlap_frac": 0.0,
+      "cov": 0.01586280157708729
+     },
+     {
+      "mpl": 0.07846467280754844,
+      "overlap_frac": 0.0,
+      "cov": 0.01586280157708729
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "1192463216_a5f06caf2c_1050_47311799@N00.jpg",
+  "true_label": "Venice, Italy",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.10338792143238928,
+  "cues": [
+   {
+    "cue": "Italian text on hotel sign",
+    "category": "text/signage",
+    "area_frac": 0.01164812771955629,
+    "real_mpl": 0.09500749871919963,
+    "controls": [
+     {
+      "mpl": 0.05068425173115666,
+      "overlap_frac": 0.0,
+      "cov": 0.01164812771955629
+     },
+     {
+      "mpl": 0.04289075137294703,
+      "overlap_frac": 0.0,
+      "cov": 0.01164812771955629
+     }
+    ]
+   },
+   {
+    "cue": "Venetian Gothic architecture",
+    "category": "architecture",
+    "area_frac": 0.056758288901146044,
+    "real_mpl": 0.03692459792564623,
+    "controls": [
+     {
+      "mpl": 0.05230909982686257,
+      "overlap_frac": 0.45289512754757727,
+      "cov": 0.056758288901146044
+     },
+     {
+      "mpl": 0.061357182171477447,
+      "overlap_frac": 0.4496333288343006,
+      "cov": 0.056758288901146044
+     }
+    ]
+   },
+   {
+    "cue": "Mediterranean pantile roof",
+    "category": "architecture",
+    "area_frac": 0.031449817164102875,
+    "real_mpl": 0.05439505133364201,
+    "controls": [
+     {
+      "mpl": 0.07203030755631419,
+      "overlap_frac": 0.0,
+      "cov": 0.031449817164102875
+     },
+     {
+      "mpl": 0.06593530438078019,
+      "overlap_frac": 0.0,
+      "cov": 0.031449817164102875
+     }
+    ]
+   },
+   {
+    "cue": "Canal-side location",
+    "category": "environment",
+    "area_frac": 0.056758288901146044,
+    "real_mpl": 0.03692459792564623,
+    "controls": [
+     {
+      "mpl": 0.057715077955643804,
+      "overlap_frac": 0.46358033022900075,
+      "cov": 0.056758288901146044
+     },
+     {
+      "mpl": 0.0736359969177841,
+      "overlap_frac": 0.473883115130247,
+      "cov": 0.056758288901146044
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "279684899_63d5dc5c9d_89_25304693@N00.jpg",
+  "true_label": "Anaheim, United States",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.10446599726656529,
+  "cues": [
+   {
+    "cue": "Mickey Mouse T-shirt",
+    "category": "commercial/cultural",
+    "area_frac": 0.01381866560437989,
+    "real_mpl": 0.11618850927340263,
+    "controls": [
+     {
+      "mpl": 0.054042233600848255,
+      "overlap_frac": 0.0,
+      "cov": 0.01381866560437989
+     },
+     {
+      "mpl": 0.09057909724374695,
+      "overlap_frac": 0.0,
+      "cov": 0.01381866560437989
+     }
+    ]
+   },
+   {
+    "cue": "Teacup ride",
+    "category": "landmarks/buildings",
+    "area_frac": 0.11947661947661947,
+    "real_mpl": 0.11622236207497603,
+    "controls": [
+     {
+      "mpl": 0.09346130098337778,
+      "overlap_frac": 0.0624198512439087,
+      "cov": 0.11947661947661947
+     },
+     {
+      "mpl": 0.11834937204441595,
+      "overlap_frac": 0.10862828075574933,
+      "cov": 0.11947661947661947
+     }
+    ]
+   },
+   {
+    "cue": "Thatched roof building",
+    "category": "architecture",
+    "area_frac": 0.036440777512206084,
+    "real_mpl": 0.06286906314266935,
+    "controls": [
+     {
+      "mpl": 0.10475057536334419,
+      "overlap_frac": 0.0003503731474019831,
+      "cov": 0.036440777512206084
+     },
+     {
+      "mpl": 0.10646650066002585,
+      "overlap_frac": 0.010861567569461477,
+      "cov": 0.036440777512206084
+     }
+    ]
+   },
+   {
+    "cue": "Heart design on teacup",
+    "category": "commercial/cultural",
+    "area_frac": 0.11947661947661947,
+    "real_mpl": 0.11622236207497603,
+    "controls": [
+     {
+      "mpl": 0.061929765868059365,
+      "overlap_frac": 0.08595152603231598,
+      "cov": 0.11947661947661947
+     },
+     {
+      "mpl": 0.09049831898333399,
+      "overlap_frac": 0.07128964691801316,
+      "cov": 0.11947661947661947
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "270426691_42f06b31b0_106_50994135@N00.jpg",
+  "true_label": "Argyll and Bute, United Kingdom",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.10746215968393111,
+  "cues": [
+   {
+    "cue": "Lake with surrounding greenery",
+    "category": "environment",
+    "area_frac": 0.09248151212436927,
+    "real_mpl": 0.08106926562348137,
+    "controls": [
+     {
+      "mpl": 0.0714643848736625,
+      "overlap_frac": 0.0,
+      "cov": 0.09248151212436927
+     },
+     {
+      "mpl": 0.08432929099958791,
+      "overlap_frac": 0.0,
+      "cov": 0.09248151212436927
+     }
+    ]
+   },
+   {
+    "cue": "Green grassy field",
+    "category": "environment",
+    "area_frac": 0.2727446834589692,
+    "real_mpl": 0.06007665429880561,
+    "controls": [
+     {
+      "mpl": 0.08050955719955225,
+      "overlap_frac": 0.0,
+      "cov": 0.2727446834589692
+     },
+     {
+      "mpl": 0.12925794929382328,
+      "overlap_frac": 0.0,
+      "cov": 0.2727446834589692
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "307499425_ed6d8712bd_111_73293249@N00.jpg",
+  "true_label": "Entremont, Switzerland",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.11207301708887579,
+  "cues": [
+   {
+    "cue": "Mountain stream",
+    "category": "environment",
+    "area_frac": 0.11024289595718167,
+    "real_mpl": 0.06664925866511517,
+    "controls": [
+     {
+      "mpl": 0.07978537150488055,
+      "overlap_frac": 0.002629018808486982,
+      "cov": 0.11024289595718167
+     },
+     {
+      "mpl": 0.07377862542623588,
+      "overlap_frac": 0.01789354211062726,
+      "cov": 0.11024289595718167
+     }
+    ]
+   },
+   {
+    "cue": "Rocky terrain with grass",
+    "category": "environment",
+    "area_frac": 0.011154011154011155,
+    "real_mpl": 0.05309037286771647,
+    "controls": [
+     {
+      "mpl": 0.03910417676330325,
+      "overlap_frac": 0.0,
+      "cov": 0.011154011154011155
+     },
+     {
+      "mpl": 0.03544388424473636,
+      "overlap_frac": 0.0,
+      "cov": 0.011154011154011155
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "483717602_2445d0d4ae_206_40425693@N00.jpg",
+  "true_label": "Italy",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.11346034644607265,
+  "cues": [
+   {
+    "cue": "Limestone cliffs",
+    "category": "environment",
+    "area_frac": 0.12561413454270598,
+    "real_mpl": 0.08795650077438771,
+    "controls": [
+     {
+      "mpl": 0.13687008832184308,
+      "overlap_frac": 0.0,
+      "cov": 0.12561413454270598
+     },
+     {
+      "mpl": 0.1767094160051662,
+      "overlap_frac": 0.0,
+      "cov": 0.12561413454270598
+     }
+    ]
+   },
+   {
+    "cue": "Rocky shoreline",
+    "category": "environment",
+    "area_frac": 0.16309677023962738,
+    "real_mpl": 0.10429992987505073,
+    "controls": [
+     {
+      "mpl": 0.13762472666113537,
+      "overlap_frac": 0.0,
+      "cov": 0.16309677023962738
+     },
+     {
+      "mpl": 0.13440651404967002,
+      "overlap_frac": 0.0,
+      "cov": 0.16309677023962738
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "1297522299_1d487977b3_1008_85417391@N00.jpg",
+  "true_label": "Vernon, United States",
+  "country_hit": true,
+  "n_cues": 1,
+  "vN": 0.11502612787865604,
+  "cues": [
+   {
+    "cue": "Deciduous forest with mixed hardwoods",
+    "category": "environment",
+    "area_frac": 0.034424411656554514,
+    "real_mpl": 0.11502612787865604,
+    "controls": [
+     {
+      "mpl": 0.10615211542970965,
+      "overlap_frac": 0.0,
+      "cov": 0.034424411656554514
+     },
+     {
+      "mpl": 0.1522004010938951,
+      "overlap_frac": 0.0,
+      "cov": 0.034424411656554514
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "199528247_66da61f266_70_85971448@N00.jpg",
+  "true_label": "Çavuşin Köyü, Turkey",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.11538195596542562,
+  "cues": [
+   {
+    "cue": "Unique rock formations",
+    "category": "environment",
+    "area_frac": 0.0055144430144430144,
+    "real_mpl": 0.038864546957299025,
+    "controls": [
+     {
+      "mpl": 0.08188540595618163,
+      "overlap_frac": 0.0,
+      "cov": 0.0055144430144430144
+     },
+     {
+      "mpl": 0.05804779994520386,
+      "overlap_frac": 0.0,
+      "cov": 0.0055144430144430144
+     }
+    ]
+   },
+   {
+    "cue": "Vegetation in arid landscape",
+    "category": "environment",
+    "area_frac": 0.04907841514984372,
+    "real_mpl": 0.12058835196530214,
+    "controls": [
+     {
+      "mpl": 0.0975553753864037,
+      "overlap_frac": 0.002549494003486043,
+      "cov": 0.04907841514984372
+     },
+     {
+      "mpl": 0.07345750499930326,
+      "overlap_frac": 0.0,
+      "cov": 0.04907841514984372
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "227569033_4e625d93c3_74_48637819@N00.jpg",
+  "true_label": "Leh, India",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.1159179000866674,
+  "cues": [
+   {
+    "cue": "Mountainous terrain with sparse vegetation",
+    "category": "environment",
+    "area_frac": 0.18843997058282771,
+    "real_mpl": 0.06944290060954629,
+    "controls": [
+     {
+      "mpl": 0.05792407212673507,
+      "overlap_frac": 0.7643120228309388,
+      "cov": 0.18843997058282771
+     },
+     {
+      "mpl": 0.05250979557775807,
+      "overlap_frac": 0.7639888284508622,
+      "cov": 0.18843997058282771
+     }
+    ]
+   },
+   {
+    "cue": "Green agricultural fields",
+    "category": "environment",
+    "area_frac": 0.01814097260525832,
+    "real_mpl": 0.03856793441363227,
+    "controls": [
+     {
+      "mpl": 0.05187640021881039,
+      "overlap_frac": 0.0,
+      "cov": 0.01814097260525832
+     },
+     {
+      "mpl": 0.05580924227830731,
+      "overlap_frac": 0.0,
+      "cov": 0.01814097260525832
+     }
+    ]
+   },
+   {
+    "cue": "Traditional Ladakhi architecture",
+    "category": "architecture",
+    "area_frac": 0.010333930869645156,
+    "real_mpl": 0.036927592358166186,
+    "controls": [
+     {
+      "mpl": 0.03879325818333781,
+      "overlap_frac": 0.0,
+      "cov": 0.010333930869645156
+     },
+     {
+      "mpl": 0.03531966359492795,
+      "overlap_frac": 0.0,
+      "cov": 0.010333930869645156
+     }
+    ]
+   },
+   {
+    "cue": "Cloudy sky over mountains",
+    "category": "environment",
+    "area_frac": 0.30059638720353005,
+    "real_mpl": 0.052669926822957236,
+    "controls": [
+     {
+      "mpl": 0.0604443886767284,
+      "overlap_frac": 0.011949952406619493,
+      "cov": 0.30059638720353005
+     },
+     {
+      "mpl": 0.05589085476113459,
+      "overlap_frac": 0.012332228555263752,
+      "cov": 0.30059638720353005
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "312579751_048cb85e3c_108_43935788@N00.jpg",
+  "true_label": "Miami-Dade County, United States",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.1184104304456666,
+  "cues": [
+   {
+    "cue": "Gerenuk antelopes",
+    "category": "environment",
+    "area_frac": 0.08674618496047068,
+    "real_mpl": 0.11227793820187261,
+    "controls": [
+     {
+      "mpl": 0.04079605130263748,
+      "overlap_frac": 0.024854285335806067,
+      "cov": 0.08674618496047068
+     },
+     {
+      "mpl": 0.04826396947302234,
+      "overlap_frac": 0.02766922771227977,
+      "cov": 0.08674618496047068
+     }
+    ]
+   },
+   {
+    "cue": "Arid rocky environment",
+    "category": "environment",
+    "area_frac": 0.13067228580621437,
+    "real_mpl": 0.057685185474657556,
+    "controls": [
+     {
+      "mpl": 0.049491120430036874,
+      "overlap_frac": 0.0,
+      "cov": 0.13067228580621437
+     },
+     {
+      "mpl": 0.05899685840156293,
+      "overlap_frac": 0.0,
+      "cov": 0.13067228580621437
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "34489106_b6bb027a4c_23_49503208420@N01.jpg",
+  "true_label": "Municipio de Tilcara, Argentina",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.12115547348983599,
+  "cues": [
+   {
+    "cue": "Arid mountain landscape",
+    "category": "environment",
+    "area_frac": 0.12429521358092786,
+    "real_mpl": 0.0970638156151297,
+    "controls": [
+     {
+      "mpl": 0.15035906299371898,
+      "overlap_frac": 0.0,
+      "cov": 0.12429521358092786
+     },
+     {
+      "mpl": 0.1389515084641428,
+      "overlap_frac": 0.0005752439650744736,
+      "cov": 0.12429521358092786
+     }
+    ]
+   },
+   {
+    "cue": "Adobe-style buildings",
+    "category": "architecture",
+    "area_frac": 0.004564513493084922,
+    "real_mpl": 0.050169823519762055,
+    "controls": [
+     {
+      "mpl": 0.04409598018389465,
+      "overlap_frac": 0.0,
+      "cov": 0.004564513493084922
+     },
+     {
+      "mpl": 0.03658043540303318,
+      "overlap_frac": 0.0,
+      "cov": 0.004564513493084922
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "219687801_ab67a8f5ca_70_88483799@N00.jpg",
+  "true_label": "Newport News, United States",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.12381361407216887,
+  "cues": [
+   {
+    "cue": "U.S. Army uniforms",
+    "category": "commercial/cultural",
+    "area_frac": 0.08675129210843496,
+    "real_mpl": 0.06284333986868669,
+    "controls": [
+     {
+      "mpl": 0.09771534774641809,
+      "overlap_frac": 0.0,
+      "cov": 0.08675129210843496
+     },
+     {
+      "mpl": 0.10644006416832313,
+      "overlap_frac": 0.0,
+      "cov": 0.08675129210843496
+     }
+    ]
+   },
+   {
+    "cue": "Patch on uniform",
+    "category": "text/signage",
+    "area_frac": 0.0015998140998140999,
+    "real_mpl": 0.03211390911431552,
+    "controls": [
+     {
+      "mpl": 0.09197981672188357,
+      "overlap_frac": 0.0,
+      "cov": 0.0015998140998140999
+     },
+     {
+      "mpl": 0.06174670119886328,
+      "overlap_frac": 0.0,
+      "cov": 0.0015998140998140999
+     }
+    ]
+   },
+   {
+    "cue": "Concrete pavement and hangar",
+    "category": "landmarks/buildings",
+    "area_frac": 0.02136447672161958,
+    "real_mpl": 0.08299635488314565,
+    "controls": [
+     {
+      "mpl": 0.18612357678972175,
+      "overlap_frac": 0.0,
+      "cov": 0.02136447672161958
+     },
+     {
+      "mpl": 0.16219222766822372,
+      "overlap_frac": 0.0,
+      "cov": 0.02136447672161958
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "381147491_751c8c119c_181_57253263@N00.jpg",
+  "true_label": "Cambridge, United States",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.12581625776597327,
+  "cues": [
+   {
+    "cue": "shopcambridgeside.com URL",
+    "category": "text/signage",
+    "area_frac": 0.028060035757080094,
+    "real_mpl": 0.12581625776597327,
+    "controls": [
+     {
+      "mpl": 0.07695716359533096,
+      "overlap_frac": 0.0,
+      "cov": 0.028060035757080094
+     },
+     {
+      "mpl": 0.05102920276211149,
+      "overlap_frac": 0.0,
+      "cov": 0.028060035757080094
+     }
+    ]
+   },
+   {
+    "cue": "Customer Service sign",
+    "category": "text/signage",
+    "area_frac": 0.028060035757080094,
+    "real_mpl": 0.12581625776597327,
+    "controls": [
+     {
+      "mpl": 0.058969126014116725,
+      "overlap_frac": 0.0,
+      "cov": 0.028060035757080094
+     },
+     {
+      "mpl": 0.054012103151787665,
+      "overlap_frac": 0.0,
+      "cov": 0.028060035757080094
+     }
+    ]
+   },
+   {
+    "cue": "Payless ShoeSource store",
+    "category": "commercial/cultural",
+    "area_frac": 0.028060035757080094,
+    "real_mpl": 0.12581625776597327,
+    "controls": [
+     {
+      "mpl": 0.05747847696486624,
+      "overlap_frac": 0.0,
+      "cov": 0.028060035757080094
+     },
+     {
+      "mpl": 0.059998201421101384,
+      "overlap_frac": 0.0,
+      "cov": 0.028060035757080094
+     }
+    ]
+   },
+   {
+    "cue": "Inside Sale sign",
+    "category": "text/signage",
+    "area_frac": 0.028060035757080094,
+    "real_mpl": 0.12581625776597327,
+    "controls": [
+     {
+      "mpl": 0.0476374107878418,
+      "overlap_frac": 0.0,
+      "cov": 0.028060035757080094
+     },
+     {
+      "mpl": 0.0458817766867634,
+      "overlap_frac": 0.0,
+      "cov": 0.028060035757080094
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "321720530_f2a31b2549_128_81421684@N00.jpg",
+  "true_label": "Chaoyang District, China",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.13905965030116188,
+  "cues": [
+   {
+    "cue": "Chinese text on building",
+    "category": "text/signage",
+    "area_frac": 0.17697646209118856,
+    "real_mpl": 0.07634298322532922,
+    "controls": [
+     {
+      "mpl": 0.09836004510721962,
+      "overlap_frac": 0.5445448718787197,
+      "cov": 0.17697646209118856
+     },
+     {
+      "mpl": 0.07972739878186343,
+      "overlap_frac": 0.5466246353873723,
+      "cov": 0.17697646209118856
+     }
+    ]
+   },
+   {
+    "cue": "High-rise construction",
+    "category": "landmarks/buildings",
+    "area_frac": 0.17697646209118856,
+    "real_mpl": 0.07634298322532922,
+    "controls": [
+     {
+      "mpl": 0.0834774472055057,
+      "overlap_frac": 0.5588546912401408,
+      "cov": 0.17697646209118856
+     },
+     {
+      "mpl": 0.09653903877426749,
+      "overlap_frac": 0.5506664399419235,
+      "cov": 0.17697646209118856
+     }
+    ]
+   },
+   {
+    "cue": "Red construction cranes",
+    "category": "road/infrastructure",
+    "area_frac": 0.17609448498092523,
+    "real_mpl": 0.0870049305095251,
+    "controls": [
+     {
+      "mpl": 0.11157888527224023,
+      "overlap_frac": 0.42566057578546074,
+      "cov": 0.17609448498092523
+     },
+     {
+      "mpl": 0.11559887448208735,
+      "overlap_frac": 0.42521361903509924,
+      "cov": 0.17609448498092523
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "203382931_becf34eb9c_73_40829484@N00.jpg",
+  "true_label": "Spa, Belgium",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.1423066338197635,
+  "cues": [
+   {
+    "cue": "BorgWarner Turbo & Emissions Systems logo",
+    "category": "commercial/cultural",
+    "area_frac": 0.006717974351902923,
+    "real_mpl": 0.2114374275016118,
+    "controls": [
+     {
+      "mpl": 0.08825554809291439,
+      "overlap_frac": 0.0,
+      "cov": 0.006717974351902923
+     },
+     {
+      "mpl": 0.17166758933367263,
+      "overlap_frac": 0.0,
+      "cov": 0.006717974351902923
+     }
+    ]
+   },
+   {
+    "cue": "ET3 European Championship logo",
+    "category": "text/signage",
+    "area_frac": 0.006717974351902923,
+    "real_mpl": 0.2114374275016118,
+    "controls": [
+     {
+      "mpl": 0.08948673017430425,
+      "overlap_frac": 0.0,
+      "cov": 0.006717974351902923
+     },
+     {
+      "mpl": 0.0907226449832785,
+      "overlap_frac": 0.0,
+      "cov": 0.006717974351902923
+     }
+    ]
+   },
+   {
+    "cue": "Michelin tire logo",
+    "category": "commercial/cultural",
+    "area_frac": 0.006717974351902923,
+    "real_mpl": 0.2114374275016118,
+    "controls": [
+     {
+      "mpl": 0.09234916345710824,
+      "overlap_frac": 0.0,
+      "cov": 0.006717974351902923
+     },
+     {
+      "mpl": 0.16002465077196631,
+      "overlap_frac": 0.0,
+      "cov": 0.006717974351902923
+     }
+    ]
+   },
+   {
+    "cue": "Race car with number 18",
+    "category": "vehicles/license plates",
+    "area_frac": 0.03434541046148189,
+    "real_mpl": 0.07359932725916285,
+    "controls": [
+     {
+      "mpl": 0.16983647017469342,
+      "overlap_frac": 0.0,
+      "cov": 0.03434541046148189
+     },
+     {
+      "mpl": 0.19920821012743126,
+      "overlap_frac": 0.0,
+      "cov": 0.03434541046148189
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "331988145_2303e98396_151_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.1464984272829013,
+  "cues": [
+   {
+    "cue": "Stone cairn",
+    "category": "landmarks/buildings",
+    "area_frac": 0.054599795583257935,
+    "real_mpl": 0.14869247664689175,
+    "controls": [
+     {
+      "mpl": 0.05188066889366665,
+      "overlap_frac": 0.0,
+      "cov": 0.054599795583257935
+     },
+     {
+      "mpl": 0.06771377413522338,
+      "overlap_frac": 0.0,
+      "cov": 0.054599795583257935
+     }
+    ]
+   },
+   {
+    "cue": "Sheep on hillside",
+    "category": "environment",
+    "area_frac": 0.009119164907342247,
+    "real_mpl": 0.05329478843730402,
+    "controls": [
+     {
+      "mpl": 0.05574930807093726,
+      "overlap_frac": 0.0,
+      "cov": 0.009119164907342247
+     },
+     {
+      "mpl": 0.03789316864917683,
+      "overlap_frac": 0.0,
+      "cov": 0.009119164907342247
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+  "true_label": "Okazaki, Japan",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.15141342382949008,
+  "cues": [
+   {
+    "cue": "Japanese text on festival banners",
+    "category": "text/signage",
+    "area_frac": 0.12432074932074932,
+    "real_mpl": 0.08496790385883064,
+    "controls": [
+     {
+      "mpl": 0.09560264447998418,
+      "overlap_frac": 0.23517510526856322,
+      "cov": 0.12432074932074932
+     },
+     {
+      "mpl": 0.09582922689827435,
+      "overlap_frac": 0.28576563623292595,
+      "cov": 0.12432074932074932
+     }
+    ]
+   },
+   {
+    "cue": "Samurai armor on a person",
+    "category": "commercial/cultural",
+    "area_frac": 0.05429792036934894,
+    "real_mpl": 0.07595638901109285,
+    "controls": [
+     {
+      "mpl": 0.07111929909561528,
+      "overlap_frac": 0.10901309756154913,
+      "cov": 0.05429792036934894
+     },
+     {
+      "mpl": 0.07073637040435134,
+      "overlap_frac": 0.040938697768476494,
+      "cov": 0.05429792036934894
+     }
+    ]
+   },
+   {
+    "cue": "Cherry blossoms",
+    "category": "environment",
+    "area_frac": 0.25183474290617147,
+    "real_mpl": 0.09242336939150192,
+    "controls": [
+     {
+      "mpl": 0.12323991941763456,
+      "overlap_frac": 0.17638827627116066,
+      "cov": 0.25183474290617147
+     },
+     {
+      "mpl": 0.1122607670970521,
+      "overlap_frac": 0.1765758640444938,
+      "cov": 0.25183474290617147
+     }
+    ]
+   },
+   {
+    "cue": "Japanese police uniforms",
+    "category": "commercial/cultural",
+    "area_frac": 0.05382806275663418,
+    "real_mpl": 0.051650043208072156,
+    "controls": [
+     {
+      "mpl": 0.054029357885490036,
+      "overlap_frac": 0.09717972437676416,
+      "cov": 0.05382806275663418
+     },
+     {
+      "mpl": 0.05850430811591455,
+      "overlap_frac": 0.09570910125951754,
+      "cov": 0.05382806275663418
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "244035501_3708124424_87_40829484@N00.jpg",
+  "true_label": "New York, United States",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.15250464898072563,
+  "cues": [
+   {
+    "cue": "Twin-towered building resembling The San Remo",
+    "category": "landmarks/buildings",
+    "area_frac": 0.10332909440052297,
+    "real_mpl": 0.10494086324309371,
+    "controls": [
+     {
+      "mpl": 0.16695642252134416,
+      "overlap_frac": 0.0,
+      "cov": 0.10332909440052297
+     },
+     {
+      "mpl": 0.17919427231957147,
+      "overlap_frac": 0.0,
+      "cov": 0.10332909440052297
+     }
+    ]
+   },
+   {
+    "cue": "Frozen lake with surrounding park",
+    "category": "environment",
+    "area_frac": 0.016714418500132784,
+    "real_mpl": 0.0355484702068404,
+    "controls": [
+     {
+      "mpl": 0.05452446180849908,
+      "overlap_frac": 0.0,
+      "cov": 0.016714418500132784
+     },
+     {
+      "mpl": 0.06351857199479966,
+      "overlap_frac": 0.0,
+      "cov": 0.016714418500132784
+     }
+    ]
+   },
+   {
+    "cue": "Leafless trees in winter",
+    "category": "environment",
+    "area_frac": 0.012457610671896387,
+    "real_mpl": 0.1624168526457295,
+    "controls": [
+     {
+      "mpl": 0.11882495481926802,
+      "overlap_frac": 0.0,
+      "cov": 0.012457610671896387
+     },
+     {
+      "mpl": 0.08252443389104054,
+      "overlap_frac": 0.0,
+      "cov": 0.012457610671896387
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "171046893_b97c4f0aa5_73_30571787@N00.jpg",
+  "true_label": "City of Westminster, United Kingdom",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.15286225958645885,
+  "cues": [
+   {
+    "cue": "Victorian architecture with red brick and white stone",
+    "category": "architecture",
+    "area_frac": 0.22832679869977549,
+    "real_mpl": 0.12904239812542914,
+    "controls": [
+     {
+      "mpl": 0.12904239812542914,
+      "overlap_frac": 1.0,
+      "cov": 0.22832679869977549
+     },
+     {
+      "mpl": 0.12904239812542914,
+      "overlap_frac": 1.0,
+      "cov": 0.22832679869977549
+     }
+    ]
+   },
+   {
+    "cue": "Traditional British pub sign",
+    "category": "commercial/cultural",
+    "area_frac": 0.008195519587145202,
+    "real_mpl": 0.07365355442525508,
+    "controls": [
+     {
+      "mpl": 0.0819193188457575,
+      "overlap_frac": 0.12726808075645285,
+      "cov": 0.008195519587145202
+     },
+     {
+      "mpl": 0.0753284975190063,
+      "overlap_frac": 0.12726808075645285,
+      "cov": 0.008195519587145202
+     }
+    ]
+   },
+   {
+    "cue": "Red telephone box",
+    "category": "landmarks/buildings",
+    "area_frac": 0.0038432860829060687,
+    "real_mpl": 0.11665676661064317,
+    "controls": [
+     {
+      "mpl": 0.060436583695284665,
+      "overlap_frac": 0.0,
+      "cov": 0.0038432860829060687
+     },
+     {
+      "mpl": 0.041622547793038,
+      "overlap_frac": 0.0,
+      "cov": 0.0038432860829060687
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "199802332_27a09191e6_64_85971448@N00.jpg",
+  "true_label": "Denizli, Turkey",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.15347286594526532,
+  "cues": [
+   {
+    "cue": "Mountainous background",
+    "category": "environment",
+    "area_frac": 0.06922611386897101,
+    "real_mpl": 0.05021564419692447,
+    "controls": [
+     {
+      "mpl": 0.05739972614711462,
+      "overlap_frac": 0.0,
+      "cov": 0.06922611386897101
+     },
+     {
+      "mpl": 0.06307282068584899,
+      "overlap_frac": 0.0,
+      "cov": 0.06922611386897101
+     }
+    ]
+   },
+   {
+    "cue": "Turkish text on sign",
+    "category": "text/signage",
+    "area_frac": 0.007836918551204266,
+    "real_mpl": 0.1355106397743899,
+    "controls": [
+     {
+      "mpl": 0.04760612698454818,
+      "overlap_frac": 0.0,
+      "cov": 0.007836918551204266
+     },
+     {
+      "mpl": 0.04553589220258791,
+      "overlap_frac": 0.0,
+      "cov": 0.007836918551204266
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "919126362_49e364686c_1300_50994135@N00.jpg",
+  "true_label": "Argyll and Bute, United Kingdom",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.1655901715479108,
+  "cues": [
+   {
+    "cue": "Mountainous landscape with loch",
+    "category": "environment",
+    "area_frac": 0.0970479407979408,
+    "real_mpl": 0.14653930961405565,
+    "controls": [
+     {
+      "mpl": 0.08176180908249368,
+      "overlap_frac": 0.0,
+      "cov": 0.0970479407979408
+     },
+     {
+      "mpl": 0.08930407322251034,
+      "overlap_frac": 0.0,
+      "cov": 0.0970479407979408
+     }
+    ]
+   },
+   {
+    "cue": "Stone wall and building",
+    "category": "architecture",
+    "area_frac": 0.025517386008457436,
+    "real_mpl": 0.09126757494363201,
+    "controls": [
+     {
+      "mpl": 0.3564746183809453,
+      "overlap_frac": 0.0,
+      "cov": 0.025517386008457436
+     },
+     {
+      "mpl": 0.2558170476026394,
+      "overlap_frac": 0.0,
+      "cov": 0.025517386008457436
+     }
+    ]
+   },
+   {
+    "cue": "Traffic cones",
+    "category": "road/infrastructure",
+    "area_frac": 0.0015340595697738554,
+    "real_mpl": 0.07133450562599981,
+    "controls": [
+     {
+      "mpl": 0.02997109034847343,
+      "overlap_frac": 0.0,
+      "cov": 0.0015340595697738554
+     },
+     {
+      "mpl": 0.037237833677951825,
+      "overlap_frac": 0.0,
+      "cov": 0.0015340595697738554
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "234333488_744cb7ae38_91_73293249@N00.jpg",
+  "true_label": "Anniviers, Switzerland",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.1705636702897102,
+  "cues": [
+   {
+    "cue": "Chalet-style wooden architecture",
+    "category": "architecture",
+    "area_frac": 0.2194630855345141,
+    "real_mpl": 0.1364790119924581,
+    "controls": [
+     {
+      "mpl": 0.1364790119924581,
+      "overlap_frac": 1.0,
+      "cov": 0.2194630855345141
+     },
+     {
+      "mpl": 0.1364790119924581,
+      "overlap_frac": 1.0,
+      "cov": 0.2194630855345141
+     }
+    ]
+   },
+   {
+    "cue": "Flower boxes with geraniums",
+    "category": "environment",
+    "area_frac": 0.00840508876223162,
+    "real_mpl": 0.025640194452895688,
+    "controls": [
+     {
+      "mpl": 0.06263003387066853,
+      "overlap_frac": 0.0,
+      "cov": 0.00840508876223162
+     },
+     {
+      "mpl": 0.08057462193539355,
+      "overlap_frac": 0.01838067750265836,
+      "cov": 0.00840508876223162
+     }
+    ]
+   },
+   {
+    "cue": "Alpine mountain in background",
+    "category": "environment",
+    "area_frac": 0.013301566872995444,
+    "real_mpl": 0.08729453646624948,
+    "controls": [
+     {
+      "mpl": 0.07685839865428733,
+      "overlap_frac": 0.0,
+      "cov": 0.013301566872995444
+     },
+     {
+      "mpl": 0.10779895634466827,
+      "overlap_frac": 0.0,
+      "cov": 0.013301566872995444
+     }
+    ]
+   },
+   {
+    "cue": "Traditional Swiss bell",
+    "category": "commercial/cultural",
+    "area_frac": 0.0013163673877959591,
+    "real_mpl": 0.029497716073553008,
+    "controls": [
+     {
+      "mpl": 0.03141643659324246,
+      "overlap_frac": 0.0,
+      "cov": 0.0013163673877959591
+     },
+     {
+      "mpl": 0.022610807464004484,
+      "overlap_frac": 0.0,
+      "cov": 0.0013163673877959591
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "468278910_539810ce41_193_64825499@N00.jpg",
+  "true_label": "Mexico",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.17071529518127973,
+  "cues": [
+   {
+    "cue": "Hotel Cozumel sign",
+    "category": "text/signage",
+    "area_frac": 0.14970582827725684,
+    "real_mpl": 0.11373532330033218,
+    "controls": [
+     {
+      "mpl": 0.10919667283734327,
+      "overlap_frac": 0.2861529014430457,
+      "cov": 0.14970582827725684
+     },
+     {
+      "mpl": 0.10048345807601358,
+      "overlap_frac": 0.3356616518268345,
+      "cov": 0.14970582827725684
+     }
+    ]
+   },
+   {
+    "cue": "Dos Equis branding",
+    "category": "commercial/cultural",
+    "area_frac": 0.0019190108475822761,
+    "real_mpl": 0.04657576197334566,
+    "controls": [
+     {
+      "mpl": 0.025686026014587516,
+      "overlap_frac": 0.0,
+      "cov": 0.0019190108475822761
+     },
+     {
+      "mpl": 0.035125412536396436,
+      "overlap_frac": 0.0,
+      "cov": 0.0019190108475822761
+     }
+    ]
+   },
+   {
+    "cue": "Tropical vegetation",
+    "category": "environment",
+    "area_frac": 0.011637913423627709,
+    "real_mpl": 0.040910996434944,
+    "controls": [
+     {
+      "mpl": 0.060772964717561516,
+      "overlap_frac": 0.0,
+      "cov": 0.011637913423627709
+     },
+     {
+      "mpl": 0.05258470204773717,
+      "overlap_frac": 0.0,
+      "cov": 0.011637913423627709
+     }
+    ]
+   },
+   {
+    "cue": "Waterfront location",
+    "category": "environment",
+    "area_frac": 0.3076814058956916,
+    "real_mpl": 0.08087656354340075,
+    "controls": [
+     {
+      "mpl": 0.12142502778831624,
+      "overlap_frac": 0.09357169237408758,
+      "cov": 0.3076814058956916
+     },
+     {
+      "mpl": 0.15294930531751802,
+      "overlap_frac": 0.10441902058668526,
+      "cov": 0.3076814058956916
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "370018459_911d2a6929_123_51162504@N00.jpg",
+  "true_label": "Gloucester, United States",
+  "country_hit": false,
+  "n_cues": 2,
+  "vN": 0.1716883218607099,
+  "cues": [
+   {
+    "cue": "calm water body",
+    "category": "environment",
+    "area_frac": 0.08107469714612572,
+    "real_mpl": 0.12749398366323847,
+    "controls": [
+     {
+      "mpl": 0.036546498172239275,
+      "overlap_frac": 0.0,
+      "cov": 0.08107469714612572
+     },
+     {
+      "mpl": 0.07741017263349102,
+      "overlap_frac": 0.0,
+      "cov": 0.08107469714612572
+     }
+    ]
+   },
+   {
+    "cue": "silhouette of distant land",
+    "category": "environment",
+    "area_frac": 0.020022573594002165,
+    "real_mpl": 0.17846218398371436,
+    "controls": [
+     {
+      "mpl": 0.06136824848888664,
+      "overlap_frac": 0.0,
+      "cov": 0.020022573594002165
+     },
+     {
+      "mpl": 0.04729967789785388,
+      "overlap_frac": 0.0,
+      "cov": 0.020022573594002165
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "294552061_7ddb16fe09_116_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.1718208087440001,
+  "cues": [
+   {
+    "cue": "Cluster of small houses",
+    "category": "architecture",
+    "area_frac": 0.004739703763278711,
+    "real_mpl": 0.03279724963460485,
+    "controls": [
+     {
+      "mpl": 0.04294380200306634,
+      "overlap_frac": 0.0,
+      "cov": 0.004739703763278711
+     },
+     {
+      "mpl": 0.031357153896022866,
+      "overlap_frac": 0.0,
+      "cov": 0.004739703763278711
+     }
+    ]
+   },
+   {
+    "cue": "Fenced fields",
+    "category": "road/infrastructure",
+    "area_frac": 0.2094161556248115,
+    "real_mpl": 0.1768165729039522,
+    "controls": [
+     {
+      "mpl": 0.1622961470387389,
+      "overlap_frac": 0.0,
+      "cov": 0.2094161556248115
+     },
+     {
+      "mpl": 0.16125642692589864,
+      "overlap_frac": 0.0,
+      "cov": 0.2094161556248115
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "1055535547_d8ebd9b0ff_1005_52057668@N00.jpg",
+  "true_label": "Siena, Italy",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.17203193682124798,
+  "cues": [
+   {
+    "cue": "Stone columns with arches",
+    "category": "architecture",
+    "area_frac": 0.36819472533758246,
+    "real_mpl": 0.17911203637890935,
+    "controls": [
+     {
+      "mpl": 0.5972800534880734,
+      "overlap_frac": 0.3840784253890754,
+      "cov": 0.36819472533758246
+     },
+     {
+      "mpl": 0.5755050154520532,
+      "overlap_frac": 0.38283699059561127,
+      "cov": 0.36819472533758246
+     }
+    ]
+   },
+   {
+    "cue": "Romanesque architectural elements",
+    "category": "architecture",
+    "area_frac": 0.07825044432187289,
+    "real_mpl": 0.30397120603483413,
+    "controls": [
+     {
+      "mpl": 0.3689270728825046,
+      "overlap_frac": 0.1733320279994126,
+      "cov": 0.07825044432187289
+     },
+     {
+      "mpl": 0.33019057540723623,
+      "overlap_frac": 0.13521627751399154,
+      "cov": 0.07825044432187289
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "203414504_6dce8e2783_60_40829484@N00.jpg",
+  "true_label": "Spa, Belgium",
+  "country_hit": false,
+  "n_cues": 4,
+  "vN": 0.174449607705649,
+  "cues": [
+   {
+    "cue": "Corvette text on car",
+    "category": "vehicles/license plates",
+    "area_frac": 0.2708634974259974,
+    "real_mpl": 0.174449607705649,
+    "controls": [
+     {
+      "mpl": 0.08206472508794005,
+      "overlap_frac": 0.03823983284987777,
+      "cov": 0.2708634974259974
+     },
+     {
+      "mpl": 0.11694599579010234,
+      "overlap_frac": 0.04496401923923361,
+      "cov": 0.2708634974259974
+     }
+    ]
+   },
+   {
+    "cue": "ADAC logo on car",
+    "category": "commercial/cultural",
+    "area_frac": 0.2708634974259974,
+    "real_mpl": 0.174449607705649,
+    "controls": [
+     {
+      "mpl": 0.09936635397840696,
+      "overlap_frac": 0.06255932715712217,
+      "cov": 0.2708634974259974
+     },
+     {
+      "mpl": 0.10104606992571454,
+      "overlap_frac": 0.041474654377880185,
+      "cov": 0.2708634974259974
+     }
+    ]
+   },
+   {
+    "cue": "GT3 logo on car",
+    "category": "commercial/cultural",
+    "area_frac": 0.2708634974259974,
+    "real_mpl": 0.174449607705649,
+    "controls": [
+     {
+      "mpl": 0.08730880269998492,
+      "overlap_frac": 0.04738218090606821,
+      "cov": 0.2708634974259974
+     },
+     {
+      "mpl": 0.0984724824584961,
+      "overlap_frac": 0.0535283418092728,
+      "cov": 0.2708634974259974
+     }
+    ]
+   },
+   {
+    "cue": "KW logo on car",
+    "category": "commercial/cultural",
+    "area_frac": 0.2708634974259974,
+    "real_mpl": 0.174449607705649,
+    "controls": [
+     {
+      "mpl": 0.0984724824584961,
+      "overlap_frac": 0.0535283418092728,
+      "cov": 0.2708634974259974
+     },
+     {
+      "mpl": 0.11451974818136802,
+      "overlap_frac": 0.03626712201640744,
+      "cov": 0.2708634974259974
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "494612871_db624a92e7_216_62126383@N00.jpg",
+  "true_label": "Hof HaCarmel Regional Council, Israel",
+  "country_hit": false,
+  "n_cues": 1,
+  "vN": 0.17453554219709672,
+  "cues": [
+   {
+    "cue": "Ancient Greek inscription",
+    "category": "text/signage",
+    "area_frac": 0.01875983125983126,
+    "real_mpl": 0.17453554219709672,
+    "controls": [
+     {
+      "mpl": 0.0612380701568616,
+      "overlap_frac": 0.0,
+      "cov": 0.01875983125983126
+     },
+     {
+      "mpl": 0.09292494016934144,
+      "overlap_frac": 0.0,
+      "cov": 0.01875983125983126
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "1077208489_d307c44d40_1355_93455345@N00.jpg",
+  "true_label": "Vladivostok, Russia",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.1786245953210502,
+  "cues": [
+   {
+    "cue": "Harbor with ships",
+    "category": "landmarks/buildings",
+    "area_frac": 0.0101134297562869,
+    "real_mpl": 0.057980742258090884,
+    "controls": [
+     {
+      "mpl": 0.05492815271528413,
+      "overlap_frac": 0.0,
+      "cov": 0.0101134297562869
+     },
+     {
+      "mpl": 0.04946208549862684,
+      "overlap_frac": 0.0,
+      "cov": 0.0101134297562869
+     }
+    ]
+   },
+   {
+    "cue": "Hilly terrain with urban buildings",
+    "category": "environment",
+    "area_frac": 0.013425415211129497,
+    "real_mpl": 0.09819337758189285,
+    "controls": [
+     {
+      "mpl": 0.047191203063341444,
+      "overlap_frac": 0.0,
+      "cov": 0.013425415211129497
+     },
+     {
+      "mpl": 0.03813098478613773,
+      "overlap_frac": 0.0,
+      "cov": 0.013425415211129497
+     }
+    ]
+   },
+   {
+    "cue": "Soviet-style architecture",
+    "category": "architecture",
+    "area_frac": 0.06429260893546608,
+    "real_mpl": 0.08701129972338882,
+    "controls": [
+     {
+      "mpl": 0.0682893621028351,
+      "overlap_frac": 0.0008142190447820475,
+      "cov": 0.06429260893546608
+     },
+     {
+      "mpl": 0.061338415504986483,
+      "overlap_frac": 0.0,
+      "cov": 0.06429260893546608
+     }
+    ]
+   },
+   {
+    "cue": "Lamp post design",
+    "category": "road/infrastructure",
+    "area_frac": 0.01673995423995424,
+    "real_mpl": 0.04311764018838317,
+    "controls": [
+     {
+      "mpl": 0.04641818834503195,
+      "overlap_frac": 0.01944931736709633,
+      "cov": 0.01673995423995424
+     },
+     {
+      "mpl": 0.047812493947088266,
+      "overlap_frac": 0.0116695904202578,
+      "cov": 0.01673995423995424
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "766351079_af0294281f_1240_16836474@N00.jpg",
+  "true_label": "Villa de Leyva, Colombia",
+  "country_hit": false,
+  "n_cues": 2,
+  "vN": 0.1886128609814342,
+  "cues": [
+   {
+    "cue": "Street performer painted gold",
+    "category": "commercial/cultural",
+    "area_frac": 0.005077622265122265,
+    "real_mpl": 0.09028714816982975,
+    "controls": [
+     {
+      "mpl": 0.03698122820392447,
+      "overlap_frac": 0.0,
+      "cov": 0.005077622265122265
+     },
+     {
+      "mpl": 0.03807429442090234,
+      "overlap_frac": 0.0,
+      "cov": 0.005077622265122265
+     }
+    ]
+   },
+   {
+    "cue": "Spanish text on wall sign",
+    "category": "text/signage",
+    "area_frac": 0.014388272200772202,
+    "real_mpl": 0.12967187626357699,
+    "controls": [
+     {
+      "mpl": 0.08658709220420562,
+      "overlap_frac": 0.0,
+      "cov": 0.014388272200772202
+     },
+     {
+      "mpl": 0.06815830868161911,
+      "overlap_frac": 0.0,
+      "cov": 0.014388272200772202
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "217552984_53e8b16fed_71_84498284@N00.jpg",
+  "true_label": "Rome, Italy",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.19144651681924785,
+  "cues": [
+   {
+    "cue": "Latin text 'ADVENIMUS' above entrance",
+    "category": "text/signage",
+    "area_frac": 0.005462094747809033,
+    "real_mpl": 0.04034608777547698,
+    "controls": [
+     {
+      "mpl": 0.05019134966811197,
+      "overlap_frac": 0.0,
+      "cov": 0.005462094747809033
+     },
+     {
+      "mpl": 0.06462924293153392,
+      "overlap_frac": 0.0,
+      "cov": 0.005462094747809033
+     }
+    ]
+   },
+   {
+    "cue": "Bell towers flanking the church",
+    "category": "architecture",
+    "area_frac": 0.03203969275397847,
+    "real_mpl": 0.06043281038558447,
+    "controls": [
+     {
+      "mpl": 0.08031755022485344,
+      "overlap_frac": 0.0,
+      "cov": 0.03203969275397847
+     },
+     {
+      "mpl": 0.09836322348205322,
+      "overlap_frac": 0.0,
+      "cov": 0.03203969275397847
+     }
+    ]
+   },
+   {
+    "cue": "Mediterranean trees and plants",
+    "category": "environment",
+    "area_frac": 0.0756023881023881,
+    "real_mpl": 0.14515187334269192,
+    "controls": [
+     {
+      "mpl": 0.13022414463664875,
+      "overlap_frac": 0.1511154645094827,
+      "cov": 0.0756023881023881
+     },
+     {
+      "mpl": 0.15008480438559066,
+      "overlap_frac": 0.20894060425919983,
+      "cov": 0.0756023881023881
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "847733166_0573338bfb_1321_89904893@N00.jpg",
+  "true_label": "Venice, Italy",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.1960863605195214,
+  "cues": [
+   {
+    "cue": "Latin inscription on building",
+    "category": "text/signage",
+    "area_frac": 0.019533404578047434,
+    "real_mpl": 0.10043762416686763,
+    "controls": [
+     {
+      "mpl": 0.11646635745796836,
+      "overlap_frac": 0.0,
+      "cov": 0.019533404578047434
+     },
+     {
+      "mpl": 0.13293712747965397,
+      "overlap_frac": 0.0,
+      "cov": 0.019533404578047434
+     }
+    ]
+   },
+   {
+    "cue": "Statues on building facade",
+    "category": "landmarks/buildings",
+    "area_frac": 0.02014530474351903,
+    "real_mpl": 0.1227744819506862,
+    "controls": [
+     {
+      "mpl": 0.1314834053299976,
+      "overlap_frac": 0.0,
+      "cov": 0.02014530474351903
+     },
+     {
+      "mpl": 0.18544803018823006,
+      "overlap_frac": 0.0,
+      "cov": 0.02014530474351903
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "276477189_7baf796f9d_83_12814307@N00.jpg",
+  "true_label": "Seraing, Belgium",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.19739267567749375,
+  "cues": [
+   {
+    "cue": "French text on sign",
+    "category": "text/signage",
+    "area_frac": 0.16335085085085085,
+    "real_mpl": 0.2660024535330129,
+    "controls": [
+     {
+      "mpl": 0.17810757839744654,
+      "overlap_frac": 0.05451816881482582,
+      "cov": 0.16335085085085085
+     },
+     {
+      "mpl": 0.1414417786382056,
+      "overlap_frac": 0.05229054471271465,
+      "cov": 0.16335085085085085
+     }
+    ]
+   },
+   {
+    "cue": "Railway infrastructure",
+    "category": "road/infrastructure",
+    "area_frac": 0.0058425772711487,
+    "real_mpl": 0.0457091796922562,
+    "controls": [
+     {
+      "mpl": 0.055550091189013745,
+      "overlap_frac": 0.0,
+      "cov": 0.0058425772711487
+     },
+     {
+      "mpl": 0.06566645926591368,
+      "overlap_frac": 0.0,
+      "cov": 0.0058425772711487
+     }
+    ]
+   },
+   {
+    "cue": "European style vegetation",
+    "category": "environment",
+    "area_frac": 0.04080866580866581,
+    "real_mpl": 0.18639233429507154,
+    "controls": [
+     {
+      "mpl": 0.11694217135905832,
+      "overlap_frac": 0.0,
+      "cov": 0.04080866580866581
+     },
+     {
+      "mpl": 0.11673305830982593,
+      "overlap_frac": 0.0,
+      "cov": 0.04080866580866581
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "244685754_fa9cd577a8_94_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.2112207172498752,
+  "cues": [
+   {
+    "cue": "Rocky coastline with grassy hills",
+    "category": "environment",
+    "area_frac": 0.15496506484367145,
+    "real_mpl": 0.08238769352184437,
+    "controls": [
+     {
+      "mpl": 0.10197482372193396,
+      "overlap_frac": 0.021841084485531632,
+      "cov": 0.15496506484367145
+     },
+     {
+      "mpl": 0.11245623701557009,
+      "overlap_frac": 0.023881928394761383,
+      "cov": 0.15496506484367145
+     }
+    ]
+   },
+   {
+    "cue": "Sandy beach with rocks",
+    "category": "environment",
+    "area_frac": 0.17032983143996513,
+    "real_mpl": 0.09797009367993127,
+    "controls": [
+     {
+      "mpl": 0.15758154370809457,
+      "overlap_frac": 0.021776821395634798,
+      "cov": 0.17032983143996513
+     },
+     {
+      "mpl": 0.12474922367840029,
+      "overlap_frac": 0.02305564094681832,
+      "cov": 0.17032983143996513
+     }
+    ]
+   },
+   {
+    "cue": "Overcast sky",
+    "category": "environment",
+    "area_frac": 0.2806729834791059,
+    "real_mpl": 0.10609383669235155,
+    "controls": [
+     {
+      "mpl": 0.15914163842954748,
+      "overlap_frac": 0.16971994418285338,
+      "cov": 0.2806729834791059
+     },
+     {
+      "mpl": 0.13122844397001668,
+      "overlap_frac": 0.16732458267728287,
+      "cov": 0.2806729834791059
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "256718877_67e9b4f39b_83_50994135@N00.jpg",
+  "true_label": "Inverclyde, United Kingdom",
+  "country_hit": false,
+  "n_cues": 4,
+  "vN": 0.21320574142440366,
+  "cues": [
+   {
+    "cue": "Wooden cabinet design",
+    "category": "architecture",
+    "area_frac": 0.2637601298315584,
+    "real_mpl": 0.18551672788209397,
+    "controls": [
+     {
+      "mpl": 0.159141075753524,
+      "overlap_frac": 0.286472628562811,
+      "cov": 0.2637601298315584
+     },
+     {
+      "mpl": 0.1756689409171242,
+      "overlap_frac": 0.3046297692655708,
+      "cov": 0.2637601298315584
+     }
+    ]
+   },
+   {
+    "cue": "Decorative lamp",
+    "category": "other",
+    "area_frac": 0.01322844626416055,
+    "real_mpl": 0.04681400755039675,
+    "controls": [
+     {
+      "mpl": 0.03995648515654134,
+      "overlap_frac": 0.0,
+      "cov": 0.01322844626416055
+     },
+     {
+      "mpl": 0.05736458849264892,
+      "overlap_frac": 0.0,
+      "cov": 0.01322844626416055
+     }
+    ]
+   },
+   {
+    "cue": "Painting style",
+    "category": "commercial/cultural",
+    "area_frac": 0.06906185031185032,
+    "real_mpl": 0.054862571682398456,
+    "controls": [
+     {
+      "mpl": 0.0679967531387578,
+      "overlap_frac": 0.31034615163092516,
+      "cov": 0.06906185031185032
+     },
+     {
+      "mpl": 0.05810310510475966,
+      "overlap_frac": 0.4272851191276134,
+      "cov": 0.06906185031185032
+     }
+    ]
+   },
+   {
+    "cue": "Clothing style",
+    "category": "commercial/cultural",
+    "area_frac": 0.12333600280028852,
+    "real_mpl": 0.07430418111423699,
+    "controls": [
+     {
+      "mpl": 0.07967309270164777,
+      "overlap_frac": 0.2018038937444233,
+      "cov": 0.12333600280028852
+     },
+     {
+      "mpl": 0.1142511431209441,
+      "overlap_frac": 0.2001376033368809,
+      "cov": 0.12333600280028852
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "266287734_114d6cc260_94_40829484@N00.jpg",
+  "true_label": "Biwer, Luxembourg",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.2387563658035136,
+  "cues": [
+   {
+    "cue": "Porsche dealership building",
+    "category": "landmarks/buildings",
+    "area_frac": 0.26005182478396766,
+    "real_mpl": 0.20241358222717337,
+    "controls": [
+     {
+      "mpl": 0.4401605547497783,
+      "overlap_frac": 0.0,
+      "cov": 0.26005182478396766
+     },
+     {
+      "mpl": 0.6734019669219556,
+      "overlap_frac": 0.0,
+      "cov": 0.26005182478396766
+     }
+    ]
+   },
+   {
+    "cue": "www.porsche.lu URL on car",
+    "category": "text/signage",
+    "area_frac": 0.026541528773671632,
+    "real_mpl": 0.06132401719474573,
+    "controls": [
+     {
+      "mpl": 0.17488300556319117,
+      "overlap_frac": 0.0,
+      "cov": 0.026541528773671632
+     },
+     {
+      "mpl": 0.19973921964706143,
+      "overlap_frac": 0.0,
+      "cov": 0.026541528773671632
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "219898919_220c455b81_78_82927779@N00.jpg",
+  "true_label": "George, South Africa",
+  "country_hit": false,
+  "n_cues": 3,
+  "vN": 0.23988578365218402,
+  "cues": [
+   {
+    "cue": "Rasta-style beanie",
+    "category": "commercial/cultural",
+    "area_frac": 0.02255412300055157,
+    "real_mpl": 0.08936205204409983,
+    "controls": [
+     {
+      "mpl": 0.10263193308549827,
+      "overlap_frac": 0.0,
+      "cov": 0.02255412300055157
+     },
+     {
+      "mpl": 0.04974453779011743,
+      "overlap_frac": 0.0,
+      "cov": 0.02255412300055157
+     }
+    ]
+   },
+   {
+    "cue": "Blue jeans and casual clothing",
+    "category": "commercial/cultural",
+    "area_frac": 0.14009066464423608,
+    "real_mpl": 0.3444939784239977,
+    "controls": [
+     {
+      "mpl": 0.10648703611497388,
+      "overlap_frac": 0.03490208141084795,
+      "cov": 0.14009066464423608
+     },
+     {
+      "mpl": 0.16038995712732096,
+      "overlap_frac": 0.0360196862503845,
+      "cov": 0.14009066464423608
+     }
+    ]
+   },
+   {
+    "cue": "Stone and brick wall",
+    "category": "architecture",
+    "area_frac": 0.06375540080897224,
+    "real_mpl": 0.17575736100455336,
+    "controls": [
+     {
+      "mpl": 0.11686698308097763,
+      "overlap_frac": 0.0,
+      "cov": 0.06375540080897224
+     },
+     {
+      "mpl": 0.07801941337955356,
+      "overlap_frac": 0.0,
+      "cov": 0.06375540080897224
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "880710221_64f0fdd8f2_1137_85417391@N00.jpg",
+  "true_label": "Jefferson County, United States",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.2404816218327404,
+  "cues": [
+   {
+    "cue": "Sunset over ocean",
+    "category": "environment",
+    "area_frac": 0.2851282404853833,
+    "real_mpl": 0.21622386712694036,
+    "controls": [
+     {
+      "mpl": 0.19279610087073062,
+      "overlap_frac": 0.048865514045057026,
+      "cov": 0.2851282404853833
+     },
+     {
+      "mpl": 0.21164244578221886,
+      "overlap_frac": 0.0369916979002942,
+      "cov": 0.2851282404853833
+     }
+    ]
+   },
+   {
+    "cue": "Rocky shoreline",
+    "category": "environment",
+    "area_frac": 0.003947186982901268,
+    "real_mpl": 0.10536264684302736,
+    "controls": [
+     {
+      "mpl": 0.049774262584358825,
+      "overlap_frac": 0.0,
+      "cov": 0.003947186982901268
+     },
+     {
+      "mpl": 0.05071765906904116,
+      "overlap_frac": 0.0,
+      "cov": 0.003947186982901268
+     }
+    ]
+   },
+   {
+    "cue": "Cloudy sky",
+    "category": "environment",
+    "area_frac": 0.22321428571428573,
+    "real_mpl": 0.13332319410066418,
+    "controls": [
+     {
+      "mpl": 0.07466834833710573,
+      "overlap_frac": 0.0,
+      "cov": 0.22321428571428573
+     },
+     {
+      "mpl": 0.0706220199199397,
+      "overlap_frac": 0.00016731016731016732,
+      "cov": 0.22321428571428573
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "668488293_1b39338210_1369_81421684@N00.jpg",
+  "true_label": "Grafenegg, Austria",
+  "country_hit": false,
+  "n_cues": 2,
+  "vN": 0.24315344793063776,
+  "cues": [
+   {
+    "cue": "Dragon statue",
+    "category": "landmarks/buildings",
+    "area_frac": 0.13803916161059018,
+    "real_mpl": 0.13274624212920066,
+    "controls": [
+     {
+      "mpl": 0.10823428187968241,
+      "overlap_frac": 0.18807064511617685,
+      "cov": 0.13803916161059018
+     },
+     {
+      "mpl": 0.12405862753198021,
+      "overlap_frac": 0.2558088426268156,
+      "cov": 0.13803916161059018
+     }
+    ]
+   },
+   {
+    "cue": "Lush greenery",
+    "category": "environment",
+    "area_frac": 0.2845339216767788,
+    "real_mpl": 0.09184849504282333,
+    "controls": [
+     {
+      "mpl": 0.07592269052503678,
+      "overlap_frac": 0.3130548986159035,
+      "cov": 0.2845339216767788
+     },
+     {
+      "mpl": 0.11509038712393097,
+      "overlap_frac": 0.3182840305509247,
+      "cov": 0.2845339216767788
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "415005347_2f1a541aef_183_7132415@N03.jpg",
+  "true_label": "Mont Dore, France",
+  "country_hit": false,
+  "n_cues": 3,
+  "vN": 0.25319493465258525,
+  "cues": [
+   {
+    "cue": "Tall white lighthouse",
+    "category": "landmarks/buildings",
+    "area_frac": 0.002463400900900901,
+    "real_mpl": 0.14458926991023363,
+    "controls": [
+     {
+      "mpl": 0.03615813790483665,
+      "overlap_frac": 0.0,
+      "cov": 0.002463400900900901
+     },
+     {
+      "mpl": 0.03324139691110165,
+      "overlap_frac": 0.0,
+      "cov": 0.002463400900900901
+     }
+    ]
+   },
+   {
+    "cue": "Tropical vegetation",
+    "category": "environment",
+    "area_frac": 0.016356120150763008,
+    "real_mpl": 0.17988657330160088,
+    "controls": [
+     {
+      "mpl": 0.0684845074945452,
+      "overlap_frac": 0.0,
+      "cov": 0.016356120150763008
+     },
+     {
+      "mpl": 0.050820302280196725,
+      "overlap_frac": 0.0,
+      "cov": 0.016356120150763008
+     }
+    ]
+   },
+   {
+    "cue": "Small boats",
+    "category": "vehicles/license plates",
+    "area_frac": 0.004174135870564442,
+    "real_mpl": 0.11106266171133632,
+    "controls": [
+     {
+      "mpl": 0.05811312160573935,
+      "overlap_frac": 0.0,
+      "cov": 0.004174135870564442
+     },
+     {
+      "mpl": 0.06414006460349315,
+      "overlap_frac": 0.0,
+      "cov": 0.004174135870564442
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "1000269685_e60e9cdfb4_1125_78841376@N00.jpg",
+  "true_label": "Bermuda",
+  "country_hit": false,
+  "n_cues": 2,
+  "vN": 0.256149486537629,
+  "cues": [
+   {
+    "cue": "Dolphin Discovery logo on life vest",
+    "category": "commercial/cultural",
+    "area_frac": 0.01609773038344467,
+    "real_mpl": 0.22987508147131977,
+    "controls": [
+     {
+      "mpl": 0.08459575045918633,
+      "overlap_frac": 0.0,
+      "cov": 0.01609773038344467
+     },
+     {
+      "mpl": 0.05627833764531783,
+      "overlap_frac": 0.0,
+      "cov": 0.01609773038344467
+     }
+    ]
+   },
+   {
+    "cue": "Clear turquoise water",
+    "category": "environment",
+    "area_frac": 0.01910967089538518,
+    "real_mpl": 0.09093645556933955,
+    "controls": [
+     {
+      "mpl": 0.0832251446036152,
+      "overlap_frac": 0.0,
+      "cov": 0.01910967089538518
+     },
+     {
+      "mpl": 0.15813805274025233,
+      "overlap_frac": 0.0,
+      "cov": 0.01910967089538518
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "339479847_8d444a33ea_138_63163416@N00.jpg",
+  "true_label": "Alexandria, Egypt",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.2576575141673045,
+  "cues": [
+   {
+    "cue": "Distinctive tower with crenellations",
+    "category": "landmarks/buildings",
+    "area_frac": 0.14471700010053282,
+    "real_mpl": 0.2712089027074693,
+    "controls": [
+     {
+      "mpl": 0.15139857114421384,
+      "overlap_frac": 0.0,
+      "cov": 0.14471700010053282
+     },
+     {
+      "mpl": 0.1478257990054462,
+      "overlap_frac": 0.0,
+      "cov": 0.14471700010053282
+     }
+    ]
+   },
+   {
+    "cue": "Mediterranean climate vegetation",
+    "category": "environment",
+    "area_frac": 0.028239251365570858,
+    "real_mpl": 0.07457984648411763,
+    "controls": [
+     {
+      "mpl": 0.07235690548422334,
+      "overlap_frac": 0.0,
+      "cov": 0.028239251365570858
+     },
+     {
+      "mpl": 0.06682179811788132,
+      "overlap_frac": 0.0,
+      "cov": 0.028239251365570858
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "758114922_f369e388f5_1324_41894169878@N01.jpg",
+  "true_label": "Boulder County, United States",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.25801769156090004,
+  "cues": [
+   {
+    "cue": "Spider-Man themed sunglasses",
+    "category": "commercial/cultural",
+    "area_frac": 0.06848813098813099,
+    "real_mpl": 0.11429637675414767,
+    "controls": [
+     {
+      "mpl": 0.16161053030707104,
+      "overlap_frac": 0.0,
+      "cov": 0.06848813098813099
+     },
+     {
+      "mpl": 0.12489948106121902,
+      "overlap_frac": 0.0,
+      "cov": 0.06848813098813099
+     }
+    ]
+   },
+   {
+    "cue": "Rocky background",
+    "category": "environment",
+    "area_frac": 0.13235301628158772,
+    "real_mpl": 0.261752609776908,
+    "controls": [
+     {
+      "mpl": 0.283825045640577,
+      "overlap_frac": 0.016177733187987767,
+      "cov": 0.13235301628158772
+     },
+     {
+      "mpl": 0.2590323668165281,
+      "overlap_frac": 0.006926423630873714,
+      "cov": 0.13235301628158772
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "264072697_0bb27f33c4_95_90833046@N00.jpg",
+  "true_label": "Minneapolis, United States",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.2580756407724878,
+  "cues": [
+   {
+    "cue": "Autumn foliage",
+    "category": "environment",
+    "area_frac": 0.2145442636514065,
+    "real_mpl": 0.2198122505740765,
+    "controls": [
+     {
+      "mpl": 0.15056169703060304,
+      "overlap_frac": 0.46263490533194074,
+      "cov": 0.2145442636514065
+     },
+     {
+      "mpl": 0.1428894981567188,
+      "overlap_frac": 0.46431536380921773,
+      "cov": 0.2145442636514065
+     }
+    ]
+   },
+   {
+    "cue": "Road with bike lane",
+    "category": "road/infrastructure",
+    "area_frac": 0.13040799089906233,
+    "real_mpl": 0.15601376978030213,
+    "controls": [
+     {
+      "mpl": 0.2799909803112475,
+      "overlap_frac": 0.008183810814085406,
+      "cov": 0.13040799089906233
+     },
+     {
+      "mpl": 0.27223170457843343,
+      "overlap_frac": 0.020773441716507506,
+      "cov": 0.13040799089906233
+     }
+    ]
+   },
+   {
+    "cue": "Stone retaining wall",
+    "category": "landmarks/buildings",
+    "area_frac": 0.02615657749586321,
+    "real_mpl": 0.1942081694057284,
+    "controls": [
+     {
+      "mpl": 0.20028994906773032,
+      "overlap_frac": 0.0,
+      "cov": 0.02615657749586321
+     },
+     {
+      "mpl": 0.18896183182158593,
+      "overlap_frac": 0.0,
+      "cov": 0.02615657749586321
+     }
+    ]
+   },
+   {
+    "cue": "Cars driving on the right",
+    "category": "vehicles/license plates",
+    "area_frac": 0.0018917195256480971,
+    "real_mpl": 0.08371399710432788,
+    "controls": [
+     {
+      "mpl": 0.045147521910086565,
+      "overlap_frac": 0.0,
+      "cov": 0.0018917195256480971
+     },
+     {
+      "mpl": 0.043458896050858536,
+      "overlap_frac": 0.0,
+      "cov": 0.0018917195256480971
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "1102966083_dcc68a51a6_1086_70323761@N00.jpg",
+  "true_label": "New York, United States",
+  "country_hit": true,
+  "n_cues": 1,
+  "vN": 0.2728654799945307,
+  "cues": [
+   {
+    "cue": "Food Network logo",
+    "category": "text/signage",
+    "area_frac": 0.24913385962493106,
+    "real_mpl": 0.2728654799945307,
+    "controls": [
+     {
+      "mpl": 0.11729623494608768,
+      "overlap_frac": 0.0,
+      "cov": 0.24913385962493106
+     },
+     {
+      "mpl": 0.13674056512952415,
+      "overlap_frac": 0.0,
+      "cov": 0.24913385962493106
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "167345423_ba2914f302_59_79954435@N00.jpg",
+  "true_label": "Area A (Kicking Horse/Kinbasket Lake), Canada",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.28460270398815307,
+  "cues": [
+   {
+    "cue": "Turquoise glacial lake",
+    "category": "environment",
+    "area_frac": 0.23384098384098384,
+    "real_mpl": 0.06270806742178253,
+    "controls": [
+     {
+      "mpl": 0.07638402724679366,
+      "overlap_frac": 0.0,
+      "cov": 0.23384098384098384
+     },
+     {
+      "mpl": 0.08519550145189578,
+      "overlap_frac": 0.0,
+      "cov": 0.23384098384098384
+     }
+    ]
+   },
+   {
+    "cue": "Coniferous forest",
+    "category": "environment",
+    "area_frac": 0.06713345999060284,
+    "real_mpl": 0.10663748681473012,
+    "controls": [
+     {
+      "mpl": 0.0880735987294464,
+      "overlap_frac": 0.0,
+      "cov": 0.06713345999060284
+     },
+     {
+      "mpl": 0.0492467465319888,
+      "overlap_frac": 0.0,
+      "cov": 0.06713345999060284
+     }
+    ]
+   },
+   {
+    "cue": "Rocky mountain range",
+    "category": "environment",
+    "area_frac": 0.1213981838981839,
+    "real_mpl": 0.12404468160795824,
+    "controls": [
+     {
+      "mpl": 0.09444322802016497,
+      "overlap_frac": 0.0,
+      "cov": 0.1213981838981839
+     },
+     {
+      "mpl": 0.0772573920705205,
+      "overlap_frac": 0.0,
+      "cov": 0.1213981838981839
+     }
+    ]
+   },
+   {
+    "cue": "Red canoes with numbers",
+    "category": "commercial/cultural",
+    "area_frac": 0.05794570080284366,
+    "real_mpl": 0.0994429167013832,
+    "controls": [
+     {
+      "mpl": 0.10709703956095086,
+      "overlap_frac": 0.0,
+      "cov": 0.05794570080284366
+     },
+     {
+      "mpl": 0.12536392713970704,
+      "overlap_frac": 0.0,
+      "cov": 0.05794570080284366
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "1300123632_36361364c9_1048_50435419@N00.jpg",
+  "true_label": "Waukesha, United States",
+  "country_hit": true,
+  "n_cues": 4,
+  "vN": 0.30401653549521357,
+  "cues": [
+   {
+    "cue": "Tartan kilt",
+    "category": "commercial/cultural",
+    "area_frac": 0.01778963274498989,
+    "real_mpl": 0.10623530984426713,
+    "controls": [
+     {
+      "mpl": 0.04613469434345443,
+      "overlap_frac": 0.0,
+      "cov": 0.01778963274498989
+     },
+     {
+      "mpl": 0.07943334610951873,
+      "overlap_frac": 0.0,
+      "cov": 0.01778963274498989
+     }
+    ]
+   },
+   {
+    "cue": "Pop-up tent with text",
+    "category": "text/signage",
+    "area_frac": 0.021169447508733223,
+    "real_mpl": 0.062123633464893156,
+    "controls": [
+     {
+      "mpl": 0.06442663387064927,
+      "overlap_frac": 0.0,
+      "cov": 0.021169447508733223
+     },
+     {
+      "mpl": 0.08759045979180313,
+      "overlap_frac": 0.0,
+      "cov": 0.021169447508733223
+     }
+    ]
+   },
+   {
+    "cue": "Wooden snow fence",
+    "category": "road/infrastructure",
+    "area_frac": 0.09418235199485199,
+    "real_mpl": 0.07125451332404951,
+    "controls": [
+     {
+      "mpl": 0.11624641119017858,
+      "overlap_frac": 0.005231130564748585,
+      "cov": 0.09418235199485199
+     },
+     {
+      "mpl": 0.10604106288116838,
+      "overlap_frac": 0.002135155332550443,
+      "cov": 0.09418235199485199
+     }
+    ]
+   },
+   {
+    "cue": "Deciduous trees",
+    "category": "environment",
+    "area_frac": 0.1322077817613532,
+    "real_mpl": 0.24008735566835712,
+    "controls": [
+     {
+      "mpl": 0.11115355303096752,
+      "overlap_frac": 0.32880641446296255,
+      "cov": 0.1322077817613532
+     },
+     {
+      "mpl": 0.12204861847970831,
+      "overlap_frac": 0.32260272484300645,
+      "cov": 0.1322077817613532
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "452065902_0daa6bd4bd_219_15632944@N00.jpg",
+  "true_label": "Bardo, Poland",
+  "country_hit": false,
+  "n_cues": 4,
+  "vN": 0.3265948572212874,
+  "cues": [
+   {
+    "cue": "Train model EN57",
+    "category": "vehicles/license plates",
+    "area_frac": 0.11405793548650692,
+    "real_mpl": 0.26569206580549337,
+    "controls": [
+     {
+      "mpl": 0.1241813868076513,
+      "overlap_frac": 0.0,
+      "cov": 0.11405793548650692
+     },
+     {
+      "mpl": 0.11574620469172191,
+      "overlap_frac": 0.0,
+      "cov": 0.11405793548650692
+     }
+    ]
+   },
+   {
+    "cue": "Polish text on train",
+    "category": "text/signage",
+    "area_frac": 0.11405793548650692,
+    "real_mpl": 0.26569206580549337,
+    "controls": [
+     {
+      "mpl": 0.14201204345199672,
+      "overlap_frac": 0.0,
+      "cov": 0.11405793548650692
+     },
+     {
+      "mpl": 0.11544338847706671,
+      "overlap_frac": 0.0,
+      "cov": 0.11405793548650692
+     }
+    ]
+   },
+   {
+    "cue": "Architecture style of buildings",
+    "category": "architecture",
+    "area_frac": 0.08342526199669056,
+    "real_mpl": 0.23104364765611834,
+    "controls": [
+     {
+      "mpl": 0.11725276614114918,
+      "overlap_frac": 0.025130088766452403,
+      "cov": 0.08342526199669056
+     },
+     {
+      "mpl": 0.1381993701376439,
+      "overlap_frac": 0.02497704315886134,
+      "cov": 0.08342526199669056
+     }
+    ]
+   },
+   {
+    "cue": "Overhead electric lines",
+    "category": "road/infrastructure",
+    "area_frac": 0.012712968070110927,
+    "real_mpl": 0.07409159839989429,
+    "controls": [
+     {
+      "mpl": 0.09248823114507465,
+      "overlap_frac": 0.0,
+      "cov": 0.012712968070110927
+     },
+     {
+      "mpl": 0.07341302669686066,
+      "overlap_frac": 0.0,
+      "cov": 0.012712968070110927
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "499393661_a7da0fd73e_206_8255645@N03.jpg",
+  "true_label": "Saalbach-Hinterglemm, Austria",
+  "country_hit": false,
+  "n_cues": 3,
+  "vN": 0.3456983403434608,
+  "cues": [
+   {
+    "cue": "Snow-covered mountains",
+    "category": "environment",
+    "area_frac": 0.4544238115666687,
+    "real_mpl": 0.3125267913305512,
+    "controls": [
+     {
+      "mpl": 0.08175204403280449,
+      "overlap_frac": 0.7356678055249612,
+      "cov": 0.4544238115666687
+     },
+     {
+      "mpl": 0.0758389982062413,
+      "overlap_frac": 0.7355104632605812,
+      "cov": 0.4544238115666687
+     }
+    ]
+   },
+   {
+    "cue": "Ski gear and attire",
+    "category": "commercial/cultural",
+    "area_frac": 0.04313880206737349,
+    "real_mpl": 0.05066198130971103,
+    "controls": [
+     {
+      "mpl": 0.06937529036932379,
+      "overlap_frac": 0.4508538787107467,
+      "cov": 0.04313880206737349
+     },
+     {
+      "mpl": 0.04553649238557903,
+      "overlap_frac": 0.39876283777784355,
+      "cov": 0.04313880206737349
+     }
+    ]
+   },
+   {
+    "cue": "Clear blue sky",
+    "category": "environment",
+    "area_frac": 0.2594469469469469,
+    "real_mpl": 0.07762183421201818,
+    "controls": [
+     {
+      "mpl": 0.08643666404266466,
+      "overlap_frac": 0.34287387489357934,
+      "cov": 0.2594469469469469
+     },
+     {
+      "mpl": 0.094656555957867,
+      "overlap_frac": 0.3430854859426288,
+      "cov": 0.2594469469469469
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "379777984_75362fd964_150_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.35166452778953705,
+  "cues": [
+   {
+    "cue": "Rocky shoreline",
+    "category": "environment",
+    "area_frac": 0.26219169933983444,
+    "real_mpl": 0.05305980486674218,
+    "controls": [
+     {
+      "mpl": 0.11403097629350578,
+      "overlap_frac": 0.0028517793665375243,
+      "cov": 0.26219169933983444
+     },
+     {
+      "mpl": 0.33636424809925336,
+      "overlap_frac": 0.03165714742181571,
+      "cov": 0.26219169933983444
+     }
+    ]
+   },
+   {
+    "cue": "Moored sailboats",
+    "category": "vehicles/license plates",
+    "area_frac": 0.0028735632183908046,
+    "real_mpl": 0.08353189706078482,
+    "controls": [
+     {
+      "mpl": 0.02805735248261816,
+      "overlap_frac": 0.0,
+      "cov": 0.0028735632183908046
+     },
+     {
+      "mpl": 0.03420138982515737,
+      "overlap_frac": 0.0,
+      "cov": 0.0028735632183908046
+     }
+    ]
+   },
+   {
+    "cue": "Sunset over hills",
+    "category": "environment",
+    "area_frac": 0.056761251298548976,
+    "real_mpl": 0.2675291858549646,
+    "controls": [
+     {
+      "mpl": 0.05505353203085296,
+      "overlap_frac": 0.0,
+      "cov": 0.056761251298548976
+     },
+     {
+      "mpl": 0.04334804029023677,
+      "overlap_frac": 0.0,
+      "cov": 0.056761251298548976
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "43779838_1ef2e1f024_30_88483799@N00.jpg",
+  "true_label": "Sussex County, United States",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.35480959522560224,
+  "cues": [
+   {
+    "cue": "Atlantic Ocean view",
+    "category": "environment",
+    "area_frac": 0.10298053155196012,
+    "real_mpl": 0.11346232413649876,
+    "controls": [
+     {
+      "mpl": 0.13358823481093093,
+      "overlap_frac": 0.0,
+      "cov": 0.10298053155196012
+     },
+     {
+      "mpl": 0.08944922395108466,
+      "overlap_frac": 0.0,
+      "cov": 0.10298053155196012
+     }
+    ]
+   },
+   {
+    "cue": "Sandy beach with dunes",
+    "category": "environment",
+    "area_frac": 0.0747277890135033,
+    "real_mpl": 0.14064921503205718,
+    "controls": [
+     {
+      "mpl": 0.11269172869075737,
+      "overlap_frac": 0.0025799617277200656,
+      "cov": 0.0747277890135033
+     },
+     {
+      "mpl": 0.1110192093468019,
+      "overlap_frac": 0.00695393657736468,
+      "cov": 0.0747277890135033
+     }
+    ]
+   },
+   {
+    "cue": "Wooden deck railing",
+    "category": "architecture",
+    "area_frac": 0.1294342812199955,
+    "real_mpl": 0.11958694690164745,
+    "controls": [
+     {
+      "mpl": 0.11809017507490388,
+      "overlap_frac": 0.185154130702836,
+      "cov": 0.1294342812199955
+     },
+     {
+      "mpl": 0.12406912142435247,
+      "overlap_frac": 0.21704562268803945,
+      "cov": 0.1294342812199955
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "468114689_6f7d634bae_220_7885919@N07.jpg",
+  "true_label": "Paris, France",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.36490452562472264,
+  "cues": [
+   {
+    "cue": "Parisian architecture style",
+    "category": "architecture",
+    "area_frac": 0.0604699086841944,
+    "real_mpl": 0.4456906218389789,
+    "controls": [
+     {
+      "mpl": 0.11164089725367553,
+      "overlap_frac": 0.0,
+      "cov": 0.0604699086841944
+     },
+     {
+      "mpl": 0.14213164422830712,
+      "overlap_frac": 0.0,
+      "cov": 0.0604699086841944
+     }
+    ]
+   },
+   {
+    "cue": "French window shutters",
+    "category": "architecture",
+    "area_frac": 0.011154011154011155,
+    "real_mpl": 0.1708883059421743,
+    "controls": [
+     {
+      "mpl": 0.05272576888758241,
+      "overlap_frac": 0.0,
+      "cov": 0.011154011154011155
+     },
+     {
+      "mpl": 0.056924309533774704,
+      "overlap_frac": 0.0,
+      "cov": 0.011154011154011155
+     }
+    ]
+   },
+   {
+    "cue": "Vegetation and small gardens",
+    "category": "environment",
+    "area_frac": 0.07957191885763314,
+    "real_mpl": 0.1574349497594159,
+    "controls": [
+     {
+      "mpl": 0.1913821274721264,
+      "overlap_frac": 0.015131093353871828,
+      "cov": 0.07957191885763314
+     },
+     {
+      "mpl": 0.23792221815729514,
+      "overlap_frac": 0.02174192099098232,
+      "cov": 0.07957191885763314
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "71807788_2b6c93f13f_35_18684820@N00.jpg",
+  "true_label": "Paris, France",
+  "country_hit": true,
+  "n_cues": 5,
+  "vN": 0.3679462347978754,
+  "cues": [
+   {
+    "cue": "Bus route number and destination",
+    "category": "text/signage",
+    "area_frac": 0.26436816280566283,
+    "real_mpl": 0.2431768886831093,
+    "controls": [
+     {
+      "mpl": 0.1751623964441243,
+      "overlap_frac": 0.4467620387827287,
+      "cov": 0.26436816280566283
+     },
+     {
+      "mpl": 0.282987862029784,
+      "overlap_frac": 0.4980467370457102,
+      "cov": 0.26436816280566283
+     }
+    ]
+   },
+   {
+    "cue": "French text on bus",
+    "category": "text/signage",
+    "area_frac": 0.26436816280566283,
+    "real_mpl": 0.2431768886831093,
+    "controls": [
+     {
+      "mpl": 0.5112955650438527,
+      "overlap_frac": 0.44681093827254403,
+      "cov": 0.26436816280566283
+     },
+     {
+      "mpl": 0.1583990766424952,
+      "overlap_frac": 0.41146204041271167,
+      "cov": 0.26436816280566283
+     }
+    ]
+   },
+   {
+    "cue": "Architecture style of buildings",
+    "category": "architecture",
+    "area_frac": 0.06435293712079426,
+    "real_mpl": 0.10419684152313566,
+    "controls": [
+     {
+      "mpl": 0.07764360283517271,
+      "overlap_frac": 0.5004240882103478,
+      "cov": 0.06435293712079426
+     },
+     {
+      "mpl": 0.06357736293312723,
+      "overlap_frac": 0.6046158653631535,
+      "cov": 0.06435293712079426
+     }
+    ]
+   },
+   {
+    "cue": "Green and cream color scheme of bus",
+    "category": "vehicles/license plates",
+    "area_frac": 0.26436816280566283,
+    "real_mpl": 0.2431768886831093,
+    "controls": [
+     {
+      "mpl": 0.24665448769825765,
+      "overlap_frac": 0.4846482768363117,
+      "cov": 0.26436816280566283
+     },
+     {
+      "mpl": 0.4059777269877443,
+      "overlap_frac": 0.4968296830769732,
+      "cov": 0.26436816280566283
+     }
+    ]
+   },
+   {
+    "cue": "European car models",
+    "category": "vehicles/license plates",
+    "area_frac": 0.13211298032726604,
+    "real_mpl": 0.09821260316183361,
+    "controls": [
+     {
+      "mpl": 0.19958000884735577,
+      "overlap_frac": 0.26219883447855963,
+      "cov": 0.13211298032726604
+     },
+     {
+      "mpl": 0.2098602526964898,
+      "overlap_frac": 0.2675698008176046,
+      "cov": 0.13211298032726604
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "217726612_48fdd833cd_57_63163416@N00.jpg",
+  "true_label": "Marmaris, Turkey",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.37509331754169206,
+  "cues": [
+   {
+    "cue": "Sailboats",
+    "category": "vehicles/license plates",
+    "area_frac": 0.03652273717368721,
+    "real_mpl": 0.14758282830214534,
+    "controls": [
+     {
+      "mpl": 0.06667821393639461,
+      "overlap_frac": 0.0,
+      "cov": 0.03652273717368721
+     },
+     {
+      "mpl": 0.08316412428277614,
+      "overlap_frac": 0.0,
+      "cov": 0.03652273717368721
+     }
+    ]
+   },
+   {
+    "cue": "Mediterranean architecture in distant town",
+    "category": "architecture",
+    "area_frac": 0.024157199825743107,
+    "real_mpl": 0.07813360574462767,
+    "controls": [
+     {
+      "mpl": 0.04144070216123951,
+      "overlap_frac": 0.0,
+      "cov": 0.024157199825743107
+     },
+     {
+      "mpl": 0.04683968642730006,
+      "overlap_frac": 0.0,
+      "cov": 0.024157199825743107
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "199300245_2b38ee3d16_78_23601949@N00.jpg",
+  "true_label": "Bristol, United States",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.3897543667460106,
+  "cues": [
+   {
+    "cue": "American flag",
+    "category": "commercial/cultural",
+    "area_frac": 0.03985538472145615,
+    "real_mpl": 0.2009165376944363,
+    "controls": [
+     {
+      "mpl": 0.07738133341821803,
+      "overlap_frac": 0.0,
+      "cov": 0.03985538472145615
+     },
+     {
+      "mpl": 0.04960492695441509,
+      "overlap_frac": 0.0,
+      "cov": 0.03985538472145615
+     }
+    ]
+   },
+   {
+    "cue": "English text on sign",
+    "category": "text/signage",
+    "area_frac": 0.19876844318808604,
+    "real_mpl": 0.2492510065959612,
+    "controls": [
+     {
+      "mpl": 0.18700602405905514,
+      "overlap_frac": 0.7335833676588549,
+      "cov": 0.19876844318808604
+     },
+     {
+      "mpl": 0.18700602405905514,
+      "overlap_frac": 0.7335833676588549,
+      "cov": 0.19876844318808604
+     }
+    ]
+   },
+   {
+    "cue": "Traditional parade attire",
+    "category": "commercial/cultural",
+    "area_frac": 0.04083069038426181,
+    "real_mpl": 0.1352809282024176,
+    "controls": [
+     {
+      "mpl": 0.06515500187826195,
+      "overlap_frac": 0.03166115528037712,
+      "cov": 0.04083069038426181
+     },
+     {
+      "mpl": 0.08865987504756637,
+      "overlap_frac": 0.03866178850348273,
+      "cov": 0.04083069038426181
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "253013198_0869efe061_109_36093984@N00.jpg",
+  "true_label": "Colma, United States",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.3948587357384145,
+  "cues": [
+   {
+    "cue": "Transamerica Pyramid-like building",
+    "category": "landmarks/buildings",
+    "area_frac": 0.19088476231333373,
+    "real_mpl": 0.15418662107020528,
+    "controls": [
+     {
+      "mpl": 0.4361655619904894,
+      "overlap_frac": 0.4975719713184932,
+      "cov": 0.19088476231333373
+     },
+     {
+      "mpl": 0.3504413178445652,
+      "overlap_frac": 0.4915587542808219,
+      "cov": 0.19088476231333373
+     }
+    ]
+   },
+   {
+    "cue": "Red-flowered trees",
+    "category": "environment",
+    "area_frac": 0.21477983085125943,
+    "real_mpl": 0.4192180724636569,
+    "controls": [
+     {
+      "mpl": 0.4795188721988954,
+      "overlap_frac": 0.36438214470422486,
+      "cov": 0.21477983085125943
+     },
+     {
+      "mpl": 0.3917899286592777,
+      "overlap_frac": 0.4181870062240294,
+      "cov": 0.21477983085125943
+     }
+    ]
+   },
+   {
+    "cue": "Speed limit sign in miles per hour",
+    "category": "road/infrastructure",
+    "area_frac": 0.0069150783436497726,
+    "real_mpl": 0.08510809048722726,
+    "controls": [
+     {
+      "mpl": 0.07547104952268358,
+      "overlap_frac": 0.0,
+      "cov": 0.0069150783436497726
+     },
+     {
+      "mpl": 0.05183656268108131,
+      "overlap_frac": 0.0,
+      "cov": 0.0069150783436497726
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "486597679_e1a557718f_198_51162504@N00.jpg",
+  "true_label": "Seville, Spain",
+  "country_hit": false,
+  "n_cues": 3,
+  "vN": 0.3968627975139283,
+  "cues": [
+   {
+    "cue": "Golden religious statues",
+    "category": "commercial/cultural",
+    "area_frac": 0.24836188229045372,
+    "real_mpl": 0.3968627975139283,
+    "controls": [
+     {
+      "mpl": 0.1194502756378672,
+      "overlap_frac": 0.10843045223908987,
+      "cov": 0.24836188229045372
+     },
+     {
+      "mpl": 0.18825965449225848,
+      "overlap_frac": 0.12022866425732955,
+      "cov": 0.24836188229045372
+     }
+    ]
+   },
+   {
+    "cue": "Crown and scepter on statue",
+    "category": "commercial/cultural",
+    "area_frac": 0.24836188229045372,
+    "real_mpl": 0.3968627975139283,
+    "controls": [
+     {
+      "mpl": 0.13965080015621353,
+      "overlap_frac": 0.12930223472015875,
+      "cov": 0.24836188229045372
+     },
+     {
+      "mpl": 0.12483440696380677,
+      "overlap_frac": 0.11343248286817362,
+      "cov": 0.24836188229045372
+     }
+    ]
+   },
+   {
+    "cue": "Religious iconography",
+    "category": "commercial/cultural",
+    "area_frac": 0.24836188229045372,
+    "real_mpl": 0.3968627975139283,
+    "controls": [
+     {
+      "mpl": 0.17221921173937596,
+      "overlap_frac": 0.15303232041784692,
+      "cov": 0.24836188229045372
+     },
+     {
+      "mpl": 0.1515754182303384,
+      "overlap_frac": 0.1072172156219637,
+      "cov": 0.24836188229045372
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+  "true_label": "Budapest, Hungary",
+  "country_hit": false,
+  "n_cues": 3,
+  "vN": 0.4003580485880466,
+  "cues": [
+   {
+    "cue": "Cyrillic text on gravestone",
+    "category": "text/signage",
+    "area_frac": 0.015466997609854753,
+    "real_mpl": 0.3781445266158888,
+    "controls": [
+     {
+      "mpl": 0.09568870349393085,
+      "overlap_frac": 0.0,
+      "cov": 0.015466997609854753
+     },
+     {
+      "mpl": 0.08481007504652942,
+      "overlap_frac": 0.0,
+      "cov": 0.015466997609854753
+     }
+    ]
+   },
+   {
+    "cue": "Orthodox cross on mausoleum",
+    "category": "landmarks/buildings",
+    "area_frac": 0.032577220077220075,
+    "real_mpl": 0.1544965258579763,
+    "controls": [
+     {
+      "mpl": 0.18281210805947404,
+      "overlap_frac": 0.0,
+      "cov": 0.032577220077220075
+     },
+     {
+      "mpl": 0.10830656442616288,
+      "overlap_frac": 0.0,
+      "cov": 0.032577220077220075
+     }
+    ]
+   },
+   {
+    "cue": "Autumn foliage",
+    "category": "environment",
+    "area_frac": 0.2734073359073359,
+    "real_mpl": 0.3200501464654647,
+    "controls": [
+     {
+      "mpl": 0.2238147702026578,
+      "overlap_frac": 0.03752270742562005,
+      "cov": 0.2734073359073359
+     },
+     {
+      "mpl": 0.1997648801488128,
+      "overlap_frac": 0.028850689044863802,
+      "cov": 0.2734073359073359
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "181848051_3f34be1b5d_68_70323761@N00.jpg",
+  "true_label": "New York, United States",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.42400995784969453,
+  "cues": [
+   {
+    "cue": "Brooklyn Heights Promenade sign",
+    "category": "text/signage",
+    "area_frac": 0.10948991082919654,
+    "real_mpl": 0.30359337586859225,
+    "controls": [
+     {
+      "mpl": 0.07825343385198977,
+      "overlap_frac": 0.0,
+      "cov": 0.10948991082919654
+     },
+     {
+      "mpl": 0.08209304129777235,
+      "overlap_frac": 0.0,
+      "cov": 0.10948991082919654
+     }
+    ]
+   },
+   {
+    "cue": "Brooklyn Bridge",
+    "category": "landmarks/buildings",
+    "area_frac": 0.019126907519764664,
+    "real_mpl": 0.07926649623272486,
+    "controls": [
+     {
+      "mpl": 0.03392981837720475,
+      "overlap_frac": 0.0,
+      "cov": 0.019126907519764664
+     },
+     {
+      "mpl": 0.04881656483951067,
+      "overlap_frac": 0.0,
+      "cov": 0.019126907519764664
+     }
+    ]
+   },
+   {
+    "cue": "Manhattan skyline",
+    "category": "landmarks/buildings",
+    "area_frac": 0.20699893132928848,
+    "real_mpl": 0.10794106791880166,
+    "controls": [
+     {
+      "mpl": 0.1327156585296526,
+      "overlap_frac": 0.2200456592487735,
+      "cov": 0.20699893132928848
+     },
+     {
+      "mpl": 0.09373212833192576,
+      "overlap_frac": 0.21193385654113842,
+      "cov": 0.20699893132928848
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "149866866_e6a46a330b_52_63163416@N00.jpg",
+  "true_label": "Istanbul, Turkey",
+  "country_hit": true,
+  "n_cues": 2,
+  "vN": 0.4662658319054881,
+  "cues": [
+   {
+    "cue": "Turkish text on sign",
+    "category": "text/signage",
+    "area_frac": 0.0572911430582085,
+    "real_mpl": 0.5016284236609322,
+    "controls": [
+     {
+      "mpl": 0.04706177718902397,
+      "overlap_frac": 0.02719894713753016,
+      "cov": 0.0572911430582085
+     },
+     {
+      "mpl": 0.08427304284189009,
+      "overlap_frac": 0.09724354756159977,
+      "cov": 0.0572911430582085
+     }
+    ]
+   },
+   {
+    "cue": "Fish market display",
+    "category": "commercial/cultural",
+    "area_frac": 0.19352568613652357,
+    "real_mpl": 0.057401766230446676,
+    "controls": [
+     {
+      "mpl": 0.38276845197712395,
+      "overlap_frac": 0.19408008658008657,
+      "cov": 0.19352568613652357
+     },
+     {
+      "mpl": 0.31506204321568454,
+      "overlap_frac": 0.20392857142857143,
+      "cov": 0.19352568613652357
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "453636890_c425e657ab_239_55126705@N00.jpg",
+  "true_label": "Tinum, Mexico",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.48606677905813095,
+  "cues": [
+   {
+    "cue": "Mayan architectural style",
+    "category": "architecture",
+    "area_frac": 0.47417059917059917,
+    "real_mpl": 0.4594518922208718,
+    "controls": [
+     {
+      "mpl": 0.09567576415245437,
+      "overlap_frac": 0.6078173720575801,
+      "cov": 0.47417059917059917
+     },
+     {
+      "mpl": 0.10608127992111172,
+      "overlap_frac": 0.6052593314628223,
+      "cov": 0.47417059917059917
+     }
+    ]
+   },
+   {
+    "cue": "Stone masks and carvings",
+    "category": "landmarks/buildings",
+    "area_frac": 0.007840748912177484,
+    "real_mpl": 0.05079823499101007,
+    "controls": [
+     {
+      "mpl": 0.032425900664360074,
+      "overlap_frac": 0.0,
+      "cov": 0.007840748912177484
+     },
+     {
+      "mpl": 0.056587210313629364,
+      "overlap_frac": 0.0,
+      "cov": 0.007840748912177484
+     }
+    ]
+   },
+   {
+    "cue": "Ruined stone structures",
+    "category": "landmarks/buildings",
+    "area_frac": 0.4752022430593859,
+    "real_mpl": 0.4883538211452572,
+    "controls": [
+     {
+      "mpl": 0.09812995139262691,
+      "overlap_frac": 0.584288500910835,
+      "cov": 0.4752022430593859
+     },
+     {
+      "mpl": 0.10598590585484081,
+      "overlap_frac": 0.5893827279908432,
+      "cov": 0.4752022430593859
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "271702330_bbffd58093_110_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "country_hit": false,
+  "n_cues": 2,
+  "vN": 0.5833280766862745,
+  "cues": [
+   {
+    "cue": "Fishing boat with registration SY",
+    "category": "vehicles/license plates",
+    "area_frac": 0.19484298029556651,
+    "real_mpl": 0.19792844798943682,
+    "controls": [
+     {
+      "mpl": 0.09571453003123079,
+      "overlap_frac": 0.10414338762288514,
+      "cov": 0.19484298029556651
+     },
+     {
+      "mpl": 0.12709232178904953,
+      "overlap_frac": 0.09784534814162688,
+      "cov": 0.19484298029556651
+     }
+    ]
+   },
+   {
+    "cue": "Overcast weather",
+    "category": "environment",
+    "area_frac": 0.31503122800844474,
+    "real_mpl": 0.09685168517376375,
+    "controls": [
+     {
+      "mpl": 0.20072144620423865,
+      "overlap_frac": 0.1737160648093207,
+      "cov": 0.31503122800844474
+     },
+     {
+      "mpl": 0.1344228277104672,
+      "overlap_frac": 0.10248445037032901,
+      "cov": 0.31503122800844474
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "280870957_b4e009f8da_102_36093984@N00.jpg",
+  "true_label": "Subotica, Serbia",
+  "country_hit": false,
+  "n_cues": 2,
+  "vN": 0.6017453790867964,
+  "cues": [
+   {
+    "cue": "Red and white color scheme",
+    "category": "architecture",
+    "area_frac": 0.11424179281322139,
+    "real_mpl": 0.5145297851391678,
+    "controls": [
+     {
+      "mpl": 0.3048422200193839,
+      "overlap_frac": 0.3898587330680853,
+      "cov": 0.11424179281322139
+     },
+     {
+      "mpl": 0.3281292595780579,
+      "overlap_frac": 0.3803925074880415,
+      "cov": 0.11424179281322139
+     }
+    ]
+   },
+   {
+    "cue": "Tree foliage framing the building",
+    "category": "environment",
+    "area_frac": 0.6145814181528467,
+    "real_mpl": 0.259636864785964,
+    "controls": [
+     {
+      "mpl": 0.259636864785964,
+      "overlap_frac": 1.0,
+      "cov": 0.6145814181528467
+     },
+     {
+      "mpl": 0.259636864785964,
+      "overlap_frac": 1.0,
+      "cov": 0.6145814181528467
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "876438778_7c0cef320a_1036_15632944@N00.jpg",
+  "true_label": "Wrocław, Poland",
+  "country_hit": true,
+  "n_cues": 1,
+  "vN": 0.7833063991468995,
+  "cues": [
+   {
+    "cue": "Polish text on glue container",
+    "category": "text/signage",
+    "area_frac": 0.08196844803987662,
+    "real_mpl": 0.7833063991468995,
+    "controls": [
+     {
+      "mpl": 0.037023760134750436,
+      "overlap_frac": 0.0,
+      "cov": 0.08196844803987662
+     },
+     {
+      "mpl": 0.047798592834897624,
+      "overlap_frac": 0.0,
+      "cov": 0.08196844803987662
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "image_id": "446976495_afc37707e4_246_55126705@N00.jpg",
+  "true_label": "Distrito de Cusco, Peru",
+  "country_hit": true,
+  "n_cues": 3,
+  "vN": 0.8066726178034684,
+  "cues": [
+   {
+    "cue": "Inca stonework",
+    "category": "architecture",
+    "area_frac": 0.5608695430124001,
+    "real_mpl": 0.42282873972681173,
+    "controls": [
+     {
+      "mpl": 0.27983477360241354,
+      "overlap_frac": 0.8813450129984839,
+      "cov": 0.5608695430124001
+     },
+     {
+      "mpl": 0.24707775591391917,
+      "overlap_frac": 0.8809307005522649,
+      "cov": 0.5608695430124001
+     }
+    ]
+   },
+   {
+    "cue": "Gated doorway",
+    "category": "landmarks/buildings",
+    "area_frac": 0.08640655962084534,
+    "real_mpl": 0.11135872730015191,
+    "controls": [
+     {
+      "mpl": 0.18661595920499124,
+      "overlap_frac": 0.581100849649058,
+      "cov": 0.08640655962084534
+     },
+     {
+      "mpl": 0.10929400311280747,
+      "overlap_frac": 0.5360177318064278,
+      "cov": 0.08640655962084534
+     }
+    ]
+   },
+   {
+    "cue": "Vegetation",
+    "category": "environment",
+    "area_frac": 0.21571954607668894,
+    "real_mpl": 0.15353441834222392,
+    "controls": [
+     {
+      "mpl": 0.0989515491720875,
+      "overlap_frac": 0.7621970347133852,
+      "cov": 0.21571954607668894
+     },
+     {
+      "mpl": 0.0973767271468235,
+      "overlap_frac": 0.761179012163002,
+      "cov": 0.21571954607668894
+     }
+    ]
+   }
+  ]
+ }
+]

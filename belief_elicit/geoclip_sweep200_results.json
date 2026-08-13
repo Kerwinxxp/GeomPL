@@ -1,0 +1,5528 @@
+[
+ {
+  "image_id": "483717602_2445d0d4ae_206_40425693@N00.jpg",
+  "true_label": "Italy",
+  "gt_country": "Italy",
+  "argmax": "Grad Poreč, Croatia",
+  "p_true": 0.001049480983056128,
+  "rank_true": 13,
+  "km_error": 523.6904348662235,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Limestone cliffs",
+    "category": "environment",
+    "cov": 0.12561413454270598,
+    "mpl": 0.3224842086503434
+   },
+   {
+    "cue": "Rocky shoreline",
+    "category": "environment",
+    "cov": 0.16309677023962738,
+    "mpl": 0.39706832593004127
+   }
+  ],
+  "mpl_all": 0.3963190915174462
+ },
+ {
+  "image_id": "217552984_53e8b16fed_71_84498284@N00.jpg",
+  "true_label": "Rome, Italy",
+  "gt_country": "Italy",
+  "argmax": "Rome, Italy",
+  "p_true": 0.9780183434486389,
+  "rank_true": 1,
+  "km_error": 0.5762723814973276,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Latin text 'ADVENIMUS' above entrance",
+    "category": "text/signage",
+    "cov": 0.005462094747809033,
+    "mpl": 0.07866891110819545
+   },
+   {
+    "cue": "Bell towers flanking the church",
+    "category": "architecture",
+    "cov": 0.03203969275397847,
+    "mpl": 0.32050865741004275
+   },
+   {
+    "cue": "Mediterranean trees and plants",
+    "category": "environment",
+    "cov": 0.0756023881023881,
+    "mpl": 0.4692296850846028
+   }
+  ],
+  "mpl_all": 0.4362403691907071
+ },
+ {
+  "image_id": "415005347_2f1a541aef_183_7132415@N03.jpg",
+  "true_label": "Mont Dore, France",
+  "gt_country": "France",
+  "argmax": "Cahuita, Costa Rica",
+  "p_true": 2.5470233595115133e-05,
+  "rank_true": 52,
+  "km_error": 12502.440959898631,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Tall white lighthouse",
+    "category": "landmarks/buildings",
+    "cov": 0.002463400900900901,
+    "mpl": 0.34889228202562095
+   },
+   {
+    "cue": "Tropical vegetation",
+    "category": "environment",
+    "cov": 0.016356120150763008,
+    "mpl": 0.7942477985471277
+   },
+   {
+    "cue": "Small boats",
+    "category": "vehicles/license plates",
+    "cov": 0.004174135870564442,
+    "mpl": 0.22139813443431433
+   }
+  ],
+  "mpl_all": 1.0862962774987879
+ },
+ {
+  "image_id": "321720530_f2a31b2549_128_81421684@N00.jpg",
+  "true_label": "Chaoyang District, China",
+  "gt_country": "China",
+  "argmax": "Chaoyang District, China",
+  "p_true": 0.47991693019866943,
+  "rank_true": 1,
+  "km_error": 1.8909168581817637,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Chinese text on building",
+    "category": "text/signage",
+    "cov": 0.17697646209118856,
+    "mpl": 0.5074280958674858
+   },
+   {
+    "cue": "High-rise construction",
+    "category": "landmarks/buildings",
+    "cov": 0.17697646209118856,
+    "mpl": 0.5074280958674858
+   },
+   {
+    "cue": "Red construction cranes",
+    "category": "road/infrastructure",
+    "cov": 0.17609448498092523,
+    "mpl": 0.6276179085269394
+   }
+  ],
+  "mpl_all": 0.7531913008538991
+ },
+ {
+  "image_id": "381147491_751c8c119c_181_57253263@N00.jpg",
+  "true_label": "Cambridge, United States",
+  "gt_country": "United States",
+  "argmax": "Toronto, Canada",
+  "p_true": 0.0027284908574074507,
+  "rank_true": 21,
+  "km_error": 690.1324123145548,
+  "country_hit": false,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "shopcambridgeside.com URL",
+    "category": "text/signage",
+    "cov": 0.028060035757080094,
+    "mpl": 0.13309575418544362
+   },
+   {
+    "cue": "Customer Service sign",
+    "category": "text/signage",
+    "cov": 0.028060035757080094,
+    "mpl": 0.13309575418544362
+   },
+   {
+    "cue": "Payless ShoeSource store",
+    "category": "commercial/cultural",
+    "cov": 0.028060035757080094,
+    "mpl": 0.13309575418544362
+   },
+   {
+    "cue": "Inside Sale sign",
+    "category": "text/signage",
+    "cov": 0.028060035757080094,
+    "mpl": 0.13309575418544362
+   }
+  ],
+  "mpl_all": 0.13309575418544362
+ },
+ {
+  "image_id": "880710221_64f0fdd8f2_1137_85417391@N00.jpg",
+  "true_label": "Jefferson County, United States",
+  "gt_country": "United States",
+  "argmax": "Cahuita, Costa Rica",
+  "p_true": 1.1464319868537132e-05,
+  "rank_true": 104,
+  "km_error": 5731.674072244353,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Sunset over ocean",
+    "category": "environment",
+    "cov": 0.2851282404853833,
+    "mpl": 1.1903414945201793
+   },
+   {
+    "cue": "Rocky shoreline",
+    "category": "environment",
+    "cov": 0.003947186982901268,
+    "mpl": 0.3530797536477369
+   },
+   {
+    "cue": "Cloudy sky",
+    "category": "environment",
+    "cov": 0.22321428571428573,
+    "mpl": 0.44986180620106375
+   }
+  ],
+  "mpl_all": 1.1800340966189753
+ },
+ {
+  "image_id": "446976495_afc37707e4_246_55126705@N00.jpg",
+  "true_label": "Distrito de Cusco, Peru",
+  "gt_country": "Peru",
+  "argmax": "Distrito de Cusco, Peru",
+  "p_true": 0.9730349183082581,
+  "rank_true": 1,
+  "km_error": 1.9006423766383918,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Inca stonework",
+    "category": "architecture",
+    "cov": 0.5608695430124001,
+    "mpl": 0.6595701249762986
+   },
+   {
+    "cue": "Gated doorway",
+    "category": "landmarks/buildings",
+    "cov": 0.08640655962084534,
+    "mpl": 0.418067088208154
+   },
+   {
+    "cue": "Vegetation",
+    "category": "environment",
+    "cov": 0.21571954607668894,
+    "mpl": 0.5642106423278012
+   }
+  ],
+  "mpl_all": 0.9409054392307137
+ },
+ {
+  "image_id": "199528247_66da61f266_70_85971448@N00.jpg",
+  "true_label": "Çavuşin Köyü, Turkey",
+  "gt_country": "Turkey",
+  "argmax": "Çavuşin Köyü, Turkey",
+  "p_true": 0.9841936230659485,
+  "rank_true": 1,
+  "km_error": 0.7793603479047065,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Unique rock formations",
+    "category": "environment",
+    "cov": 0.0055144430144430144,
+    "mpl": 0.12457130974886257
+   },
+   {
+    "cue": "Vegetation in arid landscape",
+    "category": "environment",
+    "cov": 0.04907841514984372,
+    "mpl": 0.3302265203167962
+   }
+  ],
+  "mpl_all": 0.3362394239297636
+ },
+ {
+  "image_id": "847733166_0573338bfb_1321_89904893@N00.jpg",
+  "true_label": "Venice, Italy",
+  "gt_country": "Italy",
+  "argmax": "Rome, Italy",
+  "p_true": 0.08698200434446335,
+  "rank_true": 5,
+  "km_error": 393.37024782031943,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Latin inscription on building",
+    "category": "text/signage",
+    "cov": 0.019533404578047434,
+    "mpl": 0.31774826984071985
+   },
+   {
+    "cue": "Statues on building facade",
+    "category": "landmarks/buildings",
+    "cov": 0.02014530474351903,
+    "mpl": 0.36096290777028023
+   }
+  ],
+  "mpl_all": 0.4647372395606788
+ },
+ {
+  "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+  "true_label": "Budapest, Hungary",
+  "gt_country": "Hungary",
+  "argmax": "Budapest, Hungary",
+  "p_true": 0.34177446365356445,
+  "rank_true": 1,
+  "km_error": 4.297849511995598,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Cyrillic text on gravestone",
+    "category": "text/signage",
+    "cov": 0.015466997609854753,
+    "mpl": 0.3666503210566516
+   },
+   {
+    "cue": "Orthodox cross on mausoleum",
+    "category": "landmarks/buildings",
+    "cov": 0.032577220077220075,
+    "mpl": 0.35761700217204956
+   },
+   {
+    "cue": "Autumn foliage",
+    "category": "environment",
+    "cov": 0.2734073359073359,
+    "mpl": 0.6676912935662119
+   }
+  ],
+  "mpl_all": 0.5260114258680468
+ },
+ {
+  "image_id": "271517794_bcd0d062eb_79_40829484@N00.jpg",
+  "true_label": "New York, United States",
+  "gt_country": "United States",
+  "argmax": "Washington, United States",
+  "p_true": 7.541645572928246e-06,
+  "rank_true": 13,
+  "km_error": 330.83528804283316,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "White House",
+    "category": "landmarks/buildings",
+    "cov": 0.031194459765888336,
+    "mpl": 0.558916971074462
+   },
+   {
+    "cue": "National Mall greenery",
+    "category": "environment",
+    "cov": 0.0946878000449429,
+    "mpl": 0.1915988585565598
+   },
+   {
+    "cue": "Dense urban buildings",
+    "category": "architecture",
+    "cov": 0.031194459765888336,
+    "mpl": 0.558916971074462
+   }
+  ],
+  "mpl_all": 0.6340475416566176
+ },
+ {
+  "image_id": "766351079_af0294281f_1240_16836474@N00.jpg",
+  "true_label": "Villa de Leyva, Colombia",
+  "gt_country": "Colombia",
+  "argmax": "Municipio de Tilcara, Argentina",
+  "p_true": 0.021530045196413994,
+  "rank_true": 9,
+  "km_error": 3367.178159930898,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Street performer painted gold",
+    "category": "commercial/cultural",
+    "cov": 0.005077622265122265,
+    "mpl": 0.0
+   },
+   {
+    "cue": "Spanish text on wall sign",
+    "category": "text/signage",
+    "cov": 0.014388272200772202,
+    "mpl": 0.22510193996308162
+   }
+  ],
+  "mpl_all": 0.22510193996308162
+ },
+ {
+  "image_id": "104419192_8551684362_41_64825499@N00.jpg",
+  "true_label": "Greater London, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Barcelona, Spain",
+  "p_true": 0.19478340446949005,
+  "rank_true": 3,
+  "km_error": 1138.9229959924076,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Romanesque arches",
+    "category": "architecture",
+    "cov": 0.12462462462462462,
+    "mpl": 0.6019898470205978
+   },
+   {
+    "cue": "Narrow windows",
+    "category": "architecture",
+    "cov": 0.01586280157708729,
+    "mpl": 0.2589710191793321
+   }
+  ],
+  "mpl_all": 0.6417569397569717
+ },
+ {
+  "image_id": "1300123632_36361364c9_1048_50435419@N00.jpg",
+  "true_label": "Waukesha, United States",
+  "gt_country": "United States",
+  "argmax": "New Lenox, United States",
+  "p_true": 0.01567656919360161,
+  "rank_true": 5,
+  "km_error": 171.05973116145444,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Tartan kilt",
+    "category": "commercial/cultural",
+    "cov": 0.01778963274498989,
+    "mpl": 0.6006614274235778
+   },
+   {
+    "cue": "Pop-up tent with text",
+    "category": "text/signage",
+    "cov": 0.021169447508733223,
+    "mpl": 0.20848295901796798
+   },
+   {
+    "cue": "Wooden snow fence",
+    "category": "road/infrastructure",
+    "cov": 0.09418235199485199,
+    "mpl": 0.3024047971344397
+   },
+   {
+    "cue": "Deciduous trees",
+    "category": "environment",
+    "cov": 0.1322077817613532,
+    "mpl": 0.3818966294528159
+   }
+  ],
+  "mpl_all": 0.6905596298293954
+ },
+ {
+  "image_id": "166869956_84928fd11b_60_55085284@N00.jpg",
+  "true_label": "Paris, France",
+  "gt_country": "France",
+  "argmax": "Versailles, France",
+  "p_true": 0.009351391345262527,
+  "rank_true": 2,
+  "km_error": 17.006751615466097,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Golden clock with ornate design",
+    "category": "landmarks/buildings",
+    "cov": 0.004396775602132745,
+    "mpl": 0.14917304452198196
+   },
+   {
+    "cue": "Rooftop sculptures and balustrades",
+    "category": "architecture",
+    "cov": 0.008572347858062143,
+    "mpl": 0.08981780649410885
+   },
+   {
+    "cue": "French-style windows with wrought iron",
+    "category": "architecture",
+    "cov": 0.05751574278359993,
+    "mpl": 0.4498358475425846
+   }
+  ],
+  "mpl_all": 0.45882642947987684
+ },
+ {
+  "image_id": "244035501_3708124424_87_40829484@N00.jpg",
+  "true_label": "New York, United States",
+  "gt_country": "United States",
+  "argmax": "New York, United States",
+  "p_true": 0.9671676754951477,
+  "rank_true": 1,
+  "km_error": 7.465705094493051,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Twin-towered building resembling The San Remo",
+    "category": "landmarks/buildings",
+    "cov": 0.10332909440052297,
+    "mpl": 0.7776576978473974
+   },
+   {
+    "cue": "Frozen lake with surrounding park",
+    "category": "environment",
+    "cov": 0.016714418500132784,
+    "mpl": 0.23352337762128897
+   },
+   {
+    "cue": "Leafless trees in winter",
+    "category": "environment",
+    "cov": 0.012457610671896387,
+    "mpl": 0.37476934201231116
+   }
+  ],
+  "mpl_all": 0.803777615027125
+ },
+ {
+  "image_id": "494612871_db624a92e7_216_62126383@N00.jpg",
+  "true_label": "Hof HaCarmel Regional Council, Israel",
+  "gt_country": "Israel",
+  "argmax": "Istanbul, Turkey",
+  "p_true": 0.009976021945476532,
+  "rank_true": 7,
+  "km_error": 1081.9842750827618,
+  "country_hit": false,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Ancient Greek inscription",
+    "category": "text/signage",
+    "cov": 0.01875983125983126,
+    "mpl": 0.38013858927178784
+   }
+  ],
+  "mpl_all": 0.38013858927178784
+ },
+ {
+  "image_id": "297636665_27042e8d0d_109_41894169878@N01.jpg",
+  "true_label": "Colorado, Costa Rica",
+  "gt_country": "Costa Rica",
+  "argmax": "Tinum, Mexico",
+  "p_true": 0.048075120896101,
+  "rank_true": 7,
+  "km_error": 1251.3047747697976,
+  "country_hit": false,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "turtle in water",
+    "category": "environment",
+    "cov": 0.019791475148618006,
+    "mpl": 0.3889540918604676
+   }
+  ],
+  "mpl_all": 0.3889540918604676
+ },
+ {
+  "image_id": "227569033_4e625d93c3_74_48637819@N00.jpg",
+  "true_label": "Leh, India",
+  "gt_country": "India",
+  "argmax": "Leh, India",
+  "p_true": 0.9774642586708069,
+  "rank_true": 1,
+  "km_error": 2.20357992394333,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Mountainous terrain with sparse vegetation",
+    "category": "environment",
+    "cov": 0.18843997058282771,
+    "mpl": 0.6612584121898943
+   },
+   {
+    "cue": "Green agricultural fields",
+    "category": "environment",
+    "cov": 0.01814097260525832,
+    "mpl": 0.12457907926911174
+   },
+   {
+    "cue": "Traditional Ladakhi architecture",
+    "category": "architecture",
+    "cov": 0.010333930869645156,
+    "mpl": 0.1553343600677397
+   },
+   {
+    "cue": "Cloudy sky over mountains",
+    "category": "environment",
+    "cov": 0.30059638720353005,
+    "mpl": 0.4233734878056284
+   }
+  ],
+  "mpl_all": 0.7659522321794293
+ },
+ {
+  "image_id": "171046893_b97c4f0aa5_73_30571787@N00.jpg",
+  "true_label": "City of Westminster, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Greater London, United Kingdom",
+  "p_true": 0.36548933386802673,
+  "rank_true": 2,
+  "km_error": 0.4952497482270177,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Victorian architecture with red brick and white stone",
+    "category": "architecture",
+    "cov": 0.22832679869977549,
+    "mpl": 0.42347094696087606
+   },
+   {
+    "cue": "Traditional British pub sign",
+    "category": "commercial/cultural",
+    "cov": 0.008195519587145202,
+    "mpl": 0.10276663417096556
+   },
+   {
+    "cue": "Red telephone box",
+    "category": "landmarks/buildings",
+    "cov": 0.0038432860829060687,
+    "mpl": 0.0
+   }
+  ],
+  "mpl_all": 0.4238083435838885
+ },
+ {
+  "image_id": "1182903598_51bdaa7836_1385_15376845@N00.jpg",
+  "true_label": "East Granby, United States",
+  "gt_country": "United States",
+  "argmax": "East Granby, United States",
+  "p_true": 0.8035367131233215,
+  "rank_true": 1,
+  "km_error": 3.0393028588047835,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Red and white checkerboard pattern",
+    "category": "commercial/cultural",
+    "cov": 0.013713171079242508,
+    "mpl": 0.2681915121062734
+   }
+  ],
+  "mpl_all": 0.2681915121062734
+ },
+ {
+  "image_id": "43779838_1ef2e1f024_30_88483799@N00.jpg",
+  "true_label": "Sussex County, United States",
+  "gt_country": "United States",
+  "argmax": "Gloucester, United States",
+  "p_true": 0.016231879591941833,
+  "rank_true": 4,
+  "km_error": 180.84493602067226,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Atlantic Ocean view",
+    "category": "environment",
+    "cov": 0.10298053155196012,
+    "mpl": 0.4708006565488877
+   },
+   {
+    "cue": "Sandy beach with dunes",
+    "category": "environment",
+    "cov": 0.0747277890135033,
+    "mpl": 0.6146193299197171
+   },
+   {
+    "cue": "Wooden deck railing",
+    "category": "architecture",
+    "cov": 0.1294342812199955,
+    "mpl": 0.4333344202279426
+   }
+  ],
+  "mpl_all": 0.9548937236354285
+ },
+ {
+  "image_id": "1297522299_1d487977b3_1008_85417391@N00.jpg",
+  "true_label": "Vernon, United States",
+  "gt_country": "United States",
+  "argmax": "Biwer, Luxembourg",
+  "p_true": 0.00023945434077177197,
+  "rank_true": 46,
+  "km_error": 5890.012238919182,
+  "country_hit": false,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Deciduous forest with mixed hardwoods",
+    "category": "environment",
+    "cov": 0.034424411656554514,
+    "mpl": 0.3617935033575328
+   }
+  ],
+  "mpl_all": 0.3617935033575328
+ },
+ {
+  "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+  "true_label": "Cuba",
+  "gt_country": "Cuba",
+  "argmax": "Grad Poreč, Croatia",
+  "p_true": 0.0001058191919582896,
+  "rank_true": 40,
+  "km_error": 8470.570408918613,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Stone fortress walls",
+    "category": "landmarks/buildings",
+    "cov": 0.17715164143735573,
+    "mpl": 0.835862812173945
+   },
+   {
+    "cue": "Lush green landscape",
+    "category": "environment",
+    "cov": 0.16063384813384812,
+    "mpl": 1.047340890030125
+   }
+  ],
+  "mpl_all": 1.4785843126572333
+ },
+ {
+  "image_id": "307499425_ed6d8712bd_111_73293249@N00.jpg",
+  "true_label": "Entremont, Switzerland",
+  "gt_country": "Switzerland",
+  "argmax": "Anniviers, Switzerland",
+  "p_true": 0.006870278622955084,
+  "rank_true": 5,
+  "km_error": 32.311516265869066,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Mountain stream",
+    "category": "environment",
+    "cov": 0.11024289595718167,
+    "mpl": 0.6249909965582223
+   },
+   {
+    "cue": "Rocky terrain with grass",
+    "category": "environment",
+    "cov": 0.011154011154011155,
+    "mpl": 0.38036547315433594
+   }
+  ],
+  "mpl_all": 0.6310694718579946
+ },
+ {
+  "image_id": "149866866_e6a46a330b_52_63163416@N00.jpg",
+  "true_label": "Istanbul, Turkey",
+  "gt_country": "Turkey",
+  "argmax": "Barcelona, Spain",
+  "p_true": 0.0982145220041275,
+  "rank_true": 2,
+  "km_error": 2234.579431727636,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Turkish text on sign",
+    "category": "text/signage",
+    "cov": 0.0572911430582085,
+    "mpl": 0.3996499421677647
+   },
+   {
+    "cue": "Fish market display",
+    "category": "commercial/cultural",
+    "cov": 0.19352568613652357,
+    "mpl": 0.3403399745024585
+   }
+  ],
+  "mpl_all": 0.46947212560130425
+ },
+ {
+  "image_id": "484245503_2c1739bf8b_213_50435419@N00.jpg",
+  "true_label": "Buenos Aires, Argentina",
+  "gt_country": "Argentina",
+  "argmax": "Hof HaCarmel Regional Council, Israel",
+  "p_true": 0.13118435442447662,
+  "rank_true": 3,
+  "km_error": 12267.155195540714,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "light switch and power outlet",
+    "category": "road/infrastructure",
+    "cov": 0.0015599145063430778,
+    "mpl": 0.0
+   },
+   {
+    "cue": "interior design and furniture",
+    "category": "architecture",
+    "cov": 0.10010744162529876,
+    "mpl": 0.20537989302913495
+   },
+   {
+    "cue": "clothing style",
+    "category": "commercial/cultural",
+    "cov": 0.20425112612612611,
+    "mpl": 0.7572867815340205
+   }
+  ],
+  "mpl_all": 0.6490334847313446
+ },
+ {
+  "image_id": "276477189_7baf796f9d_83_12814307@N00.jpg",
+  "true_label": "Seraing, Belgium",
+  "gt_country": "Belgium",
+  "argmax": "Seraing, Belgium",
+  "p_true": 0.9080548286437988,
+  "rank_true": 1,
+  "km_error": 1.4166902308427045,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "French text on sign",
+    "category": "text/signage",
+    "cov": 0.16335085085085085,
+    "mpl": 0.9903763685745315
+   },
+   {
+    "cue": "Railway infrastructure",
+    "category": "road/infrastructure",
+    "cov": 0.0058425772711487,
+    "mpl": 0.16478434829091676
+   },
+   {
+    "cue": "European style vegetation",
+    "category": "environment",
+    "cov": 0.04080866580866581,
+    "mpl": 0.30023600220162344
+   }
+  ],
+  "mpl_all": 1.0088815541337812
+ },
+ {
+  "image_id": "468278910_539810ce41_193_64825499@N00.jpg",
+  "true_label": "Mexico",
+  "gt_country": "Mexico",
+  "argmax": "Chankom, Mexico",
+  "p_true": 0.008180062286555767,
+  "rank_true": 6,
+  "km_error": 166.727591139152,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Hotel Cozumel sign",
+    "category": "text/signage",
+    "cov": 0.14970582827725684,
+    "mpl": 0.6975525587889739
+   },
+   {
+    "cue": "Dos Equis branding",
+    "category": "commercial/cultural",
+    "cov": 0.0019190108475822761,
+    "mpl": 0.1233585878344231
+   },
+   {
+    "cue": "Tropical vegetation",
+    "category": "environment",
+    "cov": 0.011637913423627709,
+    "mpl": 0.24832283022721532
+   },
+   {
+    "cue": "Waterfront location",
+    "category": "environment",
+    "cov": 0.3076814058956916,
+    "mpl": 0.9312364696259217
+   }
+  ],
+  "mpl_all": 0.9255001018775748
+ },
+ {
+  "image_id": "379001279_fa81cf9ee0_155_87409164@N00.jpg",
+  "true_label": "Singapore, Singapore",
+  "gt_country": "Singapore",
+  "argmax": "Singapore, Singapore",
+  "p_true": 0.6794177293777466,
+  "rank_true": 1,
+  "km_error": 3.3303178670287674,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Colorful deity sculptures",
+    "category": "landmarks/buildings",
+    "cov": 0.08651636330207758,
+    "mpl": 0.3259503614768425
+   }
+  ],
+  "mpl_all": 0.3259503614768425
+ },
+ {
+  "image_id": "320631397_d6abc1ed08_129_82927779@N00.jpg",
+  "true_label": "Cederberg Local Municipality, South Africa",
+  "gt_country": "South Africa",
+  "argmax": "Cederberg Local Municipality, South Africa",
+  "p_true": 0.965480387210846,
+  "rank_true": 1,
+  "km_error": 44.40378081542534,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "wide-brimmed hat",
+    "category": "commercial/cultural",
+    "cov": 0.21397401866151866,
+    "mpl": 0.5317156125697381
+   }
+  ],
+  "mpl_all": 0.5317156125697381
+ },
+ {
+  "image_id": "311344213_4b003f4ab1_114_63163416@N00.jpg",
+  "true_label": "New Delhi, India",
+  "gt_country": "India",
+  "argmax": "New Delhi, India",
+  "p_true": 0.9296445846557617,
+  "rank_true": 1,
+  "km_error": 2.2096123384945,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Qutub Minar",
+    "category": "landmarks/buildings",
+    "cov": 0.1119432994872826,
+    "mpl": 0.5845075471823316
+   },
+   {
+    "cue": "Islamic arch ruins",
+    "category": "architecture",
+    "cov": 0.04391399416909621,
+    "mpl": 0.2225831284975683
+   }
+  ],
+  "mpl_all": 0.8110040110926222
+ },
+ {
+  "image_id": "280870957_b4e009f8da_102_36093984@N00.jpg",
+  "true_label": "Subotica, Serbia",
+  "gt_country": "Serbia",
+  "argmax": "Chankom, Mexico",
+  "p_true": 0.039452869445085526,
+  "rank_true": 5,
+  "km_error": 9698.167077605325,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Red and white color scheme",
+    "category": "architecture",
+    "cov": 0.11424179281322139,
+    "mpl": 0.7770451576288001
+   },
+   {
+    "cue": "Tree foliage framing the building",
+    "category": "environment",
+    "cov": 0.6145814181528467,
+    "mpl": 1.04188853793693
+   }
+  ],
+  "mpl_all": 2.170534767718453
+ },
+ {
+  "image_id": "1397742163_1a6b87eb5a_1164_7885919@N07.jpg",
+  "true_label": "Paris, France",
+  "gt_country": "France",
+  "argmax": "Versailles, France",
+  "p_true": 0.022079814225435257,
+  "rank_true": 2,
+  "km_error": 15.39845456832135,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Rococo style decor",
+    "category": "architecture",
+    "cov": 0.12427733856305286,
+    "mpl": 0.5338870272138315
+   },
+   {
+    "cue": "French-style furniture",
+    "category": "architecture",
+    "cov": 0.07196865232579518,
+    "mpl": 0.4192715207849573
+   },
+   {
+    "cue": "Large ornate mirror",
+    "category": "architecture",
+    "cov": 0.06487993095135952,
+    "mpl": 0.182566631989587
+   },
+   {
+    "cue": "Classical paintings",
+    "category": "architecture",
+    "cov": 0.020691609977324263,
+    "mpl": 0.14516075323303132
+   }
+  ],
+  "mpl_all": 0.4456284716277889
+ },
+ {
+  "image_id": "449901053_f0d3dbb166_164_55126705@N00.jpg",
+  "true_label": "Cahuita, Costa Rica",
+  "gt_country": "Costa Rica",
+  "argmax": "Cahuita, Costa Rica",
+  "p_true": 0.6498308777809143,
+  "rank_true": 1,
+  "km_error": 0.008162731495390235,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Tropical tree leaves",
+    "category": "environment",
+    "cov": 0.09071316214173357,
+    "mpl": 0.27266374309193286
+   }
+  ],
+  "mpl_all": 0.27266374309193286
+ },
+ {
+  "image_id": "266287734_114d6cc260_94_40829484@N00.jpg",
+  "true_label": "Biwer, Luxembourg",
+  "gt_country": "Luxembourg",
+  "argmax": "Spa, Belgium",
+  "p_true": 0.0004285772447474301,
+  "rank_true": 25,
+  "km_error": 95.8882099371789,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Porsche dealership building",
+    "category": "landmarks/buildings",
+    "cov": 0.26005182478396766,
+    "mpl": 0.5757801620518298
+   },
+   {
+    "cue": "www.porsche.lu URL on car",
+    "category": "text/signage",
+    "cov": 0.026541528773671632,
+    "mpl": 0.07274541809397954
+   }
+  ],
+  "mpl_all": 0.5762188024328194
+ },
+ {
+  "image_id": "486597679_e1a557718f_198_51162504@N00.jpg",
+  "true_label": "Seville, Spain",
+  "gt_country": "Spain",
+  "argmax": "Vienna, Austria",
+  "p_true": 0.08707625418901443,
+  "rank_true": 2,
+  "km_error": 2173.111932482505,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Golden religious statues",
+    "category": "commercial/cultural",
+    "cov": 0.24836188229045372,
+    "mpl": 0.8625868052123986
+   },
+   {
+    "cue": "Crown and scepter on statue",
+    "category": "commercial/cultural",
+    "cov": 0.24836188229045372,
+    "mpl": 0.8625868052123986
+   },
+   {
+    "cue": "Religious iconography",
+    "category": "commercial/cultural",
+    "cov": 0.24836188229045372,
+    "mpl": 0.8625868052123986
+   }
+  ],
+  "mpl_all": 0.8625868052123986
+ },
+ {
+  "image_id": "241921396_742fe1f0fd_90_82981539@N00.jpg",
+  "true_label": "Kyoto, Japan",
+  "gt_country": "Japan",
+  "argmax": "Kyoto, Japan",
+  "p_true": 0.46957215666770935,
+  "rank_true": 1,
+  "km_error": 1.7022388635530619,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Moss-covered rocks",
+    "category": "environment",
+    "cov": 0.03223499018482166,
+    "mpl": 0.3588297228210098
+   },
+   {
+    "cue": "Small waterfall feature",
+    "category": "environment",
+    "cov": 0.03704998333271603,
+    "mpl": 0.4110454542130091
+   },
+   {
+    "cue": "Dense forest with ferns",
+    "category": "environment",
+    "cov": 0.028542723804585356,
+    "mpl": 0.1710995332513287
+   }
+  ],
+  "mpl_all": 0.5105764294441985
+ },
+ {
+  "image_id": "499393661_a7da0fd73e_206_8255645@N03.jpg",
+  "true_label": "Saalbach-Hinterglemm, Austria",
+  "gt_country": "Austria",
+  "argmax": "Saalbach-Hinterglemm, Austria",
+  "p_true": 0.42527616024017334,
+  "rank_true": 1,
+  "km_error": 4.059543266762206,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Snow-covered mountains",
+    "category": "environment",
+    "cov": 0.4544238115666687,
+    "mpl": 0.7398301740289024
+   },
+   {
+    "cue": "Ski gear and attire",
+    "category": "commercial/cultural",
+    "cov": 0.04313880206737349,
+    "mpl": 0.2733395662291763
+   },
+   {
+    "cue": "Clear blue sky",
+    "category": "environment",
+    "cov": 0.2594469469469469,
+    "mpl": 0.29848649896524754
+   }
+  ],
+  "mpl_all": 0.7506679048685097
+ },
+ {
+  "image_id": "453636890_c425e657ab_239_55126705@N00.jpg",
+  "true_label": "Tinum, Mexico",
+  "gt_country": "Mexico",
+  "argmax": "Chankom, Mexico",
+  "p_true": 0.3206927180290222,
+  "rank_true": 2,
+  "km_error": 24.047790411153663,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Mayan architectural style",
+    "category": "architecture",
+    "cov": 0.47417059917059917,
+    "mpl": 1.1730268844545702
+   },
+   {
+    "cue": "Stone masks and carvings",
+    "category": "landmarks/buildings",
+    "cov": 0.007840748912177484,
+    "mpl": 0.237999033262973
+   },
+   {
+    "cue": "Ruined stone structures",
+    "category": "landmarks/buildings",
+    "cov": 0.4752022430593859,
+    "mpl": 1.0895868158145678
+   }
+  ],
+  "mpl_all": 1.090909248536224
+ },
+ {
+  "image_id": "668488293_1b39338210_1369_81421684@N00.jpg",
+  "true_label": "Grafenegg, Austria",
+  "gt_country": "Austria",
+  "argmax": "Székesfehérvár, Hungary",
+  "p_true": 0.024305475875735283,
+  "rank_true": 10,
+  "km_error": 242.04485025833512,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Dragon statue",
+    "category": "landmarks/buildings",
+    "cov": 0.13803916161059018,
+    "mpl": 0.5981179065600711
+   },
+   {
+    "cue": "Lush greenery",
+    "category": "environment",
+    "cov": 0.2845339216767788,
+    "mpl": 1.2584582395934143
+   }
+  ],
+  "mpl_all": 1.112453186226661
+ },
+ {
+  "image_id": "919126362_49e364686c_1300_50994135@N00.jpg",
+  "true_label": "Argyll and Bute, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Scotland, United Kingdom",
+  "p_true": 0.18270370364189148,
+  "rank_true": 3,
+  "km_error": 85.46294179277335,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Mountainous landscape with loch",
+    "category": "environment",
+    "cov": 0.0970479407979408,
+    "mpl": 0.7266084919983713
+   },
+   {
+    "cue": "Stone wall and building",
+    "category": "architecture",
+    "cov": 0.025517386008457436,
+    "mpl": 0.5346723916703395
+   },
+   {
+    "cue": "Traffic cones",
+    "category": "road/infrastructure",
+    "cov": 0.0015340595697738554,
+    "mpl": 0.0
+   }
+  ],
+  "mpl_all": 0.7570611334315491
+ },
+ {
+  "image_id": "203414504_6dce8e2783_60_40829484@N00.jpg",
+  "true_label": "Spa, Belgium",
+  "gt_country": "Belgium",
+  "argmax": "Spa, Belgium",
+  "p_true": 0.9837586283683777,
+  "rank_true": 1,
+  "km_error": 2.101478623246677,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Corvette text on car",
+    "category": "vehicles/license plates",
+    "cov": 0.2708634974259974,
+    "mpl": 0.5318906841481398
+   },
+   {
+    "cue": "ADAC logo on car",
+    "category": "commercial/cultural",
+    "cov": 0.2708634974259974,
+    "mpl": 0.5318906841481398
+   },
+   {
+    "cue": "GT3 logo on car",
+    "category": "commercial/cultural",
+    "cov": 0.2708634974259974,
+    "mpl": 0.5318906841481398
+   },
+   {
+    "cue": "KW logo on car",
+    "category": "commercial/cultural",
+    "cov": 0.2708634974259974,
+    "mpl": 0.5318906841481398
+   }
+  ],
+  "mpl_all": 0.5318906841481398
+ },
+ {
+  "image_id": "103558896_55f8059bc9_35_73293249@N00.jpg",
+  "true_label": "Toronto, Canada",
+  "gt_country": "Canada",
+  "argmax": "Toronto, Canada",
+  "p_true": 0.988102376461029,
+  "rank_true": 1,
+  "km_error": 1.2566399070896233,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "distinctive skyscraper with stepped design",
+    "category": "landmarks/buildings",
+    "cov": 0.31964601719066005,
+    "mpl": 0.9220028816497724
+   },
+   {
+    "cue": "golden reflective building",
+    "category": "landmarks/buildings",
+    "cov": 0.31964601719066005,
+    "mpl": 0.9220028816497724
+   }
+  ],
+  "mpl_all": 0.9220028816497724
+ },
+ {
+  "image_id": "279684899_63d5dc5c9d_89_25304693@N00.jpg",
+  "true_label": "Anaheim, United States",
+  "gt_country": "United States",
+  "argmax": "Anaheim, United States",
+  "p_true": 0.873558521270752,
+  "rank_true": 1,
+  "km_error": 2.6064986226410003,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Mickey Mouse T-shirt",
+    "category": "commercial/cultural",
+    "cov": 0.01381866560437989,
+    "mpl": 0.21279777781090148
+   },
+   {
+    "cue": "Teacup ride",
+    "category": "landmarks/buildings",
+    "cov": 0.11947661947661947,
+    "mpl": 0.5855070391663112
+   },
+   {
+    "cue": "Thatched roof building",
+    "category": "architecture",
+    "cov": 0.036440777512206084,
+    "mpl": 0.2794304652125338
+   },
+   {
+    "cue": "Heart design on teacup",
+    "category": "commercial/cultural",
+    "cov": 0.11947661947661947,
+    "mpl": 0.5855070391663112
+   }
+  ],
+  "mpl_all": 0.7085095423252025
+ },
+ {
+  "image_id": "520721897_11b0c68892_243_70323761@N00.jpg",
+  "true_label": "Town of Hyde Park, United States",
+  "gt_country": "United States",
+  "argmax": "Town of Hyde Park, United States",
+  "p_true": 0.9509676098823547,
+  "rank_true": 1,
+  "km_error": 2.5929947500300905,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Victorian-style furniture",
+    "category": "architecture",
+    "cov": 0.0984642167677882,
+    "mpl": 0.42266390684189337
+   },
+   {
+    "cue": "Portrait above fireplace",
+    "category": "commercial/cultural",
+    "cov": 0.01882813936385365,
+    "mpl": 0.15334005976072754
+   },
+   {
+    "cue": "Classical sculpture",
+    "category": "commercial/cultural",
+    "cov": 0.0053160622357050925,
+    "mpl": 0.1889336572360339
+   },
+   {
+    "cue": "Dark wood paneling",
+    "category": "architecture",
+    "cov": 0.011743886743886744,
+    "mpl": 0.14122756964455327
+   }
+  ],
+  "mpl_all": 0.5133658038191576
+ },
+ {
+  "image_id": "468114689_6f7d634bae_220_7885919@N07.jpg",
+  "true_label": "Paris, France",
+  "gt_country": "France",
+  "argmax": "Saint-Ouen-sur-Seine, France",
+  "p_true": 0.1785670518875122,
+  "rank_true": 2,
+  "km_error": 6.237861099512567,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Parisian architecture style",
+    "category": "architecture",
+    "cov": 0.0604699086841944,
+    "mpl": 1.1637129488389275
+   },
+   {
+    "cue": "French window shutters",
+    "category": "architecture",
+    "cov": 0.011154011154011155,
+    "mpl": 0.25184396959325206
+   },
+   {
+    "cue": "Vegetation and small gardens",
+    "category": "environment",
+    "cov": 0.07957191885763314,
+    "mpl": 0.4675937260792123
+   }
+  ],
+  "mpl_all": 1.1088103773270783
+ },
+ {
+  "image_id": "181848051_3f34be1b5d_68_70323761@N00.jpg",
+  "true_label": "New York, United States",
+  "gt_country": "United States",
+  "argmax": "New York, United States",
+  "p_true": 0.9964249730110168,
+  "rank_true": 1,
+  "km_error": 1.7899643027741219,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Brooklyn Heights Promenade sign",
+    "category": "text/signage",
+    "cov": 0.10948991082919654,
+    "mpl": 0.8097294685854791
+   },
+   {
+    "cue": "Brooklyn Bridge",
+    "category": "landmarks/buildings",
+    "cov": 0.019126907519764664,
+    "mpl": 0.23454661955200184
+   },
+   {
+    "cue": "Manhattan skyline",
+    "category": "landmarks/buildings",
+    "cov": 0.20699893132928848,
+    "mpl": 0.2585099365988774
+   }
+  ],
+  "mpl_all": 0.7117392266426578
+ },
+ {
+  "image_id": "334797817_910e96579f_137_65367662@N00.jpg",
+  "true_label": "San Jose, United States",
+  "gt_country": "United States",
+  "argmax": "Omaha, United States",
+  "p_true": 0.054053857922554016,
+  "rank_true": 4,
+  "km_error": 2258.2848811373833,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "yellow calla lily",
+    "category": "environment",
+    "cov": 0.05129475776797205,
+    "mpl": 0.17930017763706088
+   }
+  ],
+  "mpl_all": 0.17930017763706088
+ },
+ {
+  "image_id": "379777984_75362fd964_150_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Argyll and Bute, United Kingdom",
+  "p_true": 0.005412417929619551,
+  "rank_true": 3,
+  "km_error": 196.2362886098581,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Rocky shoreline",
+    "category": "environment",
+    "cov": 0.26219169933983444,
+    "mpl": 0.6391233272468481
+   },
+   {
+    "cue": "Moored sailboats",
+    "category": "vehicles/license plates",
+    "cov": 0.0028735632183908046,
+    "mpl": 0.34855964792986494
+   },
+   {
+    "cue": "Sunset over hills",
+    "category": "environment",
+    "cov": 0.056761251298548976,
+    "mpl": 1.3183797740766623
+   }
+  ],
+  "mpl_all": 1.330672056697928
+ },
+ {
+  "image_id": "357019239_3aa477b691_146_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Argyll and Bute, United Kingdom",
+  "p_true": 0.2845023274421692,
+  "rank_true": 3,
+  "km_error": 194.06080588857512,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Stone cottage with damaged roof",
+    "category": "landmarks/buildings",
+    "cov": 0.12166775577225965,
+    "mpl": 0.6311786318239131
+   },
+   {
+    "cue": "Rolling hills and moorland",
+    "category": "environment",
+    "cov": 0.09110368285245132,
+    "mpl": 0.4613776506355686
+   },
+   {
+    "cue": "Overcast sky",
+    "category": "environment",
+    "cov": 0.0022934050467477633,
+    "mpl": 0.0
+   }
+  ],
+  "mpl_all": 0.7888190022480737
+ },
+ {
+  "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+  "true_label": "New York, United States",
+  "gt_country": "United States",
+  "argmax": "New York, United States",
+  "p_true": 0.8576383590698242,
+  "rank_true": 1,
+  "km_error": 2.825566189333565,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Equestrian statue",
+    "category": "landmarks/buildings",
+    "cov": 0.11178812741312741,
+    "mpl": 0.6017778551614174
+   },
+   {
+    "cue": "American flag",
+    "category": "commercial/cultural",
+    "cov": 0.005683776889134032,
+    "mpl": 0.0
+   },
+   {
+    "cue": "Historic building architecture",
+    "category": "architecture",
+    "cov": 0.10064752252252253,
+    "mpl": 0.5556069408210293
+   },
+   {
+    "cue": "Trees with autumn foliage",
+    "category": "environment",
+    "cov": 0.2557943785622357,
+    "mpl": 0.42958937474344844
+   }
+  ],
+  "mpl_all": 0.9330950305423817
+ },
+ {
+  "image_id": "331988145_2303e98396_151_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Inverclyde, United Kingdom",
+  "p_true": 0.07092957198619843,
+  "rank_true": 3,
+  "km_error": 272.8692276631021,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Stone cairn",
+    "category": "landmarks/buildings",
+    "cov": 0.054599795583257935,
+    "mpl": 0.8324960642639172
+   },
+   {
+    "cue": "Sheep on hillside",
+    "category": "environment",
+    "cov": 0.009119164907342247,
+    "mpl": 0.3272082007408591
+   }
+  ],
+  "mpl_all": 0.7328961258876454
+ },
+ {
+  "image_id": "224260045_431e8a656e_72_73293249@N00.jpg",
+  "true_label": "Entremont, Switzerland",
+  "gt_country": "Switzerland",
+  "argmax": "La Plagne-Tarentaise, France",
+  "p_true": 0.032479021698236465,
+  "rank_true": 3,
+  "km_error": 65.64029887897738,
+  "country_hit": false,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Mountain peaks",
+    "category": "environment",
+    "cov": 0.004934781720496006,
+    "mpl": 0.13509411439836433
+   }
+  ],
+  "mpl_all": 0.13509411439836433
+ },
+ {
+  "image_id": "256718877_67e9b4f39b_83_50994135@N00.jpg",
+  "true_label": "Inverclyde, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Slovenia",
+  "p_true": 0.027784962207078934,
+  "rank_true": 10,
+  "km_error": 1740.919158009634,
+  "country_hit": false,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Wooden cabinet design",
+    "category": "architecture",
+    "cov": 0.2637601298315584,
+    "mpl": 0.30507968718647865
+   },
+   {
+    "cue": "Decorative lamp",
+    "category": "other",
+    "cov": 0.01322844626416055,
+    "mpl": 0.008823587811960734
+   },
+   {
+    "cue": "Painting style",
+    "category": "commercial/cultural",
+    "cov": 0.06906185031185032,
+    "mpl": 0.20083476681733367
+   },
+   {
+    "cue": "Clothing style",
+    "category": "commercial/cultural",
+    "cov": 0.12333600280028852,
+    "mpl": 0.4572070410130759
+   }
+  ],
+  "mpl_all": 0.5814259032867737
+ },
+ {
+  "image_id": "169956693_5edea53724_78_70323761@N00.jpg",
+  "true_label": "Chicago, United States",
+  "gt_country": "United States",
+  "argmax": "Chicago, United States",
+  "p_true": 0.9406248331069946,
+  "rank_true": 1,
+  "km_error": 8.430122718574678,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Wrigley Field text on cup",
+    "category": "text/signage",
+    "cov": 0.20160817705460563,
+    "mpl": 0.8844242767737882
+   }
+  ],
+  "mpl_all": 0.8844242767737882
+ },
+ {
+  "image_id": "217726612_48fdd833cd_57_63163416@N00.jpg",
+  "true_label": "Marmaris, Turkey",
+  "gt_country": "Turkey",
+  "argmax": "Marmaris, Turkey",
+  "p_true": 0.9998019337654114,
+  "rank_true": 1,
+  "km_error": 0.800035421509708,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Sailboats",
+    "category": "vehicles/license plates",
+    "cov": 0.03652273717368721,
+    "mpl": 0.8948816936679952
+   },
+   {
+    "cue": "Mediterranean architecture in distant town",
+    "category": "architecture",
+    "cov": 0.024157199825743107,
+    "mpl": 0.7008386940477017
+   }
+  ],
+  "mpl_all": 0.9657961361526449
+ },
+ {
+  "image_id": "370018459_911d2a6929_123_51162504@N00.jpg",
+  "true_label": "Gloucester, United States",
+  "gt_country": "United States",
+  "argmax": "Grad Poreč, Croatia",
+  "p_true": 0.0020104225259274244,
+  "rank_true": 21,
+  "km_error": 6428.164025851612,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "calm water body",
+    "category": "environment",
+    "cov": 0.08107469714612572,
+    "mpl": 0.8853380424461855
+   },
+   {
+    "cue": "silhouette of distant land",
+    "category": "environment",
+    "cov": 0.020022573594002165,
+    "mpl": 0.6802992297902234
+   }
+  ],
+  "mpl_all": 1.2200110020924901
+ },
+ {
+  "image_id": "482450631_9a18ceae7e_219_50435419@N00.jpg",
+  "true_label": "Buenos Aires, Argentina",
+  "gt_country": "Argentina",
+  "argmax": "Amsterdam, Netherlands",
+  "p_true": 0.007002791855484247,
+  "rank_true": 30,
+  "km_error": 11447.512323760384,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "indoor plant",
+    "category": "environment",
+    "cov": 0.07459149200220629,
+    "mpl": 0.2776576616326713
+   },
+   {
+    "cue": "window with view of brick building",
+    "category": "architecture",
+    "cov": 0.0802494139547711,
+    "mpl": 0.607798294073098
+   },
+   {
+    "cue": "clothing style",
+    "category": "commercial/cultural",
+    "cov": 0.27874494392351534,
+    "mpl": 0.3867884197345636
+   }
+  ],
+  "mpl_all": 0.6013809267859564
+ },
+ {
+  "image_id": "234333488_744cb7ae38_91_73293249@N00.jpg",
+  "true_label": "Anniviers, Switzerland",
+  "gt_country": "Switzerland",
+  "argmax": "Kitzbühel, Austria",
+  "p_true": 0.11340488493442535,
+  "rank_true": 4,
+  "km_error": 394.43742903455404,
+  "country_hit": false,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Chalet-style wooden architecture",
+    "category": "architecture",
+    "cov": 0.2194630855345141,
+    "mpl": 0.5383871370649481
+   },
+   {
+    "cue": "Flower boxes with geraniums",
+    "category": "environment",
+    "cov": 0.00840508876223162,
+    "mpl": 0.06264896343890732
+   },
+   {
+    "cue": "Alpine mountain in background",
+    "category": "environment",
+    "cov": 0.013301566872995444,
+    "mpl": 0.3191087776784127
+   },
+   {
+    "cue": "Traditional Swiss bell",
+    "category": "commercial/cultural",
+    "cov": 0.0013163673877959591,
+    "mpl": 0.0
+   }
+  ],
+  "mpl_all": 0.6789792158413748
+ },
+ {
+  "image_id": "1055535547_d8ebd9b0ff_1005_52057668@N00.jpg",
+  "true_label": "Siena, Italy",
+  "gt_country": "Italy",
+  "argmax": "Sibiu, Romania",
+  "p_true": 0.000365241285180673,
+  "rank_true": 25,
+  "km_error": 1053.0721643184795,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Stone columns with arches",
+    "category": "architecture",
+    "cov": 0.36819472533758246,
+    "mpl": 0.6512375268906493
+   },
+   {
+    "cue": "Romanesque architectural elements",
+    "category": "architecture",
+    "cov": 0.07825044432187289,
+    "mpl": 0.17750637459250998
+   }
+  ],
+  "mpl_all": 0.6240729252622307
+ },
+ {
+  "image_id": "1102966083_dcc68a51a6_1086_70323761@N00.jpg",
+  "true_label": "New York, United States",
+  "gt_country": "United States",
+  "argmax": "New York, United States",
+  "p_true": 0.26244309544563293,
+  "rank_true": 1,
+  "km_error": 3.3742631147728885,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Food Network logo",
+    "category": "text/signage",
+    "cov": 0.24913385962493106,
+    "mpl": 0.8106210349156383
+   }
+  ],
+  "mpl_all": 0.8106210349156383
+ },
+ {
+  "image_id": "271702330_bbffd58093_110_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Argyll and Bute, United Kingdom",
+  "p_true": 0.01376488246023655,
+  "rank_true": 6,
+  "km_error": 196.97942366371845,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Fishing boat with registration SY",
+    "category": "vehicles/license plates",
+    "cov": 0.19484298029556651,
+    "mpl": 0.7009200891119837
+   },
+   {
+    "cue": "Overcast weather",
+    "category": "environment",
+    "cov": 0.31503122800844474,
+    "mpl": 0.5621352508620139
+   }
+  ],
+  "mpl_all": 1.6339944162054498
+ },
+ {
+  "image_id": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+  "true_label": "Slovenia",
+  "gt_country": "Slovenia",
+  "argmax": "Slovenia",
+  "p_true": 0.3752412796020508,
+  "rank_true": 1,
+  "km_error": 58.75929021356162,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Church on an island",
+    "category": "landmarks/buildings",
+    "cov": 0.023301158301158302,
+    "mpl": 0.4303569474095279
+   },
+   {
+    "cue": "Mountainous forested background",
+    "category": "environment",
+    "cov": 0.24644098179812465,
+    "mpl": 1.8620720528639922
+   }
+  ],
+  "mpl_all": 1.7144694987241986
+ },
+ {
+  "image_id": "337534295_8a12d1be27_145_65367662@N00.jpg",
+  "true_label": "Vallejo, United States",
+  "gt_country": "United States",
+  "argmax": "Koto, Japan",
+  "p_true": 0.006193702574819326,
+  "rank_true": 31,
+  "km_error": 8253.971534612434,
+  "country_hit": false,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "seal in water",
+    "category": "environment",
+    "cov": 0.15041109349145063,
+    "mpl": 0.36926307862662766
+   }
+  ],
+  "mpl_all": 0.36926307862662766
+ },
+ {
+  "image_id": "452065902_0daa6bd4bd_219_15632944@N00.jpg",
+  "true_label": "Bardo, Poland",
+  "gt_country": "Poland",
+  "argmax": "Bardo, Poland",
+  "p_true": 0.613541305065155,
+  "rank_true": 1,
+  "km_error": 0.6472532952139227,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Train model EN57",
+    "category": "vehicles/license plates",
+    "cov": 0.11405793548650692,
+    "mpl": 0.5532470508276192
+   },
+   {
+    "cue": "Polish text on train",
+    "category": "text/signage",
+    "cov": 0.11405793548650692,
+    "mpl": 0.5532470508276192
+   },
+   {
+    "cue": "Architecture style of buildings",
+    "category": "architecture",
+    "cov": 0.08342526199669056,
+    "mpl": 0.35904507361711
+   },
+   {
+    "cue": "Overhead electric lines",
+    "category": "road/infrastructure",
+    "cov": 0.012712968070110927,
+    "mpl": 0.2611704630763089
+   }
+  ],
+  "mpl_all": 0.6666008467590122
+ },
+ {
+  "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+  "true_label": "Bangkok, Thailand",
+  "gt_country": "Thailand",
+  "argmax": "Bangkok, Thailand",
+  "p_true": 0.9972869157791138,
+  "rank_true": 1,
+  "km_error": 2.034620417147975,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Thai text on storefront signs",
+    "category": "text/signage",
+    "cov": 0.15294376008661723,
+    "mpl": 0.37750901907738915
+   },
+   {
+    "cue": "Fujifilm signage",
+    "category": "commercial/cultural",
+    "cov": 0.15294376008661723,
+    "mpl": 0.37750901907738915
+   },
+   {
+    "cue": "Left-hand traffic with vehicles",
+    "category": "vehicles/license plates",
+    "cov": 0.018407438050295193,
+    "mpl": 0.10876827042670752
+   }
+  ],
+  "mpl_all": 0.41129254680660676
+ },
+ {
+  "image_id": "203382931_becf34eb9c_73_40829484@N00.jpg",
+  "true_label": "Spa, Belgium",
+  "gt_country": "Belgium",
+  "argmax": "Spa, Belgium",
+  "p_true": 0.9792954921722412,
+  "rank_true": 1,
+  "km_error": 2.101478623246677,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "BorgWarner Turbo & Emissions Systems logo",
+    "category": "commercial/cultural",
+    "cov": 0.006717974351902923,
+    "mpl": 0.09889229543215103
+   },
+   {
+    "cue": "ET3 European Championship logo",
+    "category": "text/signage",
+    "cov": 0.006717974351902923,
+    "mpl": 0.09889229543215103
+   },
+   {
+    "cue": "Michelin tire logo",
+    "category": "commercial/cultural",
+    "cov": 0.006717974351902923,
+    "mpl": 0.09889229543215103
+   },
+   {
+    "cue": "Race car with number 18",
+    "category": "vehicles/license plates",
+    "cov": 0.03434541046148189,
+    "mpl": 0.0
+   }
+  ],
+  "mpl_all": 0.09889229543215103
+ },
+ {
+  "image_id": "34489106_b6bb027a4c_23_49503208420@N01.jpg",
+  "true_label": "Municipio de Tilcara, Argentina",
+  "gt_country": "Argentina",
+  "argmax": "Municipio de Tilcara, Argentina",
+  "p_true": 0.9668787121772766,
+  "rank_true": 1,
+  "km_error": 3.4305165518125027,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Arid mountain landscape",
+    "category": "environment",
+    "cov": 0.12429521358092786,
+    "mpl": 0.2823276484837308
+   },
+   {
+    "cue": "Adobe-style buildings",
+    "category": "architecture",
+    "cov": 0.004564513493084922,
+    "mpl": 0.1892856663853626
+   }
+  ],
+  "mpl_all": 0.32548786227608284
+ },
+ {
+  "image_id": "294552061_7ddb16fe09_116_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Inverclyde, United Kingdom",
+  "p_true": 0.0020511772017925978,
+  "rank_true": 6,
+  "km_error": 276.17000171065746,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Cluster of small houses",
+    "category": "architecture",
+    "cov": 0.004739703763278711,
+    "mpl": 0.14878636591916725
+   },
+   {
+    "cue": "Fenced fields",
+    "category": "road/infrastructure",
+    "cov": 0.2094161556248115,
+    "mpl": 0.7064752451902364
+   }
+  ],
+  "mpl_all": 0.7745575800322467
+ },
+ {
+  "image_id": "234270041_a4787189dd_82_50994135@N00.jpg",
+  "true_label": "Chicago, United States",
+  "gt_country": "United States",
+  "argmax": "Oxford, United States",
+  "p_true": 0.001694860984571278,
+  "rank_true": 59,
+  "km_error": 861.1331141703955,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Interior decor style",
+    "category": "architecture",
+    "cov": 0.084925486711201,
+    "mpl": 0.43877793849086766
+   }
+  ],
+  "mpl_all": 0.43877793849086766
+ },
+ {
+  "image_id": "1000269685_e60e9cdfb4_1125_78841376@N00.jpg",
+  "true_label": "Bermuda",
+  "gt_country": "Bermuda",
+  "argmax": "Tulum, Mexico",
+  "p_true": 0.03547999635338783,
+  "rank_true": 5,
+  "km_error": 2627.1921907730016,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Dolphin Discovery logo on life vest",
+    "category": "commercial/cultural",
+    "cov": 0.01609773038344467,
+    "mpl": 0.2031504260592559
+   },
+   {
+    "cue": "Clear turquoise water",
+    "category": "environment",
+    "cov": 0.01910967089538518,
+    "mpl": 0.14473656880012983
+   }
+  ],
+  "mpl_all": 0.26000894139885045
+ },
+ {
+  "image_id": "71807788_2b6c93f13f_35_18684820@N00.jpg",
+  "true_label": "Paris, France",
+  "gt_country": "France",
+  "argmax": "Budapest, Hungary",
+  "p_true": 0.04293661192059517,
+  "rank_true": 5,
+  "km_error": 1253.8594608886722,
+  "country_hit": false,
+  "n_cues": 5,
+  "per_cue": [
+   {
+    "cue": "Bus route number and destination",
+    "category": "text/signage",
+    "cov": 0.26436816280566283,
+    "mpl": 0.9600730583164699
+   },
+   {
+    "cue": "French text on bus",
+    "category": "text/signage",
+    "cov": 0.26436816280566283,
+    "mpl": 0.9600730583164699
+   },
+   {
+    "cue": "Architecture style of buildings",
+    "category": "architecture",
+    "cov": 0.06435293712079426,
+    "mpl": 0.5970456343370337
+   },
+   {
+    "cue": "Green and cream color scheme of bus",
+    "category": "vehicles/license plates",
+    "cov": 0.26436816280566283,
+    "mpl": 0.9600730583164699
+   },
+   {
+    "cue": "European car models",
+    "category": "vehicles/license plates",
+    "cov": 0.13211298032726604,
+    "mpl": 0.6054221950830128
+   }
+  ],
+  "mpl_all": 1.1593125017345576
+ },
+ {
+  "image_id": "219687801_ab67a8f5ca_70_88483799@N00.jpg",
+  "true_label": "Newport News, United States",
+  "gt_country": "United States",
+  "argmax": "East Granby, United States",
+  "p_true": 0.14585794508457184,
+  "rank_true": 2,
+  "km_error": 626.6889113707509,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "U.S. Army uniforms",
+    "category": "commercial/cultural",
+    "cov": 0.08675129210843496,
+    "mpl": 0.4699208651949415
+   },
+   {
+    "cue": "Patch on uniform",
+    "category": "text/signage",
+    "cov": 0.0015998140998140999,
+    "mpl": 0.033281772785587825
+   },
+   {
+    "cue": "Concrete pavement and hangar",
+    "category": "landmarks/buildings",
+    "cov": 0.02136447672161958,
+    "mpl": 0.2366502562805623
+   }
+  ],
+  "mpl_all": 0.5622729554280766
+ },
+ {
+  "image_id": "1192463216_a5f06caf2c_1050_47311799@N00.jpg",
+  "true_label": "Venice, Italy",
+  "gt_country": "Italy",
+  "argmax": "Venice, Italy",
+  "p_true": 0.6836497187614441,
+  "rank_true": 1,
+  "km_error": 4.09318755343999,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Italian text on hotel sign",
+    "category": "text/signage",
+    "cov": 0.01164812771955629,
+    "mpl": 0.11680116727032283
+   },
+   {
+    "cue": "Venetian Gothic architecture",
+    "category": "architecture",
+    "cov": 0.056758288901146044,
+    "mpl": 0.271115693654854
+   },
+   {
+    "cue": "Mediterranean pantile roof",
+    "category": "architecture",
+    "cov": 0.031449817164102875,
+    "mpl": 0.31142880241521587
+   },
+   {
+    "cue": "Canal-side location",
+    "category": "environment",
+    "cov": 0.056758288901146044,
+    "mpl": 0.271115693654854
+   }
+  ],
+  "mpl_all": 0.4681630524192745
+ },
+ {
+  "image_id": "118159659_c2cc29c6a1_52_18684820@N00.jpg",
+  "true_label": "Bangkok, Thailand",
+  "gt_country": "Thailand",
+  "argmax": "Roi Et, Thailand",
+  "p_true": 0.08114137500524521,
+  "rank_true": 3,
+  "km_error": 410.6013508294396,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Dried fish on woven bamboo tray",
+    "category": "commercial/cultural",
+    "cov": 0.013160162713734143,
+    "mpl": 0.13762065522102027
+   },
+   {
+    "cue": "Stacked dried fish",
+    "category": "commercial/cultural",
+    "cov": 0.1498465940430226,
+    "mpl": 0.24157998114020926
+   }
+  ],
+  "mpl_all": 0.2837293191484974
+ },
+ {
+  "image_id": "244685754_fa9cd577a8_94_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Argyll and Bute, United Kingdom",
+  "p_true": 0.17210093140602112,
+  "rank_true": 2,
+  "km_error": 212.65960281604478,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Rocky coastline with grassy hills",
+    "category": "environment",
+    "cov": 0.15496506484367145,
+    "mpl": 0.547885497010146
+   },
+   {
+    "cue": "Sandy beach with rocks",
+    "category": "environment",
+    "cov": 0.17032983143996513,
+    "mpl": 0.5324942309248883
+   },
+   {
+    "cue": "Overcast sky",
+    "category": "environment",
+    "cov": 0.2806729834791059,
+    "mpl": 0.48056591774960716
+   }
+  ],
+  "mpl_all": 0.6835416724521582
+ },
+ {
+  "image_id": "359583512_c889dcbcf3_142_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Argyll and Bute, United Kingdom",
+  "p_true": 0.18171226978302002,
+  "rank_true": 2,
+  "km_error": 196.21750161059776,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "White daisies with yellow centers",
+    "category": "environment",
+    "cov": 0.02852469816755531,
+    "mpl": 0.3915272689333065
+   },
+   {
+    "cue": "Rocky ground with small stones",
+    "category": "environment",
+    "cov": 0.06054396232967661,
+    "mpl": 0.2595665769399042
+   }
+  ],
+  "mpl_all": 0.4131915471544952
+ },
+ {
+  "image_id": "199300245_2b38ee3d16_78_23601949@N00.jpg",
+  "true_label": "Bristol, United States",
+  "gt_country": "United States",
+  "argmax": "Oxford, United States",
+  "p_true": 0.007385813631117344,
+  "rank_true": 10,
+  "km_error": 2023.0420074254973,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "American flag",
+    "category": "commercial/cultural",
+    "cov": 0.03985538472145615,
+    "mpl": 0.43946491801457926
+   },
+   {
+    "cue": "English text on sign",
+    "category": "text/signage",
+    "cov": 0.19876844318808604,
+    "mpl": 0.510262805639421
+   },
+   {
+    "cue": "Traditional parade attire",
+    "category": "commercial/cultural",
+    "cov": 0.04083069038426181,
+    "mpl": 0.29837724034800195
+   }
+  ],
+  "mpl_all": 0.7625908112710175
+ },
+ {
+  "image_id": "264072697_0bb27f33c4_95_90833046@N00.jpg",
+  "true_label": "Minneapolis, United States",
+  "gt_country": "United States",
+  "argmax": "Omaha, United States",
+  "p_true": 0.11511638760566711,
+  "rank_true": 3,
+  "km_error": 467.2240128228024,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Autumn foliage",
+    "category": "environment",
+    "cov": 0.2145442636514065,
+    "mpl": 0.4319656429270415
+   },
+   {
+    "cue": "Road with bike lane",
+    "category": "road/infrastructure",
+    "cov": 0.13040799089906233,
+    "mpl": 0.3489281732438809
+   },
+   {
+    "cue": "Stone retaining wall",
+    "category": "landmarks/buildings",
+    "cov": 0.02615657749586321,
+    "mpl": 0.4291705549795577
+   },
+   {
+    "cue": "Cars driving on the right",
+    "category": "vehicles/license plates",
+    "cov": 0.0018917195256480971,
+    "mpl": 0.26070351225524213
+   }
+  ],
+  "mpl_all": 0.6994392422077221
+ },
+ {
+  "image_id": "167345423_ba2914f302_59_79954435@N00.jpg",
+  "true_label": "Area A (Kicking Horse/Kinbasket Lake), Canada",
+  "gt_country": "Canada",
+  "argmax": "Improvement District No. 9, Canada",
+  "p_true": 0.06945271044969559,
+  "rank_true": 2,
+  "km_error": 42.14713310285245,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Turquoise glacial lake",
+    "category": "environment",
+    "cov": 0.23384098384098384,
+    "mpl": 0.43197757437713785
+   },
+   {
+    "cue": "Coniferous forest",
+    "category": "environment",
+    "cov": 0.06713345999060284,
+    "mpl": 0.5815298204362127
+   },
+   {
+    "cue": "Rocky mountain range",
+    "category": "environment",
+    "cov": 0.1213981838981839,
+    "mpl": 0.5505153859791887
+   },
+   {
+    "cue": "Red canoes with numbers",
+    "category": "commercial/cultural",
+    "cov": 0.05794570080284366,
+    "mpl": 0.32158408382072695
+   }
+  ],
+  "mpl_all": 0.7968828275568789
+ },
+ {
+  "image_id": "1077208489_d307c44d40_1355_93455345@N00.jpg",
+  "true_label": "Vladivostok, Russia",
+  "gt_country": "Russia",
+  "argmax": "Vladivostok, Russia",
+  "p_true": 0.9961552023887634,
+  "rank_true": 1,
+  "km_error": 4.3113972524874775,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Harbor with ships",
+    "category": "landmarks/buildings",
+    "cov": 0.0101134297562869,
+    "mpl": 0.09975854161926741
+   },
+   {
+    "cue": "Hilly terrain with urban buildings",
+    "category": "environment",
+    "cov": 0.013425415211129497,
+    "mpl": 0.37625625520531664
+   },
+   {
+    "cue": "Soviet-style architecture",
+    "category": "architecture",
+    "cov": 0.06429260893546608,
+    "mpl": 0.30723166252095313
+   },
+   {
+    "cue": "Lamp post design",
+    "category": "road/infrastructure",
+    "cov": 0.01673995423995424,
+    "mpl": 0.2065084248406035
+   }
+  ],
+  "mpl_all": 0.3252080725552492
+ },
+ {
+  "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+  "true_label": "Okazaki, Japan",
+  "gt_country": "Japan",
+  "argmax": "Kyoto, Japan",
+  "p_true": 0.2326962798833847,
+  "rank_true": 2,
+  "km_error": 127.18296295885128,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Japanese text on festival banners",
+    "category": "text/signage",
+    "cov": 0.12432074932074932,
+    "mpl": 0.2969976715901306
+   },
+   {
+    "cue": "Samurai armor on a person",
+    "category": "commercial/cultural",
+    "cov": 0.05429792036934894,
+    "mpl": 0.4488021191316359
+   },
+   {
+    "cue": "Cherry blossoms",
+    "category": "environment",
+    "cov": 0.25183474290617147,
+    "mpl": 0.4469322186835769
+   },
+   {
+    "cue": "Japanese police uniforms",
+    "category": "commercial/cultural",
+    "cov": 0.05382806275663418,
+    "mpl": 0.19928922412942715
+   }
+  ],
+  "mpl_all": 0.7665885704873311
+ },
+ {
+  "image_id": "219898919_220c455b81_78_82927779@N00.jpg",
+  "true_label": "George, South Africa",
+  "gt_country": "South Africa",
+  "argmax": "Cederberg Local Municipality, South Africa",
+  "p_true": 0.003673919942229986,
+  "rank_true": 26,
+  "km_error": 321.0862265908818,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Rasta-style beanie",
+    "category": "commercial/cultural",
+    "cov": 0.02255412300055157,
+    "mpl": 0.2917577569713438
+   },
+   {
+    "cue": "Blue jeans and casual clothing",
+    "category": "commercial/cultural",
+    "cov": 0.14009066464423608,
+    "mpl": 0.3745091493647975
+   },
+   {
+    "cue": "Stone and brick wall",
+    "category": "architecture",
+    "cov": 0.06375540080897224,
+    "mpl": 0.4816207657013203
+   }
+  ],
+  "mpl_all": 0.616739969233418
+ },
+ {
+  "image_id": "876438778_7c0cef320a_1036_15632944@N00.jpg",
+  "true_label": "Wrocław, Poland",
+  "gt_country": "Poland",
+  "argmax": "Budapest, Hungary",
+  "p_true": 0.007570418529212475,
+  "rank_true": 18,
+  "km_error": 433.1617005428376,
+  "country_hit": false,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Polish text on glue container",
+    "category": "text/signage",
+    "cov": 0.08196844803987662,
+    "mpl": 0.3200407003570801
+   }
+  ],
+  "mpl_all": 0.3200407003570801
+ },
+ {
+  "image_id": "312579751_048cb85e3c_108_43935788@N00.jpg",
+  "true_label": "Miami-Dade County, United States",
+  "gt_country": "United States",
+  "argmax": "Kuala Lumpur, Malaysia",
+  "p_true": 0.036744605749845505,
+  "rank_true": 11,
+  "km_error": 16808.887792129375,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Gerenuk antelopes",
+    "category": "environment",
+    "cov": 0.08674618496047068,
+    "mpl": 0.8471337227384625
+   },
+   {
+    "cue": "Arid rocky environment",
+    "category": "environment",
+    "cov": 0.13067228580621437,
+    "mpl": 0.26734155770407786
+   }
+  ],
+  "mpl_all": 0.8386929444071751
+ },
+ {
+  "image_id": "199802332_27a09191e6_64_85971448@N00.jpg",
+  "true_label": "Denizli, Turkey",
+  "gt_country": "Turkey",
+  "argmax": "Denizli, Turkey",
+  "p_true": 0.9891568422317505,
+  "rank_true": 1,
+  "km_error": 14.486974465392166,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Mountainous background",
+    "category": "environment",
+    "cov": 0.06922611386897101,
+    "mpl": 0.4296513224948793
+   },
+   {
+    "cue": "Turkish text on sign",
+    "category": "text/signage",
+    "cov": 0.007836918551204266,
+    "mpl": 0.19903555963416672
+   }
+  ],
+  "mpl_all": 0.4586612845942686
+ },
+ {
+  "image_id": "253013198_0869efe061_109_36093984@N00.jpg",
+  "true_label": "Colma, United States",
+  "gt_country": "United States",
+  "argmax": "San Francisco, United States",
+  "p_true": 0.0004925552057102323,
+  "rank_true": 2,
+  "km_error": 12.114125588796869,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Transamerica Pyramid-like building",
+    "category": "landmarks/buildings",
+    "cov": 0.19088476231333373,
+    "mpl": 0.7894795346543269
+   },
+   {
+    "cue": "Red-flowered trees",
+    "category": "environment",
+    "cov": 0.21477983085125943,
+    "mpl": 0.6946867456546006
+   },
+   {
+    "cue": "Speed limit sign in miles per hour",
+    "category": "road/infrastructure",
+    "cov": 0.0069150783436497726,
+    "mpl": 0.034583887687400755
+   }
+  ],
+  "mpl_all": 0.902024794835498
+ },
+ {
+  "image_id": "369043327_64ca92b933_146_13527886@N00.jpg",
+  "true_label": "Leh, India",
+  "gt_country": "India",
+  "argmax": "Iguerferouane, Morocco",
+  "p_true": 0.3712771534919739,
+  "rank_true": 2,
+  "km_error": 7730.4993019316125,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Mountainous terrain with barren rocky slopes",
+    "category": "environment",
+    "cov": 0.2577692488406774,
+    "mpl": 0.7677444792386295
+   },
+   {
+    "cue": "Sparse tree cover",
+    "category": "environment",
+    "cov": 0.02666952666952667,
+    "mpl": 0.34622750570717725
+   }
+  ],
+  "mpl_all": 0.8381788048403005
+ },
+ {
+  "image_id": "311937210_3b4a9ca55c_84_63163416@N00.jpg",
+  "true_label": "Jaipur Municipal Corporation, India",
+  "gt_country": "India",
+  "argmax": "Jaipur Municipal Corporation, India",
+  "p_true": 0.8569488525390625,
+  "rank_true": 1,
+  "km_error": 2.1325588481955102,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Jharokha-style windows",
+    "category": "architecture",
+    "cov": 0.009705606380483229,
+    "mpl": 0.0646181779063977
+   },
+   {
+    "cue": "People in traditional Indian attire",
+    "category": "commercial/cultural",
+    "cov": 0.019982993197278913,
+    "mpl": 0.2332306543819097
+   }
+  ],
+  "mpl_all": 0.2410481107173188
+ },
+ {
+  "image_id": "71812047_61e009056a_35_18684820@N00.jpg",
+  "true_label": "Paris, France",
+  "gt_country": "France",
+  "argmax": "Paris, France",
+  "p_true": 0.6077988743782043,
+  "rank_true": 1,
+  "km_error": 1.0767060945821199,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Statue in background",
+    "category": "landmarks/buildings",
+    "cov": 0.009724328920757492,
+    "mpl": 0.15420536156812614
+   }
+  ],
+  "mpl_all": 0.15420536156812614
+ },
+ {
+  "image_id": "758114922_f369e388f5_1324_41894169878@N01.jpg",
+  "true_label": "Boulder County, United States",
+  "gt_country": "United States",
+  "argmax": "Municipio de Tilcara, Argentina",
+  "p_true": 0.0017254394479095936,
+  "rank_true": 29,
+  "km_error": 8188.579354933865,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Spider-Man themed sunglasses",
+    "category": "commercial/cultural",
+    "cov": 0.06848813098813099,
+    "mpl": 0.3055013065460539
+   },
+   {
+    "cue": "Rocky background",
+    "category": "environment",
+    "cov": 0.13235301628158772,
+    "mpl": 0.500562225481473
+   }
+  ],
+  "mpl_all": 0.49937720242712225
+ },
+ {
+  "image_id": "203420486_c21ed696cc_65_40829484@N00.jpg",
+  "true_label": "Spa, Belgium",
+  "gt_country": "Belgium",
+  "argmax": "Spa, Belgium",
+  "p_true": 0.6571002006530762,
+  "rank_true": 1,
+  "km_error": 2.101478623246677,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Purple Sumolux banners",
+    "category": "commercial/cultural",
+    "cov": 0.09200048262548262,
+    "mpl": 0.3471365214532553
+   },
+   {
+    "cue": "Dodge race car",
+    "category": "vehicles/license plates",
+    "cov": 0.08057978258871117,
+    "mpl": 0.5846349138195261
+   },
+   {
+    "cue": "French text on worker's shirt",
+    "category": "text/signage",
+    "cov": 0.06960723478580622,
+    "mpl": 0.2786439543398906
+   }
+  ],
+  "mpl_all": 0.7640754317571432
+ },
+ {
+  "image_id": "270426691_42f06b31b0_106_50994135@N00.jpg",
+  "true_label": "Argyll and Bute, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Scotland, United Kingdom",
+  "p_true": 0.022519035264849663,
+  "rank_true": 4,
+  "km_error": 98.71735676767555,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Lake with surrounding greenery",
+    "category": "environment",
+    "cov": 0.09248151212436927,
+    "mpl": 0.26193453152391133
+   },
+   {
+    "cue": "Green grassy field",
+    "category": "environment",
+    "cov": 0.2727446834589692,
+    "mpl": 0.36264556435738665
+   }
+  ],
+  "mpl_all": 0.39652619615036494
+ },
+ {
+  "image_id": "339479847_8d444a33ea_138_63163416@N00.jpg",
+  "true_label": "Alexandria, Egypt",
+  "gt_country": "Egypt",
+  "argmax": "Alexandria, Egypt",
+  "p_true": 0.6301204562187195,
+  "rank_true": 1,
+  "km_error": 5.079405072732021,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Distinctive tower with crenellations",
+    "category": "landmarks/buildings",
+    "cov": 0.14471700010053282,
+    "mpl": 0.5031436695708033
+   },
+   {
+    "cue": "Mediterranean climate vegetation",
+    "category": "environment",
+    "cov": 0.028239251365570858,
+    "mpl": 0.8111789627717969
+   }
+  ],
+  "mpl_all": 1.0828740125897527
+ },
+ {
+  "image_id": "182032884_4d2e269a5c_54_77392231@N00.jpg",
+  "true_label": "Amsterdam, Netherlands",
+  "gt_country": "Netherlands",
+  "argmax": "Amsterdam, Netherlands",
+  "p_true": 0.999895453453064,
+  "rank_true": 1,
+  "km_error": 0.32663050529888743,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Live Porno Show signage",
+    "category": "text/signage",
+    "cov": 0.1297292190149333,
+    "mpl": 0.6308624096831232
+   },
+   {
+    "cue": "Blauw restaurant sign",
+    "category": "text/signage",
+    "cov": 0.1297292190149333,
+    "mpl": 0.6308624096831232
+   }
+  ],
+  "mpl_all": 0.6308624096831232
+ },
+ {
+  "image_id": "819657413_fdcd20c2fe_1304_7885919@N07.jpg",
+  "true_label": "La Plagne-Tarentaise, France",
+  "gt_country": "France",
+  "argmax": "Saalbach-Hinterglemm, Austria",
+  "p_true": 0.246719092130661,
+  "rank_true": 2,
+  "km_error": 499.1219588617434,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Ski lift",
+    "category": "road/infrastructure",
+    "cov": 0.03322327429470286,
+    "mpl": 0.32534809100181505
+   },
+   {
+    "cue": "Snow-covered mountains",
+    "category": "environment",
+    "cov": 0.09593011378725665,
+    "mpl": 0.5034583009108605
+   },
+   {
+    "cue": "Skiers on lift",
+    "category": "commercial/cultural",
+    "cov": 0.005671487814344957,
+    "mpl": 0.15078394841694356
+   }
+  ],
+  "mpl_all": 0.5044840465089541
+ },
+ {
+  "image_id": "482474082_48e542db42_184_50435419@N00.jpg",
+  "true_label": "Buenos Aires, Argentina",
+  "gt_country": "Argentina",
+  "argmax": "Székesfehérvár, Hungary",
+  "p_true": 0.24917706847190857,
+  "rank_true": 2,
+  "km_error": 11876.59485142686,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "gym mats",
+    "category": "other",
+    "cov": 0.11084298584298584,
+    "mpl": 0.29224688173921887
+   },
+   {
+    "cue": "curtains and windows",
+    "category": "architecture",
+    "cov": 0.045964331678617396,
+    "mpl": 0.22444684365886103
+   },
+   {
+    "cue": "clothing style",
+    "category": "commercial/cultural",
+    "cov": 0.24843721272292701,
+    "mpl": 0.3682339008185954
+   }
+  ],
+  "mpl_all": 0.45946482183887866
+ },
+ {
+  "image_id": "1434280462_b424fafbcd_1033_97522422@N00.jpg",
+  "true_label": "Bergen, Norway",
+  "gt_country": "Norway",
+  "argmax": "Reykjavik, Iceland",
+  "p_true": 0.14671708643436432,
+  "rank_true": 2,
+  "km_error": 1458.1536976331734,
+  "country_hit": false,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Stencil art style",
+    "category": "commercial/cultural",
+    "cov": 0.0024769667626810482,
+    "mpl": 0.12962944333813173
+   }
+  ],
+  "mpl_all": 0.12962944333813173
+ },
+ {
+  "image_id": "754881567_128bec18c6_1427_78247883@N00.jpg",
+  "true_label": "Slovenia",
+  "gt_country": "Slovenia",
+  "argmax": "Thörl, Austria",
+  "p_true": 0.11973036825656891,
+  "rank_true": 4,
+  "km_error": 151.17637719492998,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Mountainous forested landscape",
+    "category": "environment",
+    "cov": 0.19289506343077772,
+    "mpl": 1.069412806762412
+   },
+   {
+    "cue": "Wooden dock",
+    "category": "road/infrastructure",
+    "cov": 0.2574174940246369,
+    "mpl": 0.4484865187241072
+   },
+   {
+    "cue": "Calm lake with distant boat",
+    "category": "environment",
+    "cov": 0.25111463504320647,
+    "mpl": 0.6274482790251954
+   }
+  ],
+  "mpl_all": 1.118709072504915
+ },
+ {
+  "image_id": "494842008_7ca250deeb_225_15632944@N00.jpg",
+  "true_label": "Wolsztyn, Poland",
+  "gt_country": "Poland",
+  "argmax": "Wolsztyn, Poland",
+  "p_true": 0.9952630996704102,
+  "rank_true": 1,
+  "km_error": 1.3313932621244065,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "European style railway tracks",
+    "category": "road/infrastructure",
+    "cov": 0.00987850094992952,
+    "mpl": 0.1430659871039014
+   }
+  ],
+  "mpl_all": 0.1430659871039014
+ },
+ {
+  "image_id": "307515621_3ef10398a0_116_73293249@N00.jpg",
+  "true_label": "City of Westminster, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "City of Westminster, United Kingdom",
+  "p_true": 0.45196300745010376,
+  "rank_true": 1,
+  "km_error": 0.556165351350921,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Holocaust Memorial",
+    "category": "landmarks/buildings",
+    "cov": 0.005924291638577353,
+    "mpl": 0.4095954608213322
+   }
+  ],
+  "mpl_all": 0.4095954608213322
+ },
+ {
+  "image_id": "247705387_80a84ec97e_80_73293249@N00.jpg",
+  "true_label": "Entremont, Switzerland",
+  "gt_country": "Switzerland",
+  "argmax": "La Plagne-Tarentaise, France",
+  "p_true": 0.01906454563140869,
+  "rank_true": 4,
+  "km_error": 65.64029887897738,
+  "country_hit": false,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Coniferous trees",
+    "category": "environment",
+    "cov": 0.18120033298604726,
+    "mpl": 0.5611813926461268
+   }
+  ],
+  "mpl_all": 0.5611813926461268
+ },
+ {
+  "image_id": "285040218_3e6db163b9_108_36093984@N00.jpg",
+  "true_label": "Budapest, Hungary",
+  "gt_country": "Hungary",
+  "argmax": "Barcelona, Spain",
+  "p_true": 0.15602660179138184,
+  "rank_true": 3,
+  "km_error": 1498.8322580046079,
+  "country_hit": false,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Hungarian text on storefront",
+    "category": "text/signage",
+    "cov": 0.017493258564687135,
+    "mpl": 0.23857388013396194
+   },
+   {
+    "cue": "Art Nouveau architectural style",
+    "category": "architecture",
+    "cov": 0.15646130824702253,
+    "mpl": 0.36530753530180754
+   },
+   {
+    "cue": "Statues on building facade",
+    "category": "landmarks/buildings",
+    "cov": 0.0054876304876304875,
+    "mpl": 0.20061027460492067
+   },
+   {
+    "cue": "European pedestrian street",
+    "category": "road/infrastructure",
+    "cov": 0.06749862107004964,
+    "mpl": 0.0
+   }
+  ],
+  "mpl_all": 0.40683105253547175
+ },
+ {
+  "image_id": "343826237_57941e9a77_166_59398218@N00.jpg",
+  "true_label": "Bamako, Mali",
+  "gt_country": "Mali",
+  "argmax": "Bamako, Mali",
+  "p_true": 0.9967824220657349,
+  "rank_true": 1,
+  "km_error": 1.4816823752601105,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Traditional African attire",
+    "category": "commercial/cultural",
+    "cov": 0.2408926783926784,
+    "mpl": 0.5196145907081571
+   },
+   {
+    "cue": "Microphone",
+    "category": "other",
+    "cov": 0.009625697125697125,
+    "mpl": 0.15910036064311167
+   }
+  ],
+  "mpl_all": 0.5578961876382312
+ },
+ {
+  "image_id": "447991928_895301f964_251_55126705@N00.jpg",
+  "true_label": "Palenque, Mexico",
+  "gt_country": "Mexico",
+  "argmax": "Tinum, Mexico",
+  "p_true": 0.1966419219970703,
+  "rank_true": 3,
+  "km_error": 520.1063287561875,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Mayan pyramid structure",
+    "category": "landmarks/buildings",
+    "cov": 0.016266266266266267,
+    "mpl": 0.4377563074062397
+   },
+   {
+    "cue": "Tower with multiple levels",
+    "category": "landmarks/buildings",
+    "cov": 0.01637096279953423,
+    "mpl": 0.4432113032694275
+   },
+   {
+    "cue": "Dense jungle vegetation",
+    "category": "environment",
+    "cov": 0.2400499989785704,
+    "mpl": 0.5741454658591064
+   }
+  ],
+  "mpl_all": 0.7100337856567185
+ },
+ {
+  "image_id": "266501144_9cf5ecfa8a_106_18684820@N00.jpg",
+  "true_label": "San Francisco, United States",
+  "gt_country": "United States",
+  "argmax": "San Diego, United States",
+  "p_true": 0.20768573880195618,
+  "rank_true": 2,
+  "km_error": 736.1578377206656,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "San Francisco Fire Department text",
+    "category": "text/signage",
+    "cov": 0.05194352515781087,
+    "mpl": 0.25563679919443394
+   },
+   {
+    "cue": "Ford vehicle with emergency lights",
+    "category": "vehicles/license plates",
+    "cov": 0.057829513186656044,
+    "mpl": 0.4615425980121943
+   }
+  ],
+  "mpl_all": 0.5614039983708385
+ },
+ {
+  "image_id": "269110735_b4df79901e_89_40829484@N00.jpg",
+  "true_label": "Paris, France",
+  "gt_country": "France",
+  "argmax": "Paris, France",
+  "p_true": 0.4777098000049591,
+  "rank_true": 1,
+  "km_error": 1.9399030020190606,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Art Nouveau architectural details",
+    "category": "architecture",
+    "cov": 0.0035979857408428837,
+    "mpl": 0.28213403349997757
+   }
+  ],
+  "mpl_all": 0.28213403349997757
+ },
+ {
+  "image_id": "1434291853_faa298e88a_1080_15376845@N00.jpg",
+  "true_label": "Hamden, United States",
+  "gt_country": "United States",
+  "argmax": "Versailles, France",
+  "p_true": 0.0032707222271710634,
+  "rank_true": 46,
+  "km_error": 5708.544073036387,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "yellow rose",
+    "category": "environment",
+    "cov": 0.15046551653694512,
+    "mpl": 0.7495141616566122
+   },
+   {
+    "cue": "green leaves",
+    "category": "environment",
+    "cov": 0.07405109190823476,
+    "mpl": 0.2618724891701273
+   }
+  ],
+  "mpl_all": 0.7244122228979972
+ },
+ {
+  "image_id": "280982601_991aab2b9e_105_36093984@N00.jpg",
+  "true_label": "City of Novi Sad, Serbia",
+  "gt_country": "Serbia",
+  "argmax": "Pilsen, Czechia",
+  "p_true": 0.08692735433578491,
+  "rank_true": 3,
+  "km_error": 696.6285397410185,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Petrovaradin Fortress",
+    "category": "landmarks/buildings",
+    "cov": 0.015444015444015444,
+    "mpl": 0.21600503869422572
+   },
+   {
+    "cue": "Clock Tower",
+    "category": "landmarks/buildings",
+    "cov": 0.0012601887601887602,
+    "mpl": 0.15232450966390126
+   }
+  ],
+  "mpl_all": 0.23002959780783452
+ },
+ {
+  "image_id": "357006445_59e324334e_147_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Argyll and Bute, United Kingdom",
+  "p_true": 0.04312935471534729,
+  "rank_true": 3,
+  "km_error": 196.23290307326639,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Hills with sparse vegetation",
+    "category": "environment",
+    "cov": 0.39894147314098055,
+    "mpl": 0.9119650440049706
+   },
+   {
+    "cue": "Military ship",
+    "category": "vehicles/license plates",
+    "cov": 0.029121008009114976,
+    "mpl": 0.5014843715659462
+   },
+   {
+    "cue": "Sailboat",
+    "category": "vehicles/license plates",
+    "cov": 0.011902667470929258,
+    "mpl": 0.3084020224162783
+   },
+   {
+    "cue": "Overcast sky",
+    "category": "environment",
+    "cov": 0.15677046680741263,
+    "mpl": 0.3270905679314597
+   }
+  ],
+  "mpl_all": 1.2104064909319112
+ },
+ {
+  "image_id": "446978329_01eaba3123_207_55126705@N00.jpg",
+  "true_label": "Distrito de Cusco, Peru",
+  "gt_country": "Peru",
+  "argmax": "Distrito de Cusco, Peru",
+  "p_true": 0.9997697472572327,
+  "rank_true": 1,
+  "km_error": 0.6107909473320164,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Inca stonework",
+    "category": "landmarks/buildings",
+    "cov": 0.24659225552082695,
+    "mpl": 0.8942793931425177
+   },
+   {
+    "cue": "Highland vegetation",
+    "category": "environment",
+    "cov": 0.04294473044473045,
+    "mpl": 0.21854685791778952
+   }
+  ],
+  "mpl_all": 0.8245159825891802
+ },
+ {
+  "image_id": "152574247_4462a1a738_56_50994135@N00.jpg",
+  "true_label": "Argyll and Bute, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Spa, Belgium",
+  "p_true": 0.0007332150707952678,
+  "rank_true": 22,
+  "km_error": 941.8509124373692,
+  "country_hit": false,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Deciduous trees",
+    "category": "environment",
+    "cov": 0.32938951442646025,
+    "mpl": 0.7754591157719664
+   },
+   {
+    "cue": "Green pasture",
+    "category": "environment",
+    "cov": 0.11416968265138568,
+    "mpl": 1.4781801607461775
+   },
+   {
+    "cue": "Horse in field",
+    "category": "environment",
+    "cov": 0.0063607955497469925,
+    "mpl": 0.37837214178147716
+   },
+   {
+    "cue": "Fencing style",
+    "category": "road/infrastructure",
+    "cov": 0.07852660768740993,
+    "mpl": 0.8515924374608609
+   }
+  ],
+  "mpl_all": 0.9345875296827805
+ },
+ {
+  "image_id": "46462453_5cbc3a3aec_33_97522422@N00.jpg",
+  "true_label": "Haidian District, China",
+  "gt_country": "China",
+  "argmax": "Xicheng District, China",
+  "p_true": 0.3027804493904114,
+  "rank_true": 2,
+  "km_error": 12.360955907981007,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Traditional Chinese pavilion",
+    "category": "landmarks/buildings",
+    "cov": 0.014850788288288288,
+    "mpl": 0.4031685757457135
+   },
+   {
+    "cue": "Seventeen-Arch Bridge",
+    "category": "landmarks/buildings",
+    "cov": 0.06898815269350983,
+    "mpl": 0.5745695756271233
+   },
+   {
+    "cue": "Stone balustrades with Chinese motifs",
+    "category": "architecture",
+    "cov": 0.06454972191579335,
+    "mpl": 0.31413393401199136
+   },
+   {
+    "cue": "Winter trees without leaves",
+    "category": "environment",
+    "cov": 0.12784835217870932,
+    "mpl": 0.4310111594887672
+   }
+  ],
+  "mpl_all": 0.7923960756083984
+ },
+ {
+  "image_id": "346949135_b0b1d403a7_164_97332629@N00.jpg",
+  "true_label": "Apache County, United States",
+  "gt_country": "United States",
+  "argmax": "Apache County, United States",
+  "p_true": 0.9939471483230591,
+  "rank_true": 1,
+  "km_error": 104.43632787281867,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Sparse desert vegetation",
+    "category": "environment",
+    "cov": 0.011224234438520152,
+    "mpl": 0.26868872091118345
+   }
+  ],
+  "mpl_all": 0.26868872091118345
+ },
+ {
+  "image_id": "103726410_49bcd2e470_33_73293249@N00.jpg",
+  "true_label": "New York, United States",
+  "gt_country": "United States",
+  "argmax": "New York, United States",
+  "p_true": 0.8427478075027466,
+  "rank_true": 1,
+  "km_error": 0.5277027206240761,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "iRobot movie billboard",
+    "category": "commercial/cultural",
+    "cov": 0.15342893914322486,
+    "mpl": 0.7496831841872824
+   },
+   {
+    "cue": "Yellow taxis",
+    "category": "vehicles/license plates",
+    "cov": 0.026222651222651223,
+    "mpl": 0.11037728384684364
+   },
+   {
+    "cue": "Steam rising from street",
+    "category": "road/infrastructure",
+    "cov": 0.11150659588159588,
+    "mpl": 0.39590818644571624
+   },
+   {
+    "cue": "Neon signage",
+    "category": "commercial/cultural",
+    "cov": 0.0036412369001654716,
+    "mpl": 0.07245116010964538
+   }
+  ],
+  "mpl_all": 0.7892723047942204
+ },
+ {
+  "image_id": "517839578_b7ad071121_227_78841376@N00.jpg",
+  "true_label": "Paris, France",
+  "gt_country": "France",
+  "argmax": "Paris, France",
+  "p_true": 0.722505509853363,
+  "rank_true": 1,
+  "km_error": 2.465501788055001,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Arc de Triomphe",
+    "category": "landmarks/buildings",
+    "cov": 0.14952707809850668,
+    "mpl": 0.4607257332894809
+   },
+   {
+    "cue": "French inscriptions",
+    "category": "text/signage",
+    "cov": 0.027710108067250924,
+    "mpl": 0.3284479555085521
+   }
+  ],
+  "mpl_all": 0.517575172002593
+ },
+ {
+  "image_id": "536101198_9259f93e31_1276_50994135@N00.jpg",
+  "true_label": "Arezzo, Italy",
+  "gt_country": "Italy",
+  "argmax": "Florence, Italy",
+  "p_true": 0.00629481440410018,
+  "rank_true": 2,
+  "km_error": 60.91878514984297,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Arched window with iron bars",
+    "category": "architecture",
+    "cov": 0.2224802927927928,
+    "mpl": 0.5233158418623383
+   },
+   {
+    "cue": "Stone door frame",
+    "category": "architecture",
+    "cov": 0.1404181605074462,
+    "mpl": 0.46773727628734374
+   },
+   {
+    "cue": "Wall lantern",
+    "category": "architecture",
+    "cov": 0.009642454954954955,
+    "mpl": 0.29208003980381486
+   }
+  ],
+  "mpl_all": 0.6277605329040483
+ },
+ {
+  "image_id": "247114082_803e9a566f_98_41894169878@N01.jpg",
+  "true_label": "Omaha, United States",
+  "gt_country": "United States",
+  "argmax": "New Lenox, United States",
+  "p_true": 0.003783807158470154,
+  "rank_true": 7,
+  "km_error": 678.7023136426583,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "brick fireplace",
+    "category": "architecture",
+    "cov": 0.07286623358051929,
+    "mpl": 0.1618136600696893
+   },
+   {
+    "cue": "wooden cabinet with figurines",
+    "category": "commercial/cultural",
+    "cov": 0.17660006945721232,
+    "mpl": 0.17715431514935168
+   },
+   {
+    "cue": "casual clothing style",
+    "category": "commercial/cultural",
+    "cov": 0.1674557210271496,
+    "mpl": 0.5191921097938874
+   }
+  ],
+  "mpl_all": 0.49299463193477705
+ },
+ {
+  "image_id": "35954677_c4bc439d83_25_63163416@N00.jpg",
+  "true_label": "Jid Hafs, Bahrain",
+  "gt_country": "Bahrain",
+  "argmax": "Jaipur Municipal Corporation, India",
+  "p_true": 0.011497117578983307,
+  "rank_true": 9,
+  "km_error": 2505.786671063544,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Arabic text on packaging",
+    "category": "text/signage",
+    "cov": 0.010504126575555148,
+    "mpl": 0.1378038646711685
+   },
+   {
+    "cue": "Traditional attire",
+    "category": "commercial/cultural",
+    "cov": 0.19443933729648016,
+    "mpl": 0.5321924527920103
+   }
+  ],
+  "mpl_all": 0.5640000263323508
+ },
+ {
+  "image_id": "389869342_8c120b15eb_185_62126383@N00.jpg",
+  "true_label": "Washington, United States",
+  "gt_country": "United States",
+  "argmax": "Ashland, United States",
+  "p_true": 8.214133413275704e-05,
+  "rank_true": 60,
+  "km_error": 488.3723637904999,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Bird resembling a juvenile hawk or owl",
+    "category": "environment",
+    "cov": 0.01640570021111893,
+    "mpl": 0.6092359598274375
+   }
+  ],
+  "mpl_all": 0.6092359598274375
+ },
+ {
+  "image_id": "109040743_ad2fafd7e9_51_18684820@N00.jpg",
+  "true_label": "Roi Et, Thailand",
+  "gt_country": "Thailand",
+  "argmax": "Roi Et, Thailand",
+  "p_true": 0.4534914195537567,
+  "rank_true": 1,
+  "km_error": 34.717776921986356,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Palm tree leaves",
+    "category": "environment",
+    "cov": 0.14254257446221733,
+    "mpl": 0.6557429336752685
+   }
+  ],
+  "mpl_all": 0.6557429336752685
+ },
+ {
+  "image_id": "203380906_c7f7ea7d75_64_85417391@N00.jpg",
+  "true_label": "Aarhus, Denmark",
+  "gt_country": "Denmark",
+  "argmax": "Wolsztyn, Poland",
+  "p_true": 0.009024317376315594,
+  "rank_true": 24,
+  "km_error": 590.9305285757107,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "engraved year 1927",
+    "category": "landmarks/buildings",
+    "cov": 0.7494197003125574,
+    "mpl": 0.7069310035005517
+   },
+   {
+    "cue": "yellow brick",
+    "category": "architecture",
+    "cov": 0.7494197003125574,
+    "mpl": 0.7069310035005517
+   }
+  ],
+  "mpl_all": 0.7069310035005517
+ },
+ {
+  "image_id": "285479812_4961ee8b04_112_55085284@N00.jpg",
+  "true_label": "Venice, Italy",
+  "gt_country": "Italy",
+  "argmax": "Florence, Italy",
+  "p_true": 0.0007636626251041889,
+  "rank_true": 31,
+  "km_error": 204.09586996567694,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Piazza San Marco layout",
+    "category": "landmarks/buildings",
+    "cov": 0.012487934362934362,
+    "mpl": 0.07249381468297418
+   },
+   {
+    "cue": "Venetian architecture",
+    "category": "architecture",
+    "cov": 0.39460235107556535,
+    "mpl": 0.8181267455300921
+   },
+   {
+    "cue": "Outdoor cafe seating",
+    "category": "commercial/cultural",
+    "cov": 0.001287001287001287,
+    "mpl": 0.0
+   },
+   {
+    "cue": "Red tiled roofs",
+    "category": "architecture",
+    "cov": 0.1422509882331311,
+    "mpl": 0.35240379231806723
+   }
+  ],
+  "mpl_all": 0.826706889783356
+ },
+ {
+  "image_id": "172547950_fa21b898b5_58_40279823@N00.jpg",
+  "true_label": "Morocco",
+  "gt_country": "Morocco",
+  "argmax": "District de Nosy Be, Madagascar",
+  "p_true": 0.0001684927410678938,
+  "rank_true": 58,
+  "km_error": 7938.945694327542,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Distant hills and boat",
+    "category": "environment",
+    "cov": 0.029276406508549367,
+    "mpl": 0.8279159526643968
+   },
+   {
+    "cue": "Casual beach attire",
+    "category": "other",
+    "cov": 0.062021683673469385,
+    "mpl": 0.6089192805204362
+   }
+  ],
+  "mpl_all": 0.8208026923546893
+ },
+ {
+  "image_id": "446721345_98e39554dc_201_55126705@N00.jpg",
+  "true_label": "Tulum, Mexico",
+  "gt_country": "Mexico",
+  "argmax": "Tulum, Mexico",
+  "p_true": 0.5071849822998047,
+  "rank_true": 1,
+  "km_error": 33.25579842853775,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Cliff with vegetation",
+    "category": "environment",
+    "cov": 0.14183443647729363,
+    "mpl": 0.6828096582512522
+   },
+   {
+    "cue": "Palm trees",
+    "category": "environment",
+    "cov": 0.008817490960348104,
+    "mpl": 0.3036192888291054
+   }
+  ],
+  "mpl_all": 0.7285398460318143
+ },
+ {
+  "image_id": "379167304_8d37503114_186_81421684@N00.jpg",
+  "true_label": "Haidian District, China",
+  "gt_country": "China",
+  "argmax": "Xicheng District, China",
+  "p_true": 0.3173554539680481,
+  "rank_true": 2,
+  "km_error": 12.66113144917058,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Traditional Chinese architecture",
+    "category": "architecture",
+    "cov": 0.12167348790695952,
+    "mpl": 0.4010335028218778
+   },
+   {
+    "cue": "Winter clothing",
+    "category": "environment",
+    "cov": 0.40067687692136744,
+    "mpl": 0.6315573620332835
+   },
+   {
+    "cue": "Bare trees",
+    "category": "environment",
+    "cov": 0.0739541279306641,
+    "mpl": 0.21897376372222802
+   }
+  ],
+  "mpl_all": 0.6651242214792704
+ },
+ {
+  "image_id": "380730771_e8d0feea19_167_75452460@N00.jpg",
+  "true_label": "Thörl, Austria",
+  "gt_country": "Austria",
+  "argmax": "Improvement District No. 9, Canada",
+  "p_true": 0.01925249956548214,
+  "rank_true": 5,
+  "km_error": 8053.421628858899,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Rocky mountain terrain",
+    "category": "environment",
+    "cov": 0.3274307470736042,
+    "mpl": 0.6353799618881234
+   },
+   {
+    "cue": "Snow patches",
+    "category": "environment",
+    "cov": 0.0013150906008048866,
+    "mpl": 0.09100330447889085
+   },
+   {
+    "cue": "Alpine vegetation",
+    "category": "environment",
+    "cov": 0.022717870932156648,
+    "mpl": 0.2101689845879608
+   }
+  ],
+  "mpl_all": 0.7257365851361782
+ },
+ {
+  "image_id": "166306401_d24beeb1b6_65_23601949@N00.jpg",
+  "true_label": "Bristol, United States",
+  "gt_country": "United States",
+  "argmax": "Unorganized Borough, United States",
+  "p_true": 0.20981815457344055,
+  "rank_true": 2,
+  "km_error": 5661.364489708013,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Forest Technician SUNY Ranger School text",
+    "category": "text/signage",
+    "cov": 0.12035042057363486,
+    "mpl": 0.6976455951646987
+   },
+   {
+    "cue": "Green grass and river",
+    "category": "environment",
+    "cov": 0.050348179812465525,
+    "mpl": 0.3876583253014382
+   }
+  ],
+  "mpl_all": 0.8040058593709771
+ },
+ {
+  "image_id": "356872603_fc07a113a8_133_99437479@N00.jpg",
+  "true_label": "Hong Kong, China",
+  "gt_country": "China",
+  "argmax": "Hong Kong, China",
+  "p_true": 0.9988002777099609,
+  "rank_true": 1,
+  "km_error": 1.0879547196810335,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Bank of China Tower",
+    "category": "landmarks/buildings",
+    "cov": 0.09384256705685277,
+    "mpl": 0.5474904813676928
+   }
+  ],
+  "mpl_all": 0.5474904813676928
+ },
+ {
+  "image_id": "167322301_5d0c781dd5_45_79954435@N00.jpg",
+  "true_label": "Improvement District No. 9, Canada",
+  "gt_country": "Canada",
+  "argmax": "Improvement District No. 9, Canada",
+  "p_true": 0.9467580914497375,
+  "rank_true": 1,
+  "km_error": 24.60437092184117,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Turquoise glacial lake",
+    "category": "environment",
+    "cov": 0.2808599415742273,
+    "mpl": 0.43068668424096795
+   },
+   {
+    "cue": "Snow-capped mountain peaks",
+    "category": "environment",
+    "cov": 0.3700384057526915,
+    "mpl": 0.6638540944744656
+   },
+   {
+    "cue": "Dense coniferous forest",
+    "category": "environment",
+    "cov": 0.05627438663152949,
+    "mpl": 0.5797975668595575
+   },
+   {
+    "cue": "Canoes on the lake",
+    "category": "other",
+    "cov": 0.004452156237870523,
+    "mpl": 0.08162659872656876
+   }
+  ],
+  "mpl_all": 0.7583123044841699
+ },
+ {
+  "image_id": "307411664_69c7675ea8_116_36093984@N00.jpg",
+  "true_label": "Székesfehérvár, Hungary",
+  "gt_country": "Hungary",
+  "argmax": "Sibiu, Romania",
+  "p_true": 0.1494297832250595,
+  "rank_true": 2,
+  "km_error": 465.9690209121501,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "church spire",
+    "category": "landmarks/buildings",
+    "cov": 0.0017836714265285693,
+    "mpl": 0.3110789038325166
+   },
+   {
+    "cue": "yellow building with red roof",
+    "category": "architecture",
+    "cov": 0.11174695103266531,
+    "mpl": 1.4936953476297314
+   },
+   {
+    "cue": "circular emblem on wall",
+    "category": "landmarks/buildings",
+    "cov": 0.004101039815325529,
+    "mpl": 0.16319690761054936
+   }
+  ],
+  "mpl_all": 1.5110756846490623
+ },
+ {
+  "image_id": "216548983_a3eddb2676_92_90833046@N00.jpg",
+  "true_label": "Ullensvang, Norway",
+  "gt_country": "Norway",
+  "argmax": "Ullensvang, Norway",
+  "p_true": 0.8167219758033752,
+  "rank_true": 1,
+  "km_error": 35.56231804582404,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Wooden building with steep roof",
+    "category": "architecture",
+    "cov": 0.025067158995730424,
+    "mpl": 0.26563994539634816
+   },
+   {
+    "cue": "Mountainous landscape with waterfall",
+    "category": "environment",
+    "cov": 0.212226256869114,
+    "mpl": 0.7963857645580148
+   },
+   {
+    "cue": "Scaffolding on building",
+    "category": "road/infrastructure",
+    "cov": 0.04758840473126187,
+    "mpl": 0.38128214658627746
+   },
+   {
+    "cue": "Vegetation and greenery",
+    "category": "environment",
+    "cov": 0.22327174112888398,
+    "mpl": 0.6173829127208862
+   }
+  ],
+  "mpl_all": 0.8452053037853818
+ },
+ {
+  "image_id": "311969092_71d58e54a7_104_63163416@N00.jpg",
+  "true_label": "Jaipur Municipal Corporation, India",
+  "gt_country": "India",
+  "argmax": "Jaipur Municipal Corporation, India",
+  "p_true": 0.7392118573188782,
+  "rank_true": 1,
+  "km_error": 2.1325588481955102,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Traditional red turban",
+    "category": "commercial/cultural",
+    "cov": 0.013844207633792432,
+    "mpl": 0.30243333935954364
+   },
+   {
+    "cue": "Snake charmer with pungi",
+    "category": "commercial/cultural",
+    "cov": 0.1421136188465534,
+    "mpl": 0.8163325629437459
+   },
+   {
+    "cue": "Cobra in basket",
+    "category": "commercial/cultural",
+    "cov": 0.028222495894909688,
+    "mpl": 0.22886200813624563
+   }
+  ],
+  "mpl_all": 0.739831842461075
+ },
+ {
+  "image_id": "69997478_868eb06f34_12_18684820@N00.jpg",
+  "true_label": "Saint-Ouen-sur-Seine, France",
+  "gt_country": "France",
+  "argmax": "Florence, Italy",
+  "p_true": 0.0686127096414566,
+  "rank_true": 5,
+  "km_error": 891.1487856476717,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Italian text on restaurant sign",
+    "category": "text/signage",
+    "cov": 0.25239291895695837,
+    "mpl": 0.7789242597062273
+   },
+   {
+    "cue": "French text on restaurant sign",
+    "category": "text/signage",
+    "cov": 0.25239291895695837,
+    "mpl": 0.7789242597062273
+   }
+  ],
+  "mpl_all": 0.7789242597062273
+ },
+ {
+  "image_id": "159969431_2246ec6548_54_14542551@N00.jpg",
+  "true_label": "Ulaanbaatar, Mongolia",
+  "gt_country": "Mongolia",
+  "argmax": "Ulaanbaatar, Mongolia",
+  "p_true": 0.9398516416549683,
+  "rank_true": 1,
+  "km_error": 0.1132576342649389,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Traditional Mongolian architecture",
+    "category": "architecture",
+    "cov": 0.03020878020878021,
+    "mpl": 0.5529333003673037
+   },
+   {
+    "cue": "Steppe landscape",
+    "category": "environment",
+    "cov": 0.0871802925374354,
+    "mpl": 0.48136373544217476
+   },
+   {
+    "cue": "Concrete bridge",
+    "category": "road/infrastructure",
+    "cov": 0.012014565585994157,
+    "mpl": 0.2621368701316883
+   },
+   {
+    "cue": "Low water level river",
+    "category": "environment",
+    "cov": 0.09252109252109252,
+    "mpl": 0.31183383128760667
+   }
+  ],
+  "mpl_all": 0.8378124723137599
+ },
+ {
+  "image_id": "331989316_22825d7df5_159_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Reykjavik, Iceland",
+  "p_true": 0.008946329355239868,
+  "rank_true": 9,
+  "km_error": 1059.6156562725444,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Street lamps reflecting on water",
+    "category": "road/infrastructure",
+    "cov": 0.0019876177071813947,
+    "mpl": 0.24531874461708403
+   },
+   {
+    "cue": "Twilight sky with low horizon",
+    "category": "environment",
+    "cov": 0.3505495794376864,
+    "mpl": 0.6383811104707646
+   },
+   {
+    "cue": "Road with left-hand traffic",
+    "category": "road/infrastructure",
+    "cov": 0.1618159579102577,
+    "mpl": 0.5542622879884459
+   }
+  ],
+  "mpl_all": 0.7470434139239319
+ },
+ {
+  "image_id": "397259728_b03b741e94_125_16836474@N00.jpg",
+  "true_label": "Zipaquirá, Colombia",
+  "gt_country": "Colombia",
+  "argmax": "Villa de Leyva, Colombia",
+  "p_true": 0.05106151103973389,
+  "rank_true": 2,
+  "km_error": 88.06565566035914,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Eucalyptus trees",
+    "category": "environment",
+    "cov": 0.034589595973524546,
+    "mpl": 0.4402275270713212
+   },
+   {
+    "cue": "Dry grassland",
+    "category": "environment",
+    "cov": 0.03643391478212907,
+    "mpl": 0.29201210384925913
+   },
+   {
+    "cue": "Simple rural building",
+    "category": "landmarks/buildings",
+    "cov": 0.0024993105350248207,
+    "mpl": 0.1522983260615491
+   }
+  ],
+  "mpl_all": 0.440057044015504
+ },
+ {
+  "image_id": "415068190_31002b539d_185_7132415@N03.jpg",
+  "true_label": "Chankom, Mexico",
+  "gt_country": "Mexico",
+  "argmax": "Chankom, Mexico",
+  "p_true": 0.5089690685272217,
+  "rank_true": 1,
+  "km_error": 14.844920343382796,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Serpent head sculpture",
+    "category": "landmarks/buildings",
+    "cov": 0.2560040908255194,
+    "mpl": 0.46186499605136216
+   },
+   {
+    "cue": "Stone pyramid structure",
+    "category": "architecture",
+    "cov": 0.40176416850523994,
+    "mpl": 0.46614360527811155
+   }
+  ],
+  "mpl_all": 0.6551957946898135
+ },
+ {
+  "image_id": "149075440_b0db725148_53_18684820@N00.jpg",
+  "true_label": "San Francisco, United States",
+  "gt_country": "United States",
+  "argmax": "San Diego, United States",
+  "p_true": 0.012108962051570415,
+  "rank_true": 2,
+  "km_error": 738.2074035321488,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Spanish Colonial Revival architecture",
+    "category": "architecture",
+    "cov": 0.06188235429306858,
+    "mpl": 0.2047399578301137
+   },
+   {
+    "cue": "Colorful tiled dome",
+    "category": "landmarks/buildings",
+    "cov": 0.013257836918551204,
+    "mpl": 0.0
+   },
+   {
+    "cue": "Red-tiled roof",
+    "category": "architecture",
+    "cov": 0.01302657887479316,
+    "mpl": 0.16420356061398897
+   }
+  ],
+  "mpl_all": 0.21313521758490145
+ },
+ {
+  "image_id": "1342605412_be16a333a3_1259_50994135@N00.jpg",
+  "true_label": "Argyll and Bute, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Scotland, United Kingdom",
+  "p_true": 0.017818067222833633,
+  "rank_true": 4,
+  "km_error": 91.33789533328162,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Rolling green hills",
+    "category": "environment",
+    "cov": 0.015162483912483912,
+    "mpl": 0.37574067654274457
+   },
+   {
+    "cue": "Utility pole",
+    "category": "road/infrastructure",
+    "cov": 0.0011605993748850891,
+    "mpl": 0.17918675200713902
+   }
+  ],
+  "mpl_all": 0.39909877367116836
+ },
+ {
+  "image_id": "149105529_b3a4e8192e_50_90833046@N00.jpg",
+  "true_label": "Hægebostad, Norway",
+  "gt_country": "Norway",
+  "argmax": "Hægebostad, Norway",
+  "p_true": 0.6645801067352295,
+  "rank_true": 1,
+  "km_error": 1.1239973910889014,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Norwegian text on gravestone",
+    "category": "text/signage",
+    "cov": 0.01751156127475621,
+    "mpl": 0.2829417607659603
+   },
+   {
+    "cue": "Cross symbol on gravestone",
+    "category": "commercial/cultural",
+    "cov": 0.01751156127475621,
+    "mpl": 0.2829417607659603
+   },
+   {
+    "cue": "Lake and mountainous landscape",
+    "category": "environment",
+    "cov": 0.009479407526557421,
+    "mpl": 0.4012375888541964
+   }
+  ],
+  "mpl_all": 0.3881635278151566
+ },
+ {
+  "image_id": "746791136_8007013877_1266_7885919@N07.jpg",
+  "true_label": "Saint-Germain-en-Laye, France",
+  "gt_country": "France",
+  "argmax": "Grafenegg, Austria",
+  "p_true": 0.02533540688455105,
+  "rank_true": 7,
+  "km_error": 1001.0154580434362,
+  "country_hit": false,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "deciduous trees with autumn foliage",
+    "category": "environment",
+    "cov": 0.08528043349471921,
+    "mpl": 0.484911934727727
+   }
+  ],
+  "mpl_all": 0.484911934727727
+ },
+ {
+  "image_id": "271701445_654fc76f71_119_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Scotland, United Kingdom",
+  "p_true": 0.43218904733657837,
+  "rank_true": 1,
+  "km_error": 208.64359858912212,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Large body of water",
+    "category": "environment",
+    "cov": 0.25102700562983815,
+    "mpl": 0.6815844129552777
+   },
+   {
+    "cue": "Forest with coniferous trees",
+    "category": "environment",
+    "cov": 0.01813203729767769,
+    "mpl": 0.5868815249863711
+   },
+   {
+    "cue": "White boathouse",
+    "category": "landmarks/buildings",
+    "cov": 0.005504486277269529,
+    "mpl": 0.3114326095805047
+   },
+   {
+    "cue": "Stone structure on hill",
+    "category": "landmarks/buildings",
+    "cov": 0.006709623504574243,
+    "mpl": 0.3745857941941188
+   }
+  ],
+  "mpl_all": 1.0309249961926998
+ },
+ {
+  "image_id": "1300383440_e445726635_1185_50435419@N00.jpg",
+  "true_label": "Waukesha, United States",
+  "gt_country": "United States",
+  "argmax": "New Lenox, United States",
+  "p_true": 0.0009892757516354322,
+  "rank_true": 27,
+  "km_error": 171.05973116145444,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Person wearing kilt",
+    "category": "commercial/cultural",
+    "cov": 0.010316119691119691,
+    "mpl": 0.20505382424086938
+   },
+   {
+    "cue": "Person wearing a flat cap",
+    "category": "commercial/cultural",
+    "cov": 0.028223536036036036,
+    "mpl": 0.40617257800685524
+   },
+   {
+    "cue": "Drum with Scottish brand",
+    "category": "commercial/cultural",
+    "cov": 0.11692895063430778,
+    "mpl": 0.2858420469426142
+   }
+  ],
+  "mpl_all": 0.4154102474235424
+ },
+ {
+  "image_id": "1353805528_ef062711aa_1115_15376845@N00.jpg",
+  "true_label": "Oxford, United States",
+  "gt_country": "United States",
+  "argmax": "East Granby, United States",
+  "p_true": 6.0591166402446106e-05,
+  "rank_true": 30,
+  "km_error": 61.34014211211195,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "American flag",
+    "category": "other",
+    "cov": 0.0023484900717043572,
+    "mpl": 0.2924631771021992
+   },
+   {
+    "cue": "Control tower",
+    "category": "landmarks/buildings",
+    "cov": 0.05190234877734878,
+    "mpl": 0.07674759326488706
+   },
+   {
+    "cue": "B-24 Liberator aircraft",
+    "category": "vehicles/license plates",
+    "cov": 0.39397465067107923,
+    "mpl": 0.6874157344004906
+   },
+   {
+    "cue": "People in casual clothing",
+    "category": "other",
+    "cov": 0.016666379389593675,
+    "mpl": 0.14527327128824663
+   }
+  ],
+  "mpl_all": 0.8069151434698234
+ },
+ {
+  "image_id": "675928519_1f97d85c9f_1211_8159033@N04.jpg",
+  "true_label": "Koto, Japan",
+  "gt_country": "Japan",
+  "argmax": "Singapore, Singapore",
+  "p_true": 0.03219332545995712,
+  "rank_true": 7,
+  "km_error": 5320.762432490615,
+  "country_hit": false,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Anime character cutouts",
+    "category": "commercial/cultural",
+    "cov": 0.24601770137484424,
+    "mpl": 0.6445420434462893
+   }
+  ],
+  "mpl_all": 0.6445420434462893
+ },
+ {
+  "image_id": "427116407_e64c8f1e4c_173_84752760@N00.jpg",
+  "true_label": "Barcelona, Spain",
+  "gt_country": "Spain",
+  "argmax": "Barcelona, Spain",
+  "p_true": 0.999705970287323,
+  "rank_true": 1,
+  "km_error": 2.363866037078774,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Sagrada Familia towers",
+    "category": "landmarks/buildings",
+    "cov": 0.1583573369287655,
+    "mpl": 0.7177575940423053
+   },
+   {
+    "cue": "Religious sculptures",
+    "category": "landmarks/buildings",
+    "cov": 0.01758901758901759,
+    "mpl": 0.12740691540226798
+   }
+  ],
+  "mpl_all": 0.6496946618895014
+ },
+ {
+  "image_id": "739128198_9df33d6371_1248_78841376@N00.jpg",
+  "true_label": "Florence, Italy",
+  "gt_country": "Italy",
+  "argmax": "Florence, Italy",
+  "p_true": 0.2955816090106964,
+  "rank_true": 1,
+  "km_error": 0.5933704315575015,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Renaissance-style cherub fresco",
+    "category": "architecture",
+    "cov": 0.10589798982656126,
+    "mpl": 0.4805448019466141
+   },
+   {
+    "cue": "Decorative border with floral motifs",
+    "category": "architecture",
+    "cov": 0.04770969949541378,
+    "mpl": 0.1493809474108701
+   }
+  ],
+  "mpl_all": 0.4007774824352525
+ },
+ {
+  "image_id": "237534811_baaa86ac76_89_82981539@N00.jpg",
+  "true_label": "Seoul, South Korea",
+  "gt_country": "South Korea",
+  "argmax": "Seoul, South Korea",
+  "p_true": 0.6780339479446411,
+  "rank_true": 1,
+  "km_error": 0.2130051390930525,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Mountain in the background",
+    "category": "environment",
+    "cov": 0.03912097754462286,
+    "mpl": 0.4602714014507095
+   },
+   {
+    "cue": "Crowd of tourists",
+    "category": "commercial/cultural",
+    "cov": 0.17674213102168768,
+    "mpl": 0.8257725027597156
+   }
+  ],
+  "mpl_all": 0.8808769862506989
+ },
+ {
+  "image_id": "1034783376_9e3db4b81a_1016_70323761@N00.jpg",
+  "true_label": "New York, United States",
+  "gt_country": "United States",
+  "argmax": "Sussex County, United States",
+  "p_true": 0.006484623067080975,
+  "rank_true": 12,
+  "km_error": 521.4472109237178,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Statue of a man with a sword",
+    "category": "landmarks/buildings",
+    "cov": 0.13857815085493658,
+    "mpl": 0.5595447739244688
+   },
+   {
+    "cue": "Modern office building",
+    "category": "landmarks/buildings",
+    "cov": 0.12022545504688362,
+    "mpl": 0.37013336280943443
+   },
+   {
+    "cue": "Green park area",
+    "category": "environment",
+    "cov": 0.03888438821474536,
+    "mpl": 0.0
+   }
+  ],
+  "mpl_all": 0.7954605411252814
+ },
+ {
+  "image_id": "451534383_24746ed49b_237_7571568@N05.jpg",
+  "true_label": "Palm Bay, United States",
+  "gt_country": "United States",
+  "argmax": "Palm Bay, United States",
+  "p_true": 0.25102218985557556,
+  "rank_true": 1,
+  "km_error": 6.460261653308527,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Zephyrhills water bottle",
+    "category": "commercial/cultural",
+    "cov": 0.03035369553226696,
+    "mpl": 0.30623757677155744
+   },
+   {
+    "cue": "Sliding glass door",
+    "category": "architecture",
+    "cov": 0.17478655313476743,
+    "mpl": 0.5427767023713346
+   },
+   {
+    "cue": "Red Solo cup",
+    "category": "commercial/cultural",
+    "cov": 0.021193866059937488,
+    "mpl": 0.23326605740638487
+   }
+  ],
+  "mpl_all": 0.5936032160923219
+ },
+ {
+  "image_id": "515336129_772a6aeee1_203_77392231@N00.jpg",
+  "true_label": "Ubud District, Indonesia",
+  "gt_country": "Indonesia",
+  "argmax": "Ubud District, Indonesia",
+  "p_true": 0.7703191637992859,
+  "rank_true": 1,
+  "km_error": 1.202941250316865,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Palm trees",
+    "category": "environment",
+    "cov": 0.1124072095054238,
+    "mpl": 0.38185980797335917
+   },
+   {
+    "cue": "Traditional hat",
+    "category": "commercial/cultural",
+    "cov": 0.009885204081632654,
+    "mpl": 0.41173779700233754
+   }
+  ],
+  "mpl_all": 0.4658256440214574
+ },
+ {
+  "image_id": "417810588_98d2542c95_126_90672364@N00.jpg",
+  "true_label": "Accra, Ghana",
+  "gt_country": "Ghana",
+  "argmax": "Accra, Ghana",
+  "p_true": 0.8365830183029175,
+  "rank_true": 1,
+  "km_error": 1.7648879396649837,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Thatched roof hut",
+    "category": "landmarks/buildings",
+    "cov": 0.04590543987865416,
+    "mpl": 0.6211106296259573
+   },
+   {
+    "cue": "Beach volleyball net",
+    "category": "other",
+    "cov": 0.006446497517926089,
+    "mpl": 0.2437939591102519
+   }
+  ],
+  "mpl_all": 0.6113192217841608
+ },
+ {
+  "image_id": "1118479971_9ad6008b4f_1327_82927779@N00.jpg",
+  "true_label": "District de Nosy Be, Madagascar",
+  "gt_country": "Madagascar",
+  "argmax": "Bamako, Mali",
+  "p_true": 0.07923601567745209,
+  "rank_true": 4,
+  "km_error": 6844.825589256162,
+  "country_hit": false,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Dried seafood display",
+    "category": "commercial/cultural",
+    "cov": 0.05390897913219342,
+    "mpl": 0.1739070707333662
+   },
+   {
+    "cue": "Sandals worn by person",
+    "category": "commercial/cultural",
+    "cov": 0.0068357579518293805,
+    "mpl": 0.0
+   },
+   {
+    "cue": "Wooden crates",
+    "category": "commercial/cultural",
+    "cov": 0.09688706563706563,
+    "mpl": 0.20115669649059642
+   },
+   {
+    "cue": "Can with text",
+    "category": "text/signage",
+    "cov": 0.006532680639823497,
+    "mpl": 0.15656196881958945
+   }
+  ],
+  "mpl_all": 0.2552372817801271
+ },
+ {
+  "image_id": "227971154_bee07fe5ca_63_18684820@N00.jpg",
+  "true_label": "Kuala Lumpur, Malaysia",
+  "gt_country": "Malaysia",
+  "argmax": "Vallejo, United States",
+  "p_true": 0.0025520576164126396,
+  "rank_true": 55,
+  "km_error": 13578.988579125229,
+  "country_hit": false,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "MG car badge",
+    "category": "vehicles/license plates",
+    "cov": 0.27325539825539824,
+    "mpl": 0.47854723101860336
+   }
+  ],
+  "mpl_all": 0.47854723101860336
+ },
+ {
+  "image_id": "266488116_a6492639a0_85_18684820@N00.jpg",
+  "true_label": "San Francisco, United States",
+  "gt_country": "United States",
+  "argmax": "Alexandria, United States",
+  "p_true": 0.032151222229003906,
+  "rank_true": 5,
+  "km_error": 3918.3818727175844,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Dreyer's logo on ice cream cone",
+    "category": "commercial/cultural",
+    "cov": 0.02332546194153337,
+    "mpl": 0.2983961319955187
+   },
+   {
+    "cue": "English text on sign",
+    "category": "text/signage",
+    "cov": 0.07801296194153337,
+    "mpl": 0.5364133071955992
+   }
+  ],
+  "mpl_all": 0.6932745569829993
+ },
+ {
+  "image_id": "873010122_2c74adfa62_1015_9729483@N02.jpg",
+  "true_label": "New York, United States",
+  "gt_country": "United States",
+  "argmax": "Toronto, Canada",
+  "p_true": 0.06558351963758469,
+  "rank_true": 3,
+  "km_error": 548.044379402327,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "blue stadium seats",
+    "category": "landmarks/buildings",
+    "cov": 0.08963427713427713,
+    "mpl": 0.4692557778133106
+   },
+   {
+    "cue": "foul pole",
+    "category": "landmarks/buildings",
+    "cov": 0.004034646891789749,
+    "mpl": 0.09944744192059382
+   },
+   {
+    "cue": "advertisement signs",
+    "category": "commercial/cultural",
+    "cov": 0.013463718820861678,
+    "mpl": 0.10536068602887201
+   }
+  ],
+  "mpl_all": 0.40239213799304296
+ },
+ {
+  "image_id": "572930210_7ec9507b92_1130_70323761@N00.jpg",
+  "true_label": "New York, United States",
+  "gt_country": "United States",
+  "argmax": "New York, United States",
+  "p_true": 0.6887080073356628,
+  "rank_true": 1,
+  "km_error": 4.860998298794672,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Bryant Park sign",
+    "category": "text/signage",
+    "cov": 0.028335574094502665,
+    "mpl": 0.2817089875953539
+   },
+   {
+    "cue": "Beaux-Arts architectural style",
+    "category": "architecture",
+    "cov": 0.1645910898143041,
+    "mpl": 0.3697326344330407
+   },
+   {
+    "cue": "Sculpture with classical figures",
+    "category": "landmarks/buildings",
+    "cov": 0.10895701185879757,
+    "mpl": 0.5645100662993995
+   }
+  ],
+  "mpl_all": 0.7858038296554088
+ },
+ {
+  "image_id": "569280183_8e650bd68d_1164_48264126@N00.jpg",
+  "true_label": "Unorganized Borough, United States",
+  "gt_country": "United States",
+  "argmax": "Unorganized Borough, United States",
+  "p_true": 0.3594610095024109,
+  "rank_true": 1,
+  "km_error": 1199.3478896097529,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Icebergs in water",
+    "category": "environment",
+    "cov": 0.003519144144144144,
+    "mpl": 0.0061780997600557
+   }
+  ],
+  "mpl_all": 0.0061780997600557
+ },
+ {
+  "image_id": "231068772_1acbfb9b54_91_96155869@N00.jpg",
+  "true_label": "Pilsen, Czechia",
+  "gt_country": "Czechia",
+  "argmax": "Pilsen, Czechia",
+  "p_true": 0.9468684792518616,
+  "rank_true": 1,
+  "km_error": 0.3842972043029797,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Hotel Central sign",
+    "category": "text/signage",
+    "cov": 0.008347633347633348,
+    "mpl": 0.15974017968548582
+   },
+   {
+    "cue": "Recepce text",
+    "category": "text/signage",
+    "cov": 0.008347633347633348,
+    "mpl": 0.15974017968548582
+   },
+   {
+    "cue": "European architecture style",
+    "category": "architecture",
+    "cov": 0.20449786521215094,
+    "mpl": 0.7722324813188792
+   },
+   {
+    "cue": "Right-hand drive cars",
+    "category": "vehicles/license plates",
+    "cov": 0.04015750444321873,
+    "mpl": 0.33198008274914115
+   }
+  ],
+  "mpl_all": 0.8268467606705202
+ },
+ {
+  "image_id": "499408237_330409e18c_211_8255645@N03.jpg",
+  "true_label": "Saalbach-Hinterglemm, Austria",
+  "gt_country": "Austria",
+  "argmax": "Anaheim, United States",
+  "p_true": 0.007781733758747578,
+  "rank_true": 27,
+  "km_error": 9725.554538811233,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "wine glasses on table",
+    "category": "commercial/cultural",
+    "cov": 0.03462773998488284,
+    "mpl": 0.24800884638830545
+   },
+   {
+    "cue": "decorative greenery on table",
+    "category": "commercial/cultural",
+    "cov": 0.02408275622561337,
+    "mpl": 0.2810345639187598
+   },
+   {
+    "cue": "style of clothing",
+    "category": "commercial/cultural",
+    "cov": 0.26923351923351924,
+    "mpl": 0.3328492540114943
+   }
+  ],
+  "mpl_all": 0.4102287283377511
+ },
+ {
+  "image_id": "487097733_05b162ed49_197_8159033@N04.jpg",
+  "true_label": "Dongcheng District, China",
+  "gt_country": "China",
+  "argmax": "Xicheng District, China",
+  "p_true": 0.3056497871875763,
+  "rank_true": 2,
+  "km_error": 3.884058297295436,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Traditional Chinese architecture",
+    "category": "architecture",
+    "cov": 0.22323216073216073,
+    "mpl": 0.675445819051226
+   },
+   {
+    "cue": "Chinese characters on building",
+    "category": "text/signage",
+    "cov": 0.0020901003043860187,
+    "mpl": 0.07323814696777
+   },
+   {
+    "cue": "Imperial-style roof",
+    "category": "architecture",
+    "cov": 0.09769974055688341,
+    "mpl": 0.40115686613347984
+   }
+  ],
+  "mpl_all": 0.6771020125219601
+ },
+ {
+  "image_id": "369442842_a63c6a6790_159_13527886@N00.jpg",
+  "true_label": "Iguerferouane, Morocco",
+  "gt_country": "Morocco",
+  "argmax": "Iguerferouane, Morocco",
+  "p_true": 0.9007179737091064,
+  "rank_true": 1,
+  "km_error": 3.9514938948151537,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Rocky mountain terrain",
+    "category": "environment",
+    "cov": 0.5034562623848338,
+    "mpl": 0.8173939978950524
+   },
+   {
+    "cue": "Waterfall",
+    "category": "environment",
+    "cov": 0.006713345999060285,
+    "mpl": 0.6651845521648246
+   },
+   {
+    "cue": "Sparse vegetation",
+    "category": "environment",
+    "cov": 0.010525831954403384,
+    "mpl": 0.48778068481106207
+   }
+  ],
+  "mpl_all": 0.9577550685150861
+ },
+ {
+  "image_id": "453683152_73915760c1_242_55126705@N00.jpg",
+  "true_label": "Tinum, Mexico",
+  "gt_country": "Mexico",
+  "argmax": "Chankom, Mexico",
+  "p_true": 0.27993714809417725,
+  "rank_true": 2,
+  "km_error": 24.047790411153663,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Mayan-style stone carvings",
+    "category": "landmarks/buildings",
+    "cov": 0.28672805458519746,
+    "mpl": 0.6762370231331127
+   },
+   {
+    "cue": "Stone block construction",
+    "category": "architecture",
+    "cov": 0.15906467692181978,
+    "mpl": 0.4579255342945367
+   }
+  ],
+  "mpl_all": 0.6857469609677179
+ },
+ {
+  "image_id": "199527863_7d85bd7343_71_85971448@N00.jpg",
+  "true_label": "Çavuşin Köyü, Turkey",
+  "gt_country": "Turkey",
+  "argmax": "Çavuşin Köyü, Turkey",
+  "p_true": 0.998816728591919,
+  "rank_true": 1,
+  "km_error": 0.7793603479047065,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Fairy chimney rock formations",
+    "category": "landmarks/buildings",
+    "cov": 0.1382798614941472,
+    "mpl": 0.8793824661084196
+   },
+   {
+    "cue": "Arid landscape with sparse vegetation",
+    "category": "environment",
+    "cov": 0.11729331372188515,
+    "mpl": 0.45970009937652817
+   }
+  ],
+  "mpl_all": 0.9803560220879379
+ },
+ {
+  "image_id": "1319266947_876ba5b28e_1380_79039156@N00.jpg",
+  "true_label": "Martina Franca, Italy",
+  "gt_country": "Italy",
+  "argmax": "Martina Franca, Italy",
+  "p_true": 0.7585985064506531,
+  "rank_true": 1,
+  "km_error": 0.40428090956100415,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Rococo window frames",
+    "category": "architecture",
+    "cov": 0.1120099691528263,
+    "mpl": 0.39018642940071885
+   }
+  ],
+  "mpl_all": 0.39018642940071885
+ },
+ {
+  "image_id": "497978640_a7130ed235_201_8255645@N03.jpg",
+  "true_label": "Kitzbühel, Austria",
+  "gt_country": "Austria",
+  "argmax": "La Plagne-Tarentaise, France",
+  "p_true": 0.012535704299807549,
+  "rank_true": 4,
+  "km_error": 483.1383729342125,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Ski goggles and winter clothing",
+    "category": "commercial/cultural",
+    "cov": 0.016925088353659783,
+    "mpl": 0.1437020863812985
+   },
+   {
+    "cue": "Outdoor wooden benches",
+    "category": "road/infrastructure",
+    "cov": 0.001768349982635697,
+    "mpl": 0.0
+   }
+  ],
+  "mpl_all": 0.1437020863812985
+ },
+ {
+  "image_id": "459041961_711d8ad90a_187_50994135@N00.jpg",
+  "true_label": "Glasgow, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Glasgow, United Kingdom",
+  "p_true": 0.71878981590271,
+  "rank_true": 1,
+  "km_error": 1.5760240302111206,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "modern high-rise buildings",
+    "category": "landmarks/buildings",
+    "cov": 0.0796044769259055,
+    "mpl": 0.41537334475109844
+   },
+   {
+    "cue": "yellow dandelions",
+    "category": "environment",
+    "cov": 0.009060718882147453,
+    "mpl": 0.07339934457041737
+   },
+   {
+    "cue": "metal railings",
+    "category": "road/infrastructure",
+    "cov": 0.06793671860636147,
+    "mpl": 0.41052494116568905
+   }
+  ],
+  "mpl_all": 0.6318703649918632
+ },
+ {
+  "image_id": "415840874_3c499a1a01_174_7132415@N03.jpg",
+  "true_label": "San Francisco, United States",
+  "gt_country": "United States",
+  "argmax": "San Francisco, United States",
+  "p_true": 0.9985201954841614,
+  "rank_true": 1,
+  "km_error": 5.4937624741443605,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Coit Tower",
+    "category": "landmarks/buildings",
+    "cov": 0.0008934316970031255,
+    "mpl": 0.11831140540180271
+   },
+   {
+    "cue": "Curved street with brick paving",
+    "category": "road/infrastructure",
+    "cov": 0.026252815315315314,
+    "mpl": 0.10331113153669133
+   },
+   {
+    "cue": "Hilly urban landscape",
+    "category": "environment",
+    "cov": 0.019677043114543116,
+    "mpl": 0.1355085880290671
+   },
+   {
+    "cue": "Mediterranean-style architecture",
+    "category": "architecture",
+    "cov": 0.09021649200220629,
+    "mpl": 0.6185852194772979
+   }
+  ],
+  "mpl_all": 0.7894588596669955
+ },
+ {
+  "image_id": "370937781_bb00b8afd3_183_13527886@N00.jpg",
+  "true_label": "Cayo, Belize",
+  "gt_country": "Belize",
+  "argmax": "Tinum, Mexico",
+  "p_true": 0.008729957044124603,
+  "rank_true": 5,
+  "km_error": 379.34352278423324,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Mayan pyramid structure",
+    "category": "landmarks/buildings",
+    "cov": 0.27129253468539183,
+    "mpl": 0.7981226476576264
+   },
+   {
+    "cue": "Tropical vegetation",
+    "category": "environment",
+    "cov": 0.04589582714582715,
+    "mpl": 0.4956869407893552
+   }
+  ],
+  "mpl_all": 0.8790075262428311
+ },
+ {
+  "image_id": "381053059_1aa0a6c6ed_127_50994135@N00.jpg",
+  "true_label": "Argyll and Bute, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Scotland, United Kingdom",
+  "p_true": 0.17892779409885406,
+  "rank_true": 2,
+  "km_error": 127.60350258385417,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Harbor seal",
+    "category": "environment",
+    "cov": 0.13147133853541418,
+    "mpl": 0.9654883039772925
+   }
+  ],
+  "mpl_all": 0.9654883039772925
+ },
+ {
+  "image_id": "45242953_221e7fcc35_33_98908999@N00.jpg",
+  "true_label": "Paris, France",
+  "gt_country": "France",
+  "argmax": "Paris, France",
+  "p_true": 0.7008771300315857,
+  "rank_true": 1,
+  "km_error": 2.568266705735336,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Arc de Triomphe",
+    "category": "landmarks/buildings",
+    "cov": 0.03179710322567465,
+    "mpl": 0.3017721902356898
+   },
+   {
+    "cue": "French architectural style",
+    "category": "architecture",
+    "cov": 0.016616105901820187,
+    "mpl": 0.179231658830433
+   },
+   {
+    "cue": "Right-hand drive cars",
+    "category": "vehicles/license plates",
+    "cov": 0.007010837367980225,
+    "mpl": 0.11696550582013647
+   }
+  ],
+  "mpl_all": 0.3916862654568643
+ },
+ {
+  "image_id": "140569222_85ec512f5d_45_85417391@N00.jpg",
+  "true_label": "Paris, France",
+  "gt_country": "France",
+  "argmax": "Versailles, France",
+  "p_true": 0.0022441570181399584,
+  "rank_true": 2,
+  "km_error": 17.062697826596896,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Formal French garden layout",
+    "category": "landmarks/buildings",
+    "cov": 0.20069894511858796,
+    "mpl": 0.48808038637627654
+   },
+   {
+    "cue": "Topiary cones",
+    "category": "landmarks/buildings",
+    "cov": 0.012680410001838574,
+    "mpl": 0.34012004684252684
+   },
+   {
+    "cue": "Large reflecting pools",
+    "category": "landmarks/buildings",
+    "cov": 0.011595939051296194,
+    "mpl": 0.08860623145089529
+   }
+  ],
+  "mpl_all": 0.6706108494843371
+ },
+ {
+  "image_id": "148132071_d34756b6a1_52_96155869@N00.jpg",
+  "true_label": "Sibiu, Romania",
+  "gt_country": "Romania",
+  "argmax": "Sibiu, Romania",
+  "p_true": 0.9941580295562744,
+  "rank_true": 1,
+  "km_error": 0.46886848586483393,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Gothic church with patterned roof",
+    "category": "landmarks/buildings",
+    "cov": 0.06149516863802578,
+    "mpl": 0.6245644202032028
+   },
+   {
+    "cue": "Colorful historic buildings",
+    "category": "architecture",
+    "cov": 0.2660773017915875,
+    "mpl": 0.9515712133780233
+   },
+   {
+    "cue": "Red tiled roofs",
+    "category": "architecture",
+    "cov": 0.10828685828685829,
+    "mpl": 0.31590608687168187
+   }
+  ],
+  "mpl_all": 0.9120438542963979
+ },
+ {
+  "image_id": "497783235_1abb3ea03a_194_8255645@N03.jpg",
+  "true_label": "Reykjavik, Iceland",
+  "gt_country": "Iceland",
+  "argmax": "Reykjavik, Iceland",
+  "p_true": 0.8592471480369568,
+  "rank_true": 1,
+  "km_error": 2.1195530860506038,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Tall waterfall with visible cave behind",
+    "category": "landmarks/buildings",
+    "cov": 0.2226065351065351,
+    "mpl": 0.5006430773767968
+   },
+   {
+    "cue": "Lush green moss and grass",
+    "category": "environment",
+    "cov": 0.23062731098445385,
+    "mpl": 0.3056787840301912
+   }
+  ],
+  "mpl_all": 0.49280884361623994
+ },
+ {
+  "image_id": "392426226_fde8ad65f3_166_32377115@N00.jpg",
+  "true_label": "South Dublin, Ireland",
+  "gt_country": "Ireland",
+  "argmax": "South Dublin, Ireland",
+  "p_true": 0.2898128628730774,
+  "rank_true": 1,
+  "km_error": 4.331243761328139,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Irish Defence Forces uniform",
+    "category": "commercial/cultural",
+    "cov": 0.19200019534840965,
+    "mpl": 0.5533142109696606
+   },
+   {
+    "cue": "Irish Air Corps insignia",
+    "category": "commercial/cultural",
+    "cov": 0.004122425997425998,
+    "mpl": 0.10857161516139528
+   },
+   {
+    "cue": "Medals on uniform",
+    "category": "commercial/cultural",
+    "cov": 0.0016877528038242325,
+    "mpl": 0.03560953912894002
+   }
+  ],
+  "mpl_all": 0.5834829311299068
+ },
+ {
+  "image_id": "370013417_a565c9df1f_138_51162504@N00.jpg",
+  "true_label": "Gloucester, United States",
+  "gt_country": "United States",
+  "argmax": "District de Nosy Be, Madagascar",
+  "p_true": 0.046445660293102264,
+  "rank_true": 3,
+  "km_error": 13359.891197713452,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Small boat silhouette",
+    "category": "vehicles/license plates",
+    "cov": 0.001495117566546138,
+    "mpl": 0.27653260444072747
+   },
+   {
+    "cue": "Calm water",
+    "category": "environment",
+    "cov": 0.2598235991093134,
+    "mpl": 0.45577754726547626
+   },
+   {
+    "cue": "Low horizon",
+    "category": "environment",
+    "cov": 0.009141794856080571,
+    "mpl": 0.6056880634852004
+   }
+  ],
+  "mpl_all": 0.6828896085846828
+ },
+ {
+  "image_id": "370662822_d4198634bb_157_13527886@N00.jpg",
+  "true_label": "Cuba",
+  "gt_country": "Cuba",
+  "argmax": "Alexandria, Egypt",
+  "p_true": 0.15304650366306305,
+  "rank_true": 2,
+  "km_error": 10388.057802283514,
+  "country_hit": false,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "Classic car",
+    "category": "vehicles/license plates",
+    "cov": 0.0033247533247533247,
+    "mpl": 0.46279459727542355
+   },
+   {
+    "cue": "Seawall with waves",
+    "category": "road/infrastructure",
+    "cov": 0.037271965843394414,
+    "mpl": 0.5837111863706589
+   },
+   {
+    "cue": "Cloudy sky",
+    "category": "environment",
+    "cov": 0.09994177851320708,
+    "mpl": 0.4894283597135185
+   }
+  ],
+  "mpl_all": 0.5672373408854627
+ },
+ {
+  "image_id": "197508182_721f559e6a_60_35468147630@N01.jpg",
+  "true_label": "Agra, India",
+  "gt_country": "India",
+  "argmax": "Agra, India",
+  "p_true": 0.9881933331489563,
+  "rank_true": 1,
+  "km_error": 4.052716739750771,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "Taj Mahal",
+    "category": "landmarks/buildings",
+    "cov": 0.02433236808236808,
+    "mpl": 0.33590915234645374
+   }
+  ],
+  "mpl_all": 0.33590915234645374
+ },
+ {
+  "image_id": "561996222_774334f886_1323_7132415@N03.jpg",
+  "true_label": "Seattle, United States",
+  "gt_country": "United States",
+  "argmax": "Seattle, United States",
+  "p_true": 0.9384186863899231,
+  "rank_true": 1,
+  "km_error": 5.332712769957029,
+  "country_hit": true,
+  "n_cues": 3,
+  "per_cue": [
+   {
+    "cue": "People wearing casual festival attire",
+    "category": "commercial/cultural",
+    "cov": 0.4255780014708586,
+    "mpl": 0.5508240463227811
+   },
+   {
+    "cue": "Architecture of buildings in background",
+    "category": "landmarks/buildings",
+    "cov": 0.044854005791505794,
+    "mpl": 0.17342138249986772
+   },
+   {
+    "cue": "Trees and greenery",
+    "category": "environment",
+    "cov": 0.02751252528038242,
+    "mpl": 0.3711772850053627
+   }
+  ],
+  "mpl_all": 0.6941986062248293
+ },
+ {
+  "image_id": "191259820_05864d024a_56_91062007@N00.jpg",
+  "true_label": "San Diego, United States",
+  "gt_country": "United States",
+  "argmax": "San Diego, United States",
+  "p_true": 0.9622258543968201,
+  "rank_true": 1,
+  "km_error": 18.06094361195456,
+  "country_hit": true,
+  "n_cues": 5,
+  "per_cue": [
+   {
+    "cue": "Coastal cliffs with vegetation",
+    "category": "environment",
+    "cov": 0.027193009335866478,
+    "mpl": 0.20040906736797534
+   },
+   {
+    "cue": "Ocean waves and rocky shoreline",
+    "category": "environment",
+    "cov": 0.21013871013871013,
+    "mpl": 0.8223862209262225
+   },
+   {
+    "cue": "Gazebo overlooking the ocean",
+    "category": "landmarks/buildings",
+    "cov": 0.037941002226716515,
+    "mpl": 0.4471832025672996
+   },
+   {
+    "cue": "Buildings with modern architecture",
+    "category": "architecture",
+    "cov": 0.01302578088292374,
+    "mpl": 0.17258293354339466
+   },
+   {
+    "cue": "Palm tree",
+    "category": "environment",
+    "cov": 0.003267297910155053,
+    "mpl": 0.1770338338681881
+   }
+  ],
+  "mpl_all": 0.9476934666261198
+ },
+ {
+  "image_id": "407599611_3709c403d5_149_15632944@N00.jpg",
+  "true_label": "Wrocław, Poland",
+  "gt_country": "Poland",
+  "argmax": "Wrocław, Poland",
+  "p_true": 0.7661970257759094,
+  "rank_true": 1,
+  "km_error": 3.1355334608770424,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Tram with route number 20",
+    "category": "vehicles/license plates",
+    "cov": 0.13491169741169742,
+    "mpl": 0.6343482140657359
+   },
+   {
+    "cue": "Polish text on tram destination sign",
+    "category": "text/signage",
+    "cov": 0.13491169741169742,
+    "mpl": 0.6343482140657359
+   },
+   {
+    "cue": "European style traffic lights and road signs",
+    "category": "road/infrastructure",
+    "cov": 0.0025803865089579375,
+    "mpl": 0.0
+   },
+   {
+    "cue": "Right-hand drive vehicles",
+    "category": "vehicles/license plates",
+    "cov": 0.007804998876427448,
+    "mpl": 0.18195778752692834
+   }
+  ],
+  "mpl_all": 0.6823005937062285
+ },
+ {
+  "image_id": "1108114251_b09d32f32a_1036_77235581@N00.jpg",
+  "true_label": "Scotland, United Kingdom",
+  "gt_country": "United Kingdom",
+  "argmax": "Bergen, Norway",
+  "p_true": 0.006485260557383299,
+  "rank_true": 39,
+  "km_error": 707.0199923178398,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "red plastic crates",
+    "category": "commercial/cultural",
+    "cov": 0.187482124982125,
+    "mpl": 0.3822790992424981
+   },
+   {
+    "cue": "fresh seafood, possibly shrimp or prawns",
+    "category": "commercial/cultural",
+    "cov": 0.27709725031153604,
+    "mpl": 0.6572875037332724
+   }
+  ],
+  "mpl_all": 0.7017142358504054
+ },
+ {
+  "image_id": "120317522_749fbcec2e_34_18684820@N00.jpg",
+  "true_label": "Bangkok, Thailand",
+  "gt_country": "Thailand",
+  "argmax": "Kuala Lumpur, Malaysia",
+  "p_true": 0.056710463017225266,
+  "rank_true": 4,
+  "km_error": 1184.1357254638,
+  "country_hit": false,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Tropical vegetation",
+    "category": "environment",
+    "cov": 0.03216210470674757,
+    "mpl": 0.1259460361138729
+   },
+   {
+    "cue": "Building architecture",
+    "category": "architecture",
+    "cov": 0.02608906738371024,
+    "mpl": 0.39869837189979823
+   }
+  ],
+  "mpl_all": 0.44670827898821297
+ },
+ {
+  "image_id": "479751616_1402e5dee7_224_15632944@N00.jpg",
+  "true_label": "Wolsztyn, Poland",
+  "gt_country": "Poland",
+  "argmax": "Wolsztyn, Poland",
+  "p_true": 0.9865583777427673,
+  "rank_true": 1,
+  "km_error": 0.948151743792946,
+  "country_hit": true,
+  "n_cues": 4,
+  "per_cue": [
+   {
+    "cue": "Steam locomotive with PKP logo",
+    "category": "vehicles/license plates",
+    "cov": 0.135150456579028,
+    "mpl": 0.6097655458219852
+   },
+   {
+    "cue": "Semaphore railway signals",
+    "category": "road/infrastructure",
+    "cov": 0.016453953953953954,
+    "mpl": 0.21768579888791464
+   },
+   {
+    "cue": "Crowd of people at a railway event",
+    "category": "commercial/cultural",
+    "cov": 0.03952677166962881,
+    "mpl": 0.3630761812289935
+   },
+   {
+    "cue": "European-style architecture",
+    "category": "architecture",
+    "cov": 0.02932141324998468,
+    "mpl": 0.5359208407510018
+   }
+  ],
+  "mpl_all": 0.9558623435708091
+ },
+ {
+  "image_id": "487157243_e18d20f05c_211_8159033@N04.jpg",
+  "true_label": "Shanghai, China",
+  "gt_country": "China",
+  "argmax": "Shanghai, China",
+  "p_true": 0.8821587562561035,
+  "rank_true": 1,
+  "km_error": 0.510174674058221,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Chinese text on storefront signs",
+    "category": "text/signage",
+    "cov": 0.03524442810157096,
+    "mpl": 0.34079189510047814
+   },
+   {
+    "cue": "Narrow pedestrian street",
+    "category": "road/infrastructure",
+    "cov": 0.058438540581397726,
+    "mpl": 0.15065666526680713
+   }
+  ],
+  "mpl_all": 0.3355659756798164
+ },
+ {
+  "image_id": "346848851_e2ac3b09e3_139_78225438@N00.jpg",
+  "true_label": "Barcelona, Spain",
+  "gt_country": "Spain",
+  "argmax": "Barcelona, Spain",
+  "p_true": 0.9994264841079712,
+  "rank_true": 1,
+  "km_error": 2.3458787216712764,
+  "country_hit": true,
+  "n_cues": 2,
+  "per_cue": [
+   {
+    "cue": "Distinctive spires of Sagrada Familia",
+    "category": "landmarks/buildings",
+    "cov": 0.053620265673837104,
+    "mpl": 0.49178887846032193
+   },
+   {
+    "cue": "Construction cranes around the building",
+    "category": "road/infrastructure",
+    "cov": 0.06762502298216584,
+    "mpl": 0.3232781327451459
+   }
+  ],
+  "mpl_all": 0.4336608487079152
+ },
+ {
+  "image_id": "476241859_f1bc705fe0_191_41894169878@N01.jpg",
+  "true_label": "New Lenox, United States",
+  "gt_country": "United States",
+  "argmax": "Waukesha, United States",
+  "p_true": 0.12401793152093887,
+  "rank_true": 3,
+  "km_error": 174.67636527843024,
+  "country_hit": true,
+  "n_cues": 1,
+  "per_cue": [
+   {
+    "cue": "blurred trees outside",
+    "category": "environment",
+    "cov": 0.10977686870544014,
+    "mpl": 0.31156094867882606
+   }
+  ],
+  "mpl_all": 0.31156094867882606
+ }
+]
