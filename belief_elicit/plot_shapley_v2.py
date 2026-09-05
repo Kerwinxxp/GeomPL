@@ -1,8 +1,10 @@
-"""全量 Shapley 汇总图:
-(a) 逐类别 φ(矫正)vs 单条 mPL(未矫正)配对条形;(b) 184 对交互指数直方图。
-运行(主环境):python -m belief_elicit.plot_shapley_v2
+"""Shapley summary figure over all images.
+
+(a) per-category paired bars: phi (corrected) vs single-cue mPL (uncorrected);
+(b) histogram of the pairwise interaction index.
+
+Run (main environment): python -m belief_elicit.plot_shapley_v2
 """
-import json
 import os
 import sys
 from collections import defaultdict
@@ -15,18 +17,19 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-plt.rcParams.update({"font.family": "DejaVu Sans", "axes.spines.top": False,
-                     "axes.spines.right": False})
-DATA = os.path.join(os.path.dirname(__file__), "shapley_v2_results.json")
-OUT = os.path.join(os.path.dirname(__file__), "figures", "georanker_shapley.png")
-BLUE, GRAY, GREEN, ORANGE, RED = "#1E88E5", "#C4CDD5", "#43A047", "#FB8C00", "#E53935"
+from belief_elicit.plotstyle import BLUE, GRAY_LIGHT as GRAY, GREEN, ORANGE, RED
+from belief_elicit.plotstyle import apply_style, save
+from belief_elicit.results import FIGDIR, SHAPLEY_V2 as DATA, load_shapley
+
+apply_style()
+OUT = os.path.join(FIGDIR, "georanker_shapley.png")
 
 
 def main():
-    R = json.load(open(DATA, encoding="utf-8"))  # 全部 95 张(主结果)
+    R = load_shapley(DATA)                       # all 95 images (the main result)
     fig, ax = plt.subplots(1, 2, figsize=(15, 5.6))
 
-    # (a) φ vs v 配对条形
+    # (a) phi vs v paired bars
     cat_phi, cat_v = defaultdict(list), defaultdict(list)
     for r in R:
         for c in r["cues"]:
@@ -53,7 +56,7 @@ def main():
     ax[0].legend(fontsize=9, loc="lower right")
     ax[0].grid(axis="x", color="#EEE", zorder=0); ax[0].set_axisbelow(True)
 
-    # (b) 交互直方图
+    # (b) interaction histogram
     Is = np.array([x for r in R for x in r["sii"].values()])
     n_ov = (Is < -0.01).sum(); n_ad = (np.abs(Is) <= 0.01).sum(); n_bk = (Is > 0.01).sum()
     bins = np.linspace(min(-0.6, Is.min()), max(0.6, Is.max()), 41)
@@ -75,9 +78,7 @@ def main():
     fig.suptitle("Shapley attribution on all multi-cue images (m = 2–5, full subset "
                  "lattice, efficiency verified 80/80)", fontsize=13, y=1.02)
     fig.tight_layout()
-    os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    fig.savefig(OUT, bbox_inches="tight", dpi=120)
-    print("saved", OUT)
+    save(fig, OUT, dpi=120)
 
 
 if __name__ == "__main__":

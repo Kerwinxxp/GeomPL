@@ -1,20 +1,20 @@
-"""按 **掩码几何** 去重 GPT-4o 线索清单(归因之前的必要清洗)。
+"""De-duplicate the GPT-4o cue list by **mask geometry** (a necessary clean-up before attribution).
 
-问题:GPT-4o 给出的线索名字不同,SAM 3 分割出来却是(近乎)同一片像素。例如
-  Seville  : 3 条线索两两 IoU = 1.000;
-  Bangkok  : "Thai text on storefront signs" ≡ "Fujifilm signage";
-  Tinum    : "Mayan architectural style" ≈ "Ruined stone structures"(IoU 0.998)。
-重复线索会 (1) 抬高 m、(2) 把同一片区域的功劳劈成几份 φ、(3) 制造假的"重叠"交互(I ≈ −v)。
+The problem: GPT-4o gives cues different names but SAM 3 segments (nearly) the same pixels
+for them. For example Seville has 3 cues with pairwise IoU = 1.000; in Bangkok "Thai text on
+storefront signs" is the same region as "Fujifilm signage"; in Tinum "Mayan architectural
+style" ~ "Ruined stone structures" (IoU 0.998). Duplicate cues (1) inflate m, (2) split one
+region's credit across several phi, and (3) manufacture fake "overlap" interactions (I ~ -v).
 
-做法:逐图算线索并集掩码两两 IoU,用并查集在 --iou(默认 0.90)上合并成"合并玩家"。
-另外**只报告不合并**包含关系:recall(A⊆B) = |A∩B|/|A| ≥ --recall(默认 0.95) 且 IoU < 阈值。
+Method: per image, compute pairwise IoU of the cue union masks and union-find them into
+"merged players" at --iou (default 0.90). Containment is **reported but not merged**:
+recall(A subset B) = |A and B| / |A| >= --recall (default 0.95) while IoU < the threshold.
 
-掩码来源与过滤规则与 belief_elicit/precompute_inpaint.py::cue_masks_of 完全一致
-(maskable=True、丢弃 degenerate/无 mask_rle 的 instance、并集非空),线索顺序必须与
-georanker_sweep_results.json 的 per_cue 一致(与 run_georanker_control.py 同样 assert)。
+Masks come from belief_elicit.cues.cue_masks_of (the single reader), and the cue order must
+match per_cue in georanker_sweep_results.json (asserted, as in run_georanker_control.py).
 
-产物:belief_elicit/cue_dedup_groups.json
-运行:python -m belief_elicit.dedup_cues            # 默认 --iou 0.9
+Output: belief_elicit/cue_dedup_groups.json
+Run: python -m belief_elicit.dedup_cues            # default --iou 0.9
      python -m belief_elicit.dedup_cues --iou 0.95
 """
 import argparse
@@ -32,47 +32,19 @@ except Exception:
 
 import numpy as np
 
+from belief_elicit.cues import cue_masks_of
+from belief_elicit.results import DEDUP_GROUPS as OUT, SAM3_DIR as SRC, SWEEP
+
 HERE = os.path.dirname(os.path.abspath(__file__))
-SWEEP = os.path.join(HERE, "georanker_sweep_results.json")
-SRC = os.path.join(ROOT, "cue_extract", "results_sam3")
-OUT = os.path.join(HERE, "cue_dedup_groups.json")
 
 IOU_DEFAULT = 0.90
 RECALL_DEFAULT = 0.95
 
 
-# ---- 与 belief_elicit/precompute_inpaint.py::cue_masks_of 逐字一致(那个文件 import
-#      LaMa/torch,主环境装不上,所以复制而非 import)----
-def cue_masks_of(src, iid):
-    """从 <src>/<iid>.json 读线索掩码。返回 (cues, categories, masks, (W, H)) 或 None。"""
-    from cue_extract.rle import rle_to_mask
-    p = os.path.join(src, iid + ".json")
-    if not os.path.exists(p):
-        return None
-    rec = json.load(open(p, encoding="utf-8"))
-    W, H = rec["image_size"]
-    cues, cats, masks = [], [], []
-    for c in rec["geo_privacy_cues"]:
-        if not c.get("maskable"):
-            continue
-        good = [i for i in c["instances"] if not i.get("degenerate") and i.get("mask_rle")]
-        if not good:
-            continue
-        u = np.zeros((H, W), bool)
-        for i in good:
-            m = rle_to_mask(i["mask_rle"])
-            if m.shape == (H, W):
-                u |= m
-        if not u.any():
-            continue
-        cues.append(c["cue"]); cats.append(c.get("category")); masks.append(u)
-    return cues, cats, masks, (W, H)
-
-
-# ---------------- 几何 ----------------
+# ---------------- geometry ----------------
 
 def pairwise_geometry(masks):
-    """返回 (iou[m,m], recall[m,m]);recall[i,j] = |Mi ∩ Mj| / |Mi|(i 被 j 覆盖的比例)。"""
+    """-> (iou[m,m], recall[m,m]); recall[i,j] = |Mi and Mj| / |Mi| (how much of i lies in j)."""
     m = len(masks)
     flat = [mk.ravel() for mk in masks]
     area = np.array([float(f.sum()) for f in flat])
@@ -88,7 +60,7 @@ def pairwise_geometry(masks):
 
 
 def union_find_groups(iou, thr):
-    """两两 IoU >= thr 的线索并查集合并。返回按最小成员下标排序的 groups(list of list)。"""
+    """Union-find over pairs with IoU >= thr -> groups (list of lists) sorted by lowest member."""
     m = iou.shape[0]
     parent = list(range(m))
 
@@ -110,7 +82,7 @@ def union_find_groups(iou, thr):
 
 
 def dedup_image(cues, cats, masks, iou_thr=IOU_DEFAULT, recall_thr=RECALL_DEFAULT):
-    """单图去重。返回 dict(groups / index_map / containment / n_cues / n_merged / affected)。"""
+    """De-duplicate one image -> dict(groups / index_map / containment / n_cues / n_merged / affected)."""
     m = len(cues)
     iou, rec = pairwise_geometry(masks)
     groups = union_find_groups(iou, iou_thr)
@@ -119,7 +91,8 @@ def dedup_image(cues, cats, masks, iou_thr=IOU_DEFAULT, recall_thr=RECALL_DEFAUL
     for gi, g in enumerate(groups):
         for k in g:
             index_map[k] = gi
-        # 近似量化:合并玩家用"成员并集"代表,最坏的成员与并集差多少像素
+        # quantify the approximation: the merged player is the members' union, so record
+        # how many pixels the worst member differs from that union by
         u = np.zeros_like(masks[0])
         for k in g:
             u |= masks[k]
@@ -155,7 +128,7 @@ def dedup_image(cues, cats, masks, iou_thr=IOU_DEFAULT, recall_thr=RECALL_DEFAUL
                                           itertools.combinations(range(m), 2)), default=0.0))}
 
 
-# ---------------- 批量 ----------------
+# ---------------- batch ----------------
 
 def build_all(sweep_path=SWEEP, src=SRC, iou_thr=IOU_DEFAULT, recall_thr=RECALL_DEFAULT,
               verbose=True):
@@ -185,15 +158,15 @@ def build_all(sweep_path=SWEEP, src=SRC, iou_thr=IOU_DEFAULT, recall_thr=RECALL_
 
 
 def load_groups(path=OUT):
-    """读回 cue_dedup_groups.json(供 shapley_v3 / dedup_report / plot_dedup 使用)。"""
+    """Read cue_dedup_groups.json back (for shapley_v3 / dedup_report / plot_dedup)."""
     return json.load(open(path, encoding="utf-8"))
 
 
 def main():
-    ap = argparse.ArgumentParser(description="按掩码几何去重线索(归因前清洗)")
-    ap.add_argument("--iou", type=float, default=IOU_DEFAULT, help="合并阈值(并查集)")
+    ap = argparse.ArgumentParser(description="de-duplicate cues by mask geometry")
+    ap.add_argument("--iou", type=float, default=IOU_DEFAULT, help="merge threshold (union-find)")
     ap.add_argument("--recall", type=float, default=RECALL_DEFAULT,
-                    help="包含关系报告阈值(只报告,不合并)")
+                    help="containment reporting threshold (reported, never merged)")
     ap.add_argument("--src", default=SRC)
     ap.add_argument("--sweep", default=SWEEP)
     ap.add_argument("--out", default=OUT)

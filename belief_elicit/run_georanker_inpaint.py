@@ -1,24 +1,27 @@
-"""LaMa 修复(inpaint)版逐线索 mPL:对预计算图像变体批量打分。
+"""Per-cue mPL under the LaMa-inpaint operator: batch-score the precomputed image variants.
 
-灰块遮蔽会引入"篡改伪影"(等面积对照实验:涂灰一块无关区域也能大幅改变后验)。
-本脚本改用 **预先修复好的图像变体**(由 inpaint 缓存包生成)重跑同一口径:
-  变体图 → GeoRanker 变体 B / gallery_v2 → prior;posterior 直接复用 sweep(仪器确定性,
-  原图零重复打分)→ 2km 几何 mPL。
+Gray-block masking introduces a tampering artifact (the equal-area control shows that
+graying out an irrelevant region also moves the posterior a lot). This script reruns the
+same measurement on **pre-inpainted image variants**: variant image -> GeoRanker variant B /
+gallery_v2 -> prior; the posterior is reused from the sweep (the meter is deterministic, so
+the clean image is never re-scored) -> 2 km geometry -> mPL.
 
-缓存契约(belief_elicit/inpaint_cache/<image_id>/):
-  s<k>.png       单线索 k 被删
-  p<k>-<l>.png   线索对 (k,l) 被删
-  all.png        全部线索被删
-  c<k>-<j>.png   线索 k 的等面积对照放置 j(修复填补)
-  cg<k>-<j>.png  同一放置的灰块填补版(修复 vs 灰块的直接对照)
-  manifest.json  逐文件元数据(spec / cue 索引 / 对照掩码 RLE / overlap_frac / coverage)
-manifest 缺失或不全时按文件名回退解析;磁盘上没有的文件跳过(允许缓存包仍在跑)。
+Cache contract (belief_elicit/inpaint_cache/<image_id>/):
+  s<k>.png       cue k removed
+  p<k>-<l>.png   cue pair (k, l) removed
+  all.png        every cue removed
+  c<k>-<j>.png   equal-area control placement j for cue k (inpainted)
+  cg<k>-<j>.png  the same placement filled with gray (a direct inpaint-vs-gray comparison)
+  manifest.json  per-file metadata (spec / cue indices / control mask RLE / overlap / coverage)
+A missing or partial manifest falls back to parsing the filename; files not on disk are
+skipped (so the cache is allowed to still be generating).
 
-输出:逐变体记录 **完整 prior 分布**({label: prob},138 项)——分布必须落盘,
-下游 Shapley / 分布层面分析靠它,不能只存标量。每次打分后即写盘;重启按 **spec 级**
-断点续跑(同一张图已打过的 spec 不重复打)。
+Output: per variant, the **full prior distribution** ({label: prob}, 138 entries) - the
+distribution must be persisted, the downstream Shapley and distribution-level analyses need
+it, a scalar is not enough. Written after every scoring; restarts resume at **spec level**
+(a spec already scored for an image is not scored again).
 
-运行(注意 offline 环境变量,避免 HF 联网卡住):
+Run (note the offline env vars, so HF cannot hang on the network):
   HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
   belief_elicit/.venv_gr/Scripts/python.exe -m belief_elicit.run_georanker_inpaint --part main
 """
@@ -40,6 +43,9 @@ from PIL import Image
 
 from belief_elicit.geometry import build_geometry, mpl
 from belief_elicit.georanker_belief import score_labels
+from belief_elicit.results import (INPAINT, INPAINT_CACHE, INPAINT_CONTROLS, SWEEP,
+                                   load_gallery, load_sweep)
+from belief_elicit.results import manifest_index as load_manifest      # noqa: F401
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 MERGE_KM = 2.0
@@ -53,12 +59,13 @@ RE_C = re.compile(r"^c(\d+)-(\d+)$")
 RE_CG = re.compile(r"^cg(\d+)-(\d+)$")
 
 
-# ---------------- 缓存清单解析 ----------------
+# ---------------- cache manifest parsing ----------------
 
 def parse_stem(stem):
-    """文件名 → (kind, cue 索引列表, 放置序号)。无法识别返回 None。
+    """Filename stem -> (kind, cue indices, placement); None when unrecognised.
 
-    kind ∈ {all, single, pair, ctrl_inpaint, ctrl_gray};前三者属 main,后两者属 control。
+    kind in {all, single, pair, ctrl_inpaint, ctrl_gray}; the first three belong to `main`,
+    the last two to `control`.
     """
     m = RE_ALL.match(stem)
     if m:
@@ -69,7 +76,7 @@ def parse_stem(stem):
     m = RE_P.match(stem)
     if m:
         return "pair", [int(m.group(1)), int(m.group(2))], None
-    m = RE_CG.match(stem)                      # 必须先于 RE_C 试(cg 也匹配 c 前缀)
+    m = RE_CG.match(stem)                      # must precede RE_C ("cg" also matches "c")
     if m:
         return "ctrl_gray", [int(m.group(1))], int(m.group(2))
     m = RE_C.match(stem)
@@ -82,46 +89,6 @@ PART_OF = {"all": "main", "single": "main", "pair": "main",
            "ctrl_inpaint": "control", "ctrl_gray": "control"}
 
 
-def load_manifest(dirpath):
-    """读 manifest.json,归一化成 {filename: entry dict}。缺失/损坏 → {}。"""
-    p = os.path.join(dirpath, "manifest.json")
-    if not os.path.exists(p):
-        return {}
-    try:
-        data = json.load(open(p, encoding="utf-8"))
-    except Exception as e:
-        print(f"  [warn] manifest 解析失败 {p}: {e}", flush=True)
-        return {}
-    entries = None
-    if isinstance(data, list):
-        entries = data
-    elif isinstance(data, dict):
-        for key in ("files", "variants", "entries", "items"):
-            if isinstance(data.get(key), list):
-                entries = data[key]
-                break
-            if isinstance(data.get(key), dict):       # {"s0.png": {...}} 形态
-                entries = [dict(v, file=k) for k, v in data[key].items()]
-                break
-        if entries is None:                            # 顶层直接按文件名键
-            cand = [(k, v) for k, v in data.items() if isinstance(v, dict) and "." in k]
-            entries = [dict(v, file=k) for k, v in cand]
-    out = {}
-    for e in entries or []:
-        if not isinstance(e, dict):
-            continue
-        fn = None
-        for key in ("file", "filename", "name", "path", "png"):
-            if isinstance(e.get(key), str):
-                fn = os.path.basename(e[key])
-                break
-        if fn is None and isinstance(e.get("spec"), str):
-            fn = e["spec"] + ".png"
-        if fn:
-            out[fn] = e
-    return out
-
-
 def pick(entry, keys, default=None):
     for k in keys:
         if entry.get(k) is not None:
@@ -130,11 +97,11 @@ def pick(entry, keys, default=None):
 
 
 def list_specs(dirpath, part, ops="both"):
-    """列出该图缓存目录中属于 part 的变体,按稳定顺序返回条目列表。
+    """List this image's cached variants belonging to `part`, in a stable order.
 
-    ops ∈ {inpaint, gray, both}:只过滤 **对照**(c*/cg*)。对照的 op 优先取 manifest 的
-    `op` 字段,缺失时按文件名前缀回退(cg → gray,c → inpaint)。main 部分(s*/p*/all)
-    不受 ops 影响。
+    ops in {inpaint, gray, both} filters the **controls** (c*/cg*) only: a control's op comes
+    from the manifest `op` field, falling back to the filename prefix (cg -> gray,
+    c -> inpaint). The main part (s*/p*/all) is unaffected by ops.
     """
     manifest = load_manifest(dirpath)
     try:
@@ -159,8 +126,8 @@ def list_specs(dirpath, part, ops="both"):
             cues_m = [cues_m]
         if isinstance(cues_m, list) and cues_m:
             cues = [int(c) for c in cues_m]
-        # manifest 的 "spec" 是**类别**(single/pair/all/control),多个文件共用 →
-        # 唯一 id 只能用文件名 stem(断点续跑按它去重)。
+        # the manifest "spec" is a *category* (single/pair/all/control) shared by several
+        # files, so the unique id has to be the filename stem (resume dedupes on it).
         op = pick(e, ["op"])
         if PART_OF[kind] == "control" and op in ("gray", "inpaint"):
             kind = "ctrl_gray" if op == "gray" else "ctrl_inpaint"
@@ -188,31 +155,32 @@ def list_specs(dirpath, part, ops="both"):
     return sorted(items, key=key)
 
 
-# ---------------- 主流程 ----------------
+# ---------------- main ----------------
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--cache", default=os.path.join(HERE, "inpaint_cache"),
-                    help="修复缓存根目录(内含 <image_id>/ 子目录)")
+    ap.add_argument("--cache", default=INPAINT_CACHE,
+                    help="inpaint cache root (holds one <image_id>/ directory per image)")
     ap.add_argument("--part", choices=["main", "control", "all"], default="main",
-                    help="main = s*/p*/all;control = c*/cg*;all = 两者")
+                    help="main = s*/p*/all; control = c*/cg*; all = both")
     ap.add_argument("--ops", choices=["inpaint", "gray", "both"], default="both",
-                    help="只对**对照**生效:inpaint = 只打 c*;gray = 只打 cg*;"
-                         "both(默认)= 两者都打。对照打分量减半时用它")
-    ap.add_argument("--ids", nargs="*", default=None, help="按 image_id 前缀筛选")
-    ap.add_argument("--out", default=None, help="结果 JSON(默认按 --part 选择)")
-    ap.add_argument("--limit", type=int, default=0, help="本次最多打分次数(0 = 不限,冒烟用)")
-    ap.add_argument("--sweep", default=os.path.join(HERE, "georanker_sweep_results.json"),
-                    help="sweep 结果:提供 posterior 与逐线索元数据")
+                    help="applies to the **controls** only: inpaint = score c* only; "
+                         "gray = score cg* only; both (default) = score both. Use it to "
+                         "halve the control scoring budget")
+    ap.add_argument("--ids", nargs="*", default=None, help="filter by image_id prefix")
+    ap.add_argument("--out", default=None, help="result JSON (default chosen by --part)")
+    ap.add_argument("--limit", type=int, default=0,
+                    help="cap on scorings this run (0 = no cap; for smoke tests)")
+    ap.add_argument("--sweep", default=SWEEP,
+                    help="sweep results: supplies the posterior and per-cue metadata")
     ap.add_argument("--no-manifest-ok", action="store_true",
-                    help="缺 manifest.json 的图也照跑(默认跳过:该图可能仍在生成中)")
+                    help="also run images without a manifest.json (skipped by default: such "
+                         "an image may still be generating)")
     args = ap.parse_args()
 
-    out_path = args.out or os.path.join(
-        HERE, "georanker_inpaint_control_results.json" if args.part == "control"
-        else "georanker_inpaint_results.json")
+    out_path = args.out or (INPAINT_CONTROLS if args.part == "control" else INPAINT)
 
-    sweep = json.load(open(args.sweep, encoding="utf-8"))
+    sweep = load_sweep(args.sweep)
     order = [r["image_id"] for r in sweep]
     sw = {r["image_id"]: r for r in sweep}
     if args.ids:
@@ -221,11 +189,10 @@ def main():
             print(f"没有匹配 --ids {args.ids} 的图", flush=True)
             return
 
-    gv = [g for g in json.load(open(os.path.join(ROOT, "data", "gallery_v2.json"),
-                                    encoding="utf-8")) if g["gps"]]
+    gv = load_gallery()
     rep, clusters, dist = build_geometry(gv, merge_km=MERGE_KM)
 
-    # ---- 断点续跑:spec 级 ----
+    # ---- resume, at spec level ----
     done = {}
     if os.path.exists(out_path):
         try:
@@ -241,20 +208,21 @@ def main():
 
     def save():
         recs = [done[i] for i in order if i in done]
-        recs += [r for i, r in done.items() if i not in order]     # 保留其它图的旧结果
+        recs += [r for i, r in done.items() if i not in order]     # keep other images' results
         tmp = out_path + ".tmp"
         json.dump(recs, open(tmp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         os.replace(tmp, out_path)
 
-    # ---- 盘点待办 ----
+    # ---- take stock of what is left ----
     todo = []
     n_nomani = 0
     for iid in order:
         d = os.path.join(args.cache, iid)
         if not os.path.isdir(d):
             continue
-        # precompute 是**最后**才写 manifest.json 的:没有 manifest = 该图还在生成中,
-        # 此时 PNG 可能只写了一半 → 跳过(缓存包跑完后重跑本脚本即可补上)。
+        # precompute writes manifest.json **last**: no manifest means the image is still
+        # being generated and its PNGs may be half-written -> skip (rerun once the cache is
+        # complete and it will be picked up).
         if not args.no_manifest_ok and not os.path.exists(os.path.join(d, "manifest.json")):
             n_nomani += 1
             continue
@@ -309,7 +277,7 @@ def main():
                           if 0 <= k < len(r["per_cue"])],
             "mpl": val,
             "seconds": secs,
-            "prior": prior,                      # 完整分布,必须落盘
+            "prior": prior,                      # the full distribution, must be persisted
         }
         if it["coverage"] is not None:
             rec["coverage"] = it["coverage"]
@@ -317,13 +285,13 @@ def main():
             rec["placement"] = it["placement"]
         if PART_OF[it["kind"]] == "control":
             rec["overlap_frac"] = it["overlap_frac"]
-        # 灰块基线:单线索时给出 sweep 的灰块 mPL,便于直接对照
+        # gray baseline: for singles, carry the sweep's gray mPL for a direct comparison
         if it["kind"] == "single" and 0 <= cues[0] < len(r["per_cue"]):
             rec["gray_mpl"] = r["per_cue"][cues[0]]["mpl"]
 
         done[iid]["variants"].append(rec)
         done_specs[iid].add(it["spec"])
-        save()                                   # 每次打分后即写盘(spec 级续跑才有意义)
+        save()                                   # write after every scoring (spec-level resume)
 
         nsc += 1
         el = time.time() - t0

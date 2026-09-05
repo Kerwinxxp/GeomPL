@@ -1,24 +1,14 @@
-"""二阶截断(anchored)Shapley:只用单条 + 成对 + 全遮的 v。
+"""Validate the second-order anchored Shapley truncation against the exact gray-block lattice.
 
-动机:修复(inpaint)口径下打分极贵,2^m 全格不可行;但 **单条 v({k})、成对 v({k,l})、
-全遮 v(N)** 是可以负担的(m 条线索 → m + C(m,2) + 1 次打分)。本模块把 Harsanyi
-(Mobius)分解截断到二阶,再用 v(N) 做 efficiency 锚定:
+The estimator itself lives in `belief_elicit.attribution` (`order2_shapley`,
+`order2_from_v`) and is re-exported here for the callers that have always imported it from
+this module. This CLI checks it where the full 2^m lattice exists, reporting Spearman,
+top-1 agreement and relative magnitude error, stratified by m.
 
-    d_k    = v({k})                                  (一阶 Mobius 分红, v(∅)=0)
-    d_kl   = v({k,l}) − v({k}) − v({l})               (二阶分红 = 成对交互)
-    φ_k^(2)= d_k + ½ Σ_{l≠k} d_kl                     (截断到二阶的 Shapley)
-    φ_k    = φ_k^(2) + [v(N) − Σ_j φ_j^(2)] / m       (锚定:强制 Σφ = v(N))
-
-诊断量 residual_share = |v(N) − Σ_j φ_j^(2)| / |v(N)|:三阶及以上分红被丢掉了多少。
-
-CLI 在**灰块**数据上做校验(那里 2^m 全格已有,精确 Shapley 可算):
-    python -m belief_elicit.order2_shapley
-逐图报告 Spearman、top-1 一致率、相对幅度误差,并按 m 分层。
+Run: python -m belief_elicit.order2_shapley
 """
 import argparse
-import itertools
 import json
-import math
 import os
 import sys
 from collections import defaultdict
@@ -32,132 +22,20 @@ except Exception:
 
 import numpy as np
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-SWEEP = os.path.join(HERE, "georanker_sweep_results.json")
-LATTICE = os.path.join(HERE, "georanker_lattice_results.json")
-OUT = os.path.join(HERE, "order2_shapley_validation.json")
+from belief_elicit.attribution import (order2_from_v, order2_shapley,  # noqa: F401
+                                       shapley as exact_shapley, spearman)
+from belief_elicit.results import (ORDER2_VALIDATION as OUT, SWEEP, LATTICE,
+                                   build_v as build_v_gray, load_lattice, load_sweep)
 
-
-# ---------------- 库:二阶截断 Shapley ----------------
-
-def order2_shapley(singles, pairs, v_all=None):
-    """二阶锚定 Shapley。
-
-    参数
-      singles : 长度 m 的序列,singles[k] = v({k})
-      pairs   : dict,键 (k, l)(k<l 或任意序,内部归一)→ v({k,l})
-      v_all   : v(N)。None 时不做锚定(φ = φ^(2)),residual_share = nan。
-
-    返回 dict:
-      phi            : 锚定后的 φ_k(list,长度 m)
-      phi2           : 锚定前的 φ_k^(2)
-      d              : 一阶分红 d_k = v({k})
-      interactions   : {(k,l): d_kl},k<l
-      anchor         : [v(N) − Σφ^(2)] / m(逐线索均摊的锚定量)
-      residual       : v(N) − Σφ^(2)
-      residual_share : |residual| / |v(N)|(截断诊断;v(N)≈0 时为 nan)
-      sum_phi2       : Σφ^(2)
-    """
-    m = len(singles)
-    d = [float(x) for x in singles]
-    pd = {}
-    for (k, l), val in pairs.items():
-        a, b = (int(k), int(l)) if int(k) < int(l) else (int(l), int(k))
-        pd[(a, b)] = float(val)
-
-    inter = {}
-    for a, b in itertools.combinations(range(m), 2):
-        if (a, b) not in pd:
-            raise KeyError(f"缺少成对值 v({{{a},{b}}})")
-        inter[(a, b)] = pd[(a, b)] - d[a] - d[b]
-
-    phi2 = []
-    for k in range(m):
-        s = d[k]
-        for l in range(m):
-            if l == k:
-                continue
-            a, b = (k, l) if k < l else (l, k)
-            s += 0.5 * inter[(a, b)]
-        phi2.append(s)
-
-    sum2 = float(sum(phi2))
-    if v_all is None:
-        return {"phi": list(phi2), "phi2": list(phi2), "d": d, "interactions": inter,
-                "anchor": 0.0, "residual": float("nan"),
-                "residual_share": float("nan"), "sum_phi2": sum2}
-    vN = float(v_all)
-    resid = vN - sum2
-    anchor = resid / m if m else 0.0
-    phi = [p + anchor for p in phi2]
-    share = abs(resid) / abs(vN) if abs(vN) > 1e-12 else float("nan")
-    return {"phi": phi, "phi2": list(phi2), "d": d, "interactions": inter,
-            "anchor": anchor, "residual": resid, "residual_share": share,
-            "sum_phi2": sum2}
-
-
-def order2_from_v(v, m):
-    """从完整/部分 v 字典(键为 frozenset)取出单条/成对/全遮,调用 order2_shapley。"""
-    singles = [v[frozenset([k])] for k in range(m)]
-    pairs = {(k, l): v[frozenset([k, l])] for k, l in itertools.combinations(range(m), 2)}
-    return order2_shapley(singles, pairs, v.get(frozenset(range(m))))
-
-
-# ---------------- 校验用:精确 Shapley + 相关系数 ----------------
-
-def exact_shapley(v, m):
-    out = []
-    for k in range(m):
-        others = [i for i in range(m) if i != k]
-        tot = 0.0
-        for size in range(m):
-            w = math.factorial(size) * math.factorial(m - size - 1) / math.factorial(m)
-            for Sset in itertools.combinations(others, size):
-                tot += w * (v[frozenset(Sset) | {k}] - v[frozenset(Sset)])
-        out.append(tot)
-    return out
-
-
-def spearman(a, b):
-    a, b = np.asarray(a, float), np.asarray(b, float)
-    if len(a) < 2:
-        return float("nan")
-    ra = np.argsort(np.argsort(a)).astype(float)
-    rb = np.argsort(np.argsort(b)).astype(float)
-    if ra.std() == 0 or rb.std() == 0:
-        return float("nan")
-    return float(np.corrcoef(ra, rb)[0, 1])
-
-
-def build_v_gray(r, lattice):
-    """复刻 shapley_v2.build_v:sweep(单条 + 全遮)+ lattice(中间子集)。"""
-    m = r["n_cues"]
-    v = {frozenset(): 0.0}
-    for k, pc in enumerate(r["per_cue"]):
-        v[frozenset([k])] = pc["mpl"]
-    if m == 1:
-        return v, True
-    v[frozenset(range(m))] = r["mpl_all"]
-    if m >= 3:
-        lat = lattice.get(r["image_id"])
-        if not lat or len(lat["combos"]) < 2 ** m - 2 - m:
-            return v, False
-        for c in lat["combos"]:
-            v[frozenset(c["subset"])] = c["mpl"]
-    return v, True
-
-
-# ---------------- CLI:灰块数据上的校验 ----------------
 
 def validate(sweep_path=SWEEP, lattice_path=LATTICE, out_path=OUT, quiet=False):
-    sweep = json.load(open(sweep_path, encoding="utf-8"))
-    lattice = ({r["image_id"]: r for r in json.load(open(lattice_path, encoding="utf-8"))}
-               if os.path.exists(lattice_path) else {})
+    sweep = load_sweep(sweep_path)
+    lattice = load_lattice(lattice_path)
 
     per_image, skipped = [], 0
     for r in sweep:
         m = r["n_cues"]
-        if m < 2:                       # m=1 时 φ = v({1}),两法平凡相同
+        if m < 2:                       # at m=1, phi = v({1}); both methods trivially agree
             continue
         v, ok = build_v_gray(r, lattice)
         if not ok:
@@ -219,7 +97,7 @@ def validate(sweep_path=SWEEP, lattice_path=LATTICE, out_path=OUT, quiet=False):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="二阶截断 anchored Shapley + 灰块校验")
+    ap = argparse.ArgumentParser(description="second-order anchored Shapley + gray-block check")
     ap.add_argument("--sweep", default=SWEEP)
     ap.add_argument("--lattice", default=LATTICE)
     ap.add_argument("--out", default=OUT)

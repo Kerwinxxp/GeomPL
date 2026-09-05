@@ -1,10 +1,13 @@
-"""温度校准(审稿意见 #1):τ 敏感性 + NLL/Brier/ECE + mPL∝1/τ 验证。
+"""Temperature calibration: tau sensitivity + NLL/Brier/ECE + the mPL ~ 1/tau check.
 
-关键:softmax(s/τ) 的分布可从已存 p(1) 精确恢复,无需重打分:
-    p_i(τ) = p_i(1)^{1/τ} / Σ_j p_j(1)^{1/τ}
-因此 (a) 用真值 NLL 在 held-out 上选 τ*、报 Brier/ECE;(b) 直接展示 mPL(τ)≈mPL(1)/τ,
-说明 τ 只是全局缩放、图内比较/交互符号对 τ 不变。
-运行(主环境):python -m belief_elicit.calibrate_tau
+The key point is that softmax(s/tau) can be recovered exactly from the stored p(1), so
+nothing has to be re-scored:
+    p_i(tau) = p_i(1)^(1/tau) / sum_j p_j(1)^(1/tau)
+So (a) tau* is chosen on a held-out split by minimising the true-label NLL, with Brier/ECE
+reported, and (b) mPL(tau) ~ mPL(1)/tau is shown directly — tau is only a global scale, so
+within-image comparisons and interaction signs are tau-invariant.
+
+Run (main environment): python -m belief_elicit.calibrate_tau
 """
 import json
 import math
@@ -20,40 +23,12 @@ except Exception:
 
 import numpy as np
 
-from belief_elicit.geometry import cluster_representatives, haversine_km, merge_distribution
-
-SWEEP = os.path.join(os.path.dirname(__file__), "georanker_sweep_results.json")
-
-
-def build_geometry(gv, merge_km=2.0):
-    coords = {g["label"]: g["gps"] for g in gv if g["gps"]}
-    rep = cluster_representatives(coords, merge_km)
-    clusters = sorted(set(rep.values()))
-    rc = {c: coords[c] for c in clusters}
-    dmat = {}
-    for a in range(len(clusters)):
-        for b in range(a + 1, len(clusters)):
-            dmat[(clusters[a], clusters[b])] = haversine_km(*rc[clusters[a]], *rc[clusters[b]])
-    return rep, clusters, (lambda i, j: dmat.get((i, j)) or dmat.get((j, i)))
-
-
-def mpl(prior, post, rep, clusters, dist):
-    pr, po = merge_distribution(prior, rep), merge_distribution(post, rep)
-    keys = [k for k in clusters if pr.get(k, 0) > 0 and po.get(k, 0) > 0]
-    llr = {k: math.log(po[k] / pr[k]) for k in keys}
-    ks = list(llr)
-    vals = []
-    for i in range(len(ks)):
-        for j in range(i + 1, len(ks)):
-            d = dist(ks[i], ks[j])
-            if d and d > 0:
-                vals.append(abs(llr[ks[i]] - llr[ks[j]]) / d * 1000)
-    return sum(vals) / len(vals) if vals else 0.0
-OUT = os.path.join(os.path.dirname(__file__), "calibrate_tau_results.json")
+from belief_elicit.geometry import build_geometry, mpl
+from belief_elicit.results import CALIBRATE_TAU as OUT, SWEEP, load_gallery, load_sweep
 
 
 def temper(prob, tau):
-    """p(1) dict -> p(tau) dict,精确恢复 softmax(s/τ)。"""
+    """p(1) dict -> p(tau) dict; exact recovery of softmax(s/tau)."""
     labels = list(prob)
     lp = np.array([math.log(max(prob[l], 1e-12)) for l in labels]) / tau
     lp -= lp.max()
@@ -96,12 +71,11 @@ def ece(rows, tau, nbin=10):
 
 
 def main():
-    rows = json.load(open(SWEEP, encoding="utf-8"))
-    gv = [g for g in json.load(open(os.path.join(ROOT, "data", "gallery_v2.json"),
-                                    encoding="utf-8")) if g["gps"]]
+    rows = load_sweep(SWEEP)
+    gv = load_gallery()
     rep, clusters, dist = build_geometry(gv, merge_km=2.0)
 
-    # (a) held-out τ 选择:固定 50/50 划分,train 上最小化 NLL,test 上报指标
+    # (a) held-out tau selection: fixed 50/50 split, minimise NLL on train, report on test
     rng = np.random.default_rng(0)
     idx = rng.permutation(len(rows))
     tr = [rows[i] for i in idx[:len(rows) // 2]]
@@ -114,7 +88,7 @@ def main():
     for name, fn in [("NLL", nll), ("Brier", brier), ("ECE", ece)]:
         print(f"  {name:12s}{fn(te,1.0):10.4f}{fn(te,star):10.4f}")
 
-    # (b) mPL 对 τ 的缩放:取几张有代表性的图,验证 ≈ 1/τ
+    # (b) how mPL scales with tau: a couple of representative images, expect ~ 1/tau
     print("\nmPL(全遮) 随 τ(应 ≈ mPL(1)/τ,证明 τ 只是全局缩放):")
     demo = [r for r in rows if r["n_cues"] >= 2][:2]
     tau_grid = [0.5, 1.0, 2.0, 5.0]
@@ -133,7 +107,7 @@ def main():
         scale_rows.append(rec)
         print(line)
 
-    # 排名对 τ 不变性:全体 mPL(τ) 排序相关
+    # ranking is tau-invariant
     print("\n图内排名对 τ 不变(全局缩放不改变序):"
           "\n  Δllr(τ) = (1/τ)·Δllr(1) 逐对成立 ⇒ 任一图的子集 mPL 排序与交互符号严格 τ-不变。")
 

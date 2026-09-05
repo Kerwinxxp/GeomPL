@@ -1,97 +1,36 @@
-"""Shapley 之外的替代归因法(全部基于已有 2^m 格,零 GPU)。
+"""Attribution methods other than Shapley, all read off the existing 2^m lattice (no GPU).
 
-  1. Banzhaf value      : 对 coalition 均匀加权(而非 Shapley 的排列加权)
-  2. Additive surrogate : 对 v(S) 最小二乘拟合可加模型,R^2 = "可加性能解释多少"
-  3. Harsanyi dividends : 精确 Mobius 分解,看非可加性住在几阶
-  4. Minimal sufficient : 达到 v(N) 给定比例所需的最小线索子集(隐私可读性强)
-运行:python -m belief_elicit.alt_attribution
+  1. Banzhaf value      : coalitions weighted uniformly (not by permutation as Shapley)
+  2. Additive surrogate : least-squares additive fit of v(S); R^2 = how much is additive
+  3. Harsanyi dividends : exact Mobius decomposition — which order the non-additivity lives at
+  4. Minimal sufficient : smallest cue subset reaching a given share of v(N)
+
+The operators live in `belief_elicit.attribution`; this module is the CLI over them.
+Run: python -m belief_elicit.alt_attribution
 """
-import itertools, json, math, os, sys
+import json
+import os
+import sys
 from collections import defaultdict
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
-try: sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-except Exception: pass
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
+
 import numpy as np
 
-SWEEP = os.path.join(os.path.dirname(__file__), "georanker_sweep_results.json")
-LAT = os.path.join(os.path.dirname(__file__), "georanker_lattice_results.json")
-OUT = os.path.join(os.path.dirname(__file__), "alt_attribution_results.json")
+from belief_elicit.attribution import (additive_fit, banzhaf, harsanyi,  # noqa: F401
+                                       min_sufficient, shapley, spearman)
+from belief_elicit.results import (ALT_ATTRIBUTION as OUT, LATTICE as LAT, SWEEP,
+                                   build_v, load_lattice, load_sweep)  # noqa: F401
 
-def build_v(r, lattice):
-    m = r["n_cues"]; v = {frozenset(): 0.0}
-    for k, pc in enumerate(r["per_cue"]): v[frozenset([k])] = pc["mpl"]
-    if m == 1: return v, True
-    v[frozenset(range(m))] = r["mpl_all"]
-    if m >= 3:
-        lat = lattice.get(r["image_id"])
-        if not lat or len(lat["combos"]) < 2**m - 2 - m: return v, False
-        for c in lat["combos"]: v[frozenset(c["subset"])] = c["mpl"]
-    return v, True
-
-def shapley(v, m):
-    out = []
-    for k in range(m):
-        others = [i for i in range(m) if i != k]; tot = 0.0
-        for sz in range(m):
-            w = math.factorial(sz)*math.factorial(m-sz-1)/math.factorial(m)
-            for S in itertools.combinations(others, sz):
-                tot += w*(v[frozenset(S)|{k}] - v[frozenset(S)])
-        out.append(tot)
-    return out
-
-def banzhaf(v, m):
-    out = []
-    for k in range(m):
-        others = [i for i in range(m) if i != k]; tot = 0.0
-        for sz in range(m):
-            for S in itertools.combinations(others, sz):
-                tot += v[frozenset(S)|{k}] - v[frozenset(S)]
-        out.append(tot / 2**(m-1))
-    return out
-
-def additive_fit(v, m):
-    """v(S) ~ sum_{k in S} a_k,对全部非空子集 OLS;返回 (系数, R^2)。"""
-    subs = [S for sz in range(1, m+1) for S in itertools.combinations(range(m), sz)]
-    X = np.zeros((len(subs), m)); y = np.array([v[frozenset(S)] for S in subs])
-    for i, S in enumerate(subs):
-        for k in S: X[i, k] = 1.0
-    a, *_ = np.linalg.lstsq(X, y, rcond=None)
-    pred = X @ a
-    ss_res = float(((y-pred)**2).sum()); ss_tot = float(((y-y.mean())**2).sum())
-    return a.tolist(), (1 - ss_res/ss_tot if ss_tot > 1e-12 else float("nan"))
-
-def harsanyi(v, m):
-    """Mobius 分解 d(T);返回按阶聚合的 |d| 占比。"""
-    by_order = defaultdict(float)
-    for sz in range(1, m+1):
-        for T in itertools.combinations(range(m), sz):
-            Tf = frozenset(T); d = 0.0
-            for sz2 in range(sz+1):
-                for S in itertools.combinations(T, sz2):
-                    d += (-1)**(sz-sz2) * v[frozenset(S)]
-            by_order[sz] += abs(d)
-    tot = sum(by_order.values())
-    return {k: (val/tot if tot > 1e-12 else 0.0) for k, val in by_order.items()}
-
-def min_sufficient(v, m, frac=0.8):
-    """达到 frac*v(N) 所需最小 |S|(masking 视角:至少要遮几条才能造成 80% 的总移动)。"""
-    target = frac * v[frozenset(range(m))]
-    if target <= 0: return None
-    for sz in range(1, m+1):
-        for S in itertools.combinations(range(m), sz):
-            if v[frozenset(S)] >= target: return sz
-    return m
-
-def spearman(a, b):
-    a, b = np.asarray(a, float), np.asarray(b, float)
-    ra = np.argsort(np.argsort(a)); rb = np.argsort(np.argsort(b))
-    if len(a) < 2 or ra.std() == 0 or rb.std() == 0: return np.nan
-    return float(np.corrcoef(ra, rb)[0, 1])
 
 def main():
-    sweep = json.load(open(SWEEP, encoding="utf-8"))
-    lattice = {r["image_id"]: r for r in json.load(open(LAT, encoding="utf-8"))} if os.path.exists(LAT) else {}
+    sweep = load_sweep(SWEEP)
+    lattice = load_lattice(LAT)
     rows, r2s, minsuf, rho_img = [], [], [], []
     ord_share = defaultdict(list)
     for r in sweep:
@@ -142,6 +81,7 @@ def main():
         print(f"   {k:24s} {np.median(d['s']):9.4f} {np.median(d['b']):9.4f} "
               f"{np.median(d['a']):9.4f} {len(d['s']):4d}")
     print(f"\nsaved {OUT}")
+
 
 if __name__ == "__main__":
     main()

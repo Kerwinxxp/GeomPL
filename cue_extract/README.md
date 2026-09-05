@@ -37,20 +37,30 @@ cue_extract/.venv/Scripts/python -m cue_extract.viz_vocab_vs_gpt4o
 
 ## Modules
 
+**Library** (no CLI; imported by the runners and by `belief_elicit/`)
+
 | file | role |
 |---|---|
-| `run_extract_sam3.py` | orchestrator (GPT-4o → SAM 3 → degenerate/maskable) + config loader |
-| `grounded.py` | parse the VLM geo-reasoning output into cues |
+| `common.py` | `load_subsets` (the `data/subset*.jsonl` manifest) · `cue_masks` — **the single reader** for the cue-record JSON below (maskable cue, union of non-degenerate instances, non-empty union). Re-exported to the analysis layer as `belief_elicit.cues.cue_masks_of`. |
+| `rle.py` | minimal mask RLE encode/decode (no pycocotools) — the single `mask_to_rle`, also used by `belief_elicit/` |
 | `prompts.py` | the geo-reasoning prompt and the cue category list |
-| `sam3_seg.py` | SAM 3 text→mask + `segment_with_fallback` recall chain |
+| `grounded.py` | parse the VLM geo-reasoning output into cues |
+| `sam3_seg.py` | SAM 3 text→mask + `segment_with_fallback` recall chain (the only place SAM 3 is loaded) |
 | `merge.py` | `flag_degenerate` (bbox > 40% img → non-maskable) · `assign_maskable` (evidence-based) |
-| `rle.py` | minimal mask RLE encode/decode (no pycocotools) — also used by `belief_elicit/` |
 | `mllm.py` | GPT-4o client (OpenAI-compatible), disk-cached responses, key from `OPENAI_API_KEY` |
 | `imaging.py` | `smart_resize_dims` — model coordinate space == our pixel space |
-| `viz.py` | annotation overlay for a single image |
-| `viz_montage50.py` | multi-image annotation-quality montage |
+| `viz.py` | `render` — annotation overlay for a single image |
+
+**Runners and reports** (each is a `python -m cue_extract.<name>` entry point)
+
+| file | role |
+|---|---|
+| `run_extract_sam3.py` | orchestrator (GPT-4o → SAM 3 → degenerate/maskable) + config loader; `extract_one` |
+| `extract_vocab.py` | fixed-vocabulary arm; `extract_vocab_cues` |
+| `compare_vocab.py` | how much of the GPT-4o cue list the vocabulary covers (IoU / pixel recall) |
 | `stats_cues.py` | dataset-wide cue statistics figure (categories, counts, localization outcomes) |
-| `extract_vocab.py` · `compare_vocab.py` · `viz_vocab_vs_gpt4o.py` | fixed-vocabulary arm: extraction, coverage analysis, side-by-side figure |
+| `viz_montage50.py` | multi-image annotation-quality montage |
+| `viz_vocab_vs_gpt4o.py` | side-by-side GPT-4o vs vocabulary mask overlays |
 
 ## Output JSON (`cue_extract/results_sam3/<id>.json`)
 

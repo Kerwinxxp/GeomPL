@@ -1,21 +1,24 @@
-"""LaMa 修复(inpainting)作为"信息删除"算子,替代纯灰块遮蔽。
+"""LaMa inpainting as the "information removal" operator, in place of solid gray blocks.
 
-灰块遮蔽会引入巨大的"篡改伪影":等面积对照实验显示,把一块无关区域涂灰
-也能大幅改变后验。LaMa 用图像内容填补被删区域,几乎不留可见篡改痕迹,
-因而更接近"该线索从未出现过"的反事实。
+Gray fill introduces a large tampering artifact: the equal-area control shows that graying
+out an irrelevant region also moves the posterior a lot. LaMa fills the removed region with
+plausible image content, leaving almost no visible tampering trace, so it is closer to the
+counterfactual "this cue was never in the picture".
 
-接口与 belief_elicit.masking.mask_solid_from_masks 对齐:
-    inpaint_from_masks(img, [mask, ...]) -> PIL.Image (RGB, 同尺寸)
+The interface mirrors belief_elicit.masking.mask_solid_from_masks:
+    inpaint_from_masks(img, [mask, ...]) -> PIL.Image (RGB, same size)
+
+Library module — no CLI.
 """
 import numpy as np
 from PIL import Image
 
-DILATE_PX = 5          # 掩码外扩像素数:给 LaMa 一个干净的边界(避免线索边缘残留)
-_LAMA = None           # 模块级懒加载单例
+DILATE_PX = 5          # mask dilation: give LaMa a clean border (no cue edge left behind)
+_LAMA = None           # module-level lazy singleton
 
 
 def get_lama():
-    """加载并缓存 LaMa(torchscript big-lama,权重走 torch.hub 缓存)。"""
+    """Load and cache LaMa (torchscript big-lama; weights come from the torch.hub cache)."""
     global _LAMA
     if _LAMA is None:
         import torch
@@ -26,7 +29,7 @@ def get_lama():
 
 
 def union_of(masks, shape):
-    """把若干布尔掩码并成一个 (H, W) 布尔掩码;尺寸不符的忽略。"""
+    """Union several boolean masks into one (H, W) mask; masks of other sizes are ignored."""
     h, w = shape
     u = np.zeros((h, w), dtype=bool)
     for m in masks or []:
@@ -37,7 +40,7 @@ def union_of(masks, shape):
 
 
 def dilate(mask, px=DILATE_PX):
-    """形态学膨胀 px 像素(椭圆核),让修复区完整盖住线索边缘。"""
+    """Morphological dilation by px pixels (elliptical kernel) so the fill covers cue edges."""
     if px <= 0:
         return np.asarray(mask, dtype=bool)
     import cv2
@@ -47,18 +50,19 @@ def dilate(mask, px=DILATE_PX):
 
 
 def inpaint_from_masks(image, masks, dilate_px=DILATE_PX):
-    """按**不规则布尔掩码**修复:并集 → 膨胀 → LaMa 填补。返回新图,不就地修改。
+    """Inpaint the union of **irregular boolean masks**: union -> dilate -> LaMa.
 
-    masks: [np.bool_ (H,W), ...],须与图同尺寸。空掩码时原样返回 RGB 副本。
+    masks: [np.bool_ (H, W), ...] at the image's size. An empty union returns an RGB copy.
+    Returns a new image; the input is not modified.
     """
     img = image.convert("RGB")
     w, h = img.size
     u = dilate(union_of(masks, (h, w)), dilate_px)
     if not u.any():
         return img.copy()
-    m = Image.fromarray((u.astype(np.uint8) * 255), mode="L")   # 255 = 待修复
+    m = Image.fromarray((u.astype(np.uint8) * 255), mode="L")   # 255 = region to repair
     out = get_lama()(img, m)
-    # LaMa 内部把输入 pad 到 8 的倍数,输出可能比原图大 → 裁回原尺寸
+    # LaMa pads its input to a multiple of 8, so the output can be larger -> crop back
     if out.size != (w, h):
         out = out.crop((0, 0, w, h))
     return out.convert("RGB")

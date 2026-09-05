@@ -1,8 +1,10 @@
-"""等面积对照结果图:
-(a) 逐线索配对散点 real vs control(同形状同面积);(b) 对照 vs 真实的分布对比。
-运行:python -m belief_elicit.plot_control_v2
+"""Equal-area control figure.
+
+(a) per-cue paired scatter, real vs control (same mask shape and area);
+(b) the control distribution against the real-cue distribution.
+
+Run: python -m belief_elicit.plot_control_v2
 """
-import json
 import os
 import sys
 
@@ -14,15 +16,15 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-plt.rcParams.update({"font.family": "DejaVu Sans", "axes.spines.top": False,
-                     "axes.spines.right": False})
-DATA = os.path.join(os.path.dirname(__file__), "georanker_control_results.json")
-OUT = os.path.join(os.path.dirname(__file__), "figures", "georanker_control.png")
-BLUE, RED, GRAY, GREEN = "#1E88E5", "#E53935", "#B0BEC5", "#43A047"
+from belief_elicit.plotstyle import BLUE, GRAY, GREEN, RED, apply_style, save
+from belief_elicit.results import CONTROLS as DATA, FIGDIR, load_controls
+
+apply_style()
+OUT = os.path.join(FIGDIR, "georanker_control.png")
 
 
 def main():
-    R = json.load(open(DATA, encoding="utf-8"))
+    R = load_controls(DATA)
     rows = []
     for r in R:
         for c in r["cues"]:
@@ -40,7 +42,7 @@ def main():
 
     fig, ax = plt.subplots(1, 2, figsize=(14.5, 5.6))
 
-    # (a) 配对散点
+    # (a) paired scatter
     lim = max(real.max(), cmax.max()) * 1.12
     ax[0].plot([0, lim], [0, lim], color="#888", lw=1.2, ls="--", label="y = x")
     ax[0].plot([0, lim / 2], [0, lim], color="#BBB", lw=1.0, ls=":", label="y = 2x")
@@ -63,7 +65,7 @@ def main():
     ax[0].set_xlim(0, lim * 0.62); ax[0].set_ylim(0, lim)
     ax[0].grid(color="#EEE", zorder=0); ax[0].set_axisbelow(True)
 
-    # (b) 分布对比
+    # (b) distribution comparison
     bins = np.linspace(0, max(ctrl_all.max(), real.max()) * 1.05, 25)
     ax[1].hist(ctrl_all, bins=bins, color=GRAY, alpha=0.85, zorder=3,
                label=f"control placements (n={len(ctrl_all)})")
@@ -83,9 +85,7 @@ def main():
                  f"({len(R)} images, {len(rows)} cues, {len(ctrl_all)} control placements)",
                  fontsize=12.5, y=1.02)
     fig.tight_layout()
-    os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    fig.savefig(OUT, bbox_inches="tight", dpi=130)
-    print("saved", OUT)
+    save(fig, OUT, dpi=130)
 
 
 if __name__ == "__main__":

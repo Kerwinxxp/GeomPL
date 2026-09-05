@@ -1,14 +1,17 @@
-"""覆盖率分析:固定词表(bottom-up)能盖住多少 GPT-4o(top-down)线索?
+"""Coverage analysis: how much of the GPT-4o (top-down) cue inventory does the fixed
+vocabulary (bottom-up) cover?
 
-对每张图,把 results_sam3 里 GPT-4o 线索的掩码(与 belief_elicit/run_georanker_control.py
-的 cue_masks_of 同一口径:maskable + 非退化实例并集)和 results_vocab 里词表线索的掩码
-逐对求 IoU 与像素召回 recall = |gpt ∩ vocab| / |gpt|,取最佳匹配。
+Per image, take the GPT-4o cue masks from results_sam3 and the vocabulary cue masks from
+results_vocab (both via cue_extract.common.cue_masks: maskable cues, union of non-degenerate
+instances), compute pairwise IoU and pixel recall = |gpt and vocab| / |gpt|, and keep the
+best match.
 
-"重要" GPT-4o 线索 = shapley_v2_results.json 里 phi 高于该图中位数的线索。
-反向:没匹配上任何 GPT-4o 线索的词表线索 = GPT-4o 可能漏掉的候选线索。
+An "important" GPT-4o cue is one whose phi in shapley_v2_results.json is above that image's
+median. In the other direction, a vocabulary cue that matches no GPT-4o cue is a candidate
+cue GPT-4o may have missed.
 
-运行:cue_extract/.venv/Scripts/python.exe -m cue_extract.compare_vocab
-     (或任意带 numpy 的 python;不需要 GPU)
+Run: cue_extract/.venv/Scripts/python.exe -m cue_extract.compare_vocab
+     (or any python with numpy; no GPU needed)
 """
 import argparse
 import glob
@@ -26,7 +29,7 @@ except Exception:
 
 import numpy as np
 
-from cue_extract.rle import rle_to_mask
+from cue_extract.common import cue_masks
 
 SAM3DIR = os.path.join(os.path.dirname(__file__), "results_sam3")
 VOCABDIR = os.path.join(os.path.dirname(__file__), "results_vocab")
@@ -38,24 +41,10 @@ REC_HIT = 0.7          # 像素召回阈值(词表盖住了 GPT-4o 线索的大�
 IOU_MATCHED = 0.1      # 判定"词表线索有对应 GPT-4o 线索"的宽松阈值
 
 
-def cue_masks(path):
-    """与 run_georanker_control.cue_masks_of 完全同口径 → [(cue, category, mask)]。"""
-    rec = json.load(open(path, encoding="utf-8"))
-    W, H = rec["image_size"]
-    out = []
-    for c in rec["geo_privacy_cues"]:
-        if not c.get("maskable"):
-            continue
-        good = [i for i in c["instances"] if not i.get("degenerate") and i.get("mask_rle")]
-        if not good:
-            continue
-        u = np.zeros((H, W), bool)
-        for i in good:
-            m = rle_to_mask(i["mask_rle"])
-            if m.shape == (H, W):
-                u |= m
-        out.append((c["cue"], c.get("category", "?"), u))
-    return out, (W, H)
+def cue_rows(path):
+    """cue_extract.common.cue_masks in the [(cue, category, mask)] shape this report uses."""
+    cues, cats, masks, size = cue_masks(path)
+    return list(zip(cues, [c if c is not None else "?" for c in cats], masks)), size
 
 
 def iou_recall(g, v):
@@ -65,8 +54,8 @@ def iou_recall(g, v):
 
 
 def analyse(iid, phi_by_cue, label):
-    gpt, (W, H) = cue_masks(os.path.join(SAM3DIR, iid + ".json"))
-    voc, _ = cue_masks(os.path.join(VOCABDIR, iid + ".json"))
+    gpt, (W, H) = cue_rows(os.path.join(SAM3DIR, iid + ".json"))
+    voc, _ = cue_rows(os.path.join(VOCABDIR, iid + ".json"))
     total = float(W * H)
     phis = [phi_by_cue.get(c, float("nan")) for c, _, _ in gpt]
     known = [p for p in phis if p == p]
@@ -113,7 +102,8 @@ def analyse(iid, phi_by_cue, label):
             "vocab_cues": [v[0] for v in voc], "unmatched_vocab": unmatched}
 
 
-def fmt(x, n=3):
+def _fmt(x, n=3):
+    """Fixed-point float, or "n/a" for nan (this report never sees None or inf)."""
     return "n/a" if x != x else f"{x:.{n}f}"
 
 
@@ -150,14 +140,14 @@ def main():
     for r in reports:
         L += ["", f"### {r['label']} — `{r['image_id']}`  ({r['size'][0]}x{r['size'][1]})",
               "", f"GPT-4o cues: {r['n_gpt']} | vocabulary cues: {r['n_vocab']} "
-                  f"| median phi: {fmt(r['median_phi'])}", "",
+                  f"| median phi: {_fmt(r['median_phi'])}", "",
               "| GPT-4o cue | category | phi | imp | area | best vocab match | IoU | recall |",
               "|---|---|---|---|---|---|---|---|"]
         for row in r["rows"]:
             allrows.append(row)
             if row["important"]:
                 imp.append(row)
-            L.append(f"| {row['cue']} | {row['category']} | {fmt(row['phi'])} | "
+            L.append(f"| {row['cue']} | {row['category']} | {_fmt(row['phi'])} | "
                      f"{'*' if row['important'] else ''} | {row['area_frac']*100:.1f}% | "
                      f"{row['best_iou_cue']} | {row['iou']:.3f} | {row['recall']:.3f} |")
         L += ["", f"Vocabulary cues present: {', '.join(r['vocab_cues']) or '(none)'}"]
@@ -181,11 +171,11 @@ def main():
         f2, _ = frac(rows, "recall", REC_HIT)
         mi = statistics.mean([x["iou"] for x in rows]) if rows else float("nan")
         mr = statistics.mean([x["recall"] for x in rows]) if rows else float("nan")
-        L += [f"- **{tag}** (n={n}): IoU >= {IOU_HIT} for {fmt(f1)} "
+        L += [f"- **{tag}** (n={n}): IoU >= {IOU_HIT} for {_fmt(f1)} "
               f"({sum(1 for x in rows if x['iou'] >= IOU_HIT)}/{n}); "
-              f"recall >= {REC_HIT} for {fmt(f2)} "
+              f"recall >= {REC_HIT} for {_fmt(f2)} "
               f"({sum(1 for x in rows if x['recall'] >= REC_HIT)}/{n}); "
-              f"mean IoU {fmt(mi)}, mean recall {fmt(mr)}."]
+              f"mean IoU {_fmt(mi)}, mean recall {_fmt(mr)}."]
     nun = sum(len(r["unmatched_vocab"]) for r in reports)
     nv = sum(r["n_vocab"] for r in reports)
     L += ["", f"- Vocabulary cues with no GPT-4o counterpart: {nun}/{nv} "

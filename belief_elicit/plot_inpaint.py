@@ -1,13 +1,14 @@
-"""修复(inpaint)vs 灰块 四联图。
+"""Inpainting vs gray-fill: a four-panel comparison.
 
-(a) 逐线索 v({k}):灰块 vs 修复(y=x 参考线)
-(b) 逐类别配对条形:灰块精确 φ vs 修复二阶锚定 φ
-(c) 成对交互 d_kl 直方图:修复 vs 灰块
-(d) 伪影地板直方图:优先同一放置的灰块 cg* vs 修复 c*(配对);没有 cg* 时回退到更早的
-    独立灰块对照跑(放置位置不同 → 非配对分布对照,图上明确标注)
+(a) per-cue v({k}): gray vs inpaint, against the y = x reference
+(b) per-category paired bars: exact gray phi vs second-order anchored inpaint phi
+(c) histogram of the pairwise interaction d_kl: inpaint vs gray
+(d) artifact-floor histogram: the paired same-placement gray cg* vs inpaint c* where
+    available, otherwise falling back to the earlier standalone gray control run (different
+    placements -> an unpaired distribution comparison, marked as such on the figure)
 
-数据来自 inpaint_report.py 落盘的 belief_elicit/<prefix>inpaint_summary.json(先跑它)。
-运行:python -m belief_elicit.plot_inpaint [--out-prefix vocab_] [--summary ...] [--out ...]
+Input is belief_elicit/<prefix>inpaint_summary.json, written by inpaint_report.py (run it first).
+Run: python -m belief_elicit.plot_inpaint [--out-prefix vocab_] [--summary ...] [--out ...]
 """
 import argparse
 import json
@@ -27,23 +28,23 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-plt.rcParams.update({"font.family": "DejaVu Sans", "axes.spines.top": False,
-                     "axes.spines.right": False})
+from belief_elicit.plotstyle import BLUE, GRAY, GREEN, RED, apply_style, save
+from belief_elicit.results import (FIGDIR, INPAINT_SUMMARY as SUMMARY,  # noqa: F401
+                                   SHAPLEY_V2, load_json)
 
+apply_style()
 HERE = os.path.dirname(os.path.abspath(__file__))
-SUMMARY = os.path.join(HERE, "inpaint_summary.json")
-OUT = os.path.join(HERE, "figures", "inpaint_vs_gray.png")
+OUT = os.path.join(FIGDIR, "inpaint_vs_gray.png")
 
 
 def default_paths(prefix=""):
-    """--out-prefix -> (summary json, figure png)。prefix="" 时与历史默认完全一致。"""
+    """--out-prefix -> (summary json, figure png); prefix="" reproduces the historical defaults."""
     return (os.path.join(HERE, f"{prefix}inpaint_summary.json"),
-            os.path.join(HERE, "figures", f"{prefix}inpaint_vs_gray.png"))
-BLUE, RED, GRAY, GREEN = "#1E88E5", "#E53935", "#B0BEC5", "#43A047"
+            os.path.join(FIGDIR, f"{prefix}inpaint_vs_gray.png"))
 
 
 def empty(ax, title, msg):
-    """数据还不够时的占位格:虚线框 + 说明,保持四联版式不塌。"""
+    """Placeholder cell when the data is not there yet, so the 2x2 layout does not collapse."""
     ax.set_title(title, fontsize=10.5)
     ax.text(0.5, 0.5, msg + "\n\n(partial run — rerun when scoring finishes)",
             ha="center", va="center", fontsize=9.5, color="#777",
@@ -55,9 +56,9 @@ def empty(ax, title, msg):
         s.set_visible(False)
 
 
-# ---------------- (a) 单条散点 ----------------
+# ---------------- (a) single-cue scatter ----------------
 
-def panel_a(ax, S):
+def panel_singles(ax, S):
     a = S["a"]
     rows = [x for x in a.get("scatter", []) if x.get("gray") is not None]
     if len(rows) < 2:
@@ -90,7 +91,7 @@ def panel_a(ax, S):
 
 # ---------------- (b) 逐类别 φ 配对条形 ----------------
 
-def panel_b(ax, S):
+def panel_phi_by_category(ax, S):
     b = S["b"]
     cats = b.get("per_category") or {}
     have_gray = any(d.get("phi_gray_median") is not None for d in cats.values())
@@ -144,7 +145,7 @@ def panel_b(ax, S):
 
 # ---------------- (c) 交互直方图 ----------------
 
-def panel_c(ax, S):
+def panel_interactions(ax, S):
     c = S["c"]
     inp = np.array([x["d_kl"] for x in c.get("interactions", [])], float)
     if len(inp) < 2:
@@ -178,7 +179,7 @@ def panel_c(ax, S):
 
 # ---------------- (d) 伪影地板 ----------------
 
-def panel_d(ax, S):
+def panel_floor(ax, S):
     """伪影地板。优先同位置配对 cg*;没有则回退到更早独立灰块跑的非配对分布对照。"""
     d = S["d"]
     if not d.get("available"):
@@ -246,7 +247,7 @@ def panel_d(ax, S):
 
 
 def gray_sii_values(S, shap_path):
-    """从 shapley_v2 结果里取出与 (c) 节同一批图的 SII 原始值(直方图用)。"""
+    """Raw SII values from the shapley_v2 results, restricted to section (c)'s images."""
     if not os.path.exists(shap_path) or not S["meta"].get("use_gray"):
         return None
     try:
@@ -260,12 +261,12 @@ def gray_sii_values(S, shap_path):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="inpaint vs gray 四联图")
+    ap = argparse.ArgumentParser(description="inpaint vs gray, four panels")
     ap.add_argument("--out-prefix", default="",
-                    help="输入/输出文件名前缀(默认空 = inpaint_summary.json / "
-                         "figures/inpaint_vs_gray.png;词表口径用 vocab_)")
+                    help="input/output filename prefix (default empty = inpaint_summary.json "
+                         "/ figures/inpaint_vs_gray.png; the vocabulary arm uses vocab_)")
     ap.add_argument("--summary", default=None)
-    ap.add_argument("--shapley", default=os.path.join(HERE, "shapley_v2_results.json"))
+    ap.add_argument("--shapley", default=SHAPLEY_V2)
     ap.add_argument("--out", default=None)
     a = ap.parse_args()
 
@@ -278,14 +279,14 @@ def main():
     if not os.path.exists(a.summary):
         print(f"[fatal] 找不到 {a.summary};先跑 python -m belief_elicit.inpaint_report")
         return 1
-    S = json.load(open(a.summary, encoding="utf-8"))
+    S = load_json(a.summary)
     S["_gray_sii_values"] = gray_sii_values(S, a.shapley)
 
     fig, axes = plt.subplots(2, 2, figsize=(14.5, 11))
-    panel_a(axes[0, 0], S)
-    panel_b(axes[0, 1], S)
-    panel_c(axes[1, 0], S)
-    panel_d(axes[1, 1], S)
+    panel_singles(axes[0, 0], S)
+    panel_phi_by_category(axes[0, 1], S)
+    panel_interactions(axes[1, 0], S)
+    panel_floor(axes[1, 1], S)
 
     m = S["meta"]
     fig.suptitle("Inpainting vs gray-fill masking: per-cue location leakage "
@@ -293,9 +294,7 @@ def main():
                  + ("" if m["use_gray"] else ", vocabulary run — no gray baseline") + ")",
                  fontsize=13, y=0.985)
     fig.tight_layout(rect=(0, 0, 1, 0.965))
-    os.makedirs(os.path.dirname(a.out), exist_ok=True)
-    fig.savefig(a.out, bbox_inches="tight", dpi=130)
-    print("saved", a.out)
+    save(fig, a.out, dpi=130)
     return 0
 
 

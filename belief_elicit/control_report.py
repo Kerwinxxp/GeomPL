@@ -1,7 +1,11 @@
-"""全量等面积对照分析 + 伪影修正 Shapley(φ' = φ − c_img/m)。
-运行:python -m belief_elicit.control_report
+"""Full equal-area control analysis + artifact-corrected Shapley (phi' = phi - c_img/m).
+
+Reads the control placements and shapley_v2 attribution; prints the artifact floor, the
+per-cue and per-category resolvability, and how the category ranking moves once the
+image-level artifact constant is subtracted. Nothing is written to disk.
+
+Run: python -m belief_elicit.control_report
 """
-import json
 import os
 import sys
 from collections import defaultdict
@@ -15,13 +19,13 @@ except Exception:
 
 import numpy as np
 
-CTRL = os.path.join(os.path.dirname(__file__), "georanker_control_results.json")
-SHAP = os.path.join(os.path.dirname(__file__), "shapley_v2_results.json")
+from belief_elicit.results import (CONTROLS as CTRL, SHAPLEY_V2 as SHAP, by_image,
+                                   load_controls, load_shapley)
 
 
 def main():
-    C = json.load(open(CTRL, encoding="utf-8"))
-    S = {r["image_id"]: r for r in json.load(open(SHAP, encoding="utf-8"))}
+    C = load_controls(CTRL)
+    S = by_image(load_shapley(SHAP))
 
     cues, c_img = [], {}
     for r in C:
@@ -55,7 +59,7 @@ def main():
           f"  与 v(N) 相关 r={np.corrcoef([c_img[r['image_id']] for r in C], [r['vN'] for r in C])[0,1]:+.2f}")
     print(f"④ 伪影与面积相关: r={np.corrcoef([x['area'] for x in cues], cmean)[0,1]:+.2f}\n")
 
-    # 按类别的可分辨率
+    # resolvability by category
     by = defaultdict(list)
     for x, rs in zip(cues, resolv):
         by[x["cat"] or "unknown"].append(bool(rs))
@@ -63,7 +67,7 @@ def main():
     for k in sorted(by, key=lambda k: -np.mean(by[k])):
         print(f"   {k:24s} {np.mean(by[k])*100:5.1f}%  (n={len(by[k])})")
 
-    # 伪影修正 Shapley:φ' = φ − c_img/m
+    # artifact-corrected Shapley: phi' = phi - c_img/m
     cat_phi, cat_phic = defaultdict(list), defaultdict(list)
     n_neg = 0
     for iid, s in S.items():

@@ -1,8 +1,10 @@
-"""GeoRanker 100 张 sweep 汇总图(与 GeoCLIP 版并排可比)。
-① 精度体检:km 误差分档 + 国家命中率;② p_true 分布;③ 逐类别单线索 mPL(country_hit 图)。
-运行(主环境):python -m belief_elicit.plot_georanker_sweep
+"""Summary figure for the 100-image GeoRanker sweep (comparable side by side with GeoCLIP).
+
+(a) accuracy check: km-error thresholds + country hit rate; (b) p_true distribution;
+(c) per-category single-cue mPL.
+
+Run (main environment): python -m belief_elicit.plot_georanker_sweep
 """
-import json
 import os
 import sys
 from collections import defaultdict
@@ -15,15 +17,15 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-plt.rcParams.update({"font.family": "DejaVu Sans", "axes.spines.top": False,
-                     "axes.spines.right": False})
-DATA = os.path.join(os.path.dirname(__file__), "georanker_sweep_results.json")
-OUT = os.path.join(os.path.dirname(__file__), "figures", "georanker_sweep.png")
-BLUE, GREEN, ORANGE = "#1E88E5", "#43A047", "#FB8C00"
+from belief_elicit.plotstyle import BLUE, GREEN, ORANGE, apply_style, save
+from belief_elicit.results import FIGDIR, SWEEP as DATA, load_sweep
+
+apply_style()
+OUT = os.path.join(FIGDIR, "georanker_sweep.png")
 
 
 def main():
-    R = json.load(open(DATA, encoding="utf-8"))
+    R = load_sweep(DATA)
     km = np.array([r["km_error"] for r in R])
     fig, ax = plt.subplots(1, 3, figsize=(18, 5.2))
 
@@ -48,7 +50,7 @@ def main():
     ax[1].set_title("(b) Confidence on the true location", fontsize=11)
     ax[1].grid(axis="y", color="#EEE", zorder=0); ax[1].set_axisbelow(True)
 
-    good = R  # 全部 maskable 图(与正文基线一致);country-hit 为分层,不在此图
+    good = R  # every maskable image (matching the main baseline); hit/miss is a stratum
     cat = defaultdict(list)
     for r in good:
         for c in r["per_cue"]:
@@ -67,9 +69,7 @@ def main():
     fig.suptitle("GeoRanker (Qwen2-VL-7B) belief meter on 100 images — accuracy + per-cue leakage "
                  "(Geo-I geometry, 2km merge)", fontsize=13, y=1.02)
     fig.tight_layout()
-    os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    fig.savefig(OUT, bbox_inches="tight", dpi=120)
-    print("saved", OUT)
+    save(fig, OUT, dpi=120)
 
 
 if __name__ == "__main__":

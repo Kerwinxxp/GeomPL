@@ -8,7 +8,6 @@ Run:  python -m belief_elicit.plot_pipeline_v2
 """
 import glob
 import itertools
-import json
 import os
 import sys
 
@@ -27,22 +26,22 @@ from matplotlib.gridspec import GridSpec
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch, Patch
 from PIL import Image
 
+from belief_elicit.attribution import order2_shapley
+from belief_elicit.cues import cue_masks_of
 from belief_elicit.masking import mask_solid_from_masks
-from belief_elicit.order2_shapley import order2_shapley
-from belief_elicit.precompute_inpaint import cue_masks_of, load_subset_paths
+from belief_elicit.plotstyle import (BLUE, GRAY, GREEN, INK, ORANGE, RED, apply_style,
+                                     save, short)
+from belief_elicit.results import (DEDUP_GROUPS, FIGDIR, INPAINT, INPAINT_CACHE,
+                                   INPAINT_CONTROLS, SAM3_DIR, SWEEP, image_path,
+                                   load_inpaint, load_json, load_manifest, load_subsets,
+                                   load_sweep)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-FIGDIR = os.path.join(HERE, "figures")
 IID_PREFIX = "158307292"
 
-BLUE, RED, GRAY, GREEN, ORANGE = "#1E88E5", "#E53935", "#B0BEC5", "#43A047", "#FB8C00"
 CUE_COLORS = [BLUE, RED, GREEN, ORANGE]
-INK = "#212121"
 
-plt.rcParams.update({
-    "font.family": "DejaVu Sans",
-    "axes.spines.top": False,
-    "axes.spines.right": False,
+apply_style(extra={
     "axes.edgecolor": "#607D8B",
     "text.color": INK,
     "axes.labelcolor": INK,
@@ -68,26 +67,18 @@ def fhead(fig, x, y, step, title, caption, fs=13.5, cfs=9.2):
 # ------------------------------------------------------------------ data ----
 
 def load_case():
-    sweep = json.load(open(os.path.join(HERE, "georanker_sweep_results.json"),
-                           encoding="utf-8"))
+    sweep = load_sweep(SWEEP)
     rec = [r for r in sweep if r["image_id"].startswith(IID_PREFIX)][0]
     iid = rec["image_id"]
 
-    inp = {r["image_id"]: r for r in json.load(
-        open(os.path.join(HERE, "georanker_inpaint_results.json"), encoding="utf-8"))}[iid]
-    ctl = {r["image_id"]: r for r in json.load(
-        open(os.path.join(HERE, "georanker_inpaint_control_results.json"),
-             encoding="utf-8"))}[iid]
-    ded = json.load(open(os.path.join(HERE, "cue_dedup_groups.json"),
-                         encoding="utf-8"))
-    cache = os.path.join(HERE, "inpaint_cache", iid)
-    manifest = json.load(open(os.path.join(cache, "manifest.json"), encoding="utf-8"))
+    inp = load_inpaint(INPAINT)[iid]
+    ctl = load_inpaint(INPAINT_CONTROLS)[iid]
+    ded = load_json(DEDUP_GROUPS)
+    cache = os.path.join(INPAINT_CACHE, iid)
+    manifest = load_manifest(cache)
 
-    cues, cats, masks, (W, H) = cue_masks_of(
-        os.path.join(ROOT, "cue_extract", "results_sam3"), iid)
-    p = load_subset_paths()[iid]["path"]
-    p = p if os.path.isabs(p) else os.path.join(ROOT, p)
-    img = Image.open(p).resize((W, H)).convert("RGB")
+    cues, cats, masks, (W, H) = cue_masks_of(SAM3_DIR, iid)
+    img = Image.open(image_path(load_subsets()[iid])).resize((W, H)).convert("RGB")
 
     V = {v["spec"]: v for v in inp["variants"]}
     m = len(cues)
@@ -166,11 +157,6 @@ def panel_removal(ax_g, ax_i, D, k=2):
 
 # --------------------------------------------------- panel 3: beliefs -------
 
-def short(lbl):
-    a = lbl.split(",")[0]
-    return a if len(a) <= 17 else a[:16] + "…"
-
-
 def fmt_p(v):
     return f"{v:.3f}" if v >= 0.001 else f"{v:.4f}"
 
@@ -193,7 +179,7 @@ def panel_belief(axes, D, k=2, topn=8):
         ax.tick_params(labelsize=8)
         ax.set_xticks([0, 0.2, 0.4])
         ax.set_yticks(y)
-        ax.set_yticklabels([short(l) for l in order] if ax is axes[0] else [], fontsize=8.4)
+        ax.set_yticklabels([short(l, 17) for l in order] if ax is axes[0] else [], fontsize=8.4)
         for yy, v, l in zip(y, vals, order):
             ax.text(v + 0.014, yy, fmt_p(v), va="center", fontsize=7.6,
                     color=INK if l == true else "#78909C",
@@ -408,9 +394,7 @@ def figure_walkthrough(D):
              ha="center", va="center", fontsize=8.6, color="#455A64")
 
     out = os.path.join(FIGDIR, "pipeline_v2_walkthrough.png")
-    fig.savefig(out, dpi=130, facecolor="white")
-    plt.close(fig)
-    print("saved", out)
+    save(fig, out, dpi=130, bbox_inches=None, close=True, facecolor="white")
     return out
 
 
@@ -517,9 +501,7 @@ def figure_diagram():
              fontsize=9.6, color="#455A64", ha="left")
 
     out = os.path.join(FIGDIR, "pipeline_v2_diagram.png")
-    fig.savefig(out, dpi=130, facecolor="white")
-    plt.close(fig)
-    print("saved", out)
+    save(fig, out, dpi=130, bbox_inches=None, close=True, facecolor="white")
     return out
 
 

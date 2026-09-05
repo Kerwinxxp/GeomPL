@@ -32,21 +32,15 @@ except Exception:
 
 import numpy as np
 
-from belief_elicit.alt_attribution import harsanyi, min_sufficient
+from belief_elicit.attribution import harsanyi, min_sufficient
 from belief_elicit.dedup_cues import OUT as GROUPS_DEFAULT
-from belief_elicit.shapley_v2 import build_v
-from belief_elicit.shapley_v3 import merged_v
+from belief_elicit.results import (CONTROLS as GRAY_CTRL, DEDUP_REPORT_JSON as OUT_JSON,
+                                   DEDUP_REPORT_MD as OUT_MD, INPAINT,
+                                   INPAINT_CONTROLS as INPAINT_CTRL, LATTICE,
+                                   SHAPLEY_V2 as V2, SHAPLEY_V3 as V3, SWEEP, build_v,
+                                   by_image, load_sweep, merged_v)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-V2 = os.path.join(HERE, "shapley_v2_results.json")
-V3 = os.path.join(HERE, "shapley_v3_results.json")
-SWEEP = os.path.join(HERE, "georanker_sweep_results.json")
-LATTICE = os.path.join(HERE, "georanker_lattice_results.json")
-INPAINT = os.path.join(HERE, "georanker_inpaint_results.json")
-INPAINT_CTRL = os.path.join(HERE, "georanker_inpaint_control_results.json")
-GRAY_CTRL = os.path.join(HERE, "georanker_control_results.json")
-OUT_MD = os.path.join(HERE, "dedup_report.md")
-OUT_JSON = os.path.join(HERE, "dedup_report.json")
 
 
 def cat_stats(rows):
@@ -70,7 +64,7 @@ def sii_bins(rows):
 
 
 def resolvability_before(sweep, gctrl, inpaint, ictrl):
-    """去重前:灰块 real=v({k}) vs 自身对照最大;修复 real=s<k> vs 自身 c<k>-* 最大。"""
+    """Before de-dup: gray real = v({k}) vs its own control max; inpaint s<k> vs its c<k>-* max."""
     g_flags, i_flags = [], []
     for r in sweep:
         iid = r["image_id"]
@@ -98,7 +92,7 @@ def resolvability_before(sweep, gctrl, inpaint, ictrl):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="几何去重 BEFORE/AFTER 报告")
+    ap = argparse.ArgumentParser(description="geometric de-dup BEFORE/AFTER report")
     ap.add_argument("--before", default=V2)
     ap.add_argument("--after", default=V3)
     ap.add_argument("--groups", default=GROUPS_DEFAULT)
@@ -112,11 +106,11 @@ def main():
     G = GD["images"]
     Bi = {r["image_id"]: r for r in B}
     Ai = {r["image_id"]: r for r in A}
-    sweep = json.load(open(SWEEP, encoding="utf-8"))
-    lattice = {r["image_id"]: r for r in json.load(open(LATTICE, encoding="utf-8"))}
-    inpaint = {r["image_id"]: r for r in json.load(open(INPAINT, encoding="utf-8"))}
-    ictrl = {r["image_id"]: r for r in json.load(open(INPAINT_CTRL, encoding="utf-8"))}
-    gctrl = {r["image_id"]: r for r in json.load(open(GRAY_CTRL, encoding="utf-8"))}
+    sweep = load_sweep(SWEEP)
+    lattice = by_image(load_sweep(LATTICE))
+    inpaint = by_image(load_sweep(INPAINT))
+    ictrl = by_image(load_sweep(INPAINT_CTRL))
+    gctrl = by_image(load_sweep(GRAY_CTRL))
 
     S = {"meta": {"before": os.path.basename(a.before), "after": os.path.basename(a.after),
                   "iou_threshold": GD["meta"]["iou_threshold"],

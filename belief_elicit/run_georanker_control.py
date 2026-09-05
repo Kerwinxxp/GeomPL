@@ -1,15 +1,17 @@
-"""等面积对照(GeoRanker 版):测"遮蔽伪影地板"。
+"""Equal-area control (GeoRanker): measure the masking-artifact floor.
 
-对每条真线索:把它的 SAM3 掩码平移到随机非线索位置(形状/面积不变,避开全部线索并集),
-同管线(变体 B / gallery_v2 / 2km 几何)打分 → 对照 mPL。
-若 对照 ≈ 真线索,则 mPL 量的是"遮了一块"的伪影而非该线索的信息 —— 这是当年在
-GPT-4o 仪器上实测到的问题,本脚本在 GeoRanker 上闭环验证。
+For every real cue, translate its SAM 3 mask to a random non-cue location (same shape and
+area, avoiding the union of all cues) and score it through the same pipeline (variant B /
+gallery_v2 / 2 km geometry) -> control mPL. If control ~ real cue, then mPL is measuring the
+artifact of "something was masked" rather than that cue's information — the failure mode
+first observed on the GPT-4o meter, closed-loop-verified here on GeoRanker.
 
-选图:按 v(N) 分位数均匀取 10 张 + 强制含 NY/Bled/Cuba 案例图;每线索 nctrl=3 个放置。
-增量保存 + 断点续跑。真线索 mPL 直接复用 sweep(同后验,零额外打分)。
-运行:belief_elicit/.venv_gr/Scripts/python.exe -m belief_elicit.run_georanker_control
+Image selection: 10 images spread evenly over the v(N) quantiles + the NY / Bled / Cuba case
+images; nctrl = 3 placements per cue. Incremental saves + resume. The real-cue mPL is reused
+from the sweep (same posterior, no extra scoring).
+
+Run: belief_elicit/.venv_gr/Scripts/python.exe -m belief_elicit.run_georanker_control
 """
-import glob
 import json
 import os
 import sys
@@ -25,85 +27,31 @@ except Exception:
 import numpy as np
 from PIL import Image
 
+from belief_elicit.cues import cue_masks_of, sample_control, translate_mask  # noqa: F401
 from belief_elicit.geometry import build_geometry, mpl
 from belief_elicit.georanker_belief import score_labels
 from belief_elicit.masking import mask_solid_from_masks
-from cue_extract.rle import rle_to_mask
+from belief_elicit.results import (CONTROLS as OUT, SAM3_DIR, SWEEP, by_image, image_path,
+                                   load_gallery, load_subsets, load_sweep)
 
-SWEEP = os.path.join(os.path.dirname(__file__), "georanker_sweep_results.json")
-OUT = os.path.join(os.path.dirname(__file__), "georanker_control_results.json")
 MERGE_KM, SEED, NPICK = 2.0, 42, 10
-FORCE = ["158307292", "754780171", "370717727"]      # NY / Bled / Cuba 案例图
-
-
-def translate_mask(mask, dx, dy):
-    H, W = mask.shape
-    out = np.zeros_like(mask)
-    ys, xs = np.nonzero(mask)
-    ny, nx = ys + dy, xs + dx
-    ok = (ny >= 0) & (ny < H) & (nx >= 0) & (nx < W)
-    out[ny[ok], nx[ok]] = True
-    return out
-
-
-def sample_control(cue_mask, cue_union, rng, tries=40):
-    """随机平移:与线索并集重叠尽量小、越界不超 10%。返回 (mask, overlap_frac)。"""
-    H, W = cue_mask.shape
-    ys, xs = np.nonzero(cue_mask)
-    y0, y1, x0, x1 = ys.min(), ys.max(), xs.min(), xs.max()
-    area = int(cue_mask.sum())
-    best, best_bad = None, 10 ** 18
-    for _ in range(tries):
-        dx = int(rng.integers(-x0, W - 1 - x1)) if x1 - x0 < W - 1 else 0
-        dy = int(rng.integers(-y0, H - 1 - y1)) if y1 - y0 < H - 1 else 0
-        t = translate_mask(cue_mask, dx, dy)
-        if t.sum() < 0.9 * area:
-            continue
-        ov = int((t & cue_union).sum())
-        if ov < best_bad:
-            best_bad, best = ov, t
-        if ov == 0:
-            break
-    return best, (best_bad / max(area, 1) if best is not None else None)
-
-
-def cue_masks_of(iid):
-    rec = json.load(open(os.path.join(ROOT, "cue_extract", "results_sam3", iid + ".json"),
-                         encoding="utf-8"))
-    W, H = rec["image_size"]
-    cues, masks = [], []
-    for c in rec["geo_privacy_cues"]:
-        if not c.get("maskable"):
-            continue
-        good = [i for i in c["instances"] if not i.get("degenerate") and i.get("mask_rle")]
-        if not good:
-            continue
-        u = np.zeros((H, W), bool)
-        for i in good:
-            m = rle_to_mask(i["mask_rle"])
-            if m.shape == (H, W):
-                u |= m
-        cues.append(c["cue"]); masks.append(u)
-    return cues, masks, (W, H)
+FORCE = ["158307292", "754780171", "370717727"]      # the NY / Bled / Cuba case images
 
 
 def main():
     import argparse
     ap = argparse.ArgumentParser()
-    ap.add_argument("--all", action="store_true", help="跑全部 maskable 图(否则分位抽样)")
-    ap.add_argument("--nctrl", type=int, default=3, help="每线索随机放置数")
+    ap.add_argument("--all", action="store_true",
+                    help="run every maskable image (otherwise sample by quantile)")
+    ap.add_argument("--nctrl", type=int, default=3, help="random placements per cue")
     args = ap.parse_args()
     NCTRL = args.nctrl
-    gv = [g for g in json.load(open(os.path.join(ROOT, "data", "gallery_v2.json"),
-                                    encoding="utf-8")) if g["gps"]]
+    gv = load_gallery()
     rep, clusters, dist = build_geometry(gv, merge_km=MERGE_KM)
-    subset = {}
-    for f in sorted(glob.glob(os.path.join(ROOT, "data", "subset*.jsonl"))):
-        for line in open(f, encoding="utf-8"):
-            it = json.loads(line); subset[it["image_id"]] = it
-    sweep = {r["image_id"]: r for r in json.load(open(SWEEP, encoding="utf-8"))}
+    subset = load_subsets()
+    sweep = by_image(load_sweep(SWEEP))
 
-    # ---- 选图:按 v(N) 排序取分位 + 强制案例图 ----
+    # ---- image selection: quantiles of v(N) + the forced case images ----
     cand = sorted((r for r in sweep.values() if r["n_cues"] >= 1),
                   key=lambda r: r["mpl_all"])
     if args.all:
@@ -131,13 +79,12 @@ def main():
         if iid in done:
             continue
         r = sweep[iid]
-        cues, masks, (W, H) = cue_masks_of(iid)
+        cues, _cats, masks, (W, H) = cue_masks_of(SAM3_DIR, iid)
         assert cues == [pc["cue"] for pc in r["per_cue"]], f"cue 顺序不一致 {iid}"
         union = np.zeros((H, W), bool)
         for m_ in masks:
             union |= m_
-        p = subset[iid]["path"]; p = p if os.path.isabs(p) else os.path.join(ROOT, p)
-        img = Image.open(p).resize((W, H)).convert("RGB")
+        img = Image.open(image_path(subset[iid])).resize((W, H)).convert("RGB")
         post = r["posterior"]
 
         rec_out = {"image_id": iid, "true_label": r["true_label"],

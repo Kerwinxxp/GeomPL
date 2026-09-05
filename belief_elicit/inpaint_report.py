@@ -42,40 +42,29 @@ except Exception:
 
 import numpy as np
 
-from belief_elicit.order2_shapley import order2_shapley, spearman
+from belief_elicit.attribution import order2_shapley, spearman
+from belief_elicit.plotstyle import fmt
+from belief_elicit.results import (CONTROLS as GRAY_CONTROLS, INPAINT as RESULTS,
+                                   INPAINT_CACHE as CACHE,
+                                   INPAINT_CONTROLS as CONTROLS, SHAPLEY_V2 as SHAP, SWEEP,
+                                   index_variants, load_json, load_manifest)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-RESULTS = os.path.join(HERE, "georanker_inpaint_results.json")
-CONTROLS = os.path.join(HERE, "georanker_inpaint_control_results.json")
-GRAY_CONTROLS = os.path.join(HERE, "georanker_control_results.json")
-CACHE = os.path.join(HERE, "inpaint_cache")
-SWEEP = os.path.join(HERE, "georanker_sweep_results.json")
-SHAP = os.path.join(HERE, "shapley_v2_results.json")
 OUT_MD = os.path.join(HERE, "inpaint_report.md")
 OUT_JSON = os.path.join(HERE, "inpaint_summary.json")
 
 
 def default_outputs(prefix=""):
-    """--out-prefix -> (report md, summary json)。prefix="" 时与历史默认完全一致。"""
+    """--out-prefix -> (report md, summary json); prefix="" reproduces the historical defaults."""
     return (os.path.join(HERE, f"{prefix}inpaint_report.md"),
             os.path.join(HERE, f"{prefix}inpaint_summary.json"))
 
 
-# ---------------- 载入 ----------------
-
-def load_json(p, default=None):
-    if not p or not os.path.exists(p):
-        return default
-    try:
-        return json.load(open(p, encoding="utf-8"))
-    except Exception as e:
-        print(f"[warn] 读不了 {p}: {e}", flush=True)
-        return default
-
+# ---------------- loading ----------------
 
 def manifest_cues(cache, iid):
-    """<cache>/<iid>/manifest.json → [{cue, category, area_frac}, ...];失败返回 None。"""
-    d = load_json(os.path.join(cache, iid, "manifest.json"))
+    """<cache>/<iid>/manifest.json -> [{cue, category, area_frac}, ...]; None on failure."""
+    d = load_manifest(os.path.join(cache, iid))
     if not isinstance(d, dict):
         return None
     cs = d.get("cues")
@@ -92,7 +81,7 @@ def manifest_cues(cache, iid):
 
 
 def cue_meta(rec, mode, cache, sweep_by_id):
-    """逐图线索元数据 [{cue, category, area_frac}]。返回 None 表示不可用。"""
+    """Per-image cue metadata [{cue, category, area_frac}]; None when unavailable."""
     iid = rec["image_id"]
     if mode == "manifest":
         return manifest_cues(cache, iid)
@@ -108,21 +97,12 @@ def cue_meta(rec, mode, cache, sweep_by_id):
              "area_frac": None} for i, n in enumerate(names)]
 
 
-def index_variants(rec):
-    """变体记录 → {spec: rec}。"""
-    return {v["spec"]: v for v in rec.get("variants", [])}
-
-
 def med(a):
     a = np.asarray([x for x in a if x is not None and np.isfinite(x)], float)
     return float(np.median(a)) if len(a) else float("nan")
 
 
-def fmt(x, n=4):
-    return "n/a" if x is None or not np.isfinite(x) else f"{x:.{n}f}"
-
-
-# ---------------- (a) 单条移除 ----------------
+# ---------------- (a) single-cue removal ----------------
 
 def section_a(records, meta_by_id, use_gray):
     rows, n_img = [], 0

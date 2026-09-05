@@ -1,16 +1,15 @@
-"""几何去重前后对照图。
+"""Before/after figure for the geometric de-duplication.
 
-(a) 逐类别 φ 中位 before vs after(成对条形);
-(b) SII 直方图 before vs after;
-(c) 合并组散点:Σφ(成员, before) vs φ(合并, after),带 y=x;
-(d) 合并组清单文本框。
+(a) per-category median phi, before vs after (paired bars);
+(b) SII histogram, before vs after;
+(c) merged-group scatter: sum phi(members, before) vs phi(merged, after), with y = x;
+(d) a text panel listing the merged groups.
 
-输入:shapley_v2_results.json / shapley_v3_results.json / cue_dedup_groups.json
-产物:belief_elicit/figures/dedup_before_after.png
-运行:python -m belief_elicit.plot_dedup
+Input:  shapley_v2_results.json / shapley_v3_results.json / cue_dedup_groups.json
+Output: belief_elicit/figures/dedup_before_after.png
+Run: python -m belief_elicit.plot_dedup
 """
 import argparse
-import json
 import os
 import sys
 from collections import defaultdict
@@ -23,15 +22,12 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-plt.rcParams.update({"font.family": "DejaVu Sans", "axes.spines.top": False,
-                     "axes.spines.right": False})
+from belief_elicit.plotstyle import BLUE, GRAY, GREEN, RED, apply_style, save
+from belief_elicit.results import (DEDUP_GROUPS as GROUPS, FIGDIR, SHAPLEY_V2 as V2,
+                                   SHAPLEY_V3 as V3, by_image, load_json, load_shapley)
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-V2 = os.path.join(HERE, "shapley_v2_results.json")
-V3 = os.path.join(HERE, "shapley_v3_results.json")
-GROUPS = os.path.join(HERE, "cue_dedup_groups.json")
-OUT = os.path.join(HERE, "figures", "dedup_before_after.png")
-BLUE, RED, GRAY, GREEN = "#1E88E5", "#E53935", "#B0BEC5", "#43A047"
+apply_style()
+OUT = os.path.join(FIGDIR, "dedup_before_after.png")
 
 
 def cat_median_phi(rows):
@@ -50,18 +46,18 @@ def main():
     ap.add_argument("--out", default=OUT)
     a = ap.parse_args()
 
-    B = json.load(open(a.before, encoding="utf-8"))
-    A = json.load(open(a.after, encoding="utf-8"))
-    G = json.load(open(a.groups, encoding="utf-8"))["images"]
-    Bi = {r["image_id"]: r for r in B}
-    Ai = {r["image_id"]: r for r in A}
+    B = load_shapley(a.before)
+    A = load_shapley(a.after)
+    G = load_json(a.groups)["images"]
+    Bi = by_image(B)
+    Ai = by_image(A)
 
     cb, ca = cat_median_phi(B), cat_median_phi(A)
     cats = sorted(set(cb) | set(ca), key=lambda k: -ca.get(k, (-9, 0))[0])
 
     sii_b = np.array([x for r in B for x in r["sii"].values()], float)
     sii_a = np.array([x for r in A for x in r["sii"].values()], float)
-    # 去重前"两端同属一个合并组"的对(= 纯几何重复造出来的假交互)
+    # before-pairs whose two ends land in the same merged group (= a purely geometric artefact)
     dup_overlap = 0
     for iid, d in G.items():
         gmap = d["index_map"]
@@ -92,7 +88,7 @@ def main():
     ax_c = fig.add_subplot(gs[1, 0])
     ax_d = fig.add_subplot(gs[1, 1])
 
-    # ---- (a) 逐类别 φ 中位 ----
+    # ---- (a) per-category median phi ----
     y = np.arange(len(cats))[::-1]
     h = 0.38
     mb = [cb.get(k, (np.nan, 0))[0] for k in cats]
@@ -113,7 +109,7 @@ def main():
     ax_a.grid(axis="x", color="#EEE", zorder=0)
     ax_a.set_axisbelow(True)
 
-    # ---- (b) SII 直方图 ----
+    # ---- (b) SII histogram ----
     lo = min(sii_b.min(), sii_a.min())
     hi = max(sii_b.max(), sii_a.max())
     bins = np.linspace(lo, hi, 46)
@@ -140,7 +136,7 @@ def main():
     ax_b.grid(color="#EEE", zorder=0)
     ax_b.set_axisbelow(True)
 
-    # ---- (c) 合并组 Σφ before vs φ after ----
+    # ---- (c) merged groups: sum phi before vs phi after ----
     xs = np.array([p["sum_before"] for p in pts])
     ys = np.array([p["after"] for p in pts])
     lim = max(xs.max(), ys.max()) * 1.12
@@ -153,7 +149,7 @@ def main():
     ax_c.scatter(xs[~full], ys[~full], s=40 + 26 * np.array([p["n"] for p in pts])[~full],
                  c=BLUE, alpha=0.85, edgecolors="white", linewidths=0.7, zorder=4,
                  label=f"group ⊂ image ({int((~full).sum())})")
-    # 标注:按 Σφ 排序后在四个方位轮换摆放,避免密集区互相压字
+    # labels: sort by sum phi and rotate through four offsets so dense areas stay readable
     quads = [(9, 9), (9, -15), (-9, 9), (-9, -15)]
     for rank, i in enumerate(np.argsort(xs)):
         p = pts[i]
@@ -172,7 +168,7 @@ def main():
     ax_c.grid(color="#EEE", zorder=0)
     ax_c.set_axisbelow(True)
 
-    # ---- (d) 合并组清单 ----
+    # ---- (d) merged-group listing ----
     ax_d.axis("off")
     lines = ["Merged groups (mask IoU ≥ 0.90, union-find)", ""]
     for p in sorted(pts, key=lambda x: (-x["iou"], x["place"])):
@@ -187,9 +183,7 @@ def main():
     fig.suptitle("Geometric de-duplication of the GPT-4o cue inventory "
                  "(244 cues → 223 players on 95 images; 14 images affected)",
                  fontsize=13, y=0.975)
-    os.makedirs(os.path.dirname(a.out), exist_ok=True)
-    fig.savefig(a.out, bbox_inches="tight", dpi=130)
-    print("saved", a.out)
+    save(fig, a.out, dpi=130)
 
 
 if __name__ == "__main__":

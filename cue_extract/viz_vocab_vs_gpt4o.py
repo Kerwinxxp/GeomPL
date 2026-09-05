@@ -1,7 +1,9 @@
-"""对照大图:每张图两栏 —— 左 = GPT-4o 线索掩码,右 = 固定词表线索掩码(编号 + 图例)。
+"""Side-by-side overlay sheet: per image, GPT-4o cue masks (left) vs fixed-vocabulary masks
+(right), numbered and with a legend.
 
-输出 cue_extract/figures/vocab_vs_gpt4o.png。人眼 QA 用:看掩码是不是落在对的物体上。
-运行:cue_extract/.venv/Scripts/python.exe -m cue_extract.viz_vocab_vs_gpt4o
+Writes cue_extract/figures/vocab_vs_gpt4o.png. For human QA: are the masks on the right objects?
+
+Run: cue_extract/.venv/Scripts/python.exe -m cue_extract.viz_vocab_vs_gpt4o
 """
 import glob
 import json
@@ -21,7 +23,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 
-from cue_extract.rle import rle_to_mask
+from cue_extract.common import cue_masks
 from cue_extract.viz import COLORS
 
 SAM3DIR = os.path.join(os.path.dirname(__file__), "results_sam3")
@@ -30,22 +32,9 @@ OUT = os.path.join(os.path.dirname(__file__), "figures", "vocab_vs_gpt4o.png")
 
 
 def masks_of(path):
-    rec = json.load(open(path, encoding="utf-8"))
-    W, H = rec["image_size"]
-    out = []
-    for c in rec["geo_privacy_cues"]:
-        if not c.get("maskable"):
-            continue
-        good = [i for i in c["instances"] if not i.get("degenerate") and i.get("mask_rle")]
-        if not good:
-            continue
-        u = np.zeros((H, W), bool)
-        for i in good:
-            m = rle_to_mask(i["mask_rle"])
-            if m.shape == (H, W):
-                u |= m
-        out.append((c["cue"], u))
-    return out, (W, H)
+    """cue_extract.common.cue_masks in the [(cue, mask)] shape this figure uses."""
+    cues, _cats, masks, size = cue_masks(path)
+    return list(zip(cues, masks)), size
 
 
 def panel(ax, img, cues, title):

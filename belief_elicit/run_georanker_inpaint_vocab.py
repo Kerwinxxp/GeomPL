@@ -1,33 +1,39 @@
-"""词表(vocab)口径修复缓存的 GeoRanker 打分 —— run_georanker_inpaint.py 的薄包装。
+"""GeoRanker scoring for the fixed-vocabulary inpaint cache - a thin wrapper over
+run_georanker_inpaint.py.
 
-**为什么需要它**:run_georanker_inpaint.py 的线索元数据全部取自 sweep 的 `per_cue`
-(`r["per_cue"][k]["cue"]` / `["category"]` / `["mpl"]`、`r["n_cues"]`、`r["mpl_all"]`)。
-inpaint_cache_vocab 来自 cue_extract/results_vocab,**线索表与 sweep 完全不同**
-(10 张图逐一核对:sweep 3 条 vs 词表 7 条、4 vs 6、3 vs 1、1 vs 2 ……,首条线索名也全不一样)。
-直接跑它会:
+**Why it is needed**: run_georanker_inpaint.py takes all of its cue metadata from the
+sweep's `per_cue` (`r["per_cue"][k]["cue"]` / `["category"]` / `["mpl"]`, `r["n_cues"]`,
+`r["mpl_all"]`). inpaint_cache_vocab comes from cue_extract/results_vocab, whose **cue list
+is completely different** from the sweep's (checked image by image across the 10: sweep 3
+cues vs vocabulary 7, 4 vs 6, 3 vs 1, 1 vs 2, ...; even the first cue name differs).
+Running it directly would:
 
-  1. `cue_names` / `cue_categories` / `n_cues` 用 sweep 的线索表 → **静默张冠李戴**;
-  2. `gray_mpl` 写成**另一条线索**的灰块 mPL(词表线索数 ≤ sweep 时);
-  3. 词表线索数 > sweep 时,`if 0 <= k < len(r["per_cue"])` 让 cue_names 静默变空/变短,
-     不报错;
-  4. 默认 `--out` 仍是 georanker_inpaint_results.json → **与正在跑的主作业撞车**
-     (同一 image_id 的 variants 会被混进同一条记录,spec 名还一样)。
+  1. take `cue_names` / `cue_categories` / `n_cues` from the sweep's cue list -> **silently
+     mislabelled**;
+  2. write `gray_mpl` as **another cue's** gray mPL (when the vocabulary has fewer cues);
+  3. when the vocabulary has more cues, let `if 0 <= k < len(r["per_cue"])` silently empty
+     or truncate cue_names without an error;
+  4. still default `--out` to georanker_inpaint_results.json -> **collide with the running
+     main job** (variants for the same image_id would be merged into one record, with
+     identical spec names).
 
-本包装复用 run_georanker_inpaint 的缓存解析(parse_stem / list_specs / PART_OF)与打分/几何,
-只改三件事:
-  * 线索名/类别/面积一律读 `<cache>/<image_id>/manifest.json` 的 `cues[]`;
-  * 不写 `gray_mpl` / `mpl_all_gray`(该口径没有灰块基线),`n_cues` 用 manifest 的;
-  * 输出默认 georanker_inpaint_vocab_results.json / ..._vocab_control_results.json。
-sweep 仍被读取,但**只用来取 posterior**(仪器确定性:同一张原图的后验不必重打)以及
-true_label / country_hit / km_error 这些与线索表无关的图级字段。
+This wrapper reuses run_georanker_inpaint's cache parsing (parse_stem / list_specs /
+PART_OF) plus its scoring and geometry, and changes only three things:
+  * cue name / category / area always come from `<cache>/<image_id>/manifest.json` cues[];
+  * no `gray_mpl` / `mpl_all_gray` (this arm has no gray baseline), and `n_cues` from the
+    manifest;
+  * output defaults to georanker_inpaint_vocab_results.json / ..._vocab_control_results.json.
+The sweep is still read, but **only** for the posterior (the meter is deterministic, so the
+clean image need not be re-scored) and the image-level true_label / country_hit / km_error,
+none of which depend on the cue list.
 
-下游分析:
-  python -m belief_elicit.inpaint_report --results belief_elicit/georanker_inpaint_vocab_results.json \\
-         --controls belief_elicit/georanker_inpaint_vocab_control_results.json \\
+Downstream analysis:
+  python -m belief_elicit.inpaint_report --results belief_elicit/georanker_inpaint_vocab_results.json \
+         --controls belief_elicit/georanker_inpaint_vocab_control_results.json \
          --cues-from manifest --cache belief_elicit/inpaint_cache_vocab
 
-运行(GPU 环境,注意 offline 变量):
-  HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \\
+Run (GPU environment, note the offline env vars):
+  HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 \
   belief_elicit/.venv_gr/Scripts/python.exe -m belief_elicit.run_georanker_inpaint_vocab --part main
 """
 import argparse
@@ -47,6 +53,8 @@ from PIL import Image
 
 from belief_elicit.geometry import build_geometry, mpl
 from belief_elicit.georanker_belief import score_labels
+from belief_elicit.results import (INPAINT, INPAINT_CACHE_VOCAB, INPAINT_CONTROLS, SWEEP,
+                                   by_image, load_gallery, load_manifest, load_sweep)
 from belief_elicit.run_georanker_inpaint import (BATCH_SIZE, MERGE_KM, PART_OF,
                                                  VARIANT, list_specs)
 
@@ -54,14 +62,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 
 def read_cue_table(dirpath):
-    """manifest.json → [{cue, category, area_frac}, ...];缺失/损坏返回 None。"""
+    """manifest.json -> [{cue, category, area_frac}, ...]; None if missing or malformed."""
     p = os.path.join(dirpath, "manifest.json")
-    if not os.path.exists(p):
-        return None
-    try:
-        d = json.load(open(p, encoding="utf-8"))
-    except Exception as e:
-        print(f"  [warn] manifest 解析失败 {p}: {e}", flush=True)
+    d = load_manifest(dirpath)
+    if not isinstance(d, dict):
         return None
     cs = d.get("cues")
     if not isinstance(cs, list) or not cs:
@@ -83,28 +87,29 @@ def read_cue_table(dirpath):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--cache", default=os.path.join(HERE, "inpaint_cache_vocab"))
+    ap.add_argument("--cache", default=INPAINT_CACHE_VOCAB)
     ap.add_argument("--part", choices=["main", "control", "all"], default="main")
     ap.add_argument("--ops", choices=["inpaint", "gray", "both"], default="both",
-                    help="只对**对照**生效:inpaint = 只打 c*;gray = 只打 cg*;both = 两者")
+                    help="applies to the **controls** only: inpaint = c* only; "
+                         "gray = cg* only; both = both")
     ap.add_argument("--ids", nargs="*", default=None)
     ap.add_argument("--out", default=None)
     ap.add_argument("--limit", type=int, default=0)
-    ap.add_argument("--sweep", default=os.path.join(HERE, "georanker_sweep_results.json"),
-                    help="只用于取 posterior 与图级元数据,线索表一律来自 manifest")
+    ap.add_argument("--sweep", default=SWEEP,
+                    help="only for the posterior and image-level metadata; the cue table "
+                         "always comes from the manifest")
     args = ap.parse_args()
 
     out_path = args.out or os.path.join(
         HERE, "georanker_inpaint_vocab_control_results.json" if args.part == "control"
         else "georanker_inpaint_vocab_results.json")
-    if os.path.abspath(out_path) in (
-            os.path.abspath(os.path.join(HERE, "georanker_inpaint_results.json")),
-            os.path.abspath(os.path.join(HERE, "georanker_inpaint_control_results.json"))):
+    if os.path.abspath(out_path) in (os.path.abspath(INPAINT),
+                                     os.path.abspath(INPAINT_CONTROLS)):
         print("[fatal] --out 指向了 SAM3 口径的主结果文件;词表口径必须写到单独的文件"
               "(两者 spec 名相同、线索表不同,混在一起就废了)")
         return 1
 
-    sweep = {r["image_id"]: r for r in json.load(open(args.sweep, encoding="utf-8"))}
+    sweep = by_image(load_sweep(args.sweep))
     try:
         order = sorted(d for d in os.listdir(args.cache)
                        if os.path.isdir(os.path.join(args.cache, d)))
@@ -117,11 +122,10 @@ def main():
         print(f"缓存目录里没有可用的图:{args.cache}")
         return 1
 
-    gv = [g for g in json.load(open(os.path.join(ROOT, "data", "gallery_v2.json"),
-                                    encoding="utf-8")) if g["gps"]]
+    gv = load_gallery()
     rep, clusters, dist = build_geometry(gv, merge_km=MERGE_KM)
 
-    # ---- 断点续跑:spec 级 ----
+    # ---- resume, at spec level ----
     done = {}
     if os.path.exists(out_path):
         try:
@@ -142,15 +146,15 @@ def main():
         json.dump(recs, open(tmp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         os.replace(tmp, out_path)
 
-    # ---- 盘点待办 ----
+    # ---- take stock of what is left ----
     todo, cue_tables, n_skip = [], {}, 0
     for iid in order:
         d = os.path.join(args.cache, iid)
         cues = read_cue_table(d)
-        if cues is None:                       # 没 manifest = 缓存可能还在生成中
+        if cues is None:                       # no manifest = the cache may still be generating
             n_skip += 1
             continue
-        if iid not in sweep:                   # 没 posterior 就算不出 mPL
+        if iid not in sweep:                   # without a posterior there is no mPL
             print(f"  [warn] {iid[:16]} 不在 sweep 里(没有 posterior),跳过", flush=True)
             n_skip += 1
             continue
@@ -189,7 +193,7 @@ def main():
                 "cue_names": [c["cue"] for c in cues_meta],
                 "cue_categories": [c["category"] for c in cues_meta],
                 "cue_area_fracs": [c["area_frac"] for c in cues_meta],
-                # 词表口径没有灰块基线:不写 mpl_all_gray / gray_mpl
+                # this arm has no gray baseline: no mpl_all_gray / gray_mpl
                 "variants": [],
             }
             done_specs.setdefault(iid, set())

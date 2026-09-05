@@ -39,65 +39,25 @@ except Exception:
 
 import numpy as np
 
-from belief_elicit.order2_shapley import order2_shapley, spearman
-from cue_extract.rle import rle_to_mask
+from belief_elicit.attribution import order2_shapley, spearman
+from belief_elicit.cues import cue_masks_of
+from belief_elicit.plotstyle import short
+from belief_elicit.results import (CONTROLS as GRAY_CTRL, INPAINT as GPT_RES,
+                                   INPAINT_CACHE_VOCAB as VOC_CACHE,
+                                   INPAINT_CONTROLS as INP_CTRL, INPAINT_VOCAB as VOC_RES,
+                                   SAM3_DIR as SAM3DIR, SWEEP, VOCAB_DIR as VOCABDIR,
+                                   index_variants, load_json)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-GPT_RES = os.path.join(HERE, "georanker_inpaint_results.json")
-VOC_RES = os.path.join(HERE, "georanker_inpaint_vocab_results.json")
-SWEEP = os.path.join(HERE, "georanker_sweep_results.json")
-VOC_CACHE = os.path.join(HERE, "inpaint_cache_vocab")
-GRAY_CTRL = os.path.join(HERE, "georanker_control_results.json")
-INP_CTRL = os.path.join(HERE, "georanker_inpaint_control_results.json")
-SAM3DIR = os.path.join(ROOT, "cue_extract", "results_sam3")
-VOCABDIR = os.path.join(ROOT, "cue_extract", "results_vocab")
 OUT_MD = os.path.join(HERE, "vocab_vs_gpt4o.md")
 OUT_JSON = os.path.join(HERE, "vocab_vs_gpt4o.json")
 
-IOU_MATCHED = 0.1        # "有对应线索"的宽松阈值
-IOU_SAME = 0.5           # "几何基本重合"的严格阈值
-
-
-# ---------------- 载入 ----------------
-
-def load_json(p, default=None):
-    if not p or not os.path.exists(p):
-        return default
-    try:
-        return json.load(open(p, encoding="utf-8"))
-    except Exception as e:
-        print(f"[warn] 读不了 {p}: {e}")
-        return default
-
-
-def cue_masks(path):
-    """与 precompute_inpaint.cue_masks_of 同口径 → ([cue], [category], [mask], (W,H))。"""
-    rec = json.load(open(path, encoding="utf-8"))
-    W, H = rec["image_size"]
-    cues, cats, masks = [], [], []
-    for c in rec["geo_privacy_cues"]:
-        if not c.get("maskable"):
-            continue
-        good = [i for i in c["instances"] if not i.get("degenerate") and i.get("mask_rle")]
-        if not good:
-            continue
-        u = np.zeros((H, W), bool)
-        for i in good:
-            m = rle_to_mask(i["mask_rle"])
-            if m.shape == (H, W):
-                u |= m
-        if not u.any():
-            continue
-        cues.append(c["cue"]); cats.append(c.get("category") or "unknown"); masks.append(u)
-    return cues, cats, masks, (W, H)
-
-
-def index_variants(rec):
-    return {v["spec"]: v for v in rec.get("variants", [])}
+IOU_MATCHED = 0.1        # loose threshold for "this cue has a counterpart"
+IOU_SAME = 0.5           # strict threshold for "geometrically the same region"
 
 
 def phi_of(rec, m):
-    """该图 s*/p*/all 齐全 → (phi[list], singles[list], vN);否则 None。"""
+    """s*/p*/all all present for this image -> (phi, singles, vN); otherwise None."""
     V = index_variants(rec)
     try:
         singles = [V[f"s{k}"]["mpl"] for k in range(m)]
@@ -142,8 +102,10 @@ def build_nulls(gray_ctrl, inp_ctrl):
 # ---------------- 逐图分析 ----------------
 
 def analyse_image(iid, gpt_rec, voc_rec, sweep_rec, null):
-    gcue, gcat, gmask, (W, H) = cue_masks(os.path.join(SAM3DIR, iid + ".json"))
-    vcue, vcat, vmask, _ = cue_masks(os.path.join(VOCABDIR, iid + ".json"))
+    gcue, gcat, gmask, (W, H) = cue_masks_of(SAM3DIR, iid)
+    vcue, vcat, vmask, _ = cue_masks_of(VOCABDIR, iid)
+    gcat = [c or "unknown" for c in gcat]
+    vcat = [c or "unknown" for c in vcat]
     total = float(W * H)
 
     # 线索名/顺序自洽性检查(manifest / sweep / 结果文件 / 掩码文件)
@@ -384,11 +346,8 @@ def f(x, n=4):
     return f"{x:.{n}f}"
 
 
-def short(lbl):
-    return lbl.split(",")[0]
-
-
-def render(per_image, A, warns):
+def render_report(per_image, A, warns):
+    """Assemble the markdown report body as a list of lines."""
     L = []; P = L.append
     P("# GPT-4o-proposed cues vs a fixed vocabulary: which cue inventory captures the leakage?\n")
     P("Same 10 images, same removal operator (LaMa inpainting), same adversary (GeoRanker). "
@@ -635,7 +594,7 @@ def main():
                   "iou_matched": IOU_MATCHED, "iou_same": IOU_SAME},
          "per_image": per_image, "aggregate": A, "warnings": warns}
     with open(a.out_md, "w", encoding="utf-8") as fh:
-        fh.write(render(per_image, A, warns))
+        fh.write(render_report(per_image, A, warns))
     json.dump(S, open(a.out_json, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"\nsaved {a.out_md}\nsaved {a.out_json}")
     return 0

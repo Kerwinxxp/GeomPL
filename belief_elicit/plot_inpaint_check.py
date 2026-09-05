@@ -1,7 +1,9 @@
-"""LaMa 修复算子的目检图:原图 | 灰块遮蔽 | 修复 | 修复版等面积对照(各取一条线索)。
+"""Visual sanity check of the LaMa operator: original | gray fill | inpaint | control.
 
-看两件事:(1) 线索区确实被移除,(2) 修复内容与周围连贯、无明显平铺/糊块伪影。
-用法:cue_extract/.venv/Scripts/python.exe -m belief_elicit.plot_inpaint_check
+Two things to look for: (1) the cue region really is gone, and (2) the fill is coherent with
+its surroundings, with no obvious tiling or smearing artifacts. One cue per image.
+
+Run: cue_extract/.venv/Scripts/python.exe -m belief_elicit.plot_inpaint_check
 """
 import json
 import os
@@ -16,14 +18,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 
+from belief_elicit.cues import cue_masks_of
 from belief_elicit.masking import mask_solid_from_masks
-from belief_elicit.precompute_inpaint import cue_masks_of
+from belief_elicit.plotstyle import apply_style, save
+from belief_elicit.results import FIGDIR, INPAINT_CACHE as CACHE
 
-plt.rcParams.update({"font.family": "DejaVu Sans"})
-CACHE = os.path.join(os.path.dirname(__file__), "inpaint_cache")
-FIGDIR = os.path.join(os.path.dirname(__file__), "figures")
-PREFIXES = ["158307292", "754780171", "370717727"]      # NY / Bled / Cuba 案例图
-CUE_K = 0                                               # 每图看第 0 条线索
+apply_style(hide_spines=False)     # image panels keep their frames
+PREFIXES = ["158307292", "754780171", "370717727"]      # the NY / Bled / Cuba case images
+CUE_K = 0                                               # look at cue 0 of each image
 
 
 def main():
@@ -53,9 +55,7 @@ def main():
                               f"area={cue['area_frac']*100:.1f}%", fontsize=8)
     fig.suptitle("LaMa inpainting sanity check (cue 0 of each image)", fontsize=12)
     fig.tight_layout(rect=[0, 0, 1, 0.97])
-    out = os.path.join(FIGDIR, "inpaint_check.png")
-    fig.savefig(out, dpi=110, bbox_inches="tight")
-    print("saved", out, flush=True)
+    save(fig, os.path.join(FIGDIR, "inpaint_check.png"), dpi=110)
 
 
 if __name__ == "__main__":

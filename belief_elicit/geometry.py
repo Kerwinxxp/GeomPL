@@ -1,13 +1,17 @@
-"""mPL 的几何与度量基元(纯 Python,零依赖):
+"""Geometry and metric primitives for mPL (pure Python, no dependencies).
 
-- haversine_km / EARTH_RADIUS_KM:大圆距离;
-- cluster_representatives / merge_distribution:把 min_dist_km 内的近重复地点合并
-  为一簇,并把信念分布按代表相加(2 km 别名去重即用此对);
-- build_geometry / mpl:gallery → (代表映射, 簇列表, 距离函数),以及
-  mPL = 逐候选对 |Δ log-odds| / 距离 的均值(nats/1000 km)。
+- haversine_km / EARTH_RADIUS_KM: great-circle distance;
+- cluster_representatives / merge_distribution: collapse near-duplicate places within
+  min_dist_km into one cluster and add up the belief mass per representative (the 2 km
+  alias dedup uses this pair);
+- build_geometry / mpl: gallery -> (representative map, cluster list, distance function),
+  and mPL = mean over candidate pairs of |delta log-odds| / distance (nats/1000 km).
 
-原先分散在 geobayes.eval.{metrics,candidates} 与 run_georanker_check.py 中,
-现集中于此:所有 GeoRanker 口径的脚本共用同一份几何,保证结果可比。
+Previously scattered across geobayes.eval.{metrics,candidates} and
+run_georanker_check.py; centralised here so every GeoRanker-line script shares one
+geometry and the numbers stay comparable.
+
+Library module — no CLI.
 """
 import math
 
@@ -23,10 +27,10 @@ def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 
 
 def cluster_representatives(coords: dict, min_dist_km: float) -> dict:
-    """把 min_dist_km 内的近重复地点合并为一簇,返回 {label: 代表label}。
+    """Merge places closer than min_dist_km into one cluster -> {label: representative}.
 
-    贪心：按 label 排序遍历，每个 label 归入首个距其 < min_dist_km 的已建代表簇；
-    否则自立为新代表。确定性（排序保证可复现）。
+    Greedy over sorted labels: each label joins the first existing cluster whose centre is
+    < min_dist_km away, otherwise it starts one. Deterministic (the sort makes it reproducible).
     """
     reps = {}
     centers = []   # [(rep_label, lat, lon)]
@@ -45,7 +49,7 @@ def cluster_representatives(coords: dict, min_dist_km: float) -> dict:
 
 
 def merge_distribution(dist: dict, label_to_rep: dict) -> dict:
-    """按代表映射把概率相加，得到合并后（干净全集）的分布。"""
+    """Add probabilities up per representative -> the merged (de-aliased) distribution."""
     merged = {}
     for lbl, p in dist.items():
         rep = label_to_rep.get(lbl, lbl)
@@ -54,7 +58,7 @@ def merge_distribution(dist: dict, label_to_rep: dict) -> dict:
 
 
 def build_geometry(gv, merge_km=25.0):
-    """gallery(含 gps 的记录列表)→ (label→代表, 代表列表, 距离函数(i,j)→km)。"""
+    """Gallery (records carrying gps) -> (label->representative, clusters, dist(i, j) in km)."""
     coords = {g["label"]: g["gps"] for g in gv if g["gps"]}
     rep = cluster_representatives(coords, merge_km)
     clusters = sorted(set(rep.values()))
@@ -67,7 +71,7 @@ def build_geometry(gv, merge_km=25.0):
 
 
 def mpl(prior, post, rep, clusters, dist):
-    """metric-normalized posterior leakage:逐候选对 |Δlog-odds|/距离 的均值(×1000 km)。"""
+    """Metric-normalized posterior leakage: mean over candidate pairs of |dlog-odds|/km * 1000."""
     pr, po = merge_distribution(prior, rep), merge_distribution(post, rep)
     keys = [k for k in clusters if pr.get(k, 0) > 0 and po.get(k, 0) > 0]
     llr = {k: math.log(po[k] / pr[k]) for k in keys}

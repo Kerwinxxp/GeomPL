@@ -44,15 +44,17 @@ cue_extract/        Cue extraction (GPU): GPT-4o names cues → SAM 3 masks
   run_extract_sam3.py  orchestrator  ·  grounded / sam3_seg / merge / rle / prompts / viz
   extract_vocab.py     fixed-vocabulary (bottom-up) variant  ·  compare_vocab.py
   mllm.py imaging.py   GPT-4o client + smart_resize (API key from OPENAI_API_KEY only)
+  common.py rle.py     shared cue-record reader + mask RLE (single source for both)
   results_sam3/        per-image cue JSON (each cue carries a mask_rle)
 belief_elicit/      Belief elicitation, mPL measurement, Shapley attribution  ← main line
-  georanker_belief.py  frozen adversary  ·  geometry.py masking.py  shared primitives
+  results.py attribution.py cues.py geometry.py masking.py plotstyle.py   library
+  georanker_belief.py  frozen adversary  ·  inpaint_ops.py  LaMa removal operator
   run_georanker_*.py   sweep / lattice / control / inpaint runs (GPU)
   shapley_v3.py dedup_cues.py alt_attribution.py control_report.py   analysis (CPU)
   figures/             publication figures
 data/               subset*.jsonl, gallery_v2.json, geocoding caches (source images not committed)
 scripts/            update_gallery.py, fetch_hires50.py, remote_control/, remote_setup/
-tests/              pytest (masking primitives, cue extraction, distributed runs, remote control)
+tests/              pytest (library modules, masking, cue extraction, distributed runs, remote control)
 paper/              source material for the technical note
 ```
 
@@ -111,7 +113,8 @@ annotated per-image cue overlays are in `cue_extract/figures_sam3/`.
 ```bash
 python -m pytest tests -q
 ```
-`tests/test_cue_extract.py` needs numpy + Pillow; `tests/test_distributed_georanker.py`
+`tests/test_cue_extract.py` and `tests/test_belief_elicit_lib.py` (the `results` / `cues` /
+`attribution` library modules) need numpy + Pillow; `tests/test_distributed_georanker.py`
 and `tests/test_remote_control.py` are pure-Python and run anywhere.
 
 ## Known limitations (relevant for writing up)

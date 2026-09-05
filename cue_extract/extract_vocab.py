@@ -20,7 +20,6 @@ instances:[{bbox, score, source, mask_rle, degenerate}]}]),下游 cue_masks_of �
         --ids 158307292 754780171 --out cue_extract/results_vocab
 """
 import argparse
-import glob
 import json
 import os
 import sys
@@ -36,6 +35,7 @@ except Exception:
 import numpy as np
 from PIL import Image
 
+from cue_extract.common import load_subsets
 from cue_extract.merge import assign_maskable, flag_degenerate
 from cue_extract.rle import mask_to_rle
 from cue_extract.sam3_seg import segment_phrase
@@ -85,18 +85,8 @@ OUTDIR = os.path.join(os.path.dirname(__file__), "results_vocab")
 SAM3DIR = os.path.join(os.path.dirname(__file__), "results_sam3")
 
 
-def load_subsets() -> dict:
-    """data/subset*.jsonl → {image_id: item};后加载(高清)覆盖先加载,与主线一致。"""
-    out = {}
-    for f in sorted(glob.glob(os.path.join(ROOT, "data", "subset*.jsonl"))):
-        for line in open(f, encoding="utf-8"):
-            it = json.loads(line)
-            out[it["image_id"]] = it
-    return out
-
-
 def resolve_ids(prefixes, subset) -> list:
-    """把 image_id 前缀(或整名)解析成完整 image_id;要求 results_sam3 里有对照记录。"""
+    """Resolve image_id prefixes (or full names) to full image_ids."""
     ids = []
     for p in prefixes:
         if p in subset:
@@ -112,8 +102,9 @@ def resolve_ids(prefixes, subset) -> list:
 
 
 def target_size(iid, image):
-    """掩码坐标系:优先复用 results_sam3 的 image_size(保证与 GPT-4o 掩码逐像素可比),
-    没有对照记录时退回 smart_resize(与主线 client.prepare 同一套)。"""
+    """Mask coordinate frame: reuse the results_sam3 image_size where there is one (so the
+    masks stay pixel-comparable with the GPT-4o ones), otherwise fall back to smart_resize
+    (the same one client.prepare uses)."""
     p = os.path.join(SAM3DIR, iid + ".json")
     if os.path.exists(p):
         w, h = json.load(open(p, encoding="utf-8"))["image_size"]
@@ -123,7 +114,8 @@ def target_size(iid, image):
 
 
 def _dedupe(instances, iou_thresh=0.9):
-    """同一 cue 的多条 query 常命中同一物体 → 按掩码 IoU 去重,保留高分实例。"""
+    """Several queries for one cue often hit the same object -> dedupe by mask IoU, keep the
+    higher-scoring instance."""
     kept = []
     for ins in sorted(instances, key=lambda d: -d["score"]):
         m = ins["mask"]
@@ -140,8 +132,8 @@ def _dedupe(instances, iou_thresh=0.9):
     return kept[:MAX_INSTANCES]
 
 
-def extract_one(image, vocab=VOCAB, thresh=SEG_THRESH, verbose=True):
-    """一张图 → (geo_privacy_cues, dropped_cues)。"""
+def extract_vocab_cues(image, vocab=VOCAB, thresh=SEG_THRESH, verbose=True):
+    """One image -> (geo_privacy_cues, dropped_cues) from the fixed vocabulary."""
     W, H = image.size
     total = float(W * H)
     raw = []
@@ -236,7 +228,7 @@ def main():
         W, H = target_size(iid, img)
         img = img.resize((W, H))
         print(f"[{k}/{len(ids)}] {iid[:22]} {W}x{H}", flush=True)
-        cues, dropped = extract_one(img, thresh=args.thresh)
+        cues, dropped = extract_vocab_cues(img, thresh=args.thresh)
         rec = {"image_id": iid, "image_size": [W, H],
                "source": "fixed-vocabulary + SAM3", "vocab_version": VOCAB_VERSION,
                "seg_threshold": args.thresh,

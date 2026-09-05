@@ -1,11 +1,15 @@
-"""全局总览:全部线索的 原始单条 mPL → Shapley φ,及可分辨性。
-(a) 每条线索 v_single vs φ 散点(颜色=可分辨,大小=面积);(b) 逐类别三量对比条形。
-运行:python -m belief_elicit.plot_overview
-     python -m belief_elicit.plot_overview --shapley belief_elicit/shapley_v3_results.json             --out belief_elicit/figures/georanker_overview_dedup.png   # 去重口径
-去重口径的线索带 members(合并前的原始线索名),对照最大值取各成员对照的最大、面积取和。
+"""Global overview: raw single-cue mPL -> Shapley phi for every cue, plus resolvability.
+
+(a) per-cue v_single vs phi scatter (colour = resolvable, size = mask area);
+(b) per-category bars comparing the two medians and the resolvable rate.
+
+Run: python -m belief_elicit.plot_overview
+     python -m belief_elicit.plot_overview --shapley belief_elicit/shapley_v3_results.json \
+            --out belief_elicit/figures/georanker_overview_dedup.png   # de-dup arm
+In the de-dup arm each cue carries `members` (the original pre-merge cue names); the control
+maximum is the max over the members' controls and the area is their sum.
 """
 import argparse
-import json
 import os
 import sys
 from collections import defaultdict
@@ -18,23 +22,23 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-plt.rcParams.update({"font.family": "DejaVu Sans", "axes.spines.top": False,
-                     "axes.spines.right": False})
-SHAP = os.path.join(os.path.dirname(__file__), "shapley_v2_results.json")
-CTRL = os.path.join(os.path.dirname(__file__), "georanker_control_results.json")
-OUT = os.path.join(os.path.dirname(__file__), "figures", "georanker_overview.png")
-BLUE, RED, GRAY, GREEN = "#1E88E5", "#E53935", "#B0BEC5", "#43A047"
+from belief_elicit.plotstyle import BLUE, GRAY, GREEN, RED, apply_style, save
+from belief_elicit.results import (CONTROLS as CTRL, FIGDIR, SHAPLEY_V2 as SHAP, by_image,
+                                   load_controls, load_shapley)
+
+apply_style()
+OUT = os.path.join(FIGDIR, "georanker_overview.png")
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--shapley", default=SHAP, help="归因结果 JSON(默认 shapley_v2)")
+    ap.add_argument("--shapley", default=SHAP, help="attribution JSON (default shapley_v2)")
     ap.add_argument("--controls", default=CTRL)
     ap.add_argument("--out", default=OUT)
     a = ap.parse_args()
-    S = json.load(open(a.shapley, encoding="utf-8"))
-    C = {r["image_id"]: r for r in json.load(open(a.controls, encoding="utf-8"))}
-    # 逐线索表:v_single, phi, 面积, 可分辨(real>自身对照最大), 类别
+    S = load_shapley(a.shapley)
+    C = by_image(load_controls(a.controls))
+    # per-cue table: v_single, phi, area, resolvable (real > its own control max), category
     rows = []
     for r in S:
         cr = C.get(r["image_id"])
@@ -44,7 +48,7 @@ def main():
                 cm = [x["mpl"] for x in c["controls"]]
                 cmap[c["cue"]] = (max(cm) if cm else None, c["area_frac"])
         for c in r["cues"]:
-            names = c.get("members") or [c["cue"]]      # 去重口径:合并玩家 -> 原始成员名
+            names = c.get("members") or [c["cue"]]      # de-dup arm: merged player -> members
             got = [cmap[n] for n in names if n in cmap]
             cmax = max((g[0] for g in got if g[0] is not None), default=None)
             area = sum((g[1] for g in got if g[1] is not None), 0.0) or None
@@ -57,7 +61,7 @@ def main():
 
     fig, ax = plt.subplots(1, 2, figsize=(15, 5.8), gridspec_kw={"width_ratios": [1, 1.05]})
 
-    # (a) v_single → phi 散点
+    # (a) v_single -> phi scatter
     lim = max(v.max(), phi.max()) * 1.05
     ax[0].plot([0, lim], [0, lim], color="#999", ls="--", lw=1, label="φ = v (no correction)")
     ax[0].plot([0, lim], [0, lim / 2], color="#CCC", ls=":", lw=1, label="φ = v/2")
@@ -74,7 +78,7 @@ def main():
     ax[0].set_xlim(0, lim); ax[0].set_ylim(0, lim * 0.75)
     ax[0].grid(color="#EEE", zorder=0); ax[0].set_axisbelow(True)
 
-    # (b) 逐类别:v中位 / φ中位 / 可分辨率
+    # (b) per category: median v / median phi / resolvable rate
     cat = defaultdict(lambda: dict(v=[], phi=[], res=[]))
     for x in rows:
         cat[x["cat"]]["v"].append(x["v"]); cat[x["cat"]]["phi"].append(x["phi"])
@@ -104,9 +108,7 @@ def main():
     fig.suptitle("Per-cue location leakage across 95 images: raw mPL, Shapley correction, "
                  "and artifact-resolvability", fontsize=12.5, y=1.01)
     fig.tight_layout()
-    os.makedirs(os.path.dirname(a.out), exist_ok=True)
-    fig.savefig(a.out, bbox_inches="tight", dpi=130)
-    print("saved", a.out)
+    save(fig, a.out, dpi=130)
 
 
 if __name__ == "__main__":

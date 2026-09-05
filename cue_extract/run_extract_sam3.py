@@ -1,12 +1,16 @@
-"""线索提取(route B + SAM3):
-  ① GPT-4o grounded 定位推理(干净原图)→ 自报线索 {name, category, reasoning, confidence}
-  ② 把每条线索的**语义名**当文字 prompt 喂 SAM3 → 干净掩码(替掉 VLM 画框/自动分割)
-  ③ flag_degenerate + assign_maskable
-输出 cue_extract/results_sam3/<id>.json(同下游 schema)+ figures_sam3/ 标注图。
-venv 运行:cue_extract/.venv/Scripts/python.exe -m cue_extract.run_extract_sam3 [--ids ...]
+"""Cue extraction (route B + SAM 3):
+  1. GPT-4o grounded location reasoning on the clean image -> self-reported cues
+     {name, category, reasoning, confidence}
+  2. feed each cue's **semantic name** to SAM 3 as a text prompt -> clean masks (replacing
+     VLM-drawn boxes / automatic segmentation)
+  3. flag_degenerate + assign_maskable
+
+Writes cue_extract/results_sam3/<id>.json (the schema every downstream script reads) plus
+the annotated overlays in figures_sam3/.
+
+Run: cue_extract/.venv/Scripts/python.exe -m cue_extract.run_extract_sam3 [--ids ...]
 """
 import argparse
-import glob
 import json
 import os
 import sys
@@ -21,6 +25,7 @@ except Exception:
 
 from PIL import Image
 
+from cue_extract.common import load_subsets
 from cue_extract.grounded import locate_and_ground
 from cue_extract.merge import assign_maskable, flag_degenerate
 from cue_extract.mllm import MLLMClient
@@ -40,7 +45,7 @@ PILOT_IDS = [
 
 
 def build_client(config_path=CONFIG):
-    """读 config.yaml 建 GPT-4o 客户端。API key 只从 OPENAI_API_KEY 环境变量读取。"""
+    """Build the GPT-4o client from config.yaml. The API key is read only from OPENAI_API_KEY."""
     import yaml
     with open(config_path, encoding="utf-8") as f:
         cfg = yaml.safe_load(f) or {}
@@ -53,19 +58,12 @@ def build_client(config_path=CONFIG):
     )
 
 
-def load_subsets():
-    out = {}
-    for f in sorted(glob.glob(os.path.join(ROOT, "data", "subset*.jsonl"))):
-        for line in open(f, encoding="utf-8"):
-            it = json.loads(line); out[it["image_id"]] = it   # 覆盖:后加载(subset_sample 高清)优先
-    return out
-
-
 def extract_one(client, image, seg_thresh=0.3):
-    res = locate_and_ground(client, image)              # ① GPT-4o 自报线索(干净图)+ segment_query
+    """One image -> {location_guess, geo_privacy_cues, n_unlocalized} (GPT-4o-proposed cues)."""
+    res = locate_and_ground(client, image)              # 1. GPT-4o names cues + segment_query
     gp, unlocalized = [], 0
     for c in res["cues"]:
-        insts, used = segment_with_fallback(            # ② SAM3 回退链(query→name→变体)
+        insts, used = segment_with_fallback(            # 2. SAM 3 fallback chain
             image, c.get("segment_query", ""), c["cue"], threshold=seg_thresh)
         entry = {"cue": c["cue"], "category": c["category"], "is_text": c["is_text"],
                  "reasoning": c["reasoning"], "confidence": c["confidence"],
@@ -75,9 +73,9 @@ def extract_one(client, image, seg_thresh=0.3):
                                    "source": "sam3", "mask_rle": mask_to_rle(ins["mask"])}
                                   for ins in insts]
         else:
-            entry["instances"] = []; unlocalized += 1   # 保留但未定位(如实记录,不进消融)
+            entry["instances"] = []; unlocalized += 1   # kept but unlocalised (recorded, never ablated)
         gp.append(entry)
-    gp = assign_maskable(flag_degenerate(gp, image.size))   # ③(无实例 → maskable=False)
+    gp = assign_maskable(flag_degenerate(gp, image.size))   # 3. (no instances -> maskable=False)
     return {"location_guess": res["location_guess"], "geo_privacy_cues": gp,
             "n_unlocalized": unlocalized}
 

@@ -1,15 +1,17 @@
-"""GPT-4o 线索清单 vs 固定词表清单:三联图。
+"""GPT-4o cue inventory vs the fixed-vocabulary inventory: three panels.
 
-(a) 逐图 v(N) 配对条形:两种清单"能移除的全部泄漏"(同图 / 同算子 / 同攻击者)
-(b) 逐图逐线索 φ 点图,两列(GPT-4o | vocab);IoU>=0.5 的配对用细线连;
-    实心 = 高于伪影零假设阈值(敏感),空心 = 不敏感;阈值 c_img/m 画成短横线
-(c) 三组 φ 的中位数条形 + 散点:无对应的词表线索 / 有对应的词表线索 / 无对应的 GPT-4o 线索
+(a) per-image paired v(N) bars: how much leakage each inventory can remove (same image,
+    same removal operator, same adversary)
+(b) per-image per-cue phi dot plot in two columns (GPT-4o | vocabulary), with IoU >= 0.5
+    matches joined by a thin line; filled = above the artifact null (sensitive), hollow =
+    not; the c_img/m threshold is drawn as a short dash
+(c) median phi bars + scatter for three groups: unmatched vocabulary cues / matched
+    vocabulary cues / unmatched GPT-4o cues
 
-数据来自 belief_elicit/vocab_vs_gpt4o.json(先跑 python -m belief_elicit.vocab_vs_gpt4o)。
-运行:python -m belief_elicit.plot_vocab_vs_gpt4o
+Input is belief_elicit/vocab_vs_gpt4o.json (run python -m belief_elicit.vocab_vs_gpt4o first).
+Run: python -m belief_elicit.plot_vocab_vs_gpt4o
 """
 import argparse
-import json
 import os
 import sys
 
@@ -26,22 +28,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.lines import Line2D
 
-plt.rcParams.update({"font.family": "DejaVu Sans", "axes.spines.top": False,
-                     "axes.spines.right": False})
+from belief_elicit.plotstyle import BLUE, GREEN, RED, apply_style, save, short
+from belief_elicit.results import FIGDIR, VOCAB_REPORT_JSON as SUMMARY, load_json
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-SUMMARY = os.path.join(HERE, "vocab_vs_gpt4o.json")
-OUT = os.path.join(HERE, "figures", "vocab_vs_gpt4o_leakage.png")
-BLUE, RED, GRAY, GREEN = "#1E88E5", "#E53935", "#B0BEC5", "#43A047"
+apply_style()
+OUT = os.path.join(FIGDIR, "vocab_vs_gpt4o_leakage.png")
 
 
-def short(lbl):
-    return lbl.split(",")[0]
+# ---------------- (a) per-image v(N) ----------------
 
-
-# ---------------- (a) 逐图 v(N) ----------------
-
-def panel_a(ax, S):
+def panel_vn(ax, S):
     P = S["per_image"]
     A = S["aggregate"]
     y = np.arange(len(P))[::-1]
@@ -75,7 +71,7 @@ def panel_a(ax, S):
 
 # ---------------- (b) 逐线索 φ ----------------
 
-def panel_b(ax, S):
+def panel_phi_dots(ax, S):
     P = S["per_image"]
     step, gap = 1.0, 0.42           # 每张图占 step,列间距 gap
     xt, xl = [], []
@@ -136,7 +132,7 @@ def panel_b(ax, S):
 
 # ---------------- (c) 三组 φ 分布 ----------------
 
-def panel_c(ax, S):
+def panel_group_medians(ax, S):
     A = S["aggregate"]
     groups = [("vocabulary cues\nwith NO GPT-4o match", A["vocab_unmatched"], RED),
               ("vocabulary cues\nmatched to GPT-4o", A["vocab_matched"], GREEN),
@@ -173,13 +169,13 @@ def main():
     if not os.path.exists(a.summary):
         print(f"[fatal] 找不到 {a.summary};先跑 python -m belief_elicit.vocab_vs_gpt4o")
         return 1
-    S = json.load(open(a.summary, encoding="utf-8"))
+    S = load_json(a.summary)
 
     fig = plt.figure(figsize=(15.0, 10.8))
     gs = fig.add_gridspec(2, 2, height_ratios=[1.0, 1.08], hspace=0.40, wspace=0.19)
-    panel_a(fig.add_subplot(gs[0, 0]), S)
-    panel_c(fig.add_subplot(gs[0, 1]), S)
-    panel_b(fig.add_subplot(gs[1, :]), S)
+    panel_vn(fig.add_subplot(gs[0, 0]), S)
+    panel_group_medians(fig.add_subplot(gs[0, 1]), S)
+    panel_phi_dots(fig.add_subplot(gs[1, :]), S)
 
     ns = S["meta"]["null_sources"]
     fig.suptitle("Top-down (GPT-4o-proposed) vs bottom-up (fixed 12-concept vocabulary) cue "
@@ -189,9 +185,7 @@ def main():
                  + " + ".join(f"{k} controls ({v} img)" for k, v in ns.items()),
                  fontsize=13, y=0.985)
     fig.subplots_adjust(left=0.075, right=0.985, top=0.895, bottom=0.085)
-    os.makedirs(os.path.dirname(a.out), exist_ok=True)
-    fig.savefig(a.out, bbox_inches="tight", dpi=130)
-    print("saved", a.out)
+    save(fig, a.out, dpi=130)
     return 0
 
 

@@ -1,14 +1,15 @@
-"""GeoRanker 仪器体检(多图 × 变体 A/B/C 可选)。
+"""GeoRanker instrument health check (several images x optional prompt variants A/B/C).
 
-对每张图 × 每个 prompt 变体:
-  原图 → 138 候选 reward → softmax → 真值 rank / p_true / top5;
-  全部遮蔽子集 → p_true 变化 / raw mPL(与主线 sweep 几何口径完全一致);
-体检三条:准确性 / 遮蔽响应 / mPL 形态。
-变体 C 负例 = 变体 A 在【原图】上的倒数 5 名(单仪器;固定后对该图全部条件复用)。
-注:选 C 而未选 A 时会自动先跑一次 A 原图以取负例。
+Per image and per prompt variant:
+  clean image -> 138 candidate rewards -> softmax -> true-label rank / p_true / top-5;
+  every masking subset -> change in p_true / raw mPL (exactly the sweep's geometry).
+Three checks: accuracy, response to masking, and the shape of mPL.
+Variant C's negatives are variant A's bottom 5 on the **clean** image (one instrument; once
+fixed they are reused for every condition on that image). Note: choosing C without A runs a
+clean-image pass of A first, just to get those negatives.
 
-运行:belief_elicit/.venv_gr/Scripts/python.exe -m belief_elicit.run_georanker_check \
-      [--images 261517384,...] [--variants A,B,C] [--tag okazaki]
+Run: belief_elicit/.venv_gr/Scripts/python.exe -m belief_elicit.run_georanker_check
+     [--images 261517384,...] [--variants A,B,C] [--tag okazaki]
 """
 import glob
 import json
@@ -26,34 +27,13 @@ except Exception:
 import numpy as np
 from PIL import Image
 
+from belief_elicit.cues import cue_masks_of
 from belief_elicit.geometry import build_geometry, mpl
 from belief_elicit.georanker_belief import format_negatives, score_labels
 from belief_elicit.masking import mask_solid_from_masks, nonempty_subsets
-from cue_extract.rle import rle_to_mask
+from belief_elicit.results import SAM3_DIR, image_path, load_gallery, load_subsets
 
 OUTDIR = os.path.dirname(__file__)
-
-
-def load_case(iid, subset):
-    rec = json.load(open(os.path.join(ROOT, "cue_extract", "results_sam3", iid + ".json"),
-                         encoding="utf-8"))
-    W, H = rec["image_size"]
-    p = subset[iid]["path"]; p = p if os.path.isabs(p) else os.path.join(ROOT, p)
-    img = Image.open(p).resize((W, H)).convert("RGB")
-    masks, names = [], []
-    for c in rec["geo_privacy_cues"]:
-        if not c.get("maskable"):
-            continue
-        good = [i for i in c["instances"] if not i.get("degenerate") and i.get("mask_rle")]
-        if not good:
-            continue
-        u = np.zeros((H, W), bool)
-        for i in good:
-            m = rle_to_mask(i["mask_rle"])
-            if m.shape == (H, W):
-                u |= m
-        masks.append(u); names.append(c["cue"])
-    return img, masks, names, (W, H)
 
 
 def main():
@@ -65,23 +45,20 @@ def main():
     args = ap.parse_args()
     variants = [v for v in args.variants.split(",") if v]
 
-    gv = [g for g in json.load(open(os.path.join(ROOT, "data", "gallery_v2.json"),
-                                    encoding="utf-8")) if g["gps"]]
+    gv = load_gallery()
     labels_cache = json.load(open(os.path.join(ROOT, "data", "gt_labels_cache.json"), encoding="utf-8"))
-    subset = {}
-    for f in sorted(glob.glob(os.path.join(ROOT, "data", "subset*.jsonl"))):
-        for line in open(f, encoding="utf-8"):
-            it = json.loads(line); subset[it["image_id"]] = it
+    subset = load_subsets()
     rep, clusters, dist = build_geometry(gv)
     label_gps = {g["label"]: g["gps"] for g in gv}
 
     all_out = []
     for pref in args.images.split(","):
         iid = next(os.path.basename(f)[:-5]
-                   for f in sorted(glob.glob(os.path.join(ROOT, "cue_extract", "results_sam3", "*.json")))
+                   for f in sorted(glob.glob(os.path.join(SAM3_DIR, "*.json")))
                    if os.path.basename(f).startswith(pref))
         true = labels_cache.get(f"{subset[iid]['lat']:.5f},{subset[iid]['lon']:.5f}")
-        img, masks, names, (W, H) = load_case(iid, subset)
+        names, _cats, masks, (W, H) = cue_masks_of(SAM3_DIR, iid)
+        img = Image.open(image_path(subset[iid])).resize((W, H)).convert("RGB")
         if not masks or not true or true not in label_gps:
             print(f"skip {pref} (masks={len(masks)}, true={true})"); continue
         print(f"\n############ {true.split(',')[0]} ({pref}) | {len(masks)} cues: {names} ############",
@@ -90,7 +67,7 @@ def main():
         results = {}
         negatives = None
         for variant in variants:
-            if variant == "C" and negatives is None:   # C 需负例:先跑一次 A 原图取倒5
+            if variant == "C" and negatives is None:   # C needs negatives: run A clean first
                 pa, _ = score_labels(img, gv, variant="A", batch_size=4)
                 bottom5 = sorted(pa, key=pa.get)[:5]
                 negatives = format_negatives([(label_gps[l][0], label_gps[l][1], l)
@@ -130,7 +107,7 @@ def main():
         out_f = os.path.join(OUTDIR, f"georanker_check_{args.tag}.json")
         json.dump(all_out, open(out_f, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
-    # ---- 体检判定 ----
+    # ---- verdict ----
     print("\n================ 体检汇总 ================")
     for rec_ in all_out:
         nm = len([c for c in rec_["results"][variants[0]]["combos"] if len(c["subset"]) == 1])

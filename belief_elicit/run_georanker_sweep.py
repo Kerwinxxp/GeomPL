@@ -1,18 +1,21 @@
-"""GeoRanker(变体 B)全量 sweep:逐单线索 mPL + 精度体检。
+"""GeoRanker (prompt variant B) full sweep: per-single-cue mPL + an accuracy health check.
 
-对每张有 maskable 线索的图:
-  原图打分 → argmax / p_true / rank / km误差 / 国家命中;
-  每条单线索遮蔽 → mPL;全部线索遮蔽 → mpl_all。
-几何(Geo-I 口径):去重半径 2km —— 只合并真别名(Westminster↔Greater London 1.3km),
-保留一切真实近邻对(北京各区 2.4km+、巴黎近郊等):按 Geo-indistinguishability,
-近距对的 |Δllr|/d 是经验 ε,细粒度可区分 = 最强泄露,不得被合并抹掉。
-**完整分布落盘**(posterior + 每条先验):换任何几何都是纯后处理,无需重新打分。
-增量保存:每张图完成即写盘;重启自动跳过已完成的图(断点续跑)。
-运行:belief_elicit/.venv_gr/Scripts/python.exe -m belief_elicit.run_georanker_sweep \
-      [--src data/subset100_hires.jsonl]
+For every image with maskable cues:
+  score the clean image -> argmax / p_true / rank / km error / country hit;
+  mask each single cue -> mPL; mask every cue -> mpl_all.
+Geometry (Geo-I convention): 2 km dedup radius — merge true aliases only (Westminster <->
+Greater London, 1.3 km) and keep every genuine near-neighbour pair (Beijing districts at
+2.4 km+, the Paris suburbs, ...): under Geo-indistinguishability the |dllr|/d of a close
+pair is the empirical epsilon, so fine-grained distinguishability is the strongest leak and
+must not be merged away.
+**Full distributions are persisted** (posterior + every prior): changing the geometry is
+then pure post-processing, with no re-scoring.
+Incremental saves: each image is written as it finishes, and a restart skips what is done.
+
+Run: belief_elicit/.venv_gr/Scripts/python.exe -m belief_elicit.run_georanker_sweep
+     [--src data/subset100_hires.jsonl]
 """
 import argparse
-import glob
 import json
 import os
 import sys
@@ -28,13 +31,14 @@ except Exception:
 import numpy as np
 from PIL import Image
 
+from belief_elicit.cues import cue_masks_of
 from belief_elicit.geometry import build_geometry, haversine_km, mpl
 from belief_elicit.georanker_belief import score_labels
 from belief_elicit.masking import mask_solid_from_masks
-from cue_extract.rle import rle_to_mask
+from belief_elicit.results import (SAM3_DIR, SWEEP as OUT, image_path, load_gallery,
+                                   load_subsets)
 
-OUT = os.path.join(os.path.dirname(__file__), "georanker_sweep_results.json")
-MERGE_KM = 2.0        # Geo-I 口径:仅别名去重,保留真实近邻对
+MERGE_KM = 2.0        # Geo-I convention: alias dedup only, genuine near-neighbours kept
 
 
 def main():
@@ -43,18 +47,14 @@ def main():
     ap.add_argument("--variant", default="B")
     args = ap.parse_args()
 
-    gv = [g for g in json.load(open(os.path.join(ROOT, "data", "gallery_v2.json"),
-                                    encoding="utf-8")) if g["gps"]]
+    gv = load_gallery()
     label_gps = {g["label"]: g["gps"] for g in gv}
     label_country = {g["label"]: g["label"].split(",")[-1].strip() for g in gv}
     labels_cache = json.load(open(os.path.join(ROOT, "data", "gt_labels_cache.json"), encoding="utf-8"))
-    subset = {}
-    for f in sorted(glob.glob(os.path.join(ROOT, "data", "subset*.jsonl"))):
-        for line in open(f, encoding="utf-8"):
-            it = json.loads(line); subset[it["image_id"]] = it
+    subset = load_subsets()
     rep, clusters, dist = build_geometry(gv, merge_km=MERGE_KM)
 
-    # 断点续跑:读已有结果,跳过完成的
+    # resume: read what is already there and skip those images
     results = []
     if os.path.exists(OUT):
         results = json.load(open(OUT, encoding="utf-8"))
@@ -67,31 +67,16 @@ def main():
     for n, iid in enumerate(ids, 1):
         if iid in done:
             continue
-        cf = os.path.join(ROOT, "cue_extract", "results_sam3", iid + ".json")
-        if not os.path.exists(cf):
+        got = cue_masks_of(SAM3_DIR, iid)
+        if got is None:
             continue
-        rec = json.load(open(cf, encoding="utf-8"))
-        W, H = rec["image_size"]
-        cues, cmasks = [], []
-        for c in rec["geo_privacy_cues"]:
-            if not c.get("maskable"):
-                continue
-            good = [i for i in c["instances"] if not i.get("degenerate") and i.get("mask_rle")]
-            if not good:
-                continue
-            u = np.zeros((H, W), bool)
-            for i in good:
-                m = rle_to_mask(i["mask_rle"])
-                if m.shape == (H, W):
-                    u |= m
-            cues.append(c); cmasks.append(u)
+        cues, cats, cmasks, (W, H) = got
         if not cmasks:
             continue
         tl = labels_cache.get(f"{subset[iid]['lat']:.5f},{subset[iid]['lon']:.5f}")
         if not tl or tl not in label_gps:
             continue
-        p = subset[iid]["path"]; p = p if os.path.isabs(p) else os.path.join(ROOT, p)
-        img = Image.open(p).resize((W, H)).convert("RGB")
+        img = Image.open(image_path(subset[iid])).resize((W, H)).convert("RGB")
 
         post, _ = score_labels(img, gv, variant=args.variant, batch_size=4)
         arg = max(post, key=post.get)
@@ -100,14 +85,14 @@ def main():
         srt = sorted(post, key=post.get, reverse=True)
 
         per_cue = []
-        for c, u in zip(cues, cmasks):
+        for name, cat, u in zip(cues, cats, cmasks):
             pri, _ = score_labels(mask_solid_from_masks(img, [u]), gv, variant=args.variant,
                                   batch_size=4)
-            per_cue.append({"cue": c["cue"], "category": c.get("category"),
+            per_cue.append({"cue": name, "category": cat,
                             "cov": float(u.sum() / (W * H)),
                             "p_true_masked": pri.get(tl, 0.0),
                             "mpl": mpl(pri, post, rep, clusters, dist),
-                            "prior": pri})                       # 完整分布落盘
+                            "prior": pri})                       # full distribution persisted
         uall = np.zeros((H, W), bool)
         for u in cmasks:
             uall |= u
@@ -121,7 +106,7 @@ def main():
                         "n_cues": len(cues), "per_cue": per_cue,
                         "p_true_allmask": pri.get(tl, 0.0),
                         "mpl_all": mpl(pri, post, rep, clusters, dist),
-                        "posterior": post, "prior_allmask": pri,   # 完整分布落盘
+                        "posterior": post, "prior_allmask": pri,   # full distributions persisted
                         "merge_km": MERGE_KM})
         json.dump(results, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         el = time.time() - t0

@@ -4,11 +4,62 @@ This module contains the main line of the project: how the *adversary's belief*
 is elicited, how per-cue location leakage (mPL) is measured, and how the non-additive
 leakage is attributed to individual cues via Shapley values.
 
-Its only dependency on the rest of the repo is `cue_extract.rle` (mask RLE decode) plus
-the cue JSONs under `cue_extract/results_sam3/` and `cue_extract/results_vocab/`. The
-shared numerical primitives live here: `geometry.py` (haversine, alias clustering,
-distribution merge, `build_geometry`, `mpl`) and `masking.py` (gray-fill from boolean
-masks, non-empty subset enumeration).
+Its only dependency on the rest of the repo is `cue_extract` (`rle` for mask decode,
+`common` for the cue-record reader) plus the cue JSONs under `cue_extract/results_sam3/`
+and `cue_extract/results_vocab/`.
+
+---
+
+## 0. Module map
+
+The package is flat: a handful of **library** modules hold everything shared, and every
+runner / report / plot script is a thin CLI over them.
+
+**Library** (no CLI, no side effects at import)
+
+| file | contents |
+|---|---|
+| `results.py` | where every result and data file lives (path constants) + the loaders: `load_json` · `load_sweep` · `load_lattice` · `load_controls` · `load_inpaint` · `load_shapley` · `load_gallery` · `load_subsets` · `image_path` · `load_manifest` / `manifest_index` · `index_variants` · `by_image`, plus the set function `build_v(record, lattice)` and its merged form `merged_v(v, groups)` |
+| `attribution.py` | the operators on v(S): `shapley` · `sii` · `empty_interaction` · `banzhaf` · `harsanyi` · `additive_fit` · `min_sufficient` · `order2_shapley` / `order2_from_v` (second-order anchored truncation) · `spearman` |
+| `cues.py` | pixel primitives: `cue_masks_of` (the single cue-mask reader, delegating to `cue_extract.common.cue_masks`) · `cue_unions` · `translate_mask` · `sample_control` (equal-area control placement) · `mask_to_rle` |
+| `geometry.py` | mPL geometry: `haversine_km` · `cluster_representatives` · `merge_distribution` · `build_geometry` · `mpl` |
+| `masking.py` | `mask_solid_from_masks` (gray fill from boolean masks) · `nonempty_subsets` |
+| `inpaint_ops.py` | `inpaint_from_masks` — LaMa as the removal operator (GPU) |
+| `georanker_belief.py` | the frozen adversary: model loading + `score_labels` (GPU) |
+| `plotstyle.py` | figure palette, the shared `rcParams` (`apply_style`), `save(fig, path, dpi=...)`, `short`, `fmt` |
+
+**GPU runners** (`python -m belief_elicit.<name>`)
+
+| file | produces |
+|---|---|
+| `run_georanker_sweep.py` | `georanker_sweep_results.json` |
+| `run_georanker_lattice.py` | `georanker_lattice_results.json` |
+| `run_georanker_control.py` | `georanker_control_results.json` |
+| `run_georanker_inpaint.py` | `georanker_inpaint[_control]_results.json` (also owns the cache-manifest parsing: `parse_stem`, `list_specs`) |
+| `run_georanker_inpaint_vocab.py` | `georanker_inpaint_vocab_results.json` |
+| `run_georanker_check.py` | instrument health check (stdout + `georanker_check_<tag>.json`) |
+| `precompute_inpaint.py` | the `inpaint_cache*/` pixel variants (LaMa, cue_extract venv) |
+| `distributed_georanker.py` · `run_distributed_georanker.py` · `merge_distributed_georanker.py` | multi-machine sharding and merge |
+
+**CPU analyses and reports**
+
+| file | produces |
+|---|---|
+| `dedup_cues.py` | `cue_dedup_groups.json` |
+| `shapley_v3.py` | `shapley_v3_results.json` — holds the single attribution implementation, `run(dedup=...)` |
+| `shapley_v2.py` | `shapley_v2_results.json` — the same `run` with `dedup=False` (thin CLI) |
+| `order2_shapley.py` | `order2_shapley_validation.json` (CLI over `attribution.order2_shapley`) |
+| `alt_attribution.py` | `alt_attribution_results.json` |
+| `calibrate_tau.py` | `calibrate_tau_results.json` |
+| `dedup_report.py` | `dedup_report.md` + `.json` |
+| `inpaint_report.py` | `[vocab_]inpaint_report.md` + `[vocab_]inpaint_summary.json` |
+| `vocab_vs_gpt4o.py` | `vocab_vs_gpt4o.md` + `.json` |
+| `control_report.py` | stdout only (artifact floor, resolvability, corrected phi) |
+
+**Figures** — `plot_overview` · `plot_georanker_sweep` · `plot_shapley_v2` ·
+`plot_control_v2` · `plot_dedup` · `plot_inpaint` · `plot_inpaint_check` ·
+`plot_vocab_vs_gpt4o` · `plot_case_study` · `plot_pipeline_v2`, all writing into
+`figures/` via `plotstyle.save`.
 
 ---
 
@@ -103,6 +154,7 @@ python -m belief_elicit.dedup_cues        # → cue_dedup_groups.json (mask IoU 
 ```bash
 python -m belief_elicit.shapley_v2        # φ + SII on the raw 244-cue list
 python -m belief_elicit.shapley_v3        # φ + SII after de-dup  ← primary attribution
+#   (both are the same implementation: shapley_v3.run(dedup=True|False))
 python -m belief_elicit.dedup_report      # BEFORE/AFTER report (v2 vs v3) → dedup_report.md
 python -m belief_elicit.control_report    # artifact floor, resolvability, corrected φ (stdout)
 python -m belief_elicit.alt_attribution   # Banzhaf / additive surrogate / Harsanyi / minimal sufficient set
