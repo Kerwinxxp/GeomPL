@@ -146,3 +146,6 @@ belief_elicit/distributed_results/
 *.shard-*.meta.json
 *.shard-*.tmp
 *.shard-*.json.tmp
+
+# Remote experiment controller runtime state and outputs
+.remote_control/

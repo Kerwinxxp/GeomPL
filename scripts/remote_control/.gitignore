@@ -1,0 +1,5 @@
+# User configuration stays local; retain the blank example.
+*.json
+!config.example.json
+staging/
+__pycache__/

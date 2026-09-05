@@ -1,0 +1,9 @@
+@{
+    GeoRankerSourceCommit = '2100e9e7c4b95000e16434c7d1fd4e6a4b8424d6'
+    GeoRankerAdapterSha256 = '537BC19E6A13495BD7CE9A3163DA67B274C95E0A25F3EF1C86A3EDDB995D5385'
+    GeoRankerConfigSha256 = '48910F66A263A4E5146E98F0E14ACF5421454BCA01C9A3580C0E423D69A56565'
+    QwenModel = 'Qwen/Qwen2-VL-7B-Instruct'
+    QwenRevision = 'eed13092ef92e448dd6875b2a00151bd3f7db0ac'
+    Sam3Model = 'facebook/sam3'
+    Sam3Revision = '3c879f39826c281e95690f02c7821c4de09afae7'
+}

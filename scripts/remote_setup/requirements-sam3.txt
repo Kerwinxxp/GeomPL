@@ -1,0 +1,12 @@
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+transformers[vision]==5.13.0
+accelerate==1.14.0
+huggingface-hub==1.8.0
+opencv-python==4.11.0.86
+scipy==1.18.0
+pillow==12.3.0
+numpy==2.5.1
+matplotlib
+pyyaml
+openai
