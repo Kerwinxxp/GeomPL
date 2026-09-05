@@ -53,9 +53,17 @@ Usable images (singles + all, m>=2): **7**; pairs with an interaction value: **5
 
 ## (d) Artifact floor and resolvability (equal-area controls)
 
-Usable images: **0**, cues: **0**; placements scored: 0 inpaint / 0 gray.
+Usable images: **10**, cues: **28**; placements scored: 56 inpaint / 0 gray.
 
+- inpaint control floor: median 0.0487, P90 0.1211, max 0.2182
+- resolvability (inpaint, real > max of own controls): **72.7%** (n=22)
 
 | category | n (inpaint) | resolvable inpaint | n (gray) | resolvable gray |
 |---|---:|---:|---:|---:|
+| architecture | 4 | 100.0% | 0 | n/a |
+| landmarks/buildings | 2 | 100.0% | 0 | n/a |
+| vehicles/license plates | 2 | 100.0% | 0 | n/a |
+| text/signage | 4 | 75.0% | 0 | n/a |
+| commercial/cultural | 4 | 50.0% | 0 | n/a |
+| environment | 6 | 50.0% | 0 | n/a |
 
