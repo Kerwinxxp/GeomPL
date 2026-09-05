@@ -135,3 +135,14 @@ belief_elicit/figures/cue_stats_100.png
 
 # Chinese-language draft (local only, not shipped)
 mPL_to_Shapley_zh.pdf
+
+# LaMa inpainted variant cache (1.5 GB, regenerate: python -m belief_elicit.precompute_inpaint)
+belief_elicit/inpaint_cache/
+belief_elicit/inpaint_cache_*/
+
+# Runtime logs and distributed-run intermediates (canonical completed result JSONs stay trackable)
+belief_elicit/logs/
+belief_elicit/distributed_results/
+*.shard-*.meta.json
+*.shard-*.tmp
+*.shard-*.json.tmp
