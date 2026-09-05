@@ -33,6 +33,8 @@ DEDUP_GROUPS = os.path.join(HERE, "cue_dedup_groups.json")
 ALT_ATTRIBUTION = os.path.join(HERE, "alt_attribution_results.json")
 CALIBRATE_TAU = os.path.join(HERE, "calibrate_tau_results.json")
 ORDER2_VALIDATION = os.path.join(HERE, "order2_shapley_validation.json")
+LOCATION_PRIOR = os.path.join(HERE, "location_prior.json")
+PROTECTION_SET = os.path.join(HERE, "protection_set_results.json")
 
 # ---- generated reports ----
 DEDUP_REPORT_MD = os.path.join(HERE, "dedup_report.md")
@@ -41,6 +43,7 @@ INPAINT_REPORT_MD = os.path.join(HERE, "inpaint_report.md")
 INPAINT_SUMMARY = os.path.join(HERE, "inpaint_summary.json")
 VOCAB_REPORT_MD = os.path.join(HERE, "vocab_vs_gpt4o.md")
 VOCAB_REPORT_JSON = os.path.join(HERE, "vocab_vs_gpt4o.json")
+PROTECTION_SET_MD = os.path.join(HERE, "protection_set_report.md")
 
 # ---- pixel caches and inputs ----
 INPAINT_CACHE = os.path.join(HERE, "inpaint_cache")
@@ -178,6 +181,30 @@ def build_v(r, lattice):
         for c in lat["combos"]:
             v[frozenset(c["subset"])] = c["mpl"]
     return v, True
+
+
+def build_q(r, lattice):
+    """One sweep record (+ the lattice) -> {frozenset of cue indices: belief dict}.
+
+    The *belief* counterpart of `build_v`: instead of the scalar mPL of masking S, this
+    returns the full posterior over gallery labels that the adversary holds when S is
+    gray-filled.  q(empty) is the clean-image posterior, q({k}) the per-cue prior, q(N)
+    the all-masked prior, and the intermediate subsets come from the lattice run.
+
+    The dict is complete iff ``len(q) == 2 ** r["n_cues"]``; callers that need the whole
+    lattice must check that, because the lattice run only covers m >= 3 images and may be
+    unfinished for some of them.
+    """
+    m = r["n_cues"]
+    q = {frozenset(): r["posterior"]}
+    for k, pc in enumerate(r["per_cue"]):
+        q[frozenset([k])] = pc["prior"]
+    q[frozenset(range(m))] = r["prior_allmask"]
+    if m >= 3:
+        lat = lattice.get(r["image_id"])
+        for c in (lat or {}).get("combos", []):
+            q[frozenset(c["subset"])] = c["prior"]
+    return q
 
 
 def merged_v(v, groups):

@@ -19,10 +19,11 @@ runner / report / plot script is a thin CLI over them.
 
 | file | contents |
 |---|---|
-| `results.py` | where every result and data file lives (path constants) + the loaders: `load_json` · `load_sweep` · `load_lattice` · `load_controls` · `load_inpaint` · `load_shapley` · `load_gallery` · `load_subsets` · `image_path` · `load_manifest` / `manifest_index` · `index_variants` · `by_image`, plus the set function `build_v(record, lattice)` and its merged form `merged_v(v, groups)` |
+| `results.py` | where every result and data file lives (path constants) + the loaders: `load_json` · `load_sweep` · `load_lattice` · `load_controls` · `load_inpaint` · `load_shapley` · `load_gallery` · `load_subsets` · `image_path` · `load_manifest` / `manifest_index` · `index_variants` · `by_image`, plus the set function `build_v(record, lattice)`, its merged form `merged_v(v, groups)` and the belief lattice `build_q(record, lattice)` |
 | `attribution.py` | the operators on v(S): `shapley` · `sii` · `empty_interaction` · `banzhaf` · `harsanyi` · `additive_fit` · `min_sufficient` · `order2_shapley` / `order2_from_v` (second-order anchored truncation) · `spearman` |
 | `cues.py` | pixel primitives: `cue_masks_of` (the single cue-mask reader, delegating to `cue_extract.common.cue_masks`) · `cue_unions` · `translate_mask` · `sample_control` (equal-area control placement) · `mask_to_rle` |
 | `geometry.py` | mPL geometry: `haversine_km` · `cluster_representatives` · `merge_distribution` · `build_geometry` · `mpl` |
+| `risk.py` | **protection-oriented** (signed, forward-looking) risk on a released belief: `signed_evidence` · `p_true` · `rank_true` · `err_km` / `exp_err_km` · `mpl_vs` / `mpl_max_vs` · `eps_local` · `residual_allmask` · `risk_vector` · `gallery_coords`, plus the cached numpy evaluator `RiskGeometry` |
 | `masking.py` | `mask_solid_from_masks` (gray fill from boolean masks) · `nonempty_subsets` |
 | `inpaint_ops.py` | `inpaint_from_masks` — LaMa as the removal operator (GPU) |
 | `georanker_belief.py` | the frozen adversary: model loading + `score_labels` (GPU) |
@@ -38,6 +39,7 @@ runner / report / plot script is a thin CLI over them.
 | `run_georanker_inpaint.py` | `georanker_inpaint[_control]_results.json` (also owns the cache-manifest parsing: `parse_stem`, `list_specs`) |
 | `run_georanker_inpaint_vocab.py` | `georanker_inpaint_vocab_results.json` |
 | `run_georanker_check.py` | instrument health check (stdout + `georanker_check_<tag>.json`) |
+| `location_prior.py` | `location_prior.json` — the adversary's content-free prior pi (3 blank probes, ~3 min) |
 | `precompute_inpaint.py` | the `inpaint_cache*/` pixel variants (LaMa, cue_extract venv) |
 | `distributed_georanker.py` · `run_distributed_georanker.py` · `merge_distributed_georanker.py` | multi-machine sharding and merge |
 
@@ -55,10 +57,11 @@ runner / report / plot script is a thin CLI over them.
 | `inpaint_report.py` | `[vocab_]inpaint_report.md` + `[vocab_]inpaint_summary.json` |
 | `vocab_vs_gpt4o.py` | `vocab_vs_gpt4o.md` + `.json` |
 | `control_report.py` | stdout only (artifact floor, resolvability, corrected phi) |
+| `protection_set.py` | `protection_set_results.json` + `protection_set_report.md` — selection-strategy comparison under the risk metrics |
 
 **Figures** — `plot_overview` · `plot_georanker_sweep` · `plot_shapley_v2` ·
 `plot_control_v2` · `plot_dedup` · `plot_inpaint` · `plot_inpaint_check` ·
-`plot_vocab_vs_gpt4o` · `plot_case_study` · `plot_pipeline_v2`, all writing into
+`plot_vocab_vs_gpt4o` · `plot_case_study` · `plot_pipeline_v2` · `plot_protection_set`, all writing into
 `figures/` via `plotstyle.save`.
 
 ---
@@ -178,7 +181,23 @@ python -m belief_elicit.inpaint_report                       # → inpaint_repor
 python -m belief_elicit.vocab_vs_gpt4o                       # GPT-4o vs fixed-vocabulary cue lists
 ```
 
-### 4.6 Figures
+### 4.6 Protection-set selection (which cues to actually remove)
+
+Attribution says *which cue explains the shift*; protection asks *what is left after
+treating S*. The risk metrics live in `risk.py` and are measured against the adversary's
+content-free prior π, elicited once on the GPU:
+
+```bash
+# 1) the reference prior π: three content-free probes (GeoRanker venv, ~3 min)
+belief_elicit/.venv_gr/Scripts/python.exe -m belief_elicit.location_prior
+
+# 2) six selection strategies × every budget k, on the full gray lattice (CPU, ~2 s)
+python -m belief_elicit.protection_set        # + a k ≤ 2 replicate on the inpaint arm
+```
+
+Without step 1 the analysis falls back to a uniform prior and says so loudly.
+
+### 4.7 Figures
 
 ```bash
 python -m belief_elicit.plot_overview                        # → figures/georanker_overview.png
@@ -194,6 +213,7 @@ python -m belief_elicit.plot_inpaint_check
 python -m belief_elicit.plot_vocab_vs_gpt4o
 python -m belief_elicit.plot_case_study 158307292 754780171
 python -m belief_elicit.plot_pipeline_v2                     # explainer figures for the v2 pipeline
+python -m belief_elicit.plot_protection_set                 # -> figures/protection_set.png
 ```
 
 All long runs save incrementally and resume automatically if interrupted.
@@ -216,7 +236,9 @@ once the weights are cached.
 | `alt_attribution_results.json` | Banzhaf, additive-surrogate `R²`, Harsanyi dividends, minimal sufficient sets |
 | `order2_shapley_validation.json` | accuracy of the second-order truncation against the exact gray-block lattice |
 | `calibrate_tau_results.json` | τ sensitivity, NLL/Brier/ECE, `mPL(τ) ≈ mPL(1)/τ` |
-| `dedup_report.md` · `inpaint_report.md` · `vocab_inpaint_report.md` · `vocab_vs_gpt4o.md` | generated prose reports |
+| `location_prior.json` | the adversary's content-free prior π (gray / noise / blur probes + their average) and the uniform reference |
+| `protection_set_results.json` | per-image risk cache over every subset, the six strategies' picks at every k, minimal-k/η, misleading-cue statistics, inpaint replicate |
+| `dedup_report.md` · `inpaint_report.md` · `vocab_inpaint_report.md` · `vocab_vs_gpt4o.md` · `protection_set_report.md` | generated prose reports |
 
 Full belief distributions are persisted, so any change of geometry (merge radius,
 multi-resolution partitions) is pure post-processing — no re-scoring needed.
@@ -237,6 +259,7 @@ multi-resolution partitions) is pure post-processing — no re-scoring needed.
 | `figures/case_newyork_*.png` | overlap case: `Σv({k}) > v(N)`, Shapley corrects downward |
 | `figures/case_slovenia_*.png` | backup case: `Σv({k}) < v(N)`, Shapley corrects upward |
 | `figures/pipeline_v2_walkthrough.png` · `pipeline_v2_diagram.png` | end-to-end explainer for the v2 pipeline |
+| `figures/protection_set.png` | protection: residual risk vs budget k, regret per strategy, minimal-k/η curves, and φ vs the *signed* contribution |
 
 ## 7. Headline numbers (100 images, 95 with maskable cues)
 
@@ -246,3 +269,9 @@ multi-resolution partitions) is pure post-processing — no re-scoring needed.
 - Shapley correction roughly halves per-category medians and reorders the top categories.
 - Equal-area control: artifact floor median 0.087 nats/1000 km; 49 % of single-cue
   effects exceed their own control, while 70 % of `φ` values exceed the pure-artifact null.
+- Protection (76 images, `P ≥ 2`): π is diffuse (H = 4.84 vs 4.93 nats uniform). 38 % of
+  de-duplicated cues are **misleading** — removing them alone *raises* the attacker's
+  log-odds on the truth — and 18/76 Shapley top-1 picks are among them. Shapley top-k
+  costs 0.23–0.25 nats of regret against the optimal set and is optimal on only 42–63 %
+  of images; the signed criterion is exactly optimal at k = 1. Even with the full cue
+  vocabulary, 72–84 % of images cannot be pushed to `R1 ≤ η` by any proper subset.
