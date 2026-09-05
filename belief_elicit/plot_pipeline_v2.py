@@ -27,9 +27,9 @@ from matplotlib.gridspec import GridSpec
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch, Patch
 from PIL import Image
 
+from belief_elicit.masking import mask_solid_from_masks
 from belief_elicit.order2_shapley import order2_shapley
 from belief_elicit.precompute_inpaint import cue_masks_of, load_subset_paths
-from clue_leak.masking import mask_solid_from_masks
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 FIGDIR = os.path.join(HERE, "figures")

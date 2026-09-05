@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】逐图案例:原始单条 mPL vs Shapley φ 对比(+ SII 交互标注)。
+"""逐图案例:原始单条 mPL vs Shapley φ 对比(+ SII 交互标注)。
 左=原图+彩色线索掩码;中=single-cue mPL(基线,重复计数);右=Shapley φ(矫正,Σφ=v(N))。
 中右同序同色 → 直观看共享质量如何被重分配。底部标注最强交互对(overlap/backup)。
 用法：python -m belief_elicit.plot_case_study 158307292 754780171

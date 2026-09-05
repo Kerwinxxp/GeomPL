@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】全量等面积对照分析 + 伪影修正 Shapley(φ' = φ − c_img/m)。
+"""全量等面积对照分析 + 伪影修正 Shapley(φ' = φ − c_img/m)。
 运行:python -m belief_elicit.control_report
 """
 import json

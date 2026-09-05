@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】Shapley 之外的替代归因法(全部基于已有 2^m 格,零 GPU)。
+"""Shapley 之外的替代归因法(全部基于已有 2^m 格,零 GPU)。
 
   1. Banzhaf value      : 对 coalition 均匀加权(而非 Shapley 的排列加权)
   2. Additive surrogate : 对 v(S) 最小二乘拟合可加模型,R^2 = "可加性能解释多少"

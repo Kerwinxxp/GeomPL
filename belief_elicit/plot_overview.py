@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】全局总览:全部线索的 原始单条 mPL → Shapley φ,及可分辨性。
+"""全局总览:全部线索的 原始单条 mPL → Shapley φ,及可分辨性。
 (a) 每条线索 v_single vs φ 散点(颜色=可分辨,大小=面积);(b) 逐类别三量对比条形。
 运行:python -m belief_elicit.plot_overview
      python -m belief_elicit.plot_overview --shapley belief_elicit/shapley_v3_results.json             --out belief_elicit/figures/georanker_overview_dedup.png   # 去重口径

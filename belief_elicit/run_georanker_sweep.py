@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】GeoRanker(变体 B)全量 sweep:逐单线索 mPL + 精度体检。
+"""GeoRanker(变体 B)全量 sweep:逐单线索 mPL + 精度体检。
 
 对每张有 maskable 线索的图:
   原图打分 → argmax / p_true / rank / km误差 / 国家命中;
@@ -28,11 +28,10 @@ except Exception:
 import numpy as np
 from PIL import Image
 
+from belief_elicit.geometry import build_geometry, haversine_km, mpl
 from belief_elicit.georanker_belief import score_labels
-from belief_elicit.run_georanker_check import build_geometry, mpl
-from clue_leak.masking import mask_solid_from_masks
+from belief_elicit.masking import mask_solid_from_masks
 from cue_extract.rle import rle_to_mask
-from geobayes.eval.metrics import haversine_km
 
 OUT = os.path.join(os.path.dirname(__file__), "georanker_sweep_results.json")
 MERGE_KM = 2.0        # Geo-I 口径:仅别名去重,保留真实近邻对

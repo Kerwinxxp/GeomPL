@@ -3,7 +3,7 @@
 - 对 subset200 每张图:坐标→城市级地名(Nominatim reverse,zoom=10),缓存复用(已有 95 条不重查);
 - 地名→代表坐标(forward geocode,与旧管线几何一致);
 - 输出 data/gallery_v2.json = [{label, gps:[lat,lon], text:null, ref_image:null}, ...];
-- 同步回写 gt_labels_cache / forward_geocode_cache。旧 gallery_labels.json 保留不动。
+- 同步回写 gt_labels_cache / forward_geocode_cache。
 Nominatim 免费限速 1req/s。用法：python scripts/update_gallery.py
 """
 import json

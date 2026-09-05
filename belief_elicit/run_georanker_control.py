@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】等面积对照(GeoRanker 版):测"遮蔽伪影地板"。
+"""等面积对照(GeoRanker 版):测"遮蔽伪影地板"。
 
 对每条真线索:把它的 SAM3 掩码平移到随机非线索位置(形状/面积不变,避开全部线索并集),
 同管线(变体 B / gallery_v2 / 2km 几何)打分 → 对照 mPL。
@@ -25,9 +25,9 @@ except Exception:
 import numpy as np
 from PIL import Image
 
+from belief_elicit.geometry import build_geometry, mpl
 from belief_elicit.georanker_belief import score_labels
-from belief_elicit.run_georanker_check import build_geometry, mpl
-from clue_leak.masking import mask_solid_from_masks
+from belief_elicit.masking import mask_solid_from_masks
 from cue_extract.rle import rle_to_mask
 
 SWEEP = os.path.join(os.path.dirname(__file__), "georanker_sweep_results.json")

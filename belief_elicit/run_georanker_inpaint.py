@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】LaMa 修复(inpaint)版逐线索 mPL:对预计算图像变体批量打分。
+"""LaMa 修复(inpaint)版逐线索 mPL:对预计算图像变体批量打分。
 
 灰块遮蔽会引入"篡改伪影"(等面积对照实验:涂灰一块无关区域也能大幅改变后验)。
 本脚本改用 **预先修复好的图像变体**(由 inpaint 缓存包生成)重跑同一口径:
@@ -38,8 +38,8 @@ except Exception:
 
 from PIL import Image
 
+from belief_elicit.geometry import build_geometry, mpl
 from belief_elicit.georanker_belief import score_labels
-from belief_elicit.run_georanker_check import build_geometry, mpl
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 MERGE_KM = 2.0

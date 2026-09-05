@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】两种"线索清单"口径的对照:GPT-4o 提议(top-down)vs 固定词表(bottom-up)。
+"""两种"线索清单"口径的对照:GPT-4o 提议(top-down)vs 固定词表(bottom-up)。
 
 同一批 10 张图、同一移除算子(LaMa inpaint)、同一攻击者(GeoRanker),只换"什么算一条线索":
 

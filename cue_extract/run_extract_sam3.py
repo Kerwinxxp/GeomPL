@@ -23,11 +23,12 @@ from PIL import Image
 
 from cue_extract.grounded import locate_and_ground
 from cue_extract.merge import assign_maskable, flag_degenerate
+from cue_extract.mllm import MLLMClient
 from cue_extract.rle import mask_to_rle
 from cue_extract.sam3_seg import segment_with_fallback
 from cue_extract.viz import render
-from run import build_client, load_config
 
+CONFIG = os.path.join(ROOT, "config.yaml")
 OUTDIR = os.path.join(os.path.dirname(__file__), "results_sam3")
 FIGDIR = os.path.join(os.path.dirname(__file__), "figures_sam3")
 
@@ -36,6 +37,20 @@ PILOT_IDS = [
     "311344213_4b003f4ab1_114_63163416@N00.jpg", "370717727_f9564e3587_150_13527886@N00.jpg",
     "847733166_0573338bfb_1321_89904893@N00.jpg",
 ]
+
+
+def build_client(config_path=CONFIG):
+    """读 config.yaml 建 GPT-4o 客户端。API key 只从 OPENAI_API_KEY 环境变量读取。"""
+    import yaml
+    with open(config_path, encoding="utf-8") as f:
+        cfg = yaml.safe_load(f) or {}
+    return MLLMClient(
+        model=cfg.get("model", "gpt-4o"),
+        base_url=cfg.get("base_url"),
+        cache_dir=cfg.get("cache_dir", ".mllm_cache"),
+        temperature=cfg.get("decode_temperature", 0.0),
+        max_pixels=cfg.get("max_pixels", 1280 * 28 * 28),
+    )
 
 
 def load_subsets():
@@ -74,7 +89,7 @@ def main():
     args = ap.parse_args()
     ids = [x for x in args.ids.split(",") if x]
     os.makedirs(OUTDIR, exist_ok=True)
-    client = build_client(load_config(os.path.join(ROOT, "config.yaml")))
+    client = build_client()
     subset = load_subsets()
 
     t0 = time.time()

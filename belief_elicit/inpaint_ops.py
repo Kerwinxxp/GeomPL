@@ -4,7 +4,7 @@
 也能大幅改变后验。LaMa 用图像内容填补被删区域,几乎不留可见篡改痕迹,
 因而更接近"该线索从未出现过"的反事实。
 
-接口与 clue_leak.masking.mask_solid_from_masks 对齐:
+接口与 belief_elicit.masking.mask_solid_from_masks 对齐:
     inpaint_from_masks(img, [mask, ...]) -> PIL.Image (RGB, 同尺寸)
 """
 import numpy as np

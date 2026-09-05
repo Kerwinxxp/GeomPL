@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】**几何去重之后**的归因(shapley_v2 的替代口径)。
+"""**几何去重之后**的归因(shapley_v2 的替代口径)。
 
 先用 belief_elicit/dedup_cues.py 把两两 IoU >= 0.9 的线索并成"合并玩家",再在合并后的
 博弈上算精确 Shapley + SII。

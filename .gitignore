@@ -39,68 +39,12 @@ Thumbs.db
 # ================= 精简仓库：只保留 5 张样例 + 少量关键图 =================
 # （本地文件不删，仅不入库。样例前缀：181848051 261517384 311344213 370717727 847733166）
 
-# GeoBayes 复现的存档输出（可重生成；见 REPRODUCTION_REPORT.md）
-/results/
-/results_v0/
-/results_v1/
-/results_v1final/
-/results_zeroshot/
-/results_singlelevel/
-/results_baseline/
-/results_closedset/
-/results_closedset_gallery/
-/results_closedset_gallery_prioronly/
-
-# 消融结果 JSON —— 仅 5 样例
-clue_leak/combo2_results/*
-!clue_leak/combo2_results/181848051*
-!clue_leak/combo2_results/261517384*
-!clue_leak/combo2_results/311344213*
-!clue_leak/combo2_results/370717727*
-!clue_leak/combo2_results/847733166*
-
-# 线索标注 JSON —— 仅 5 样例
-cue_extract/results/*
-!cue_extract/results/181848051*
-!cue_extract/results/261517384*
-!cue_extract/results/311344213*
-!cue_extract/results/370717727*
-!cue_extract/results/847733166*
-
-# 原图后验缓存 —— 仅 5 样例
-clue_leak/cache_fullimage_posterior/*
-!clue_leak/cache_fullimage_posterior/181848051*
-!clue_leak/cache_fullimage_posterior/261517384*
-!clue_leak/cache_fullimage_posterior/311344213*
-!clue_leak/cache_fullimage_posterior/370717727*
-!clue_leak/cache_fullimage_posterior/847733166*
-
-# 单图 mPL 图 —— 仅 5 样例
-clue_leak/figures/per_image_mpl/*
-!clue_leak/figures/per_image_mpl/*181848051*
-!clue_leak/figures/per_image_mpl/*261517384*
-!clue_leak/figures/per_image_mpl/*311344213*
-!clue_leak/figures/per_image_mpl/*370717727*
-!clue_leak/figures/per_image_mpl/*847733166*
-
-# cue_extract 图 —— 只留 contact_sheet
+# cue_extract 图 —— 只留少量入库
 cue_extract/figures/*
-!cue_extract/figures/contact_sheet.png
+!cue_extract/figures/vocab_vs_gpt4o.png
 
-# clue_leak/figures 顶层 —— 只留 clue_mpl_ranking.png
-clue_leak/figures/*.pdf
-clue_leak/figures/combo2_leakage_5imgs.png
-
-# ================= route-B + SAM3 管线（当前推荐)：留最终产物，去探索中间物 =================
-# 探索性提取变体（route B / Set-of-Mark，已被 SAM3 取代，不入库）
-cue_extract/results_b/
-cue_extract/results_som/
-cue_extract/figures_b/
-cue_extract/figures_som/
+# route-B + SAM3 管线（当前）：留最终产物，去中间物
 cue_extract/figures_sam3/_marked/
-
-# 允许 SAM3 vs 旧管线对比图入库（cue_extract/figures/* 默认被忽略）
-!cue_extract/figures/compare_sam3_vs_old.png
 
 # ================= GeoRanker belief meter (2026-07) =================
 # GPU env (~5 GB), rebuild per belief_elicit/README.md
@@ -116,22 +60,6 @@ cue_extract/figures_sam3/*
 !cue_extract/figures_sam3/cuesSAM3_311344213.png
 !cue_extract/figures_sam3/cuesSAM3_370717727.png
 !cue_extract/figures_sam3/cuesSAM3_847733166.png
-
-# Superseded 25 km-geometry mPL outputs (kept locally, not shipped)
-clue_leak/figures/net_mpl_sam3/
-
-# Third-party LoRA weights (download separately; see belief_elicit/README.md)
-belief_elicit/georanker_ckpt/adapter_model.safetensors
-
-# Superseded 25 km-geometry per-image mPL figures (regenerate with 2 km geometry)
-clue_leak/figures/per_image_mpl_sam3/
-clue_leak/figures/control_example_*.png
-clue_leak/figures/control_area_sam3.png
-clue_leak/figures/leavein_vs_out.png
-
-# GeoCLIP transition-stage figures (superseded by GeoRanker)
-belief_elicit/figures/geoclip_mpl_*.png
-belief_elicit/figures/cue_stats_100.png
 
 # Chinese-language draft (local only, not shipped)
 mPL_to_Shapley_zh.pdf
@@ -149,7 +77,3 @@ belief_elicit/distributed_results/
 
 # Remote experiment controller runtime state and outputs
 .remote_control/
-
-# v2 pipeline: run logs (regenerable)
-belief_elicit/logs/*.log
-!cue_extract/figures/vocab_vs_gpt4o.png

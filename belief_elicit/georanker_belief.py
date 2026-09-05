@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】GeoRanker 作为信念计:对固定坐标 gallery 输出连续 softmax 概率。
+"""GeoRanker 作为信念计:对固定坐标 gallery 输出连续 softmax 概率。
 
 模型 = Qwen2-VL-7B + value_head(线性,取末 token 隐状态 → 标量 reward,越高=越近)
      + 官方 LoRA(belief_elicit/georanker_ckpt/,来源 commit 见 SOURCE_COMMIT.txt)。

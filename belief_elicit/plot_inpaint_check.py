@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 
-from clue_leak.masking import mask_solid_from_masks
+from belief_elicit.masking import mask_solid_from_masks
 from belief_elicit.precompute_inpaint import cue_masks_of
 
 plt.rcParams.update({"font.family": "DejaVu Sans"})

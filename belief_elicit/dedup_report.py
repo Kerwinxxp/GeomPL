@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】几何去重的 BEFORE/AFTER 报告(shapley_v2 vs shapley_v3)。
+"""几何去重的 BEFORE/AFTER 报告(shapley_v2 vs shapley_v3)。
 
 BEFORE = belief_elicit/shapley_v2_results.json(原始 244 条线索)
 AFTER  = belief_elicit/shapley_v3_results.json(IoU>=0.9 合并后 223 条)

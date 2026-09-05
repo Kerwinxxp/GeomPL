@@ -1,6 +1,6 @@
 # cue_extract — Geolocation Cue Extraction Pipeline
 
-Extracts "visual cues that may leak geographic location" from an image and produces **pixel-level masks**. Feeds clean cue regions to the downstream per-cue mPL ablation (`clue_leak/`).
+Extracts "visual cues that may leak geographic location" from an image and produces **pixel-level masks**. Feeds clean cue regions to the downstream per-cue mPL ablation and Shapley attribution (`belief_elicit/`).
 
 ## Pipeline: route-B + SAM 3 (`run_extract_sam3.py`)
 
@@ -17,25 +17,40 @@ GPT-4o does the semantics ("what / why"); SAM 3 does the localization ("where", 
 **Prerequisites:**
 - Use **high-resolution images** (see root README — the sample images ship at 1024px; low-res 500px badly hurts recall). `client.prepare` keeps up to ~1MP.
 - **SAM 3 is a gated model.** Accept the license once at <https://huggingface.co/facebook/sam3> and `huggingface-cli login`; then `transformers>=5.13` loads it natively (`Sam3Model`, ~840M params, ~3.4 GB VRAM).
+- `OPENAI_API_KEY` must be in the environment — the client never reads a key from code or config. Everything else (model, endpoint, `max_pixels`, cache dir) comes from the repo-root `config.yaml`.
 
 ```bash
 cue_extract/.venv/Scripts/python -m cue_extract.run_extract_sam3 --ids <id1,id2,...>
-#   → cue_extract/results_sam3/<id>.json  (used by clue_leak.run_combo2 --cue_dir)
-cue_extract/.venv/Scripts/python -m cue_extract.contact_sheet     # batch QA overview
+#   → cue_extract/results_sam3/<id>.json  (consumed by belief_elicit/run_georanker_*.py)
+cue_extract/.venv/Scripts/python -m cue_extract.viz_montage50 12    # batch QA montage
+```
+
+## Bottom-up variant: fixed vocabulary (`extract_vocab.py`)
+
+The same SAM 3 segmentation driven by a **fixed ~12-concept vocabulary** instead of GPT-4o's per-image proposals: deterministic, free, and identical across images, so masks are directly comparable image-to-image. `compare_vocab.py` measures how much of the GPT-4o cue list the vocabulary covers (IoU / pixel recall); the leakage-side comparison lives in `belief_elicit/vocab_vs_gpt4o.py`.
+
+```bash
+cue_extract/.venv/Scripts/python -m cue_extract.extract_vocab   # → cue_extract/results_vocab/<id>.json
+cue_extract/.venv/Scripts/python -m cue_extract.compare_vocab
+cue_extract/.venv/Scripts/python -m cue_extract.viz_vocab_vs_gpt4o
 ```
 
 ## Modules
 
 | file | role |
 |---|---|
-| `run_extract_sam3.py` | orchestrator (GPT-4o → SAM 3 → degenerate/maskable) |
+| `run_extract_sam3.py` | orchestrator (GPT-4o → SAM 3 → degenerate/maskable) + config loader |
 | `grounded.py` | parse the VLM geo-reasoning output into cues |
+| `prompts.py` | the geo-reasoning prompt and the cue category list |
 | `sam3_seg.py` | SAM 3 text→mask + `segment_with_fallback` recall chain |
 | `merge.py` | `flag_degenerate` (bbox > 40% img → non-maskable) · `assign_maskable` (evidence-based) |
-| `rle.py` | minimal mask RLE encode/decode (no pycocotools) |
-| `viz.py` · `contact_sheet.py` | annotation overlay · batch QA sheet |
-| `viz_compare_sam3.py` | old-pipeline vs SAM 3 mask-quality comparison figure |
-| `inpaint.py` · `viz_mask_compare.py` | gray-mask vs LaMa-inpaint robustness check |
+| `rle.py` | minimal mask RLE encode/decode (no pycocotools) — also used by `belief_elicit/` |
+| `mllm.py` | GPT-4o client (OpenAI-compatible), disk-cached responses, key from `OPENAI_API_KEY` |
+| `imaging.py` | `smart_resize_dims` — model coordinate space == our pixel space |
+| `viz.py` | annotation overlay for a single image |
+| `viz_montage50.py` | multi-image annotation-quality montage |
+| `stats_cues.py` | dataset-wide cue statistics figure (categories, counts, localization outcomes) |
+| `extract_vocab.py` · `compare_vocab.py` · `viz_vocab_vs_gpt4o.py` | fixed-vocabulary arm: extraction, coverage analysis, side-by-side figure |
 
 ## Output JSON (`cue_extract/results_sam3/<id>.json`)
 

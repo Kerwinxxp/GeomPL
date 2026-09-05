@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】GeoRanker 100 张 sweep 汇总图(与 GeoCLIP 版并排可比)。
+"""GeoRanker 100 张 sweep 汇总图(与 GeoCLIP 版并排可比)。
 ① 精度体检:km 误差分档 + 国家命中率;② p_true 分布;③ 逐类别单线索 mPL(country_hit 图)。
 运行(主环境):python -m belief_elicit.plot_georanker_sweep
 """

@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】修复(inpaint)口径逐线索泄漏分析:与灰块口径全面对照。
+"""修复(inpaint)口径逐线索泄漏分析:与灰块口径全面对照。
 
 输入
   --results   run_georanker_inpaint.py 的主结果(s*/p*/all),默认

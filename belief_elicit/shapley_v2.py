@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】审稿修复版归因:全部 maskable 图(m>=1)+ 正式 SII + hit/miss 分层。
+"""审稿修复版归因:全部 maskable 图(m>=1)+ 正式 SII + hit/miss 分层。
 
 修复(审稿意见 3/4/5):
   #3 正式 Shapley Interaction Index(在所有 coalition context 上平均二阶差分),取代 empty-context I;

@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】词表(vocab)口径修复缓存的 GeoRanker 打分 —— run_georanker_inpaint.py 的薄包装。
+"""词表(vocab)口径修复缓存的 GeoRanker 打分 —— run_georanker_inpaint.py 的薄包装。
 
 **为什么需要它**:run_georanker_inpaint.py 的线索元数据全部取自 sweep 的 `per_cue`
 (`r["per_cue"][k]["cue"]` / `["category"]` / `["mpl"]`、`r["n_cues"]`、`r["mpl_all"]`)。
@@ -45,8 +45,8 @@ except Exception:
 
 from PIL import Image
 
+from belief_elicit.geometry import build_geometry, mpl
 from belief_elicit.georanker_belief import score_labels
-from belief_elicit.run_georanker_check import build_geometry, mpl
 from belief_elicit.run_georanker_inpaint import (BATCH_SIZE, MERGE_KM, PART_OF,
                                                  VARIANT, list_specs)
 

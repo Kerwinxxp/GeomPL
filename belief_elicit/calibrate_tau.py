@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】温度校准(审稿意见 #1):τ 敏感性 + NLL/Brier/ECE + mPL∝1/τ 验证。
+"""温度校准(审稿意见 #1):τ 敏感性 + NLL/Brier/ECE + mPL∝1/τ 验证。
 
 关键:softmax(s/τ) 的分布可从已存 p(1) 精确恢复,无需重打分:
     p_i(τ) = p_i(1)^{1/τ} / Σ_j p_j(1)^{1/τ}
@@ -20,8 +20,7 @@ except Exception:
 
 import numpy as np
 
-from geobayes.eval.candidates import cluster_representatives, merge_distribution
-from geobayes.eval.metrics import haversine_km
+from belief_elicit.geometry import cluster_representatives, haversine_km, merge_distribution
 
 SWEEP = os.path.join(os.path.dirname(__file__), "georanker_sweep_results.json")
 

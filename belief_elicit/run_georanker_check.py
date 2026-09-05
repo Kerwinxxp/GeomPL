@@ -1,19 +1,17 @@
-"""【实验性 · 可整体删除】GeoRanker 仪器体检(多图 × 变体 A/B/C 可选)。
+"""GeoRanker 仪器体检(多图 × 变体 A/B/C 可选)。
 
 对每张图 × 每个 prompt 变体:
   原图 → 138 候选 reward → softmax → 真值 rank / p_true / top5;
-  全部遮蔽子集 → p_true 变化 / raw mPL(几何与 GeoCLIP 口径完全一致);
-体检三条(GEORANKER_PLAN.md §四):准确性 / 遮蔽响应 / mPL 形态。
+  全部遮蔽子集 → p_true 变化 / raw mPL(与主线 sweep 几何口径完全一致);
+体检三条:准确性 / 遮蔽响应 / mPL 形态。
 变体 C 负例 = 变体 A 在【原图】上的倒数 5 名(单仪器;固定后对该图全部条件复用)。
 注:选 C 而未选 A 时会自动先跑一次 A 原图以取负例。
 
-注意:本 venv(.venv_gr)没有 geoclip;只 import 纯 Python 几何(geobayes.eval)。
 运行:belief_elicit/.venv_gr/Scripts/python.exe -m belief_elicit.run_georanker_check \
       [--images 261517384,...] [--variants A,B,C] [--tag okazaki]
 """
 import glob
 import json
-import math
 import os
 import sys
 import time
@@ -28,40 +26,12 @@ except Exception:
 import numpy as np
 from PIL import Image
 
+from belief_elicit.geometry import build_geometry, mpl
 from belief_elicit.georanker_belief import format_negatives, score_labels
-from clue_leak.combo import nonempty_subsets
-from clue_leak.masking import mask_solid_from_masks
+from belief_elicit.masking import mask_solid_from_masks, nonempty_subsets
 from cue_extract.rle import rle_to_mask
-from geobayes.eval.candidates import cluster_representatives, merge_distribution
-from geobayes.eval.metrics import haversine_km
 
 OUTDIR = os.path.dirname(__file__)
-
-
-def build_geometry(gv, merge_km=25.0):
-    coords = {g["label"]: g["gps"] for g in gv if g["gps"]}
-    rep = cluster_representatives(coords, merge_km)
-    clusters = sorted(set(rep.values()))
-    rc = {c: coords[c] for c in clusters}
-    dmat = {}
-    for a in range(len(clusters)):
-        for b in range(a + 1, len(clusters)):
-            dmat[(clusters[a], clusters[b])] = haversine_km(*rc[clusters[a]], *rc[clusters[b]])
-    return rep, clusters, (lambda i, j: dmat.get((i, j)) or dmat.get((j, i)))
-
-
-def mpl(prior, post, rep, clusters, dist):
-    pr, po = merge_distribution(prior, rep), merge_distribution(post, rep)
-    keys = [k for k in clusters if pr.get(k, 0) > 0 and po.get(k, 0) > 0]
-    llr = {k: math.log(po[k] / pr[k]) for k in keys}
-    ks = list(llr)
-    vals = []
-    for i in range(len(ks)):
-        for j in range(i + 1, len(ks)):
-            d = dist(ks[i], ks[j])
-            if d and d > 0:
-                vals.append(abs(llr[ks[i]] - llr[ks[j]]) / d * 1000)
-    return sum(vals) / len(vals) if vals else 0.0
 
 
 def load_case(iid, subset):

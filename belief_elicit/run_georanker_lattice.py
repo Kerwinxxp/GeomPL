@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】补全 3-5 线索图的全子集格(为完整 Shapley)。
+"""补全 3-5 线索图的全子集格(为完整 Shapley)。
 
 sweep 已有:原图后验、全部单条先验、全遮先验(均含完整分布)。
 本脚本只补中间尺寸子集(2 <= |S| <= m-1),完成后每张多线索图具备全部 2^m-1 个 v(S)。
@@ -23,9 +23,9 @@ except Exception:
 import numpy as np
 from PIL import Image
 
+from belief_elicit.geometry import build_geometry, mpl
 from belief_elicit.georanker_belief import score_labels
-from belief_elicit.run_georanker_check import build_geometry, mpl
-from clue_leak.masking import mask_solid_from_masks
+from belief_elicit.masking import mask_solid_from_masks
 from cue_extract.rle import rle_to_mask
 
 SWEEP = os.path.join(os.path.dirname(__file__), "georanker_sweep_results.json")

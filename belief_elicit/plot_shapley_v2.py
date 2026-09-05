@@ -1,6 +1,6 @@
-"""【实验性 · 可整体删除】全量 Shapley 汇总图:
+"""全量 Shapley 汇总图:
 (a) 逐类别 φ(矫正)vs 单条 mPL(未矫正)配对条形;(b) 184 对交互指数直方图。
-运行(主环境):python -m belief_elicit.plot_shapley_full
+运行(主环境):python -m belief_elicit.plot_shapley_v2
 """
 import json
 import os

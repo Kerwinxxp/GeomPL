@@ -34,7 +34,7 @@ import numpy as np
 from PIL import Image
 
 from belief_elicit.inpaint_ops import DILATE_PX, inpaint_from_masks
-from clue_leak.masking import mask_solid_from_masks
+from belief_elicit.masking import mask_solid_from_masks
 SWEEP = os.path.join(os.path.dirname(__file__), "georanker_sweep_results.json")
 
 

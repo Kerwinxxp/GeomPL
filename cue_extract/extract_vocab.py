@@ -118,7 +118,7 @@ def target_size(iid, image):
     if os.path.exists(p):
         w, h = json.load(open(p, encoding="utf-8"))["image_size"]
         return int(w), int(h)
-    from geobayes.mllm.imaging import smart_resize_dims
+    from cue_extract.imaging import smart_resize_dims
     return smart_resize_dims(image.width, image.height, max_pixels=1280 * 28 * 28)
 
 

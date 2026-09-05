@@ -1,131 +1,140 @@
-# GeoBayes — MLLM Geolocation Attacker Modeling & Per-Cue Location-Privacy Leakage
+# GeoBayes — Per-Cue Location-Privacy Leakage from Images
 
-Using a multimodal LLM (GPT-4o) as a **location-privacy attacker** to study *which visual cues in an image leak geographic location, and how much each one leaks*.
+Which visual cues in a photo leak geographic location, and how much does each one leak?
+This repository holds a single pipeline (v2) that answers that question empirically.
+GPT-4o names the location cues it actually reasons from; SAM 3 turns each name into a
+pixel-precise mask; a **frozen adversary** (GeoRanker = Qwen2-VL-7B + LoRA, fully local,
+no API cost) scores every candidate location in a fixed 138-place gallery, both on the
+full image and on images with cue subsets removed. The distance-normalized belief shift
+between the two is **mPL** (metric-normalized posterior leakage). Because masking effects
+are strongly non-additive, mPL is treated as a set function `v(S)` over the cue subset
+lattice and attributed to individual cues with **Shapley values** (`Σφ_k = v(N)`), with a
+Shapley Interaction Index separating overlapping cues from mutually-backing ones. An
+equal-area control quantifies the masking-artifact floor, LaMa inpainting is used as a
+less artifact-prone removal operator, and a geometric de-duplication step merges cues
+whose masks are the same pixels.
 
-The repo contains two independent lines of work:
+Write-up: **[`mPL_to_Shapley.pdf`](mPL_to_Shapley.pdf)**.
 
-| Line | Directory | Status | Description |
-|---|---|---|---|
-| **① Per-cue leakage: mPL + Shapley attribution** (current focus) | `cue_extract/` + `belief_elicit/` | active | GPT-4o cue naming → SAM 3 masks → subset ablation under a frozen adversary → mPL as a set function → Shapley attribution |
-| **② Earlier per-cue ablation** (superseded) | `clue_leak/` | archived | First-generation ablation with GPT-4o verbalized scores; kept for reference, its mPL values are superseded (see below) |
-| **③ GeoBayes paper reproduction** (archived) | `geobayes/` + `scripts/` | frozen | Reproduction of GeoBayes (AAAI-26), a training-free Bayesian geolocation method; see [`REPRODUCTION_REPORT.md`](REPRODUCTION_REPORT.md) |
+Headline results on 100 hi-res im2gps3k images (200 have cue annotations):
 
-> ### Current main line → [`belief_elicit/`](belief_elicit/README.md)
-> Write-up: **[`mPL_to_Shapley.pdf`](mPL_to_Shapley.pdf)**
->
-> Key findings on 100 hi-res im2gps3k images (200 images have cue annotations):
-> - Masking effects are **non-additive**: of 239 cue pairs, 182 overlap (sub-additive) and 23 back each other up — so single-cue mPL double-counts shared leakage and is a biased per-cue attribution.
-> - **Shapley attribution** fixes this with an exact `Σφ_k = v(N)` on all 80 multi-cue images (full `2^m` lattice, m ≤ 5), roughly halving per-category medians and reordering the top categories.
-> - An **equal-area control** (95 images / 244 cues / 516 random placements) quantifies the masking-artifact floor: only 49 % of single-cue effects exceed their own control, while 70 % of `φ` values exceed the pure-artifact null.
-> - The belief meter is now **GeoRanker** (Qwen2-VL-7B + LoRA), running fully locally with **no API cost**; the geometry uses a 2 km alias dedup so genuinely nearby places stay distinguishable.
+- Masking effects are **non-additive**: of 239 cue pairs, 182 overlap (sub-additive) and
+  23 back each other up — so single-cue mPL double-counts shared leakage and is a biased
+  per-cue attribution.
+- **Shapley attribution** restores exactness (`Σφ_k = v(N)` on all 80 multi-cue images,
+  full `2^m` lattice, m ≤ 5), roughly halving per-category medians and reordering the top
+  categories.
+- An **equal-area control** (95 images / 244 cues / 516 random placements) puts the
+  masking-artifact floor at a median of 0.087 nats/1000 km: only 49 % of single-cue
+  effects exceed their own control, while 70 % of `φ` values exceed the pure-artifact null.
+- The geometry uses a **2 km alias dedup only**, so genuinely nearby places stay
+  distinguishable.
 
-> ⚠️ **Superseded results.** Figures and JSONs under `clue_leak/` come from the first-generation setup (GPT-4o verbalized scoring, 25 km cluster merge). That elicitation was later found to be **blind to masking** (0.1-quantized scores with a 0.05 floor), so those mPL numbers should not be used. Use `belief_elicit/` instead.
-
-> **Metric — mPL** (metric-normalized posterior leakage, Chen et al. 2026) = per candidate pair, `|Δln posterior-odds − Δln prior-odds| / geographic distance`. Here **prior = image with the cue masked out**, **posterior = full image**; larger mPL ⇒ the cue carries more location information.
-
----
-
-## Quick start (no dataset / API / GPU needed)
-
-The repo ships **5 sample images** (`data/sample_images/`) with **precomputed results** (cue annotations + ablation + posteriors). After cloning, install `matplotlib` and reproduce the per-image mPL figures directly:
-
-```bash
-pip install pillow matplotlib pyyaml       # plotting only needs these
-python -m clue_leak.plot_one_mpl cuba      # also: newyork / okazaki / newdelhi / venice
-# → clue_leak/figures/per_image_mpl/cuba_370717727_mpl.png
-python -m clue_leak.plot_clue_mpl          # cross-sample per-cue mPL ranking
-```
-The 5 samples cover typical patterns: Cuba (single decisive cue), New York (strong text / redundancy), Okazaki (cultural cue), New Delhi (perfect redundancy), Venice (architecture + inscription). To re-run the ablation (needs `OPENAI_API_KEY`): `python -m clue_leak.run_combo2 --ids <see data/subset_sample.jsonl>` — the candidate gallery is frozen in `data/gallery_labels.json` so results stay comparable to the full run.
-
-## Environment
-
-Two environments (main logic is pure Python; cue extraction needs GPU deep models):
-
-```bash
-# Main environment (scoring / analysis / plotting)
-pip install -r requirements.txt      # pillow, pyyaml, openai, pytest
-export OPENAI_API_KEY=sk-...          # attacker model (GPT-4o); read only from the environment
-
-# cue_extract GPU stack (SAM 3 + LaMa, needs CUDA)
-python -m venv cue_extract/.venv
-cue_extract/.venv/Scripts/pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
-cue_extract/.venv/Scripts/pip install "transformers>=5.13" accelerate \
-    simple-lama-inpainting scipy "pillow>=10.4" matplotlib numpy openai pyyaml
-```
-`transformers>=5.13` ships SAM 3 support natively (`Sam3Model`). `pillow>=10.4` is required — older Pillow (9.x) renders digit glyphs as boxes, breaking numbered-badge overlays. Model weights (SAM 3 ~840MB, LaMa ~200MB) download to the HuggingFace cache on first run; **SAM 3 is gated** — accept the license at <https://huggingface.co/facebook/sam3> and `huggingface-cli login` first. Tested GPU: RTX 5080 16GB (SAM 3 uses ~3.4 GB).
-
-## Data
-
-Committed data: `data/subset_sample.jsonl` (5 samples), `data/sample_images/` (sample images), `data/gallery_labels.json` (frozen 77-label gallery), `data/*_cache.json` (geocoding caches).
-
-Full reproduction needs the **IM2GPS3k** source dataset (not committed, see `.gitignore`). Once `data/im2gps3k.csv` is in place:
-
-```bash
-python scripts/build_subset.py --n 100    # fetch images from Flickr + reverse-geocode → data/subset100.jsonl
-```
+> **Metric — mPL** (Chen et al. 2026) = per candidate pair,
+> `|Δln posterior-odds − Δln prior-odds| / geographic distance`. Here **prior = image with
+> the cue masked out**, **posterior = full image**; larger mPL ⇒ the cue carries more
+> location information.
 
 ---
-
-## Line ① — run order
-
-```bash
-# 1) Build the gallery geometry cache (gallery labels → coords, for the mPL distance matrix)
-python -m clue_leak.prep_geo100
-
-# 2) Cue extraction (venv). RECOMMENDED: route-B + SAM 3 (see cue_extract/README).
-#    GPT-4o names the cues + reasoning → SAM 3 segments each by text → precise masks.
-#    Needs: accept the gated model at https://huggingface.co/facebook/sam3 + huggingface-cli login.
-cue_extract/.venv/Scripts/python -m cue_extract.run_extract_sam3 --ids <id1,id2,...>
-#   output: cue_extract/results_sam3/<id>.json (each cue carries a mask_rle)
-
-# 3) Per-cue mPL ablation (main env): prior = image with subset S masked, posterior = full image
-python -m clue_leak.run_combo2 --ids <id1,id2,...> \
-       --cue_dir cue_extract/results_sam3 --out_dir clue_leak/combo2_sam3_results \
-       --post_dir clue_leak/cache_post_hires   # separate posterior cache per resolution
-#   or batch to N images: python -m clue_leak.run_50 --target 50
-#   output: clue_leak/combo2_sam3_results/<id>.json
-
-# 4) Figures
-python -m clue_leak.plot_one_mpl cuba          # single sample (place name or image-id prefix): image + masks | per-cue & combination mPL
-python -m clue_leak.plot_clue_mpl              # across samples: sorted per-cue mPL
-```
-Figures land in `clue_leak/figures/per_image_mpl_sam3/` (one per sample).
 
 ## Repository layout
 
 ```
-cue_extract/        Cue-extraction pipeline (GPU): route-B + SAM 3
-  grounded / sam3_seg / merge / rle / prompts / viz
-  run_extract_sam3.py  orchestrator  ·  contact_sheet.py QA overview
-  viz_compare_sam3.py  old-vs-SAM3 comparison  ·  inpaint.py + viz_mask_compare.py robustness check
-clue_leak/          Per-cue mPL ablation
-  combo.py masking.py           subset enumeration + solid masking
-  run_combo2.py run_50.py       ablation runner / batch driver
-  plot_one_mpl.py plot_clue_mpl.py plot_combo2.py   plotting
-  prep_geo100.py                gallery geometry prep
-  cache_post_hires/             full-image posterior cache (optional; run_combo2 recomputes if absent)
-  combo2_sam3_results/          ablation results  ·  figures/per_image_mpl_sam3/  output figures
-geobayes/           [archived] GeoBayes reproduction: core (Bayesian loop) / search / eval / mllm / analysis
-scripts/            [archived] reproduction batch jobs + data building (build_subset.py still used)
-data/               subset*.jsonl + geocoding caches (source images not committed)
-tests/              pytest (main line + reproduction, 190 passing)
+cue_extract/        Cue extraction (GPU): GPT-4o names cues → SAM 3 masks
+  run_extract_sam3.py  orchestrator  ·  grounded / sam3_seg / merge / rle / prompts / viz
+  extract_vocab.py     fixed-vocabulary (bottom-up) variant  ·  compare_vocab.py
+  mllm.py imaging.py   GPT-4o client + smart_resize (API key from OPENAI_API_KEY only)
+  results_sam3/        per-image cue JSON (each cue carries a mask_rle)
+belief_elicit/      Belief elicitation, mPL measurement, Shapley attribution  ← main line
+  georanker_belief.py  frozen adversary  ·  geometry.py masking.py  shared primitives
+  run_georanker_*.py   sweep / lattice / control / inpaint runs (GPU)
+  shapley_v3.py dedup_cues.py alt_attribution.py control_report.py   analysis (CPU)
+  figures/             publication figures
+data/               subset*.jsonl, gallery_v2.json, geocoding caches (source images not committed)
+scripts/            update_gallery.py, fetch_hires50.py, remote_control/, remote_setup/
+tests/              pytest (masking primitives, cue extraction, distributed runs, remote control)
+paper/              source material for the technical note
 ```
+
+## Environments
+
+Three environments — the analysis layer is pure Python, the two model stacks need GPUs:
+
+```bash
+# 1) Main environment (analysis / plotting / tests) — CPU only
+pip install -r requirements.txt      # pillow, pyyaml, openai, pytest
+pip install numpy matplotlib          # the CPU analyses and figures need these too
+export OPENAI_API_KEY=sk-...          # cue naming (GPT-4o); read only from the environment
+
+# 2) cue_extract GPU stack (SAM 3 + LaMa, needs CUDA)
+python -m venv cue_extract/.venv
+cue_extract/.venv/Scripts/pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+cue_extract/.venv/Scripts/pip install "transformers>=5.13" accelerate \
+    simple-lama-inpainting scipy "pillow>=10.4" matplotlib numpy openai pyyaml
+
+# 3) belief_elicit GPU stack (GeoRanker) — see belief_elicit/README.md §3
+py -3.12 -m venv belief_elicit/.venv_gr
+```
+
+`transformers>=5.13` ships SAM 3 support natively (`Sam3Model`). `pillow>=10.4` is
+required — older Pillow (9.x) renders digit glyphs as boxes, breaking numbered-badge
+overlays. Model weights (SAM 3 ~840 MB, LaMa ~200 MB, Qwen2-VL-7B ~16.5 GB) download to
+the HuggingFace cache on first run; **SAM 3 is gated** — accept the license at
+<https://huggingface.co/facebook/sam3> and `huggingface-cli login` first. Tested GPU:
+RTX 5080 16 GB (SAM 3 uses ~3.4 GB).
+
+## Data
+
+Committed: `data/subset*.jsonl` (image manifests, read via a glob),
+`data/sample_images/` (5 sample images), `data/gallery_v2.json` (138 city-level GT labels
+with GPS — the candidate gallery), `data/*_cache.json` (geocoding caches).
+
+Full reproduction needs the **IM2GPS3k** source dataset (not committed, see `.gitignore`);
+`scripts/fetch_hires50.py` re-fetches hi-res originals from Flickr for an existing subset,
+and `scripts/update_gallery.py` rebuilds the gallery geometry (free, no API key).
+
+## Run order
+
+The end-to-end order — cue extraction, GPU scoring sweeps, then the CPU analyses and
+figures — is documented step by step in **[`belief_elicit/README.md`](belief_elicit/README.md) §4**.
+Cue extraction itself is documented in [`cue_extract/README.md`](cue_extract/README.md).
+
+## Results and figures
+
+Result JSONs live next to the code that produces them in `belief_elicit/`
+(`shapley_v3_results.json` is the primary attribution; see that README §5 for the full
+table). Figures land in `belief_elicit/figures/` and `cue_extract/figures*/`; the
+annotated per-image cue overlays are in `cue_extract/figures_sam3/`.
 
 ## Tests
 
 ```bash
-python -m pytest tests/ -q          # all (incl. reproduction archive)
-python -m pytest tests/test_clueleak_combo.py tests/test_cue_extract.py -q   # main line only
+python -m pytest tests -q
 ```
+`tests/test_cue_extract.py` needs numpy + Pillow; `tests/test_distributed_georanker.py`
+and `tests/test_remote_control.py` are pure-Python and run anywhere.
 
 ## Known limitations (relevant for writing up)
 
-- mPL is **marginal** leakage (leave-one-out), affected by cue redundancy; absolute values are small (mean over all pairs + distance normalization);
-- the masking-combination value function is **non-monotonic** and violates Shapley additivity — report single-cue mPL only; treat combinations qualitatively;
-- conclusions are specific to **this attacker (GPT-4o) + this candidate gallery**, not universal.
+- mPL is a **marginal** quantity; with redundant cues the single-cue value is biased, which
+  is exactly why Shapley `φ` (not single-cue mPL) is the reported per-cue attribution;
+- absolute values are small — mPL averages over all candidate pairs and normalizes by
+  distance, so compare within an image, not across setups;
+- gray-block masking introduces a measurable **artifact floor**; the equal-area control and
+  the LaMa-inpaint variant bound it, but cues below that floor are not resolvable;
+- conclusions are specific to **this attacker (GeoRanker) + this candidate gallery**, not
+  universal.
+
+## History
+
+Two earlier lines of work were removed from the working tree at tag **`pre-cleanup`** and
+remain in git history: the **GeoBayes paper reproduction** (`geobayes/` + its batch scripts
+and reports) and the **first-generation per-cue ablation** (`clue_leak/`, GPT-4o verbalized
+scoring with a 25 km cluster merge), whose elicitation turned out to be blind to masking.
+Neither is part of the current pipeline; `git checkout pre-cleanup` to inspect them.
 
 ## References
 
 - GeoBayes: Shi et al., AAAI-26
 - mPL: Chen et al., 2026, *Metric-Normalized Posterior Leakage*
-- SAM 3 (`facebook/sam3`) · LaMa · IM2GPS3k
+- GeoRanker (Qwen2-VL-7B + LoRA) · SAM 3 (`facebook/sam3`) · LaMa · IM2GPS3k

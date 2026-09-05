@@ -1,4 +1,4 @@
-"""【实验性 · 可整体删除】等面积对照结果图:
+"""等面积对照结果图:
 (a) 逐线索配对散点 real vs control(同形状同面积);(b) 对照 vs 真实的分布对比。
 运行:python -m belief_elicit.plot_control_v2
 """
