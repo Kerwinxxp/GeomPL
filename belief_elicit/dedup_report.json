@@ -1,0 +1,639 @@
+{
+ "meta": {
+  "before": "shapley_v2_results.json",
+  "after": "shapley_v3_results.json",
+  "iou_threshold": 0.9,
+  "recall_threshold": 0.95
+ },
+ "scale": {
+  "n_images": 95,
+  "n_images_affected": 14,
+  "n_cues_before": 244,
+  "n_cues_after": 223,
+  "n_duplicates_removed": 21,
+  "n_merged_groups": 14,
+  "n_containment_pairs_reported": 4
+ },
+ "consolidation": {
+  "groups": [
+   {
+    "image_id": "321720530_f2a31b2549_128_81421684@N00.jpg",
+    "place": "Chaoyang District",
+    "members": [
+     0,
+     1
+    ],
+    "names": [
+     "Chinese text on building",
+     "High-rise construction"
+    ],
+    "name": "Chinese text on building | High-rise construction",
+    "max_pair_iou": 1.0,
+    "sum_phi_before": 0.0682468954140984,
+    "phi_after": 0.064198851508483,
+    "delta": -0.004048043905615389,
+    "rel_delta": 0.05931469674998795,
+    "delta_over_vN": 0.0291101257399147,
+    "vN": 0.13905965030116188,
+    "covers_all_cues": false,
+    "v_single_before": [
+     0.07634298322532922,
+     0.07634298322532922
+    ],
+    "v_single_after": 0.07634298322532922
+   },
+   {
+    "image_id": "381147491_751c8c119c_181_57253263@N00.jpg",
+    "place": "Cambridge",
+    "members": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "names": [
+     "shopcambridgeside.com URL",
+     "Customer Service sign",
+     "Payless ShoeSource store",
+     "Inside Sale sign"
+    ],
+    "name": "shopcambridgeside.com URL | Customer Service sign | Payless ShoeSource store | Inside Sale sign",
+    "max_pair_iou": 1.0,
+    "sum_phi_before": 0.12581625776597327,
+    "phi_after": 0.12581625776597327,
+    "delta": 0.0,
+    "rel_delta": 0.0,
+    "delta_over_vN": 0.0,
+    "vN": 0.12581625776597327,
+    "covers_all_cues": true,
+    "v_single_before": [
+     0.12581625776597327,
+     0.12581625776597327,
+     0.12581625776597327,
+     0.12581625776597327
+    ],
+    "v_single_after": 0.12581625776597327
+   },
+   {
+    "image_id": "271517794_bcd0d062eb_79_40829484@N00.jpg",
+    "place": "New York",
+    "members": [
+     0,
+     2
+    ],
+    "names": [
+     "White House",
+     "Dense urban buildings"
+    ],
+    "name": "White House | Dense urban buildings",
+    "max_pair_iou": 1.0,
+    "sum_phi_before": 0.06570209374210223,
+    "phi_after": 0.053132602664181135,
+    "delta": -0.012569491077921095,
+    "rel_delta": 0.19131035804215935,
+    "delta_over_vN": 0.1388938915994118,
+    "vN": 0.09049707610017262,
+    "covers_all_cues": false,
+    "v_single_before": [
+     0.09084107589794443,
+     0.09084107589794443
+    ],
+    "v_single_after": 0.09084107589794443
+   },
+   {
+    "image_id": "486597679_e1a557718f_198_51162504@N00.jpg",
+    "place": "Seville",
+    "members": [
+     0,
+     1,
+     2
+    ],
+    "names": [
+     "Golden religious statues",
+     "Crown and scepter on statue",
+     "Religious iconography"
+    ],
+    "name": "Golden religious statues | Crown and scepter on statue | Religious iconography",
+    "max_pair_iou": 1.0,
+    "sum_phi_before": 0.3968627975139283,
+    "phi_after": 0.3968627975139283,
+    "delta": 0.0,
+    "rel_delta": 0.0,
+    "delta_over_vN": 0.0,
+    "vN": 0.3968627975139283,
+    "covers_all_cues": true,
+    "v_single_before": [
+     0.3968627975139283,
+     0.3968627975139283,
+     0.3968627975139283
+    ],
+    "v_single_after": 0.3968627975139283
+   },
+   {
+    "image_id": "453636890_c425e657ab_239_55126705@N00.jpg",
+    "place": "Tinum",
+    "members": [
+     0,
+     2
+    ],
+    "names": [
+     "Mayan architectural style",
+     "Ruined stone structures"
+    ],
+    "name": "Mayan architectural style | Ruined stone structures",
+    "max_pair_iou": 0.9976250859697386,
+    "sum_phi_before": 0.4646389602542186,
+    "phi_after": 0.4580888561371099,
+    "delta": -0.006550104117108657,
+    "rel_delta": 0.01409719088886754,
+    "delta_over_vN": 0.013475728849029816,
+    "vN": 0.48606677905813095,
+    "covers_all_cues": false,
+    "v_single_before": [
+     0.4594518922208718,
+     0.4883538211452572
+    ],
+    "v_single_after": 0.480909168207099
+   },
+   {
+    "image_id": "203414504_6dce8e2783_60_40829484@N00.jpg",
+    "place": "Spa",
+    "members": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "names": [
+     "Corvette text on car",
+     "ADAC logo on car",
+     "GT3 logo on car",
+     "KW logo on car"
+    ],
+    "name": "Corvette text on car | ADAC logo on car | GT3 logo on car | KW logo on car",
+    "max_pair_iou": 1.0,
+    "sum_phi_before": 0.174449607705649,
+    "phi_after": 0.174449607705649,
+    "delta": 0.0,
+    "rel_delta": 0.0,
+    "delta_over_vN": 0.0,
+    "vN": 0.174449607705649,
+    "covers_all_cues": true,
+    "v_single_before": [
+     0.174449607705649,
+     0.174449607705649,
+     0.174449607705649,
+     0.174449607705649
+    ],
+    "v_single_after": 0.174449607705649
+   },
+   {
+    "image_id": "103558896_55f8059bc9_35_73293249@N00.jpg",
+    "place": "Toronto",
+    "members": [
+     0,
+     1
+    ],
+    "names": [
+     "distinctive skyscraper with stepped design",
+     "golden reflective building"
+    ],
+    "name": "distinctive skyscraper with stepped design | golden reflective building",
+    "max_pair_iou": 1.0,
+    "sum_phi_before": 0.1862445298601716,
+    "phi_after": 0.1862445298601716,
+    "delta": 0.0,
+    "rel_delta": 0.0,
+    "delta_over_vN": 0.0,
+    "vN": 0.1862445298601716,
+    "covers_all_cues": true,
+    "v_single_before": [
+     0.1862445298601716,
+     0.1862445298601716
+    ],
+    "v_single_after": 0.1862445298601716
+   },
+   {
+    "image_id": "279684899_63d5dc5c9d_89_25304693@N00.jpg",
+    "place": "Anaheim",
+    "members": [
+     1,
+     3
+    ],
+    "names": [
+     "Teacup ride",
+     "Heart design on teacup"
+    ],
+    "name": "Teacup ride | Heart design on teacup",
+    "max_pair_iou": 1.0,
+    "sum_phi_before": 0.06484673079766887,
+    "phi_after": 0.04812249878518095,
+    "delta": -0.01672423201248792,
+    "rel_delta": 0.2579040116096204,
+    "delta_over_vN": 0.16009258945580918,
+    "vN": 0.10446599726656529,
+    "covers_all_cues": false,
+    "v_single_before": [
+     0.11622236207497603,
+     0.11622236207497603
+    ],
+    "v_single_after": 0.11622236207497603
+   },
+   {
+    "image_id": "452065902_0daa6bd4bd_219_15632944@N00.jpg",
+    "place": "Bardo",
+    "members": [
+     0,
+     1
+    ],
+    "names": [
+     "Train model EN57",
+     "Polish text on train"
+    ],
+    "name": "Train model EN57 | Polish text on train",
+    "max_pair_iou": 1.0,
+    "sum_phi_before": 0.1983070562836088,
+    "phi_after": 0.16707054183558642,
+    "delta": -0.03123651444802239,
+    "rel_delta": 0.15751590000584495,
+    "delta_over_vN": 0.09564300771232842,
+    "vN": 0.3265948572212874,
+    "covers_all_cues": false,
+    "v_single_before": [
+     0.26569206580549337,
+     0.26569206580549337
+    ],
+    "v_single_after": 0.26569206580549337
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "place": "Bangkok",
+    "members": [
+     0,
+     1
+    ],
+    "names": [
+     "Thai text on storefront signs",
+     "Fujifilm signage"
+    ],
+    "name": "Thai text on storefront signs | Fujifilm signage",
+    "max_pair_iou": 1.0,
+    "sum_phi_before": 0.05124716633832471,
+    "phi_after": 0.045241702860131114,
+    "delta": -0.006005463478193598,
+    "rel_delta": 0.1171862545247203,
+    "delta_over_vN": 0.08370296861444734,
+    "vN": 0.07174731765913785,
+    "covers_all_cues": false,
+    "v_single_before": [
+     0.06325809329471191,
+     0.06325809329471191
+    ],
+    "v_single_after": 0.06325809329471191
+   },
+   {
+    "image_id": "203382931_becf34eb9c_73_40829484@N00.jpg",
+    "place": "Spa",
+    "members": [
+     0,
+     1,
+     2
+    ],
+    "names": [
+     "BorgWarner Turbo & Emissions Systems logo",
+     "ET3 European Championship logo",
+     "Michelin tire logo"
+    ],
+    "name": "BorgWarner Turbo & Emissions Systems logo | ET3 European Championship logo | Michelin tire logo",
+    "max_pair_iou": 1.0,
+    "sum_phi_before": 0.175754897266359,
+    "phi_after": 0.1400723670311062,
+    "delta": -0.03568253023525281,
+    "rel_delta": 0.20302438674681952,
+    "delta_over_vN": 0.2507439693953131,
+    "vN": 0.1423066338197635,
+    "covers_all_cues": false,
+    "v_single_before": [
+     0.2114374275016118,
+     0.2114374275016118,
+     0.2114374275016118
+    ],
+    "v_single_after": 0.2114374275016118
+   },
+   {
+    "image_id": "71807788_2b6c93f13f_35_18684820@N00.jpg",
+    "place": "Paris",
+    "members": [
+     0,
+     1,
+     3
+    ],
+    "names": [
+     "Bus route number and destination",
+     "French text on bus",
+     "Green and cream color scheme of bus"
+    ],
+    "name": "Bus route number and destination | French text on bus | Green and cream color scheme of bus",
+    "max_pair_iou": 1.0,
+    "sum_phi_before": 0.2222104285758999,
+    "phi_after": 0.2047183795911535,
+    "delta": -0.017492048984746406,
+    "rel_delta": 0.07871839812761842,
+    "delta_over_vN": 0.04753968740665425,
+    "vN": 0.3679462347978754,
+    "covers_all_cues": false,
+    "v_single_before": [
+     0.2431768886831093,
+     0.2431768886831093,
+     0.2431768886831093
+    ],
+    "v_single_after": 0.2431768886831093
+   },
+   {
+    "image_id": "1192463216_a5f06caf2c_1050_47311799@N00.jpg",
+    "place": "Venice",
+    "members": [
+     1,
+     3
+    ],
+    "names": [
+     "Venetian Gothic architecture",
+     "Canal-side location"
+    ],
+    "name": "Venetian Gothic architecture | Canal-side location",
+    "max_pair_iou": 1.0,
+    "sum_phi_before": 0.015225600518533288,
+    "phi_after": 0.007428398943698551,
+    "delta": -0.007797201574834737,
+    "rel_delta": 0.512111267161097,
+    "delta_over_vN": 0.0754169487770748,
+    "vN": 0.10338792143238928,
+    "covers_all_cues": false,
+    "v_single_before": [
+     0.03692459792564623,
+     0.03692459792564623
+    ],
+    "v_single_after": 0.03692459792564623
+   },
+   {
+    "image_id": "244685754_fa9cd577a8_94_77235581@N00.jpg",
+    "place": "Scotland",
+    "members": [
+     0,
+     1
+    ],
+    "names": [
+     "Rocky coastline with grassy hills",
+     "Sandy beach with rocks"
+    ],
+    "name": "Rocky coastline with grassy hills | Sandy beach with rocks",
+    "max_pair_iou": 0.9027981966088405,
+    "sum_phi_before": 0.10075570997163401,
+    "phi_after": 0.10443496815942385,
+    "delta": 0.003679258187789844,
+    "rel_delta": 0.036516622123209434,
+    "delta_over_vN": 0.017419021371077262,
+    "vN": 0.2112207172498752,
+    "covers_all_cues": false,
+    "v_single_before": [
+     0.08238769352184437,
+     0.09797009367993127
+    ],
+    "v_single_after": 0.10374305576132405
+   }
+  ],
+  "max_abs_delta": 0.03568253023525281,
+  "max_rel_delta": 0.512111267161097,
+  "max_delta_over_vN": 0.2507439693953131,
+  "n_negative": 9,
+  "n_exact": 4,
+  "median_abs_delta": 0.006277783797651128
+ },
+ "per_category": {
+  "cats": [
+   "text/signage",
+   "landmarks/buildings",
+   "environment",
+   "vehicles/license plates",
+   "architecture",
+   "commercial/cultural",
+   "road/infrastructure",
+   "other"
+  ],
+  "phi_before": {
+   "environment": 0.06041651302867946,
+   "text/signage": 0.0802671873741334,
+   "architecture": 0.04183075747267441,
+   "landmarks/buildings": 0.07182765667404067,
+   "vehicles/license plates": 0.04498476072331157,
+   "road/infrastructure": 0.03373165118277639,
+   "commercial/cultural": 0.03721453582979309,
+   "other": 0.03118750079809802
+  },
+  "phi_after": {
+   "environment": 0.06120827445742125,
+   "text/signage": 0.11669136264947805,
+   "architecture": 0.04320303303468547,
+   "landmarks/buildings": 0.07163456082997027,
+   "vehicles/license plates": 0.04635711952021089,
+   "road/infrastructure": 0.03373165118277639,
+   "commercial/cultural": 0.036806519073307384,
+   "other": 0.03118750079809802
+  },
+  "v_before": {
+   "environment": 0.09398100380530094,
+   "text/signage": 0.1355106397743899,
+   "architecture": 0.08701129972338882,
+   "landmarks/buildings": 0.1227744819506862,
+   "vehicles/license plates": 0.12932274500674082,
+   "road/infrastructure": 0.07959984444356077,
+   "commercial/cultural": 0.08821356403415183,
+   "other": 0.04681400755039675
+  },
+  "v_after": {
+   "environment": 0.09577587810284131,
+   "text/signage": 0.13259125801898344,
+   "architecture": 0.08558552993364058,
+   "landmarks/buildings": 0.11971562428066468,
+   "vehicles/license plates": 0.11106266171133632,
+   "road/infrastructure": 0.07959984444356077,
+   "commercial/cultural": 0.07430418111423699,
+   "other": 0.04681400755039675
+  },
+  "n_before": {
+   "environment": 78,
+   "text/signage": 29,
+   "architecture": 41,
+   "landmarks/buildings": 31,
+   "vehicles/license plates": 12,
+   "road/infrastructure": 10,
+   "commercial/cultural": 42,
+   "other": 1
+  },
+  "n_after": {
+   "environment": 76,
+   "text/signage": 24,
+   "architecture": 40,
+   "landmarks/buildings": 28,
+   "vehicles/license plates": 11,
+   "road/infrastructure": 10,
+   "commercial/cultural": 33,
+   "other": 1
+  },
+  "rank_phi_before": [
+   "text/signage",
+   "landmarks/buildings",
+   "environment",
+   "vehicles/license plates",
+   "architecture",
+   "commercial/cultural",
+   "road/infrastructure",
+   "other"
+  ],
+  "rank_phi_after": [
+   "text/signage",
+   "landmarks/buildings",
+   "environment",
+   "vehicles/license plates",
+   "architecture",
+   "commercial/cultural",
+   "road/infrastructure",
+   "other"
+  ],
+  "rank_phi_unchanged": true,
+  "rank_v_before": [
+   "text/signage",
+   "vehicles/license plates",
+   "landmarks/buildings",
+   "environment",
+   "commercial/cultural",
+   "architecture",
+   "road/infrastructure",
+   "other"
+  ],
+  "rank_v_after": [
+   "text/signage",
+   "landmarks/buildings",
+   "vehicles/license plates",
+   "environment",
+   "architecture",
+   "road/infrastructure",
+   "commercial/cultural",
+   "other"
+  ],
+  "rank_v_unchanged": false
+ },
+ "interactions": {
+  "before": {
+   "n": 239,
+   "overlap": 182,
+   "flat": 34,
+   "backup": 23,
+   "median": -0.027604155073619283,
+   "min": -0.44724623280770404,
+   "max": 0.5708153395811781
+  },
+  "after": {
+   "n": 192,
+   "overlap": 138,
+   "flat": 35,
+   "backup": 19,
+   "median": -0.024230740104264133,
+   "min": -0.4070477086892704,
+   "max": 0.5708153395811781
+  },
+  "within_group_pairs_before": 30,
+  "within_group_overlap_pairs_before": 29,
+  "within_group_sii_median": -0.058149869235216325,
+  "overlap_removed": 44
+ },
+ "efficiency": {
+  "max_abs_before": 1.1102230246251565e-16,
+  "max_abs_after": 1.1102230246251565e-16,
+  "n": 95,
+  "ok": true
+ },
+ "harsanyi": {
+  "before": {
+   "1": 0.60503742201029,
+   "2": 0.3214762645516459,
+   "3": 0.13249108250582403,
+   "4": 0.03802529900611713,
+   "5": 0.008337906842328631
+  },
+  "after": {
+   "1": 0.6551377751415127,
+   "2": 0.29650178686468287,
+   "3": 0.11572320545806991,
+   "4": 0.032183195216464566
+  },
+  "n_images_before": 80,
+  "n_images_after": 76
+ },
+ "min_sufficient": {
+  "before": {
+   "n": 80,
+   "median": 1.0,
+   "median_m": 3.0,
+   "frac_single": 0.6375
+  },
+  "after": {
+   "n": 76,
+   "median": 1.0,
+   "median_m": 3.0,
+   "frac_single": 0.618421052631579
+  }
+ },
+ "resolvability": {
+  "gray_before": {
+   "n": 244,
+   "rate": 0.48770491803278687
+  },
+  "gray_after": {
+   "n": 223,
+   "rate": 0.47085201793721976
+  },
+  "inpaint_before": {
+   "n": 244,
+   "rate": 0.7663934426229508
+  },
+  "inpaint_after": {
+   "n": 221,
+   "rate": 0.7601809954751131
+  },
+  "inpaint_incomputable_images": [
+   {
+    "image_id": "279684899_63d5dc5c9d_89_25304693@N00.jpg",
+    "place": "Anaheim",
+    "n_cues": 3,
+    "n_cues_orig": 4
+   },
+   {
+    "image_id": "452065902_0daa6bd4bd_219_15632944@N00.jpg",
+    "place": "Bardo",
+    "n_cues": 3,
+    "n_cues_orig": 4
+   },
+   {
+    "image_id": "203382931_becf34eb9c_73_40829484@N00.jpg",
+    "place": "Spa",
+    "n_cues": 2,
+    "n_cues_orig": 4
+   },
+   {
+    "image_id": "71807788_2b6c93f13f_35_18684820@N00.jpg",
+    "place": "Paris",
+    "n_cues": 3,
+    "n_cues_orig": 5
+   },
+   {
+    "image_id": "1192463216_a5f06caf2c_1050_47311799@N00.jpg",
+    "place": "Venice",
+    "n_cues": 3,
+    "n_cues_orig": 4
+   }
+  ],
+  "n_inpaint_incomputable": 5,
+  "n_inpaint_computable": 90
+ }
+}

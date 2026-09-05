@@ -1,0 +1,1334 @@
+{
+ "a": {
+  "n_images": 10,
+  "n_cues": 33,
+  "scatter": [
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 0,
+    "cue": "text or signage",
+    "category": "text/signage",
+    "area_frac": 0.2492377581663296,
+    "coverage": 0.2492377581663296,
+    "inpaint": 0.1160556948196149,
+    "gray": null
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 1,
+    "cue": "building facade",
+    "category": "architecture",
+    "area_frac": 0.35894057322628753,
+    "coverage": 0.35894057322628753,
+    "inpaint": 0.07295053648159941,
+    "gray": null
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 2,
+    "cue": "vehicle",
+    "category": "vehicles/license plates",
+    "area_frac": 0.019945966374537803,
+    "coverage": 0.019945966374537803,
+    "inpaint": 0.04108147689035636,
+    "gray": null
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 3,
+    "cue": "person's clothing",
+    "category": "commercial/cultural",
+    "area_frac": 0.00523865702437131,
+    "coverage": 0.00523865702437131,
+    "inpaint": 0.03177177177500008,
+    "gray": null
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 4,
+    "cue": "tree or vegetation",
+    "category": "environment",
+    "area_frac": 0.016544605830320115,
+    "coverage": 0.016544605830320115,
+    "inpaint": 0.03373104739788007,
+    "gray": null
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 5,
+    "cue": "road surface",
+    "category": "road/infrastructure",
+    "area_frac": 0.029908735265878124,
+    "coverage": 0.029908735265878124,
+    "inpaint": 0.03450033779735927,
+    "gray": null
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 6,
+    "cue": "street furniture",
+    "category": "road/infrastructure",
+    "area_frac": 0.012752548466834181,
+    "coverage": 0.012752548466834181,
+    "inpaint": 0.0359823414967139,
+    "gray": null
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 0,
+    "cue": "text or signage",
+    "category": "text/signage",
+    "area_frac": 0.017781014432800148,
+    "coverage": 0.017781014432800148,
+    "inpaint": 0.06509563666585441,
+    "gray": null
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 1,
+    "cue": "building facade",
+    "category": "architecture",
+    "area_frac": 0.10228787460930318,
+    "coverage": 0.10228787460930318,
+    "inpaint": 0.663181294377218,
+    "gray": null
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 2,
+    "cue": "person's clothing",
+    "category": "commercial/cultural",
+    "area_frac": 0.02702702702702703,
+    "coverage": 0.02702702702702703,
+    "inpaint": 0.12001871822591954,
+    "gray": null
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 3,
+    "cue": "tree or vegetation",
+    "category": "environment",
+    "area_frac": 0.2590564097260526,
+    "coverage": 0.2590564097260526,
+    "inpaint": 0.16990124890422686,
+    "gray": null
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 4,
+    "cue": "flag",
+    "category": "commercial/cultural",
+    "area_frac": 0.005683776889134032,
+    "coverage": 0.005683776889134032,
+    "inpaint": 0.04944960231095986,
+    "gray": null
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 5,
+    "cue": "statue or monument",
+    "category": "landmarks/buildings",
+    "area_frac": 0.31893213366427653,
+    "coverage": 0.31893213366427653,
+    "inpaint": 0.21637278400660004,
+    "gray": null
+   },
+   {
+    "image_id": "166869956_84928fd11b_60_55085284@N00.jpg",
+    "k": 0,
+    "cue": "statue or monument",
+    "category": "landmarks/buildings",
+    "area_frac": 0.012976305387019672,
+    "coverage": 0.012976305387019672,
+    "inpaint": 0.04807644022029914,
+    "gray": null
+   },
+   {
+    "image_id": "169956693_5edea53724_78_70323761@N00.jpg",
+    "k": 0,
+    "cue": "person's clothing",
+    "category": "commercial/cultural",
+    "area_frac": 0.0789695945945946,
+    "coverage": 0.0789695945945946,
+    "inpaint": 0.09200004612123223,
+    "gray": null
+   },
+   {
+    "image_id": "169956693_5edea53724_78_70323761@N00.jpg",
+    "k": 1,
+    "cue": "street furniture",
+    "category": "road/infrastructure",
+    "area_frac": 0.03959539897039897,
+    "coverage": 0.03959539897039897,
+    "inpaint": 0.07135575185778395,
+    "gray": null
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 0,
+    "cue": "text or signage",
+    "category": "text/signage",
+    "area_frac": 0.007144900002042859,
+    "coverage": 0.007144900002042859,
+    "inpaint": 0.03438583591163093,
+    "gray": null
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 1,
+    "cue": "vehicle",
+    "category": "vehicles/license plates",
+    "area_frac": 0.052444025658311376,
+    "coverage": 0.052444025658311376,
+    "inpaint": 0.06606790292059256,
+    "gray": null
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 2,
+    "cue": "person's clothing",
+    "category": "commercial/cultural",
+    "area_frac": 0.09584073869788155,
+    "coverage": 0.09584073869788155,
+    "inpaint": 0.03372468468110425,
+    "gray": null
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 3,
+    "cue": "tree or vegetation",
+    "category": "environment",
+    "area_frac": 0.08315202958060101,
+    "coverage": 0.08315202958060101,
+    "inpaint": 0.06083803054767475,
+    "gray": null
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 4,
+    "cue": "flag",
+    "category": "commercial/cultural",
+    "area_frac": 0.15278416171273315,
+    "coverage": 0.15278416171273315,
+    "inpaint": 0.08075465379728326,
+    "gray": null
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "k": 0,
+    "cue": "text or signage",
+    "category": "text/signage",
+    "area_frac": 0.005561684133112705,
+    "coverage": 0.005561684133112705,
+    "inpaint": 0.07745446502801327,
+    "gray": null
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "k": 1,
+    "cue": "building facade",
+    "category": "architecture",
+    "area_frac": 0.03257083614226471,
+    "coverage": 0.03257083614226471,
+    "inpaint": 0.14298888629231685,
+    "gray": null
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "k": 2,
+    "cue": "tree or vegetation",
+    "category": "environment",
+    "area_frac": 0.20469832076974934,
+    "coverage": 0.20469832076974934,
+    "inpaint": 0.17709436141171733,
+    "gray": null
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "k": 3,
+    "cue": "statue or monument",
+    "category": "landmarks/buildings",
+    "area_frac": 0.014556648485219913,
+    "coverage": 0.014556648485219913,
+    "inpaint": 0.29843841552732053,
+    "gray": null
+   },
+   {
+    "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+    "k": 0,
+    "cue": "person's clothing",
+    "category": "commercial/cultural",
+    "area_frac": 0.00973167044595616,
+    "coverage": 0.00973167044595616,
+    "inpaint": 0.11808947772249286,
+    "gray": null
+   },
+   {
+    "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+    "k": 1,
+    "cue": "tree or vegetation",
+    "category": "environment",
+    "area_frac": 0.15234877734877736,
+    "coverage": 0.15234877734877736,
+    "inpaint": 0.16776564029550975,
+    "gray": null
+   },
+   {
+    "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+    "k": 2,
+    "cue": "mountain",
+    "category": "environment",
+    "area_frac": 0.039165440951155234,
+    "coverage": 0.039165440951155234,
+    "inpaint": 0.07384154572403662,
+    "gray": null
+   },
+   {
+    "image_id": "453636890_c425e657ab_239_55126705@N00.jpg",
+    "k": 0,
+    "cue": "tree or vegetation",
+    "category": "environment",
+    "area_frac": 0.015124818696247268,
+    "coverage": 0.015124818696247268,
+    "inpaint": 0.028826747039353173,
+    "gray": null
+   },
+   {
+    "image_id": "486597679_e1a557718f_198_51162504@N00.jpg",
+    "k": 0,
+    "cue": "statue or monument",
+    "category": "landmarks/buildings",
+    "area_frac": 0.24836188229045372,
+    "coverage": 0.24836188229045372,
+    "inpaint": 0.4608413434925957,
+    "gray": null
+   },
+   {
+    "image_id": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+    "k": 0,
+    "cue": "building facade",
+    "category": "architecture",
+    "area_frac": 0.023316326530612243,
+    "coverage": 0.023316326530612243,
+    "inpaint": 0.3777483211577439,
+    "gray": null
+   },
+   {
+    "image_id": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+    "k": 1,
+    "cue": "tree or vegetation",
+    "category": "environment",
+    "area_frac": 0.2425965250965251,
+    "coverage": 0.2425965250965251,
+    "inpaint": 0.3464106368553127,
+    "gray": null
+   },
+   {
+    "image_id": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+    "k": 2,
+    "cue": "mountain",
+    "category": "environment",
+    "area_frac": 0.12264616657473801,
+    "coverage": 0.12264616657473801,
+    "inpaint": 0.1942088418913322,
+    "gray": null
+   }
+  ],
+  "inpaint_median": 0.07745446502801327,
+  "n_paired": 0,
+  "per_category": {
+   "text/signage": {
+    "n": 4,
+    "inpaint_median": 0.07127505084693384,
+    "gray_median": null
+   },
+   "architecture": {
+    "n": 4,
+    "inpaint_median": 0.2603686037250304,
+    "gray_median": null
+   },
+   "vehicles/license plates": {
+    "n": 2,
+    "inpaint_median": 0.053574689905474454,
+    "gray_median": null
+   },
+   "commercial/cultural": {
+    "n": 7,
+    "inpaint_median": 0.08075465379728326,
+    "gray_median": null
+   },
+   "environment": {
+    "n": 9,
+    "inpaint_median": 0.16776564029550975,
+    "gray_median": null
+   },
+   "road/infrastructure": {
+    "n": 3,
+    "inpaint_median": 0.0359823414967139,
+    "gray_median": null
+   },
+   "landmarks/buildings": {
+    "n": 4,
+    "inpaint_median": 0.2574055997669603,
+    "gray_median": null
+   }
+  }
+ },
+ "b": {
+  "n_images": 10,
+  "n_cues": 33,
+  "per_cue": [
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 0,
+    "cue": "text or signage",
+    "category": "text/signage",
+    "phi_inpaint": 0.03836412600544068,
+    "phi_gray": null
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 1,
+    "cue": "building facade",
+    "category": "architecture",
+    "phi_inpaint": 0.02981397481633187,
+    "phi_gray": null
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 2,
+    "cue": "vehicle",
+    "category": "vehicles/license plates",
+    "phi_inpaint": 0.005951227433837872,
+    "phi_gray": null
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 3,
+    "cue": "person's clothing",
+    "category": "commercial/cultural",
+    "phi_inpaint": 0.01236272224277278,
+    "phi_gray": null
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 4,
+    "cue": "tree or vegetation",
+    "category": "environment",
+    "phi_inpaint": 0.009920111666419235,
+    "phi_gray": null
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 5,
+    "cue": "road surface",
+    "category": "road/infrastructure",
+    "phi_inpaint": 0.023084644737526888,
+    "phi_gray": null
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 6,
+    "cue": "street furniture",
+    "category": "road/infrastructure",
+    "phi_inpaint": 0.009554606619688155,
+    "phi_gray": null
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 0,
+    "cue": "text or signage",
+    "category": "text/signage",
+    "phi_inpaint": 0.14203435445596968,
+    "phi_gray": null
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 1,
+    "cue": "building facade",
+    "category": "architecture",
+    "phi_inpaint": 0.4219737837487857,
+    "phi_gray": null
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 2,
+    "cue": "person's clothing",
+    "category": "commercial/cultural",
+    "phi_inpaint": -0.06609598035916585,
+    "phi_gray": null
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 3,
+    "cue": "tree or vegetation",
+    "category": "environment",
+    "phi_inpaint": -0.004860120931625869,
+    "phi_gray": null
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 4,
+    "cue": "flag",
+    "category": "commercial/cultural",
+    "phi_inpaint": 0.14021922237106926,
+    "phi_gray": null
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 5,
+    "cue": "statue or monument",
+    "category": "landmarks/buildings",
+    "phi_inpaint": 0.18478942589646413,
+    "phi_gray": null
+   },
+   {
+    "image_id": "166869956_84928fd11b_60_55085284@N00.jpg",
+    "k": 0,
+    "cue": "statue or monument",
+    "category": "landmarks/buildings",
+    "phi_inpaint": 0.04807644022029914,
+    "phi_gray": null
+   },
+   {
+    "image_id": "169956693_5edea53724_78_70323761@N00.jpg",
+    "k": 0,
+    "cue": "person's clothing",
+    "category": "commercial/cultural",
+    "phi_inpaint": 0.09789261480662872,
+    "phi_gray": null
+   },
+   {
+    "image_id": "169956693_5edea53724_78_70323761@N00.jpg",
+    "k": 1,
+    "cue": "street furniture",
+    "category": "road/infrastructure",
+    "phi_inpaint": 0.07724832054318045,
+    "phi_gray": null
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 0,
+    "cue": "text or signage",
+    "category": "text/signage",
+    "phi_inpaint": 0.008494044222666329,
+    "phi_gray": null
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 1,
+    "cue": "vehicle",
+    "category": "vehicles/license plates",
+    "phi_inpaint": 0.012725820251429758,
+    "phi_gray": null
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 2,
+    "cue": "person's clothing",
+    "category": "commercial/cultural",
+    "phi_inpaint": 0.027691856282022788,
+    "phi_gray": null
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 3,
+    "cue": "tree or vegetation",
+    "category": "environment",
+    "phi_inpaint": 0.016848266221580137,
+    "phi_gray": null
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 4,
+    "cue": "flag",
+    "category": "commercial/cultural",
+    "phi_inpaint": 0.0322089738263363,
+    "phi_gray": null
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "k": 0,
+    "cue": "text or signage",
+    "category": "text/signage",
+    "phi_inpaint": 0.041447269735861075,
+    "phi_gray": null
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "k": 1,
+    "cue": "building facade",
+    "category": "architecture",
+    "phi_inpaint": 0.02048016258058316,
+    "phi_gray": null
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "k": 2,
+    "cue": "tree or vegetation",
+    "category": "environment",
+    "phi_inpaint": 0.05101315215118099,
+    "phi_gray": null
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "k": 3,
+    "cue": "statue or monument",
+    "category": "landmarks/buildings",
+    "phi_inpaint": 0.15816946360257755,
+    "phi_gray": null
+   },
+   {
+    "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+    "k": 0,
+    "cue": "person's clothing",
+    "category": "commercial/cultural",
+    "phi_inpaint": 0.05154790301127789,
+    "phi_gray": null
+   },
+   {
+    "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+    "k": 1,
+    "cue": "tree or vegetation",
+    "category": "environment",
+    "phi_inpaint": 0.0896601644097322,
+    "phi_gray": null
+   },
+   {
+    "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+    "k": 2,
+    "cue": "mountain",
+    "category": "environment",
+    "phi_inpaint": 0.000605636599943728,
+    "phi_gray": null
+   },
+   {
+    "image_id": "453636890_c425e657ab_239_55126705@N00.jpg",
+    "k": 0,
+    "cue": "tree or vegetation",
+    "category": "environment",
+    "phi_inpaint": 0.028826747039353173,
+    "phi_gray": null
+   },
+   {
+    "image_id": "486597679_e1a557718f_198_51162504@N00.jpg",
+    "k": 0,
+    "cue": "statue or monument",
+    "category": "landmarks/buildings",
+    "phi_inpaint": 0.4608413434925957,
+    "phi_gray": null
+   },
+   {
+    "image_id": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+    "k": 0,
+    "cue": "building facade",
+    "category": "architecture",
+    "phi_inpaint": 0.7850180997290123,
+    "phi_gray": null
+   },
+   {
+    "image_id": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+    "k": 1,
+    "cue": "tree or vegetation",
+    "category": "environment",
+    "phi_inpaint": 0.3709005031703575,
+    "phi_gray": null
+   },
+   {
+    "image_id": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+    "k": 2,
+    "cue": "mountain",
+    "category": "environment",
+    "phi_inpaint": 0.17757216577493307,
+    "phi_gray": null
+   }
+  ],
+  "per_image": [
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "m": 7,
+    "residual_share": 3.87311768588277,
+    "sum_phi": 0.1290514135220175
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "m": 6,
+    "residual_share": 0.6004257729081631,
+    "sum_phi": 0.8180606851814971
+   },
+   {
+    "image_id": "166869956_84928fd11b_60_55085284@N00.jpg",
+    "m": 1,
+    "residual_share": 0.0,
+    "sum_phi": 0.04807644022029914
+   },
+   {
+    "image_id": "169956693_5edea53724_78_70323761@N00.jpg",
+    "m": 2,
+    "residual_share": 0.0,
+    "sum_phi": 0.17514093534980918
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "m": 5,
+    "residual_share": 2.5236343199311126,
+    "sum_phi": 0.0979689608040353
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "m": 4,
+    "residual_share": 1.2189459490292618,
+    "sum_phi": 0.2711100480702028
+   },
+   {
+    "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+    "m": 3,
+    "residual_share": 0.1830288079462875,
+    "sum_phi": 0.1418137040209538
+   },
+   {
+    "image_id": "453636890_c425e657ab_239_55126705@N00.jpg",
+    "m": 1,
+    "residual_share": 0.0,
+    "sum_phi": 0.028826747039353173
+   },
+   {
+    "image_id": "486597679_e1a557718f_198_51162504@N00.jpg",
+    "m": 1,
+    "residual_share": 0.0,
+    "sum_phi": 0.4608413434925957
+   },
+   {
+    "image_id": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+    "m": 3,
+    "residual_share": 0.2711970913922389,
+    "sum_phi": 1.3334907686743027
+   }
+  ],
+  "residual_share_median": 0.2271129496692632,
+  "n_paired_cues": 0,
+  "n_paired_images": 0,
+  "per_category": {
+   "text/signage": {
+    "n": 4,
+    "phi_inpaint_median": 0.039905697870650875,
+    "phi_gray_median": null
+   },
+   "architecture": {
+    "n": 4,
+    "phi_inpaint_median": 0.22589387928255877,
+    "phi_gray_median": null
+   },
+   "vehicles/license plates": {
+    "n": 2,
+    "phi_inpaint_median": 0.009338523842633815,
+    "phi_gray_median": null
+   },
+   "commercial/cultural": {
+    "n": 7,
+    "phi_inpaint_median": 0.0322089738263363,
+    "phi_gray_median": null
+   },
+   "environment": {
+    "n": 9,
+    "phi_inpaint_median": 0.028826747039353173,
+    "phi_gray_median": null
+   },
+   "road/infrastructure": {
+    "n": 3,
+    "phi_inpaint_median": 0.023084644737526888,
+    "phi_gray_median": null
+   },
+   "landmarks/buildings": {
+    "n": 4,
+    "phi_inpaint_median": 0.17147944474952084,
+    "phi_gray_median": null
+   }
+  }
+ },
+ "c": {
+  "n_images": 7,
+  "per_image": [
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "m": 7,
+    "sum_singles": 0.366073206658524,
+    "vN": 0.12905141352201754,
+    "ratio": 0.3525289782882082,
+    "sub_additive": true
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "m": 6,
+    "sum_singles": 1.2840192844907787,
+    "vN": 0.8180606851814971,
+    "ratio": 0.6371093449004753,
+    "sub_additive": true
+   },
+   {
+    "image_id": "169956693_5edea53724_78_70323761@N00.jpg",
+    "m": 2,
+    "sum_singles": 0.16335579797901617,
+    "vN": 0.17514093534980918,
+    "ratio": 1.0721439796848036,
+    "sub_additive": false
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "m": 5,
+    "sum_singles": 0.27577110785828574,
+    "vN": 0.09796896080403535,
+    "ratio": 0.35525462244717815,
+    "sub_additive": true
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "m": 4,
+    "sum_singles": 0.6959761282593679,
+    "vN": 0.2711100480702028,
+    "ratio": 0.3895392917401454,
+    "sub_additive": true
+   },
+   {
+    "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+    "m": 3,
+    "sum_singles": 0.35969666374203924,
+    "vN": 0.1418137040209538,
+    "ratio": 0.39425915866335975,
+    "sub_additive": true
+   },
+   {
+    "image_id": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+    "m": 3,
+    "sum_singles": 0.9183677999043889,
+    "vN": 1.3334907686743027,
+    "ratio": 1.4520225652653895,
+    "sub_additive": false
+   }
+  ],
+  "n_pairs": 59,
+  "interactions": [
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 0,
+    "l": 1,
+    "cat_k": "text/signage",
+    "cat_l": "architecture",
+    "d_kl": -0.0925555522788755
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 0,
+    "l": 2,
+    "cat_k": "text/signage",
+    "cat_l": "vehicles/license plates",
+    "d_kl": -0.05356866913676812
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 0,
+    "l": 3,
+    "cat_k": "text/signage",
+    "cat_l": "commercial/cultural",
+    "d_kl": -0.034530454523235304
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 0,
+    "l": 4,
+    "cat_k": "text/signage",
+    "cat_l": "environment",
+    "d_kl": -0.044641191247940616
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 0,
+    "l": 5,
+    "cat_k": "text/signage",
+    "cat_l": "road/infrastructure",
+    "d_kl": -0.026975613697031622
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 0,
+    "l": 6,
+    "cat_k": "text/signage",
+    "cat_l": "road/infrastructure",
+    "d_kl": -0.04592060305886785
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 1,
+    "l": 2,
+    "cat_k": "architecture",
+    "cat_l": "vehicles/license plates",
+    "d_kl": -0.029852972900256812
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 1,
+    "l": 3,
+    "cat_k": "architecture",
+    "cat_l": "commercial/cultural",
+    "d_kl": -0.028510992267809065
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 1,
+    "l": 4,
+    "cat_k": "architecture",
+    "cat_l": "environment",
+    "d_kl": -0.03077888214028513
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 1,
+    "l": 5,
+    "cat_k": "architecture",
+    "cat_l": "road/infrastructure",
+    "d_kl": -0.02222141105163171
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 1,
+    "l": 6,
+    "cat_k": "architecture",
+    "cat_l": "road/infrastructure",
+    "d_kl": -0.025162259006047398
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 2,
+    "l": 3,
+    "cat_k": "vehicles/license plates",
+    "cat_l": "commercial/cultural",
+    "d_kl": -0.031170091821203838
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 2,
+    "l": 4,
+    "cat_k": "vehicles/license plates",
+    "cat_l": "environment",
+    "d_kl": -0.033624639480815774
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 2,
+    "l": 5,
+    "cat_k": "vehicles/license plates",
+    "cat_l": "road/infrastructure",
+    "d_kl": -0.032078543817367314
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 2,
+    "l": 6,
+    "cat_k": "vehicles/license plates",
+    "cat_l": "road/infrastructure",
+    "d_kl": -0.032774528070995665
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 3,
+    "l": 4,
+    "cat_k": "commercial/cultural",
+    "cat_l": "environment",
+    "d_kl": -0.026900674780718815
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 3,
+    "l": 5,
+    "cat_k": "commercial/cultural",
+    "cat_l": "road/infrastructure",
+    "d_kl": -0.028995006725022608
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 3,
+    "l": 6,
+    "cat_k": "commercial/cultural",
+    "cat_l": "road/infrastructure",
+    "d_kl": -0.03151982526083552
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 4,
+    "l": 5,
+    "cat_k": "environment",
+    "cat_l": "road/infrastructure",
+    "d_kl": -0.024783993299419167
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 4,
+    "l": 6,
+    "cat_k": "environment",
+    "cat_l": "road/infrastructure",
+    "d_kl": -0.029701436828112715
+   },
+   {
+    "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+    "k": 5,
+    "l": 6,
+    "cat_k": "road/infrastructure",
+    "cat_l": "road/infrastructure",
+    "d_kl": -0.03058576384356288
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 0,
+    "l": 1,
+    "cat_k": "text/signage",
+    "cat_l": "architecture",
+    "d_kl": 0.02715588399834068
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 0,
+    "l": 2,
+    "cat_k": "text/signage",
+    "cat_l": "commercial/cultural",
+    "d_kl": -0.008458160777633575
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 0,
+    "l": 3,
+    "cat_k": "text/signage",
+    "cat_l": "environment",
+    "d_kl": -0.03327051111376761
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 0,
+    "l": 4,
+    "cat_k": "text/signage",
+    "cat_l": "commercial/cultural",
+    "d_kl": -0.04429643797562557
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 0,
+    "l": 5,
+    "cat_k": "text/signage",
+    "cat_l": "landmarks/buildings",
+    "d_kl": 0.04901842172028931
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 1,
+    "l": 2,
+    "cat_k": "architecture",
+    "cat_l": "commercial/cultural",
+    "d_kl": -0.25294441719698985
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 1,
+    "l": 3,
+    "cat_k": "architecture",
+    "cat_l": "environment",
+    "d_kl": -0.30110305513073965
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 1,
+    "l": 4,
+    "cat_k": "architecture",
+    "cat_l": "commercial/cultural",
+    "d_kl": 0.031927147653492575
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 1,
+    "l": 5,
+    "cat_k": "architecture",
+    "cat_l": "landmarks/buildings",
+    "d_kl": -0.15117882030959556
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 2,
+    "l": 3,
+    "cat_k": "commercial/cultural",
+    "cat_l": "environment",
+    "d_kl": -0.14502002473253417
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 2,
+    "l": 4,
+    "cat_k": "commercial/cultural",
+    "cat_l": "commercial/cultural",
+    "d_kl": -0.02563536331399801
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 2,
+    "l": 5,
+    "cat_k": "commercial/cultural",
+    "cat_l": "landmarks/buildings",
+    "d_kl": -0.10389967087764247
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 3,
+    "l": 4,
+    "cat_k": "environment",
+    "cat_l": "commercial/cultural",
+    "d_kl": 0.021396576043190778
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 3,
+    "l": 5,
+    "cat_k": "environment",
+    "cat_l": "landmarks/buildings",
+    "d_kl": -0.05525396446648212
+   },
+   {
+    "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+    "k": 4,
+    "l": 5,
+    "cat_k": "commercial/cultural",
+    "cat_l": "landmarks/buildings",
+    "d_kl": 0.034419077984531754
+   },
+   {
+    "image_id": "169956693_5edea53724_78_70323761@N00.jpg",
+    "k": 0,
+    "l": 1,
+    "cat_k": "commercial/cultural",
+    "cat_l": "road/infrastructure",
+    "d_kl": 0.011785137370792995
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 0,
+    "l": 1,
+    "cat_k": "text/signage",
+    "cat_l": "vehicles/license plates",
+    "d_kl": -0.04904709346687032
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 0,
+    "l": 2,
+    "cat_k": "text/signage",
+    "cat_l": "commercial/cultural",
+    "d_kl": -0.025996953118987233
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 0,
+    "l": 3,
+    "cat_k": "text/signage",
+    "cat_l": "environment",
+    "d_kl": -0.03578331305786847
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 0,
+    "l": 4,
+    "cat_k": "text/signage",
+    "cat_l": "commercial/cultural",
+    "d_kl": -0.039851356443423
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 1,
+    "l": 2,
+    "cat_k": "vehicles/license plates",
+    "cat_l": "commercial/cultural",
+    "d_kl": -0.03909023370111349
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 1,
+    "l": 3,
+    "cat_k": "vehicles/license plates",
+    "cat_l": "environment",
+    "d_kl": -0.061588030060842285
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 1,
+    "l": 4,
+    "cat_k": "vehicles/license plates",
+    "cat_l": "commercial/cultural",
+    "d_kl": -0.05585394081871935
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 2,
+    "l": 3,
+    "cat_k": "commercial/cultural",
+    "cat_l": "environment",
+    "d_kl": -0.017547862770504456
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 2,
+    "l": 4,
+    "cat_k": "commercial/cultural",
+    "cat_l": "commercial/cultural",
+    "d_kl": -0.028325739916777573
+   },
+   {
+    "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+    "k": 3,
+    "l": 4,
+    "cat_k": "environment",
+    "cat_l": "commercial/cultural",
+    "d_kl": -0.07195545547219384
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "k": 0,
+    "l": 1,
+    "cat_k": "text/signage",
+    "cat_l": "architecture",
+    "d_kl": -0.06156933923365375
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "k": 0,
+    "l": 2,
+    "cat_k": "text/signage",
+    "cat_l": "environment",
+    "d_kl": -0.0939778232814603
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "k": 0,
+    "l": 3,
+    "cat_k": "text/signage",
+    "cat_l": "landmarks/buildings",
+    "d_kl": -0.08170147548734141
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "k": 1,
+    "l": 2,
+    "cat_k": "architecture",
+    "cat_l": "environment",
+    "d_kl": -0.15401526124271622
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "k": 1,
+    "l": 3,
+    "cat_k": "architecture",
+    "cat_l": "landmarks/buildings",
+    "d_kl": -0.19466709436524846
+   },
+   {
+    "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+    "k": 2,
+    "l": 3,
+    "cat_k": "environment",
+    "cat_l": "landmarks/buildings",
+    "d_kl": -0.16940358141504722
+   },
+   {
+    "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+    "k": 0,
+    "l": 1,
+    "cat_k": "commercial/cultural",
+    "cat_l": "environment",
+    "d_kl": -0.08006313920536724
+   },
+   {
+    "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+    "k": 0,
+    "l": 2,
+    "cat_k": "commercial/cultural",
+    "cat_l": "environment",
+    "d_kl": -0.07032400568199788
+   },
+   {
+    "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+    "k": 1,
+    "l": 2,
+    "cat_k": "environment",
+    "cat_l": "environment",
+    "d_kl": -0.0934518080311231
+   },
+   {
+    "image_id": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+    "k": 0,
+    "l": 1,
+    "cat_k": "architecture",
+    "cat_l": "environment",
+    "d_kl": 0.5689425936236695
+   },
+   {
+    "image_id": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+    "k": 0,
+    "l": 2,
+    "cat_k": "architecture",
+    "cat_l": "environment",
+    "d_kl": 0.4866895087607816
+   },
+   {
+    "image_id": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+    "k": 1,
+    "l": 2,
+    "cat_k": "environment",
+    "cat_l": "environment",
+    "d_kl": -0.2788703157516653
+   }
+  ],
+  "frac_sub_additive": 0.7142857142857143,
+  "ratio_median": 0.39425915866335975,
+  "inpaint_interaction_signs": {
+   "n": 59,
+   "neg": 50,
+   "zero": 1,
+   "pos": 8,
+   "median": -0.033624639480815774
+  },
+  "gray_sii_signs_same_images": {
+   "n": 0,
+   "neg": 0,
+   "zero": 0,
+   "pos": 0,
+   "median": NaN
+  },
+  "gray_empty_interaction_signs_same_images": {
+   "n": 0,
+   "neg": 0,
+   "zero": 0,
+   "pos": 0,
+   "median": NaN
+  },
+  "gray_sii_signs_all": {
+   "n": 0,
+   "neg": 0,
+   "zero": 0,
+   "pos": 0,
+   "median": NaN
+  }
+ },
+ "d": {
+  "available": true,
+  "n_images": 0,
+  "n_cues": 0,
+  "n_ctrl_inpaint": 0,
+  "n_ctrl_gray": 0,
+  "placements": [],
+  "per_cue": [],
+  "per_category_resolvable": {}
+ },
+ "meta": {
+  "results": "C:\\Users\\phdwf\\OneDrive\\Desktop\\GeoBayes\\belief_elicit\\georanker_inpaint_vocab_results.json",
+  "cues_from": "manifest",
+  "cache": "C:\\Users\\phdwf\\OneDrive\\Desktop\\GeoBayes\\belief_elicit\\inpaint_cache_vocab",
+  "use_gray": false,
+  "n_records": 10,
+  "n_variants": 102,
+  "controls": "C:\\Users\\phdwf\\OneDrive\\Desktop\\GeoBayes\\belief_elicit\\georanker_inpaint_control_results.json"
+ }
+}

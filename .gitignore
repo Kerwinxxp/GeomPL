@@ -149,3 +149,7 @@ belief_elicit/distributed_results/
 
 # Remote experiment controller runtime state and outputs
 .remote_control/
+
+# v2 pipeline: run logs (regenerable)
+belief_elicit/logs/*.log
+!cue_extract/figures/vocab_vs_gpt4o.png

@@ -1,7 +1,10 @@
 """【实验性 · 可整体删除】全局总览:全部线索的 原始单条 mPL → Shapley φ,及可分辨性。
 (a) 每条线索 v_single vs φ 散点(颜色=可分辨,大小=面积);(b) 逐类别三量对比条形。
 运行:python -m belief_elicit.plot_overview
+     python -m belief_elicit.plot_overview --shapley belief_elicit/shapley_v3_results.json             --out belief_elicit/figures/georanker_overview_dedup.png   # 去重口径
+去重口径的线索带 members(合并前的原始线索名),对照最大值取各成员对照的最大、面积取和。
 """
+import argparse
 import json
 import os
 import sys
@@ -24,8 +27,13 @@ BLUE, RED, GRAY, GREEN = "#1E88E5", "#E53935", "#B0BEC5", "#43A047"
 
 
 def main():
-    S = json.load(open(SHAP, encoding="utf-8"))
-    C = {r["image_id"]: r for r in json.load(open(CTRL, encoding="utf-8"))}
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--shapley", default=SHAP, help="归因结果 JSON(默认 shapley_v2)")
+    ap.add_argument("--controls", default=CTRL)
+    ap.add_argument("--out", default=OUT)
+    a = ap.parse_args()
+    S = json.load(open(a.shapley, encoding="utf-8"))
+    C = {r["image_id"]: r for r in json.load(open(a.controls, encoding="utf-8"))}
     # 逐线索表:v_single, phi, 面积, 可分辨(real>自身对照最大), 类别
     rows = []
     for r in S:
@@ -36,7 +44,10 @@ def main():
                 cm = [x["mpl"] for x in c["controls"]]
                 cmap[c["cue"]] = (max(cm) if cm else None, c["area_frac"])
         for c in r["cues"]:
-            cmax, area = cmap.get(c["cue"], (None, None))
+            names = c.get("members") or [c["cue"]]      # 去重口径:合并玩家 -> 原始成员名
+            got = [cmap[n] for n in names if n in cmap]
+            cmax = max((g[0] for g in got if g[0] is not None), default=None)
+            area = sum((g[1] for g in got if g[1] is not None), 0.0) or None
             rows.append(dict(cat=c["category"] or "unknown", v=c["v_single"],
                              phi=c["phi"], area=area or 0.05,
                              resolv=(cmax is not None and c["v_single"] > cmax)))
@@ -93,9 +104,9 @@ def main():
     fig.suptitle("Per-cue location leakage across 95 images: raw mPL, Shapley correction, "
                  "and artifact-resolvability", fontsize=12.5, y=1.01)
     fig.tight_layout()
-    os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    fig.savefig(OUT, bbox_inches="tight", dpi=130)
-    print("saved", OUT)
+    os.makedirs(os.path.dirname(a.out), exist_ok=True)
+    fig.savefig(a.out, bbox_inches="tight", dpi=130)
+    print("saved", a.out)
 
 
 if __name__ == "__main__":

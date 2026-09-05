@@ -1,0 +1,7369 @@
+[
+ {
+  "image_id": "483717602_2445d0d4ae_206_40425693@N00.jpg",
+  "place": "Italy",
+  "country_hit": true,
+  "km_error": 267.4845581971313,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.11346034644607265,
+  "cues": [
+   {
+    "cue": "Limestone cliffs",
+    "category": "environment",
+    "v_single": 0.08795650077438771,
+    "phi": 0.04855845867270482,
+    "members": [
+     "Limestone cliffs"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.1767094160051662,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.043231827865626626,
+    "phi_inpaint": 0.019472988239395098,
+    "ctrl_inpaint_max": 0.0706844910458241,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Rocky shoreline",
+    "category": "environment",
+    "v_single": 0.10429992987505073,
+    "phi": 0.06490188777336783,
+    "members": [
+     "Rocky shoreline"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.13762472666113537,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.1052878261350407,
+    "phi_inpaint": 0.08152898650880916,
+    "ctrl_inpaint_max": 0.08643168235119153,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.07879608420336578
+  },
+  "empty_interaction": {
+   "0,1": -0.07879608420336578
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 1.3740115321914728e-16,
+   "vN": 0.10100197474820426
+  }
+ },
+ {
+  "image_id": "217552984_53e8b16fed_71_84498284@N00.jpg",
+  "place": "Rome",
+  "country_hit": true,
+  "km_error": 0.5762723814973276,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.19144651681924785,
+  "cues": [
+   {
+    "cue": "Latin text 'ADVENIMUS' above entrance",
+    "category": "text/signage",
+    "v_single": 0.04034608777547698,
+    "phi": 0.028229107075498267,
+    "members": [
+     "Latin text 'ADVENIMUS' above entrance"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.06462924293153392,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.041071445381425806,
+    "phi_inpaint": 0.00225258404071,
+    "ctrl_inpaint_max": 0.02523027033516342,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Bell towers flanking the church",
+    "category": "architecture",
+    "v_single": 0.06043281038558447,
+    "phi": 0.04642886865397338,
+    "members": [
+     "Bell towers flanking the church"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.09836322348205322,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.07665765258357651,
+    "phi_inpaint": 0.042314332666046214,
+    "ctrl_inpaint_max": 0.035403836043110905,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Mediterranean trees and plants",
+    "category": "environment",
+    "v_single": 0.14515187334269192,
+    "phi": 0.1167885410897762,
+    "members": [
+     "Mediterranean trees and plants"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.15008480438559066,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08255246328561672,
+    "phi_inpaint": 0.04300873322805255,
+    "ctrl_inpaint_max": 0.05079828177955593,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": 0.00793146941970687,
+   "0,2": -0.02078731162290238,
+   "1,2": -0.024561233686167146
+  },
+  "empty_interaction": {
+   "0,1": -0.009135709375435994,
+   "0,2": -0.03785449041804524,
+   "1,2": -0.04162841248131001
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.01811510211521703,
+   "vN": 0.08757564993480876
+  }
+ },
+ {
+  "image_id": "415005347_2f1a541aef_183_7132415@N03.jpg",
+  "place": "Mont Dore",
+  "country_hit": false,
+  "km_error": 5705.015299198681,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.25319493465258525,
+  "cues": [
+   {
+    "cue": "Tall white lighthouse",
+    "category": "landmarks/buildings",
+    "v_single": 0.14458926991023363,
+    "phi": 0.0968204700167808,
+    "members": [
+     "Tall white lighthouse"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.03615813790483665,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.09994537831800425,
+    "phi_inpaint": 0.02782031904685566,
+    "ctrl_inpaint_max": 0.019245348848216416,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Tropical vegetation",
+    "category": "environment",
+    "v_single": 0.17988657330160088,
+    "phi": 0.12316999563587024,
+    "members": [
+     "Tropical vegetation"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.0684845074945452,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.30929134544298786,
+    "phi_inpaint": 0.18845504936022867,
+    "ctrl_inpaint_max": 0.025471391312390533,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Small boats",
+    "category": "vehicles/license plates",
+    "v_single": 0.11106266171133632,
+    "phi": 0.0332044689999342,
+    "members": [
+     "Small boats"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "vehicles/license plates"
+    ],
+    "ctrl_gray_max": 0.06414006460349315,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.07760163307300674,
+    "phi_inpaint": 0.01542084805943491,
+    "ctrl_inpaint_max": 0.02107445521109622,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.005690900519490678,
+   "0,2": -0.04797413061083363,
+   "1,2": -0.06586968615538927
+  },
+  "empty_interaction": {
+   "0,1": -0.06849975350436269,
+   "0,2": -0.11078298359570564,
+   "1,2": -0.12867853914026128
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.5944996902782167,
+   "vN": 0.23169621646651925
+  }
+ },
+ {
+  "image_id": "321720530_f2a31b2549_128_81421684@N00.jpg",
+  "place": "Chaoyang District",
+  "country_hit": true,
+  "km_error": 1.8909168581817637,
+  "n_cues": 2,
+  "n_cues_orig": 3,
+  "merged": true,
+  "vN": 0.13905965030116188,
+  "cues": [
+   {
+    "cue": "Chinese text on building | High-rise construction",
+    "category": "text/signage",
+    "v_single": 0.07634298322532922,
+    "phi": 0.064198851508483,
+    "members": [
+     "Chinese text on building",
+     "High-rise construction"
+    ],
+    "member_indices": [
+     0,
+     1
+    ],
+    "n_members": 2,
+    "categories": [
+     "text/signage",
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.09836004510721962,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08212236573797571,
+    "phi_inpaint": 0.007955319684743146,
+    "ctrl_inpaint_max": 0.08248146718099245,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Red construction cranes",
+    "category": "road/infrastructure",
+    "v_single": 0.0870049305095251,
+    "phi": 0.07486079879267887,
+    "members": [
+     "Red construction cranes"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "road/infrastructure"
+    ],
+    "ctrl_gray_max": 0.11559887448208735,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.16033221963584476,
+    "phi_inpaint": 0.08616517358261219,
+    "ctrl_inpaint_max": 0.051629103436463174,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.024288263433692434
+  },
+  "empty_interaction": {
+   "0,1": -0.024288263433692434
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 1.47447036517262e-16,
+   "vN": 0.09412049326735535
+  }
+ },
+ {
+  "image_id": "381147491_751c8c119c_181_57253263@N00.jpg",
+  "place": "Cambridge",
+  "country_hit": true,
+  "km_error": 2.2950596635128173,
+  "n_cues": 1,
+  "n_cues_orig": 4,
+  "merged": true,
+  "vN": 0.12581625776597327,
+  "cues": [
+   {
+    "cue": "shopcambridgeside.com URL | Customer Service sign | Payless ShoeSource store | Inside Sale sign",
+    "category": "text/signage",
+    "v_single": 0.12581625776597327,
+    "phi": 0.12581625776597327,
+    "members": [
+     "shopcambridgeside.com URL",
+     "Customer Service sign",
+     "Payless ShoeSource store",
+     "Inside Sale sign"
+    ],
+    "member_indices": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "n_members": 4,
+    "categories": [
+     "text/signage",
+     "text/signage",
+     "commercial/cultural",
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.07695716359533096,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.13176078453748177,
+    "phi_inpaint": 0.13176078453748177,
+    "ctrl_inpaint_max": 0.06440861723486839,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.13176078453748177
+  }
+ },
+ {
+  "image_id": "880710221_64f0fdd8f2_1137_85417391@N00.jpg",
+  "place": "Jefferson County",
+  "country_hit": true,
+  "km_error": 154.25691983658572,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.2404816218327404,
+  "cues": [
+   {
+    "cue": "Sunset over ocean",
+    "category": "environment",
+    "v_single": 0.21622386712694036,
+    "phi": 0.13986604429875416,
+    "members": [
+     "Sunset over ocean"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.21164244578221886,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.24814940703217855,
+    "phi_inpaint": 0.16091174731763097,
+    "ctrl_inpaint_max": 0.05608840542653685,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Rocky shoreline",
+    "category": "environment",
+    "v_single": 0.10536264684302736,
+    "phi": 0.030254006317086996,
+    "members": [
+     "Rocky shoreline"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.05071765906904116,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.06716170695602057,
+    "phi_inpaint": 0.027503940644880487,
+    "ctrl_inpaint_max": 0.00954775836856141,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Cloudy sky",
+    "category": "environment",
+    "v_single": 0.13332319410066418,
+    "phi": 0.07036157121689923,
+    "members": [
+     "Cloudy sky"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.07466834833710573,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.06740674008842579,
+    "phi_inpaint": 0.01030978955446351,
+    "ctrl_inpaint_max": 0.05988450218652821,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.07456597374776844,
+   "0,2": -0.05027193846341759,
+   "1,2": -0.04777357385892595
+  },
+  "empty_interaction": {
+   "0,1": -0.11638257391554795,
+   "0,2": -0.09208853863119709,
+   "1,2": -0.08959017402670545
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.051192957088308844,
+   "vN": 0.19872547751697497
+  }
+ },
+ {
+  "image_id": "446976495_afc37707e4_246_55126705@N00.jpg",
+  "place": "Distrito de Cusco",
+  "country_hit": true,
+  "km_error": 1.9006423766383918,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.8066726178034684,
+  "cues": [
+   {
+    "cue": "Inca stonework",
+    "category": "architecture",
+    "v_single": 0.42282873972681173,
+    "phi": 0.4901886285939972,
+    "members": [
+     "Inca stonework"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.27983477360241354,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.5264633494945068,
+    "phi_inpaint": 0.5415278199260093,
+    "ctrl_inpaint_max": 0.25481917515459485,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Gated doorway",
+    "category": "landmarks/buildings",
+    "v_single": 0.11135872730015191,
+    "phi": 0.004180379147570583,
+    "members": [
+     "Gated doorway"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.18661595920499124,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08297305281575292,
+    "phi_inpaint": -0.027800976876944883,
+    "ctrl_inpaint_max": 0.05757107614709156,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Vegetation",
+    "category": "environment",
+    "v_single": 0.15353441834222392,
+    "phi": 0.3123036100619006,
+    "members": [
+     "Vegetation"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.0989515491720875,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.08157434393311191,
+    "phi_inpaint": 0.29669060991431556,
+    "ctrl_inpaint_max": 0.08492634024468174,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.15562657869659216,
+   "0,2": 0.37626850104792386,
+   "1,2": 0.02719202700839026
+  },
+  "empty_interaction": {
+   "0,1": -0.28450979562203327,
+   "0,2": 0.24738528412248278,
+   "1,2": -0.10169118991705085
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.5307701930515323,
+   "vN": 0.81041745296338
+  }
+ },
+ {
+  "image_id": "199528247_66da61f266_70_85971448@N00.jpg",
+  "place": "Çavuşin Köyü",
+  "country_hit": true,
+  "km_error": 0.7793603479047065,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.11538195596542562,
+  "cues": [
+   {
+    "cue": "Unique rock formations",
+    "category": "environment",
+    "v_single": 0.038864546957299025,
+    "phi": 0.016829075478711254,
+    "members": [
+     "Unique rock formations"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.08188540595618163,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.023858555454770718,
+    "phi_inpaint": 0.016662701402708018,
+    "ctrl_inpaint_max": 0.033446921480900046,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Vegetation in arid landscape",
+    "category": "environment",
+    "v_single": 0.12058835196530214,
+    "phi": 0.09855288048671437,
+    "members": [
+     "Vegetation in arid landscape"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.0975553753864037,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.06931717702482683,
+    "phi_inpaint": 0.062121322972764126,
+    "ctrl_inpaint_max": 0.03657864627219617,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.04407094295717555
+  },
+  "empty_interaction": {
+   "0,1": -0.04407094295717555
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.07878402437547215
+  }
+ },
+ {
+  "image_id": "847733166_0573338bfb_1321_89904893@N00.jpg",
+  "place": "Venice",
+  "country_hit": true,
+  "km_error": 3.03512236047708,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.1960863605195214,
+  "cues": [
+   {
+    "cue": "Latin inscription on building",
+    "category": "text/signage",
+    "v_single": 0.10043762416686763,
+    "phi": 0.08687475136785142,
+    "members": [
+     "Latin inscription on building"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.13293712747965397,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.07174269904529774,
+    "phi_inpaint": 0.05755434277015467,
+    "ctrl_inpaint_max": 0.047765219946445975,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Statues on building facade",
+    "category": "landmarks/buildings",
+    "v_single": 0.1227744819506862,
+    "phi": 0.10921160915167,
+    "members": [
+     "Statues on building facade"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.18544803018823006,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.07889552855269563,
+    "phi_inpaint": 0.06470717227755256,
+    "ctrl_inpaint_max": 0.05086766578290216,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.027125745598032422
+  },
+  "empty_interaction": {
+   "0,1": -0.027125745598032422
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.12226151504770723
+  }
+ },
+ {
+  "image_id": "312179336_340ace22c6_104_36093984@N00.jpg",
+  "place": "Budapest",
+  "country_hit": false,
+  "km_error": 251.5066802098877,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.4003580485880466,
+  "cues": [
+   {
+    "cue": "Cyrillic text on gravestone",
+    "category": "text/signage",
+    "v_single": 0.3781445266158888,
+    "phi": 0.26165838253331697,
+    "members": [
+     "Cyrillic text on gravestone"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.09568870349393085,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.2924651381045746,
+    "phi_inpaint": 0.20702865535038578,
+    "ctrl_inpaint_max": 0.04757418766109232,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Orthodox cross on mausoleum",
+    "category": "landmarks/buildings",
+    "v_single": 0.1544965258579763,
+    "phi": -0.025034843390496466,
+    "members": [
+     "Orthodox cross on mausoleum"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.18281210805947404,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.15642379976796417,
+    "phi_inpaint": -0.013878490988606593,
+    "ctrl_inpaint_max": 0.1328988140538413,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Autumn foliage",
+    "category": "environment",
+    "v_single": 0.3200501464654647,
+    "phi": 0.16373450944522608,
+    "members": [
+     "Autumn foliage"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.2238147702026578,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.15926265626916816,
+    "phi_inpaint": 0.09972803392909478,
+    "ctrl_inpaint_max": 0.21822046335899242,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.10049555130675308,
+   "0,2": -0.05406408685028481,
+   "1,2": -0.1801545371820866
+  },
+  "empty_interaction": {
+   "0,1": -0.21811452631891182,
+   "0,2": -0.17168306186244353,
+   "1,2": -0.2977735121942453
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.24980442360084976,
+   "vN": 0.29287819829087397
+  }
+ },
+ {
+  "image_id": "271517794_bcd0d062eb_79_40829484@N00.jpg",
+  "place": "New York",
+  "country_hit": true,
+  "km_error": 330.83528804283316,
+  "n_cues": 2,
+  "n_cues_orig": 3,
+  "merged": true,
+  "vN": 0.09049707610017262,
+  "cues": [
+   {
+    "cue": "White House | Dense urban buildings",
+    "category": "landmarks/buildings",
+    "v_single": 0.09084107589794443,
+    "phi": 0.053132602664181135,
+    "members": [
+     "White House",
+     "Dense urban buildings"
+    ],
+    "member_indices": [
+     0,
+     2
+    ],
+    "n_members": 2,
+    "categories": [
+     "landmarks/buildings",
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.1596637955711698,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08343931588802664,
+    "phi_inpaint": 0.052171288793540806,
+    "ctrl_inpaint_max": 0.06902073954378549,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "National Mall greenery",
+    "category": "environment",
+    "v_single": 0.07507294666975478,
+    "phi": 0.03736447343599148,
+    "members": [
+     "National Mall greenery"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.0950677674605767,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.11420994464107963,
+    "phi_inpaint": 0.0829419175465938,
+    "ctrl_inpaint_max": 0.0500702420700232,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.0754169464675266
+  },
+  "empty_interaction": {
+   "0,1": -0.0754169464675266
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.1351132063401346
+  }
+ },
+ {
+  "image_id": "766351079_af0294281f_1240_16836474@N00.jpg",
+  "place": "Villa de Leyva",
+  "country_hit": false,
+  "km_error": 2083.517356509116,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.1886128609814342,
+  "cues": [
+   {
+    "cue": "Street performer painted gold",
+    "category": "commercial/cultural",
+    "v_single": 0.09028714816982975,
+    "phi": 0.07461406644384348,
+    "members": [
+     "Street performer painted gold"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.03807429442090234,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.07846370563992312,
+    "phi_inpaint": 0.05030710838204495,
+    "ctrl_inpaint_max": 0.023967351655358318,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Spanish text on wall sign",
+    "category": "text/signage",
+    "v_single": 0.12967187626357699,
+    "phi": 0.11399879453759072,
+    "members": [
+     "Spanish text on wall sign"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.08658709220420562,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.13287867676453866,
+    "phi_inpaint": 0.10472207950666049,
+    "ctrl_inpaint_max": 0.05300159990622494,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.031346163451972525
+  },
+  "empty_interaction": {
+   "0,1": -0.031346163451972525
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.15502918788870543
+  }
+ },
+ {
+  "image_id": "104419192_8551684362_41_64825499@N00.jpg",
+  "place": "Greater London",
+  "country_hit": false,
+  "km_error": 692.9492206143647,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.09789639933679709,
+  "cues": [
+   {
+    "cue": "Romanesque arches",
+    "category": "architecture",
+    "v_single": 0.11593832295631001,
+    "phi": 0.08235366767261651,
+    "members": [
+     "Romanesque arches"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.1192916547800999,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.11878292999745411,
+    "phi_inpaint": 0.09884180317494365,
+    "ctrl_inpaint_max": 0.11165692661051017,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Narrow windows",
+    "category": "architecture",
+    "v_single": 0.049127386947874094,
+    "phi": 0.015542731664180583,
+    "members": [
+     "Narrow windows"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.07846467280754844,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.0691979421190512,
+    "phi_inpaint": 0.049256815296540725,
+    "ctrl_inpaint_max": 0.04039814706761104,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.06716931056738702
+  },
+  "empty_interaction": {
+   "0,1": -0.06716931056738702
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.14809861847148437
+  }
+ },
+ {
+  "image_id": "1300123632_36361364c9_1048_50435419@N00.jpg",
+  "place": "Waukesha",
+  "country_hit": true,
+  "km_error": 455.9340463820918,
+  "n_cues": 4,
+  "n_cues_orig": 4,
+  "merged": false,
+  "vN": 0.30401653549521357,
+  "cues": [
+   {
+    "cue": "Tartan kilt",
+    "category": "commercial/cultural",
+    "v_single": 0.10623530984426713,
+    "phi": 0.0786593388941463,
+    "members": [
+     "Tartan kilt"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.07943334610951873,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.10240705994797293,
+    "phi_inpaint": 0.04640677230334909,
+    "ctrl_inpaint_max": 0.03673739758341624,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Pop-up tent with text",
+    "category": "text/signage",
+    "v_single": 0.062123633464893156,
+    "phi": 0.018582364158572624,
+    "members": [
+     "Pop-up tent with text"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.08759045979180313,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.05868232438921482,
+    "phi_inpaint": 0.017015043723418243,
+    "ctrl_inpaint_max": 0.04048534165155245,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Wooden snow fence",
+    "category": "road/infrastructure",
+    "v_single": 0.07125451332404951,
+    "phi": 0.012691706937102431,
+    "members": [
+     "Wooden snow fence"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "road/infrastructure"
+    ],
+    "ctrl_gray_max": 0.11624641119017858,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.13879308782684396,
+    "phi_inpaint": -0.007871153002595124,
+    "ctrl_inpaint_max": 0.06736641145138103,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Deciduous trees",
+    "category": "environment",
+    "v_single": 0.24008735566835712,
+    "phi": 0.19408312550539222,
+    "members": [
+     "Deciduous trees"
+    ],
+    "member_indices": [
+     3
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.12204861847970831,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.18292740151465606,
+    "phi_inpaint": 0.09201168337494393,
+    "ctrl_inpaint_max": 0.08805301434612157,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.015120003014696458,
+   "0,2": -0.016669839564003804,
+   "0,3": 0.007718825728526575,
+   "1,2": -0.022384471825876287,
+   "1,3": -0.017927488223973793,
+   "2,3": -0.047139183655875695
+  },
+  "empty_interaction": {
+   "0,1": -0.050817489112037796,
+   "0,2": -0.051289638931410905,
+   "0,3": -0.03249371830858333,
+   "1,2": -0.057858746940323245,
+   "1,3": -0.05899450800812356,
+   "2,3": -0.08712851671009123
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 1.9446587172211602,
+   "vN": 0.1475623463991161
+  }
+ },
+ {
+  "image_id": "166869956_84928fd11b_60_55085284@N00.jpg",
+  "place": "Paris",
+  "country_hit": true,
+  "km_error": 17.006751615466097,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.08710713384143842,
+  "cues": [
+   {
+    "cue": "Golden clock with ornate design",
+    "category": "landmarks/buildings",
+    "v_single": 0.04597937710293411,
+    "phi": 0.02897320672489307,
+    "members": [
+     "Golden clock with ornate design"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.04447459909768532,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.03880275932671233,
+    "phi_inpaint": 0.026799487289417,
+    "ctrl_inpaint_max": 0.02740654864560072,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Rooftop sculptures and balustrades",
+    "category": "architecture",
+    "v_single": 0.0418306225299627,
+    "phi": 0.016303169643870942,
+    "members": [
+     "Rooftop sculptures and balustrades"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.044003112314572636,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.037687437821577636,
+    "phi_inpaint": 0.01698793650279273,
+    "ctrl_inpaint_max": 0.0334210810415797,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "French-style windows with wrought iron",
+    "category": "architecture",
+    "v_single": 0.06788693607161513,
+    "phi": 0.04183075747267441,
+    "members": [
+     "French-style windows with wrought iron"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.12319975581279642,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.02296884360638945,
+    "phi_inpaint": 0.010342189787000345,
+    "ctrl_inpaint_max": 0.04050193140927023,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.010159204898018158,
+   "0,2": -0.01121665632371608,
+   "1,2": -0.028259221339817515
+  },
+  "empty_interaction": {
+   "0,1": -0.02911392419953991,
+   "0,2": -0.030171375625237834,
+   "1,2": -0.04721394064133927
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.36796626496282336,
+   "vN": 0.054129613579210076
+  }
+ },
+ {
+  "image_id": "244035501_3708124424_87_40829484@N00.jpg",
+  "place": "New York",
+  "country_hit": true,
+  "km_error": 7.465705094493051,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.15250464898072563,
+  "cues": [
+   {
+    "cue": "Twin-towered building resembling The San Remo",
+    "category": "landmarks/buildings",
+    "v_single": 0.10494086324309371,
+    "phi": 0.05598019972041089,
+    "members": [
+     "Twin-towered building resembling The San Remo"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.17919427231957147,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.10271455655562174,
+    "phi_inpaint": 0.08008908761402193,
+    "ctrl_inpaint_max": 0.039312142614051825,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Frozen lake with surrounding park",
+    "category": "environment",
+    "v_single": 0.0355484702068404,
+    "phi": 0.014240039158888872,
+    "members": [
+     "Frozen lake with surrounding park"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.06351857199479966,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.025534767547210534,
+    "phi_inpaint": 0.007921420941947822,
+    "ctrl_inpaint_max": 0.02721040657806826,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Leafless trees in winter",
+    "category": "environment",
+    "v_single": 0.1624168526457295,
+    "phi": 0.08228441010142586,
+    "members": [
+     "Leafless trees in winter"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.11882495481926802,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.027322161857307015,
+    "phi_inpaint": 0.0058679609491593,
+    "ctrl_inpaint_max": 0.024110816879953735,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": 0.026396420521742518,
+   "0,2": -0.09125160247096169,
+   "1,2": -0.035947137521499105
+  },
+  "empty_interaction": {
+   "0,1": -0.02320279712247717,
+   "0,2": -0.14085082011518138,
+   "1,2": -0.08554635516571879
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.32562674732166647,
+   "vN": 0.09387846950512906
+  }
+ },
+ {
+  "image_id": "494612871_db624a92e7_216_62126383@N00.jpg",
+  "place": "Hof HaCarmel Regional Council",
+  "country_hit": false,
+  "km_error": 686.7844950487786,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.17453554219709672,
+  "cues": [
+   {
+    "cue": "Ancient Greek inscription",
+    "category": "text/signage",
+    "v_single": 0.17453554219709672,
+    "phi": 0.17453554219709672,
+    "members": [
+     "Ancient Greek inscription"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.09292494016934144,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.19722474614443927,
+    "phi_inpaint": 0.19722474614443927,
+    "ctrl_inpaint_max": 0.028599867345662132,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.19722474614443927
+  }
+ },
+ {
+  "image_id": "297636665_27042e8d0d_109_41894169878@N01.jpg",
+  "place": "Colorado",
+  "country_hit": false,
+  "km_error": 8635.338998928863,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.04860984155244572,
+  "cues": [
+   {
+    "cue": "turtle in water",
+    "category": "environment",
+    "v_single": 0.04860984155244572,
+    "phi": 0.04860984155244572,
+    "members": [
+     "turtle in water"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.047202661894122096,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.03409934828913327,
+    "phi_inpaint": 0.03409934828913327,
+    "ctrl_inpaint_max": 0.015663775563317495,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.03409934828913327
+  }
+ },
+ {
+  "image_id": "227569033_4e625d93c3_74_48637819@N00.jpg",
+  "place": "Leh",
+  "country_hit": true,
+  "km_error": 2.20357992394333,
+  "n_cues": 4,
+  "n_cues_orig": 4,
+  "merged": false,
+  "vN": 0.1159179000866674,
+  "cues": [
+   {
+    "cue": "Mountainous terrain with sparse vegetation",
+    "category": "environment",
+    "v_single": 0.06944290060954629,
+    "phi": 0.04882019867334339,
+    "members": [
+     "Mountainous terrain with sparse vegetation"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.05792407212673507,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.07197257423507211,
+    "phi_inpaint": 0.04422371226010058,
+    "ctrl_inpaint_max": 0.038345102655481675,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Green agricultural fields",
+    "category": "environment",
+    "v_single": 0.03856793441363227,
+    "phi": 0.015382712245935425,
+    "members": [
+     "Green agricultural fields"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.05580924227830731,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.03046426870642975,
+    "phi_inpaint": 0.017188797534253047,
+    "ctrl_inpaint_max": 0.032489714946262474,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Traditional Ladakhi architecture",
+    "category": "architecture",
+    "v_single": 0.036927592358166186,
+    "phi": 0.015664701175613152,
+    "members": [
+     "Traditional Ladakhi architecture"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.03879325818333781,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.028194316093245075,
+    "phi_inpaint": 0.01471967947871167,
+    "ctrl_inpaint_max": 0.02568850287978522,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Cloudy sky over mountains",
+    "category": "environment",
+    "v_single": 0.052669926822957236,
+    "phi": 0.036050287991775426,
+    "members": [
+     "Cloudy sky over mountains"
+    ],
+    "member_indices": [
+     3
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.0604443886767284,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.05023888145349319,
+    "phi_inpaint": 0.019397926472041985,
+    "ctrl_inpaint_max": 0.06888240476366768,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.017833574506731766,
+   "0,2": -0.017072629696747846,
+   "0,3": 0.005634843741828207,
+   "1,2": -0.005230224616823507,
+   "1,3": -0.013195868732360193,
+   "2,3": -0.008128875670741543
+  },
+  "empty_interaction": {
+   "0,1": -0.028048836780805282,
+   "0,2": -0.030262805822793767,
+   "0,3": -0.015738319314663102,
+   "1,2": -0.015625500345955202,
+   "1,3": -0.03177413139193728,
+   "2,3": -0.02968205218229103
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 1.2643459429758706,
+   "vN": 0.09553011574510728
+  }
+ },
+ {
+  "image_id": "171046893_b97c4f0aa5_73_30571787@N00.jpg",
+  "place": "City of Westminster",
+  "country_hit": true,
+  "km_error": 0.4952497482270177,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.15286225958645885,
+  "cues": [
+   {
+    "cue": "Victorian architecture with red brick and white stone",
+    "category": "architecture",
+    "v_single": 0.12904239812542914,
+    "phi": 0.062271584648555686,
+    "members": [
+     "Victorian architecture with red brick and white stone"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.12904239812542914,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.1686274631990441,
+    "phi_inpaint": 0.152422356931613,
+    "ctrl_inpaint_max": 0.1686274631990441,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Traditional British pub sign",
+    "category": "commercial/cultural",
+    "v_single": 0.07365355442525508,
+    "phi": 0.02777507276157642,
+    "members": [
+     "Traditional British pub sign"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.0819193188457575,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.060221646160019036,
+    "phi_inpaint": 0.001346944305991844,
+    "ctrl_inpaint_max": 0.03321954976017195,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Red telephone box",
+    "category": "landmarks/buildings",
+    "v_single": 0.11665676661064317,
+    "phi": 0.06281560217632674,
+    "members": [
+     "Red telephone box"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.060436583695284665,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.05565926977263357,
+    "phi_inpaint": 0.05635554428630931,
+    "ctrl_inpaint_max": 0.030355017129811937,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.04927118153566183,
+   "0,2": -0.06519654707693738,
+   "1,2": -0.023411883450547788
+  },
+  "empty_interaction": {
+   "0,1": -0.07788202904738337,
+   "0,2": -0.09380739458865892,
+   "1,2": -0.05202273096226932
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.1502864807343383,
+   "vN": 0.21012484552391414
+  }
+ },
+ {
+  "image_id": "1182903598_51bdaa7836_1385_15376845@N00.jpg",
+  "place": "East Granby",
+  "country_hit": true,
+  "km_error": 1928.497197334094,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.03102117836623212,
+  "cues": [
+   {
+    "cue": "Red and white checkerboard pattern",
+    "category": "commercial/cultural",
+    "v_single": 0.03102117836623212,
+    "phi": 0.03102117836623212,
+    "members": [
+     "Red and white checkerboard pattern"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.08503951543989091,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.03791184694830597,
+    "phi_inpaint": 0.03791184694830597,
+    "ctrl_inpaint_max": 0.02030992514086471,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.03791184694830597
+  }
+ },
+ {
+  "image_id": "43779838_1ef2e1f024_30_88483799@N00.jpg",
+  "place": "Sussex County",
+  "country_hit": true,
+  "km_error": 267.75987876126294,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.35480959522560224,
+  "cues": [
+   {
+    "cue": "Atlantic Ocean view",
+    "category": "environment",
+    "v_single": 0.11346232413649876,
+    "phi": 0.08946289209417826,
+    "members": [
+     "Atlantic Ocean view"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.13358823481093093,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.13672274850868404,
+    "phi_inpaint": 0.12105355792974799,
+    "ctrl_inpaint_max": 0.04798338525349121,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Sandy beach with dunes",
+    "category": "environment",
+    "v_single": 0.14064921503205718,
+    "phi": 0.13570246755386875,
+    "members": [
+     "Sandy beach with dunes"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.11269172869075737,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.14742465203193142,
+    "phi_inpaint": 0.10713997758656789,
+    "ctrl_inpaint_max": 0.04010265012547498,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Wooden deck railing",
+    "category": "architecture",
+    "v_single": 0.11958694690164745,
+    "phi": 0.12964423557755517,
+    "members": [
+     "Wooden deck railing"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.12406912142435247,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.12133576610401475,
+    "phi_inpaint": 0.0835555821399148,
+    "ctrl_inpaint_max": 0.06600898061772485,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.034276504233045554,
+   "0,2": -0.004268431924853225,
+   "1,2": 0.03383693720341087
+  },
+  "empty_interaction": {
+   "0,1": -0.0484573961231588,
+   "0,2": -0.018449323814966473,
+   "1,2": 0.01965604531329762
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.25642406131295065,
+   "vN": 0.3117491176562307
+  }
+ },
+ {
+  "image_id": "1297522299_1d487977b3_1008_85417391@N00.jpg",
+  "place": "Vernon",
+  "country_hit": true,
+  "km_error": 26.98105178791646,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.11502612787865604,
+  "cues": [
+   {
+    "cue": "Deciduous forest with mixed hardwoods",
+    "category": "environment",
+    "v_single": 0.11502612787865604,
+    "phi": 0.11502612787865604,
+    "members": [
+     "Deciduous forest with mixed hardwoods"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.1522004010938951,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08592989276595142,
+    "phi_inpaint": 0.08592989276595142,
+    "ctrl_inpaint_max": 0.03654140755834212,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.08592989276595142
+  }
+ },
+ {
+  "image_id": "370717727_f9564e3587_150_13527886@N00.jpg",
+  "place": "Cuba",
+  "country_hit": true,
+  "km_error": 246.28229452534498,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.5186213193452707,
+  "cues": [
+   {
+    "cue": "Stone fortress walls",
+    "category": "landmarks/buildings",
+    "v_single": 0.38153798581191356,
+    "phi": 0.17801413146727835,
+    "members": [
+     "Stone fortress walls"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.09244007714282079,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.24932667476081577,
+    "phi_inpaint": 0.03826541795230115,
+    "ctrl_inpaint_max": 0.05066838760631135,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Lush green landscape",
+    "category": "environment",
+    "v_single": 0.5441310422226275,
+    "phi": 0.3406071878779923,
+    "members": [
+     "Lush green landscape"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.16934636892736138,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.4665388801502873,
+    "phi_inpaint": 0.2554776233417727,
+    "ctrl_inpaint_max": 0.05852486029050553,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.4070477086892704
+  },
+  "empty_interaction": {
+   "0,1": -0.4070477086892704
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.29374304129407386
+  }
+ },
+ {
+  "image_id": "307499425_ed6d8712bd_111_73293249@N00.jpg",
+  "place": "Entremont",
+  "country_hit": true,
+  "km_error": 5.180830551474679,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.11207301708887579,
+  "cues": [
+   {
+    "cue": "Mountain stream",
+    "category": "environment",
+    "v_single": 0.06664925866511517,
+    "phi": 0.06281595144313724,
+    "members": [
+     "Mountain stream"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.07978537150488055,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08327042176734294,
+    "phi_inpaint": 0.054877048348196344,
+    "ctrl_inpaint_max": 0.08946760793325587,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Rocky terrain with grass",
+    "category": "environment",
+    "v_single": 0.05309037286771647,
+    "phi": 0.04925706564573855,
+    "members": [
+     "Rocky terrain with grass"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.03910417676330325,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.051378283531387174,
+    "phi_inpaint": 0.02298491011224058,
+    "ctrl_inpaint_max": 0.023916776195321385,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.007666614443955853
+  },
+  "empty_interaction": {
+   "0,1": -0.007666614443955853
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.07786195846043692
+  }
+ },
+ {
+  "image_id": "149866866_e6a46a330b_52_63163416@N00.jpg",
+  "place": "Istanbul",
+  "country_hit": true,
+  "km_error": 2.234997188417339,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.4662658319054881,
+  "cues": [
+   {
+    "cue": "Turkish text on sign",
+    "category": "text/signage",
+    "v_single": 0.5016284236609322,
+    "phi": 0.4552462446679868,
+    "members": [
+     "Turkish text on sign"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.08427304284189009,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.4987338463950634,
+    "phi_inpaint": 0.4594831119608263,
+    "ctrl_inpaint_max": 0.06616948157530968,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Fish market display",
+    "category": "commercial/cultural",
+    "v_single": 0.057401766230446676,
+    "phi": 0.01101958723750129,
+    "members": [
+     "Fish market display"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.38276845197712395,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08548522234663168,
+    "phi_inpaint": 0.04623448791239456,
+    "ctrl_inpaint_max": 0.3475828050581942,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.09276435798589078
+  },
+  "empty_interaction": {
+   "0,1": -0.09276435798589078
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.5057175998732208
+  }
+ },
+ {
+  "image_id": "484245503_2c1739bf8b_213_50435419@N00.jpg",
+  "place": "Buenos Aires",
+  "country_hit": false,
+  "km_error": 6830.784939589618,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.08359735497742396,
+  "cues": [
+   {
+    "cue": "light switch and power outlet",
+    "category": "road/infrastructure",
+    "v_single": 0.15522362751009722,
+    "phi": 0.06705339296623312,
+    "members": [
+     "light switch and power outlet"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "road/infrastructure"
+    ],
+    "ctrl_gray_max": 0.03643889879235599,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.21973511169998203,
+    "phi_inpaint": 0.03595596866435753,
+    "ctrl_inpaint_max": 0.03142941125604439,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "interior design and furniture",
+    "category": "architecture",
+    "v_single": 0.09358835397079912,
+    "phi": -0.0005838103661046611,
+    "members": [
+     "interior design and furniture"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.17082587476602226,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.07210517509651505,
+    "phi_inpaint": 0.028042024639118562,
+    "ctrl_inpaint_max": 0.10889464935213387,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "clothing style",
+    "category": "commercial/cultural",
+    "v_single": 0.05206161203071121,
+    "phi": 0.017127772377295482,
+    "members": [
+     "clothing style"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.09971017713140737,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.1824272244442128,
+    "phi_inpaint": 0.06754239305257015,
+    "ctrl_inpaint_max": 0.335745330539038,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.14425184712861888,
+   "0,2": -0.02577519776164276,
+   "1,2": -0.037779057347722175
+  },
+  "empty_interaction": {
+   "0,1": -0.15372198342481866,
+   "0,2": -0.035245334057842546,
+   "1,2": -0.04724919364392196
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 1.4373267746903704,
+   "vN": 0.13154038635604626
+  }
+ },
+ {
+  "image_id": "276477189_7baf796f9d_83_12814307@N00.jpg",
+  "place": "Seraing",
+  "country_hit": true,
+  "km_error": 1.4166902308427045,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.19739267567749375,
+  "cues": [
+   {
+    "cue": "French text on sign",
+    "category": "text/signage",
+    "v_single": 0.2660024535330129,
+    "phi": 0.13727964582892108,
+    "members": [
+     "French text on sign"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.17810757839744654,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.22048211799459044,
+    "phi_inpaint": 0.2946331992435453,
+    "ctrl_inpaint_max": 0.1312767404879228,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Railway infrastructure",
+    "category": "road/infrastructure",
+    "v_single": 0.0457091796922562,
+    "phi": -0.001830553779027938,
+    "members": [
+     "Railway infrastructure"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "road/infrastructure"
+    ],
+    "ctrl_gray_max": 0.06566645926591368,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.058088515980663516,
+    "phi_inpaint": 0.015289586655045227,
+    "ctrl_inpaint_max": 0.05501633708307152,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "European style vegetation",
+    "category": "environment",
+    "v_single": 0.18639233429507154,
+    "phi": 0.06194358362760057,
+    "members": [
+     "European style vegetation"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.11694217135905832,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.1142173719070679,
+    "phi_inpaint": 0.16719170587960738,
+    "ctrl_inpaint_max": 0.053425512213513084,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.051571203067380424,
+   "0,2": -0.2053892374597541,
+   "1,2": -0.04302308899413883
+  },
+  "empty_interaction": {
+   "0,1": -0.05229896538895397,
+   "0,2": -0.20611699978132764,
+   "1,2": -0.04375085131571235
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.2040722104192071,
+   "vN": 0.4771144917781979
+  }
+ },
+ {
+  "image_id": "468278910_539810ce41_193_64825499@N00.jpg",
+  "place": "Mexico",
+  "country_hit": true,
+  "km_error": 166.727591139152,
+  "n_cues": 4,
+  "n_cues_orig": 4,
+  "merged": false,
+  "vN": 0.17071529518127973,
+  "cues": [
+   {
+    "cue": "Hotel Cozumel sign",
+    "category": "text/signage",
+    "v_single": 0.11373532330033218,
+    "phi": 0.08232512104310177,
+    "members": [
+     "Hotel Cozumel sign"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.10919667283734327,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.10706808463298709,
+    "phi_inpaint": 0.06781317514422469,
+    "ctrl_inpaint_max": 0.061830515653762186,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Dos Equis branding",
+    "category": "commercial/cultural",
+    "v_single": 0.04657576197334566,
+    "phi": 0.015997404723351264,
+    "members": [
+     "Dos Equis branding"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.035125412536396436,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.042628678436951555,
+    "phi_inpaint": 0.020948936300350142,
+    "ctrl_inpaint_max": 0.021417577761769776,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Tropical vegetation",
+    "category": "environment",
+    "v_single": 0.040910996434944,
+    "phi": 0.01191980412758477,
+    "members": [
+     "Tropical vegetation"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.060772964717561516,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.03705174837100923,
+    "phi_inpaint": 0.0013651279879917898,
+    "ctrl_inpaint_max": 0.03364742398820543,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Waterfront location",
+    "category": "environment",
+    "v_single": 0.08087656354340075,
+    "phi": 0.060472965287241914,
+    "members": [
+     "Waterfront location"
+    ],
+    "member_indices": [
+     3
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.15294930531751802,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.09984267766411682,
+    "phi_inpaint": 0.09553066662767032,
+    "ctrl_inpaint_max": 0.10001801847431915,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.022241007264590742,
+   "0,2": -0.018788693842982714,
+   "0,3": -0.013283288500206285,
+   "1,2": -0.019189877994832794,
+   "1,3": -0.007053084279848639,
+   "2,3": -0.011251805508818002
+  },
+  "empty_interaction": {
+   "0,1": -0.03796196780574017,
+   "0,2": -0.02862854784518465,
+   "0,3": -0.02382365893544791,
+   "1,2": -0.03527772707808808,
+   "1,3": -0.02384144979614361,
+   "2,3": -0.02215906448616549
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.4020228202836092,
+   "vN": 0.18565790606023694
+  }
+ },
+ {
+  "image_id": "379001279_fa81cf9ee0_155_87409164@N00.jpg",
+  "place": "Singapore",
+  "country_hit": true,
+  "km_error": 3.3303178670287674,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.036747633892623636,
+  "cues": [
+   {
+    "cue": "Colorful deity sculptures",
+    "category": "landmarks/buildings",
+    "v_single": 0.036747633892623636,
+    "phi": 0.036747633892623636,
+    "members": [
+     "Colorful deity sculptures"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.05205727312348965,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.028676372903628265,
+    "phi_inpaint": 0.028676372903628265,
+    "ctrl_inpaint_max": 0.03909917154392905,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.028676372903628265
+  }
+ },
+ {
+  "image_id": "320631397_d6abc1ed08_129_82927779@N00.jpg",
+  "place": "Cederberg Local Municipality",
+  "country_hit": true,
+  "km_error": 44.40378081542534,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.06244576796527005,
+  "cues": [
+   {
+    "cue": "wide-brimmed hat",
+    "category": "commercial/cultural",
+    "v_single": 0.06244576796527005,
+    "phi": 0.06244576796527005,
+    "members": [
+     "wide-brimmed hat"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.08063166285742127,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.06391357962240052,
+    "phi_inpaint": 0.06391357962240052,
+    "ctrl_inpaint_max": 0.06183703308684704,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.06391357962240052
+  }
+ },
+ {
+  "image_id": "311344213_4b003f4ab1_114_63163416@N00.jpg",
+  "place": "New Delhi",
+  "country_hit": true,
+  "km_error": 2.2096123384945,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.10245269795964876,
+  "cues": [
+   {
+    "cue": "Qutub Minar",
+    "category": "landmarks/buildings",
+    "v_single": 0.09020966000534535,
+    "phi": 0.0667335325805041,
+    "members": [
+     "Qutub Minar"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.08238176594259566,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.1406754927903339,
+    "phi_inpaint": 0.16976029272024568,
+    "ctrl_inpaint_max": 0.037374418185343455,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Islamic arch ruins",
+    "category": "architecture",
+    "v_single": 0.059195292803985916,
+    "phi": 0.035719165379144664,
+    "members": [
+     "Islamic arch ruins"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.053947059345538104,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.03855347343272288,
+    "phi_inpaint": 0.06763827336263467,
+    "ctrl_inpaint_max": 0.02798298751220429,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.046952254849682504
+  },
+  "empty_interaction": {
+   "0,1": -0.046952254849682504
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.23739856608288035
+  }
+ },
+ {
+  "image_id": "280870957_b4e009f8da_102_36093984@N00.jpg",
+  "place": "Subotica",
+  "country_hit": false,
+  "km_error": 154.67496358910626,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.6017453790867964,
+  "cues": [
+   {
+    "cue": "Red and white color scheme",
+    "category": "architecture",
+    "v_single": 0.5145297851391678,
+    "phi": 0.42831914972000007,
+    "members": [
+     "Red and white color scheme"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.3281292595780579,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.5388796368130094,
+    "phi_inpaint": 0.5069887924713167,
+    "ctrl_inpaint_max": 0.3441642610291791,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Tree foliage framing the building",
+    "category": "environment",
+    "v_single": 0.259636864785964,
+    "phi": 0.17342622936679628,
+    "members": [
+     "Tree foliage framing the building"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.259636864785964,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.07173099962574726,
+    "phi_inpaint": 0.0398401552840545,
+    "ctrl_inpaint_max": 0.07173099962574726,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.17242127083833542
+  },
+  "empty_interaction": {
+   "0,1": -0.17242127083833542
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.5468289477553712
+  }
+ },
+ {
+  "image_id": "1397742163_1a6b87eb5a_1164_7885919@N07.jpg",
+  "place": "Paris",
+  "country_hit": true,
+  "km_error": 15.39845456832135,
+  "n_cues": 4,
+  "n_cues_orig": 4,
+  "merged": false,
+  "vN": 0.09316969755285276,
+  "cues": [
+   {
+    "cue": "Rococo style decor",
+    "category": "architecture",
+    "v_single": 0.0623480251501676,
+    "phi": 0.0268779866682174,
+    "members": [
+     "Rococo style decor"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.17807840450190887,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.06424362128457192,
+    "phi_inpaint": 0.03340581666522914,
+    "ctrl_inpaint_max": 0.10186490158762522,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "French-style furniture",
+    "category": "architecture",
+    "v_single": 0.06094504569056904,
+    "phi": 0.03354817738378143,
+    "members": [
+     "French-style furniture"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.08233126836462709,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.05332049491615433,
+    "phi_inpaint": 0.012458143975519401,
+    "ctrl_inpaint_max": 0.05390793104222957,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Large ornate mirror",
+    "category": "architecture",
+    "v_single": 0.03631078630368676,
+    "phi": 0.012893008929740534,
+    "members": [
+     "Large ornate mirror"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.09751690008315216,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.07575892266706478,
+    "phi_inpaint": 0.01958642913910378,
+    "ctrl_inpaint_max": 0.06526877310085573,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Classical paintings",
+    "category": "architecture",
+    "v_single": 0.04916316848604426,
+    "phi": 0.019850524571113394,
+    "members": [
+     "Classical paintings"
+    ],
+    "member_indices": [
+     3
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.07732488991017153,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.026454188201423232,
+    "phi_inpaint": 0.0321588642384326,
+    "ctrl_inpaint_max": 0.04682702802845847,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.04029942857240555,
+   "0,2": 0.004044941756722662,
+   "0,3": -0.0188250749958302,
+   "1,2": -0.008115498536583348,
+   "1,3": -0.0033237454429752714,
+   "2,3": -0.02417321677483583
+  },
+  "empty_interaction": {
+   "0,1": -0.04330184514907771,
+   "0,2": -0.022262550517326805,
+   "0,3": -0.0356997714044164,
+   "1,2": -0.015214814174468447,
+   "1,3": -0.000990265215397107,
+   "2,3": -0.045144812244634985
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.2764502304040107,
+   "vN": 0.09760925401828494
+  }
+ },
+ {
+  "image_id": "449901053_f0d3dbb166_164_55126705@N00.jpg",
+  "place": "Cahuita",
+  "country_hit": true,
+  "km_error": 0.008162731495390235,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.03872203426724787,
+  "cues": [
+   {
+    "cue": "Tropical tree leaves",
+    "category": "environment",
+    "v_single": 0.03872203426724787,
+    "phi": 0.03872203426724787,
+    "members": [
+     "Tropical tree leaves"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.14138368771573445,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.035465810306726665,
+    "phi_inpaint": 0.035465810306726665,
+    "ctrl_inpaint_max": 0.12886084838005327,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.035465810306726665
+  }
+ },
+ {
+  "image_id": "266287734_114d6cc260_94_40829484@N00.jpg",
+  "place": "Biwer",
+  "country_hit": true,
+  "km_error": 2.638910346301224,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.2387563658035136,
+  "cues": [
+   {
+    "cue": "Porsche dealership building",
+    "category": "landmarks/buildings",
+    "v_single": 0.20241358222717337,
+    "phi": 0.1899229654179706,
+    "members": [
+     "Porsche dealership building"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.6734019669219556,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.3043739151862635,
+    "phi_inpaint": 0.30053079667484095,
+    "ctrl_inpaint_max": 0.5952480082926163,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "www.porsche.lu URL on car",
+    "category": "text/signage",
+    "v_single": 0.06132401719474573,
+    "phi": 0.04883340038554297,
+    "members": [
+     "www.porsche.lu URL on car"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.19973921964706143,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.07971075560446185,
+    "phi_inpaint": 0.07586763709303931,
+    "ctrl_inpaint_max": 0.11624840347627201,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.024981233618405513
+  },
+  "empty_interaction": {
+   "0,1": -0.024981233618405513
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.3763984337678803
+  }
+ },
+ {
+  "image_id": "486597679_e1a557718f_198_51162504@N00.jpg",
+  "place": "Seville",
+  "country_hit": false,
+  "km_error": 1870.5526844470228,
+  "n_cues": 1,
+  "n_cues_orig": 3,
+  "merged": true,
+  "vN": 0.3968627975139283,
+  "cues": [
+   {
+    "cue": "Golden religious statues | Crown and scepter on statue | Religious iconography",
+    "category": "commercial/cultural",
+    "v_single": 0.3968627975139283,
+    "phi": 0.3968627975139283,
+    "members": [
+     "Golden religious statues",
+     "Crown and scepter on statue",
+     "Religious iconography"
+    ],
+    "member_indices": [
+     0,
+     1,
+     2
+    ],
+    "n_members": 3,
+    "categories": [
+     "commercial/cultural",
+     "commercial/cultural",
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.18825965449225848,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.4608413434925957,
+    "phi_inpaint": 0.4608413434925957,
+    "ctrl_inpaint_max": 0.10934420028740838,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.4608413434925957
+  }
+ },
+ {
+  "image_id": "241921396_742fe1f0fd_90_82981539@N00.jpg",
+  "place": "Kyoto",
+  "country_hit": false,
+  "km_error": 12561.014383292368,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.08245866299332066,
+  "cues": [
+   {
+    "cue": "Moss-covered rocks",
+    "category": "environment",
+    "v_single": 0.06171698029366382,
+    "phi": 0.01140180894737318,
+    "members": [
+     "Moss-covered rocks"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.05098011873111224,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.037648043673437666,
+    "phi_inpaint": 0.038521550949418226,
+    "ctrl_inpaint_max": 0.02926301317164984,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Small waterfall feature",
+    "category": "environment",
+    "v_single": 0.07998916859759012,
+    "phi": 0.03642872507077284,
+    "members": [
+     "Small waterfall feature"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.08681018440404806,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.03202381901958187,
+    "phi_inpaint": 0.003944068804447028,
+    "ctrl_inpaint_max": 0.027983644735502876,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Dense forest with ferns",
+    "category": "environment",
+    "v_single": 0.0829121235780716,
+    "phi": 0.03462812897517464,
+    "members": [
+     "Dense forest with ferns"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.05266706053067775,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.14424342278231503,
+    "phi_inpaint": 0.10235937017368216,
+    "ctrl_inpaint_max": 0.03380535034175977,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.03799235802544559,
+   "0,2": -0.047439460177604954,
+   "1,2": -0.03393000453865822
+  },
+  "empty_interaction": {
+   "0,1": -0.06079014475974169,
+   "0,2": -0.07023724691190106,
+   "1,2": -0.056727791272954325
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.4185617056981392,
+   "vN": 0.14482498992754742
+  }
+ },
+ {
+  "image_id": "499393661_a7da0fd73e_206_8255645@N03.jpg",
+  "place": "Saalbach-Hinterglemm",
+  "country_hit": false,
+  "km_error": 408.15378261840476,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.3456983403434608,
+  "cues": [
+   {
+    "cue": "Snow-covered mountains",
+    "category": "environment",
+    "v_single": 0.3125267913305512,
+    "phi": 0.29066548259895464,
+    "members": [
+     "Snow-covered mountains"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.08175204403280449,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.5256543822504856,
+    "phi_inpaint": 0.3957924834743415,
+    "ctrl_inpaint_max": 0.28285467913131107,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Ski gear and attire",
+    "category": "commercial/cultural",
+    "v_single": 0.05066198130971103,
+    "phi": 0.009638304643338714,
+    "members": [
+     "Ski gear and attire"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.06937529036932379,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.040384814942164164,
+    "phi_inpaint": 0.013811240481992788,
+    "ctrl_inpaint_max": 0.05256706842294526,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Clear blue sky",
+    "category": "environment",
+    "v_single": 0.07762183421201818,
+    "phi": 0.04539455310116743,
+    "members": [
+     "Clear blue sky"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.094656555957867,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.11291293305507734,
+    "phi_inpaint": -0.0032749319876754016,
+    "ctrl_inpaint_max": 0.34671204673139244,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.022461977907362388,
+   "0,2": -0.004869186796319248,
+   "1,2": -0.04319392266587076
+  },
+  "empty_interaction": {
+   "0,1": -0.047049157046629625,
+   "0,2": -0.02945636593558648,
+   "1,2": -0.067781101805138
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.3604339041381772,
+   "vN": 0.4063287919686589
+  }
+ },
+ {
+  "image_id": "453636890_c425e657ab_239_55126705@N00.jpg",
+  "place": "Tinum",
+  "country_hit": true,
+  "km_error": 24.047790411153663,
+  "n_cues": 2,
+  "n_cues_orig": 3,
+  "merged": true,
+  "vN": 0.48606677905813095,
+  "cues": [
+   {
+    "cue": "Mayan architectural style | Ruined stone structures",
+    "category": "architecture",
+    "v_single": 0.480909168207099,
+    "phi": 0.4580888561371099,
+    "members": [
+     "Mayan architectural style",
+     "Ruined stone structures"
+    ],
+    "member_indices": [
+     0,
+     2
+    ],
+    "n_members": 2,
+    "categories": [
+     "architecture",
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.10608127992111172,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.7120152129581994,
+    "phi_inpaint": 0.6857521820847203,
+    "ctrl_inpaint_max": 0.07636308526285598,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Stone masks and carvings",
+    "category": "landmarks/buildings",
+    "v_single": 0.05079823499101007,
+    "phi": 0.02797792292102101,
+    "members": [
+     "Stone masks and carvings"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.056587210313629364,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.029118360213609456,
+    "phi_inpaint": 0.002855329340130431,
+    "ctrl_inpaint_max": 0.02457164372869109,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.045640624139978124
+  },
+  "empty_interaction": {
+   "0,1": -0.045640624139978124
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.6886075114248508
+  }
+ },
+ {
+  "image_id": "668488293_1b39338210_1369_81421684@N00.jpg",
+  "place": "Grafenegg",
+  "country_hit": false,
+  "km_error": 1029.6711012874155,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.24315344793063776,
+  "cues": [
+   {
+    "cue": "Dragon statue",
+    "category": "landmarks/buildings",
+    "v_single": 0.13274624212920066,
+    "phi": 0.14202559750850755,
+    "members": [
+     "Dragon statue"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.12405862753198021,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.26351771168815913,
+    "phi_inpaint": 0.16024463633198152,
+    "ctrl_inpaint_max": 0.21598507297425681,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Lush greenery",
+    "category": "environment",
+    "v_single": 0.09184849504282333,
+    "phi": 0.10112785042213021,
+    "members": [
+     "Lush greenery"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.11509038712393097,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.234747387915603,
+    "phi_inpaint": 0.1314743125594254,
+    "ctrl_inpaint_max": 0.13258409566331758,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": 0.01855871075861376
+  },
+  "empty_interaction": {
+   "0,1": 0.01855871075861376
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.2917189488914069
+  }
+ },
+ {
+  "image_id": "919126362_49e364686c_1300_50994135@N00.jpg",
+  "place": "Argyll and Bute",
+  "country_hit": true,
+  "km_error": 54.79472831812679,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.1655901715479108,
+  "cues": [
+   {
+    "cue": "Mountainous landscape with loch",
+    "category": "environment",
+    "v_single": 0.14653930961405565,
+    "phi": 0.08964859390617522,
+    "members": [
+     "Mountainous landscape with loch"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.08930407322251034,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.14700679461014185,
+    "phi_inpaint": 0.12031270977096825,
+    "ctrl_inpaint_max": 0.040567105878939566,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Stone wall and building",
+    "category": "architecture",
+    "v_single": 0.09126757494363201,
+    "phi": 0.04457530859669653,
+    "members": [
+     "Stone wall and building"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.3564746183809453,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.04818951175813929,
+    "phi_inpaint": 0.019604840042846936,
+    "ctrl_inpaint_max": 0.028694528362361024,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Traffic cones",
+    "category": "road/infrastructure",
+    "v_single": 0.07133450562599981,
+    "phi": 0.031366269045039044,
+    "members": [
+     "Traffic cones"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "road/infrastructure"
+    ],
+    "ctrl_gray_max": 0.037237833677951825,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.042366629863748805,
+    "phi_inpaint": 0.03504561381273244,
+    "ctrl_inpaint_max": 0.03429102807250632,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.05421231576845347,
+   "0,2": -0.04076425623650406,
+   "1,2": -0.02036735751461418
+  },
+  "empty_interaction": {
+   "0,1": -0.08241960488465842,
+   "0,2": -0.06897154535270901,
+   "1,2": -0.04857464663081913
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.31724753255114185,
+   "vN": 0.17496316362654762
+  }
+ },
+ {
+  "image_id": "203414504_6dce8e2783_60_40829484@N00.jpg",
+  "place": "Spa",
+  "country_hit": false,
+  "km_error": 323.12875664656855,
+  "n_cues": 1,
+  "n_cues_orig": 4,
+  "merged": true,
+  "vN": 0.174449607705649,
+  "cues": [
+   {
+    "cue": "Corvette text on car | ADAC logo on car | GT3 logo on car | KW logo on car",
+    "category": "vehicles/license plates",
+    "v_single": 0.174449607705649,
+    "phi": 0.174449607705649,
+    "members": [
+     "Corvette text on car",
+     "ADAC logo on car",
+     "GT3 logo on car",
+     "KW logo on car"
+    ],
+    "member_indices": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "n_members": 4,
+    "categories": [
+     "vehicles/license plates",
+     "commercial/cultural",
+     "commercial/cultural",
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.11694599579010234,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.1131231109593263,
+    "phi_inpaint": 0.1131231109593263,
+    "ctrl_inpaint_max": 0.13387643405749688,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.1131231109593263
+  }
+ },
+ {
+  "image_id": "103558896_55f8059bc9_35_73293249@N00.jpg",
+  "place": "Toronto",
+  "country_hit": false,
+  "km_error": 3642.0077602485567,
+  "n_cues": 1,
+  "n_cues_orig": 2,
+  "merged": true,
+  "vN": 0.1862445298601716,
+  "cues": [
+   {
+    "cue": "distinctive skyscraper with stepped design | golden reflective building",
+    "category": "landmarks/buildings",
+    "v_single": 0.1862445298601716,
+    "phi": 0.1862445298601716,
+    "members": [
+     "distinctive skyscraper with stepped design",
+     "golden reflective building"
+    ],
+    "member_indices": [
+     0,
+     1
+    ],
+    "n_members": 2,
+    "categories": [
+     "landmarks/buildings",
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.11403274370247642,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.17798777818606532,
+    "phi_inpaint": 0.17798777818606532,
+    "ctrl_inpaint_max": 0.0922667710581891,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.17798777818606532
+  }
+ },
+ {
+  "image_id": "279684899_63d5dc5c9d_89_25304693@N00.jpg",
+  "place": "Anaheim",
+  "country_hit": true,
+  "km_error": 2.6064986226410003,
+  "n_cues": 3,
+  "n_cues_orig": 4,
+  "merged": true,
+  "vN": 0.10446599726656529,
+  "cues": [
+   {
+    "cue": "Mickey Mouse T-shirt",
+    "category": "commercial/cultural",
+    "v_single": 0.11618850927340263,
+    "phi": 0.04862357957160596,
+    "members": [
+     "Mickey Mouse T-shirt"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.09057909724374695,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.10908927359471593,
+    "phi_inpaint": null,
+    "ctrl_inpaint_max": 0.05323074507852267,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Teacup ride | Heart design on teacup",
+    "category": "landmarks/buildings",
+    "v_single": 0.11622236207497603,
+    "phi": 0.04812249878518095,
+    "members": [
+     "Teacup ride",
+     "Heart design on teacup"
+    ],
+    "member_indices": [
+     1,
+     3
+    ],
+    "n_members": 2,
+    "categories": [
+     "landmarks/buildings",
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.11834937204441595,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.1712770259901554,
+    "phi_inpaint": null,
+    "ctrl_inpaint_max": 0.12645105781707355,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Thatched roof building",
+    "category": "architecture",
+    "v_single": 0.06286906314266935,
+    "phi": 0.0077199189097783795,
+    "members": [
+     "Thatched roof building"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.10646650066002585,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.07784720058906017,
+    "phi_inpaint": null,
+    "ctrl_inpaint_max": 0.09275919592093738,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.06258848150636945,
+   "0,2": -0.03668704339256123,
+   "1,2": -0.03775691056855806
+  },
+  "empty_interaction": {
+   "0,1": -0.11636998326336344,
+   "0,2": -0.09046854514955521,
+   "1,2": -0.09153841232555204
+  },
+  "inpaint": {
+   "computable": false,
+   "reason": "merged subset not scored under inpaint",
+   "missing_subsets": [
+    [
+     0,
+     1,
+     3
+    ],
+    [
+     1,
+     2,
+     3
+    ]
+   ]
+  }
+ },
+ {
+  "image_id": "520721897_11b0c68892_243_70323761@N00.jpg",
+  "place": "Town of Hyde Park",
+  "country_hit": true,
+  "km_error": 2.5929947500300905,
+  "n_cues": 4,
+  "n_cues_orig": 4,
+  "merged": false,
+  "vN": 0.08688751004567953,
+  "cues": [
+   {
+    "cue": "Victorian-style furniture",
+    "category": "architecture",
+    "v_single": 0.07749057267387963,
+    "phi": 0.021363069541820923,
+    "members": [
+     "Victorian-style furniture"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.07537559242034832,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.06818194949827473,
+    "phi_inpaint": 0.05224103568427298,
+    "ctrl_inpaint_max": 0.05722138027735341,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Portrait above fireplace",
+    "category": "commercial/cultural",
+    "v_single": 0.07495765247178134,
+    "phi": 0.031336296612461775,
+    "members": [
+     "Portrait above fireplace"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.04360398702839175,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.051819575077059844,
+    "phi_inpaint": 0.036891494438805225,
+    "ctrl_inpaint_max": 0.028700849797513108,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Classical sculpture",
+    "category": "commercial/cultural",
+    "v_single": 0.05659429820641667,
+    "phi": 0.017458356565503444,
+    "members": [
+     "Classical sculpture"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.03973144724249069,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.07158520349619736,
+    "phi_inpaint": 0.013990176006531654,
+    "ctrl_inpaint_max": 0.018453015160366567,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Dark wood paneling",
+    "category": "architecture",
+    "v_single": 0.05016919542945475,
+    "phi": 0.016729787325893378,
+    "members": [
+     "Dark wood paneling"
+    ],
+    "member_indices": [
+     3
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.0489877012108,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.021573715116782258,
+    "phi_inpaint": -0.0022329089877285366,
+    "ctrl_inpaint_max": 0.02975678789288057,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.03797184381430391,
+   "0,2": -0.02716811508990599,
+   "0,3": -0.027604155073619283,
+   "1,2": -0.020706537046007136,
+   "1,3": -0.014073024844127549,
+   "2,3": -0.012600805203761703
+  },
+  "empty_interaction": {
+   "0,1": -0.05860494494432339,
+   "0,2": -0.052758896111852104,
+   "0,3": -0.045401543810759296,
+   "1,2": -0.038767938659821706,
+   "1,3": -0.024341034173136017,
+   "2,3": -0.027826494424696806
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.2753741472963143,
+   "vN": 0.10088979714188132
+  }
+ },
+ {
+  "image_id": "468114689_6f7d634bae_220_7885919@N07.jpg",
+  "place": "Paris",
+  "country_hit": true,
+  "km_error": 5.410551901786447,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.36490452562472264,
+  "cues": [
+   {
+    "cue": "Parisian architecture style",
+    "category": "architecture",
+    "v_single": 0.4456906218389789,
+    "phi": 0.2773165087716258,
+    "members": [
+     "Parisian architecture style"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.14213164422830712,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.5927560379877568,
+    "phi_inpaint": 0.3410289650754988,
+    "ctrl_inpaint_max": 0.042853994763939356,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "French window shutters",
+    "category": "architecture",
+    "v_single": 0.1708883059421743,
+    "phi": 0.13461518826014085,
+    "members": [
+     "French window shutters"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.056924309533774704,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.1363574703896354,
+    "phi_inpaint": 0.05683601534479321,
+    "ctrl_inpaint_max": 0.03934958728808475,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Vegetation and small gardens",
+    "category": "environment",
+    "v_single": 0.1574349497594159,
+    "phi": -0.04702717140704399,
+    "members": [
+     "Vegetation and small gardens"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.23792221815729514,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.10949520341146064,
+    "phi_inpaint": -0.15887460876173826,
+    "ctrl_inpaint_max": 0.06019628806347916,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": 0.062036137346018816,
+   "0,2": -0.2743418696228341,
+   "1,2": -0.01013987885219475
+  },
+  "empty_interaction": {
+   "0,1": -0.12462760344081764,
+   "0,2": -0.46100561040967053,
+   "1,2": -0.1968036196390312
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 1.098291961117961,
+   "vN": 0.23899037165855375
+  }
+ },
+ {
+  "image_id": "181848051_3f34be1b5d_68_70323761@N00.jpg",
+  "place": "New York",
+  "country_hit": true,
+  "km_error": 1.7899643027741219,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.42400995784969453,
+  "cues": [
+   {
+    "cue": "Brooklyn Heights Promenade sign",
+    "category": "text/signage",
+    "v_single": 0.30359337586859225,
+    "phi": 0.30835793706000825,
+    "members": [
+     "Brooklyn Heights Promenade sign"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.08209304129777235,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.275182814142418,
+    "phi_inpaint": 0.34844449794745824,
+    "ctrl_inpaint_max": 0.06019383063079941,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Brooklyn Bridge",
+    "category": "landmarks/buildings",
+    "v_single": 0.07926649623272486,
+    "phi": 0.042298913281322334,
+    "members": [
+     "Brooklyn Bridge"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.04881656483951067,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.06276862078427015,
+    "phi_inpaint": 0.14085400170664839,
+    "ctrl_inpaint_max": 0.044438133947104094,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Manhattan skyline",
+    "category": "landmarks/buildings",
+    "v_single": 0.10794106791880166,
+    "phi": 0.0733531075083639,
+    "members": [
+     "Manhattan skyline"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.1327156585296526,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08986137455968059,
+    "phi_inpaint": 0.19424117933168678,
+    "ctrl_inpaint_max": 0.11502605613490274,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": 0.010607860528017696,
+   "0,2": 0.015367105609947224,
+   "1,2": -0.06809718267568991
+  },
+  "empty_interaction": {
+   "0,1": -0.014060905104681554,
+   "0,2": -0.009301660022752026,
+   "1,2": -0.09276594830838916
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.19532982342886598,
+   "vN": 0.6835396789857934
+  }
+ },
+ {
+  "image_id": "334797817_910e96579f_137_65367662@N00.jpg",
+  "place": "San Jose",
+  "country_hit": true,
+  "km_error": 4094.2422594862037,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.019684286526328938,
+  "cues": [
+   {
+    "cue": "yellow calla lily",
+    "category": "environment",
+    "v_single": 0.019684286526328938,
+    "phi": 0.019684286526328938,
+    "members": [
+     "yellow calla lily"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.019851918949724122,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.012626025158284059,
+    "phi_inpaint": 0.012626025158284059,
+    "ctrl_inpaint_max": 0.016493616500042392,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.012626025158284059
+  }
+ },
+ {
+  "image_id": "379777984_75362fd964_150_77235581@N00.jpg",
+  "place": "Scotland",
+  "country_hit": true,
+  "km_error": 196.2362886098581,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.35166452778953705,
+  "cues": [
+   {
+    "cue": "Rocky shoreline",
+    "category": "environment",
+    "v_single": 0.05305980486674218,
+    "phi": 0.028870811127782402,
+    "members": [
+     "Rocky shoreline"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.33636424809925336,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.060101601092205775,
+    "phi_inpaint": 0.11692734133284277,
+    "ctrl_inpaint_max": 0.04915635687598833,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Moored sailboats",
+    "category": "vehicles/license plates",
+    "v_single": 0.08353189706078482,
+    "phi": 0.04635711952021089,
+    "members": [
+     "Moored sailboats"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "vehicles/license plates"
+    ],
+    "ctrl_gray_max": 0.03420138982515737,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.10202108044969554,
+    "phi_inpaint": 0.1459521550416244,
+    "ctrl_inpaint_max": 0.030746515795507873,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Sunset over hills",
+    "category": "environment",
+    "v_single": 0.2675291858549646,
+    "phi": 0.2764365971415438,
+    "members": [
+     "Sunset over hills"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.05505353203085296,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.4277619432678007,
+    "phi_inpaint": 0.4296515613515985,
+    "ctrl_inpaint_max": 0.04039044692065825,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.08805214619022263,
+   "0,2": 0.0041122314640835295,
+   "1,2": -0.02185933613914475
+  },
+  "empty_interaction": {
+   "0,1": -0.03470925531789329,
+   "0,2": 0.05745512233641287,
+   "1,2": 0.03148355473318459
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.030930591377642425,
+   "vN": 0.6925310577260657
+  }
+ },
+ {
+  "image_id": "357019239_3aa477b691_146_77235581@N00.jpg",
+  "place": "Scotland",
+  "country_hit": true,
+  "km_error": 211.53197193297694,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.2514460158015938,
+  "cues": [
+   {
+    "cue": "Stone cottage with damaged roof",
+    "category": "landmarks/buildings",
+    "v_single": 0.15439546734508,
+    "phi": 0.1525182703346318,
+    "members": [
+     "Stone cottage with damaged roof"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.1015665602299264,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.3301417473922689,
+    "phi_inpaint": 0.4734954829415903,
+    "ctrl_inpaint_max": 0.040291740200400564,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Rolling hills and moorland",
+    "category": "environment",
+    "v_single": 0.07712515355482652,
+    "phi": 0.07662549253845577,
+    "members": [
+     "Rolling hills and moorland"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.06910887675003022,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.10894021691299473,
+    "phi_inpaint": 0.2287196223612701,
+    "ctrl_inpaint_max": 0.03929310744832076,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Overcast sky",
+    "category": "environment",
+    "v_single": 0.03718399849147276,
+    "phi": 0.022302252928506232,
+    "members": [
+     "Overcast sky"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.05094227839035347,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.03937750149812664,
+    "phi_inpaint": 0.024529391787155432,
+    "ctrl_inpaint_max": 0.018011749091604017,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": 0.02366432283859752,
+   "0,2": -0.005099846254594066,
+   "1,2": -0.0023447742664391494
+  },
+  "empty_interaction": {
+   "0,1": -0.009813983068752252,
+   "0,2": -0.03857815216194384,
+   "1,2": -0.03582308017378892
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.1607742288129747,
+   "vN": 0.7267444970900158
+  }
+ },
+ {
+  "image_id": "158307292_d73d7226ef_73_70323761@N00.jpg",
+  "place": "New York",
+  "country_hit": true,
+  "km_error": 2.825566189333565,
+  "n_cues": 4,
+  "n_cues_orig": 4,
+  "merged": false,
+  "vN": 0.8231508897804171,
+  "cues": [
+   {
+    "cue": "Equestrian statue",
+    "category": "landmarks/buildings",
+    "v_single": 0.15500846455800465,
+    "phi": 0.13278290073216298,
+    "members": [
+     "Equestrian statue"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.1498072554950465,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.25140303218543236,
+    "phi_inpaint": 0.26456399892729454,
+    "ctrl_inpaint_max": 0.06133867807691107,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "American flag",
+    "category": "commercial/cultural",
+    "v_single": 0.0734001589298367,
+    "phi": 0.08001009599225359,
+    "members": [
+     "American flag"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.05993305616134043,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.04944960231095986,
+    "phi_inpaint": 0.19215068649829228,
+    "ctrl_inpaint_max": 0.03169938876440973,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Historic building architecture",
+    "category": "architecture",
+    "v_single": 0.7300481211417795,
+    "phi": 0.5562565260149108,
+    "members": [
+     "Historic building architecture"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.18895198758534373,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.42868837185001585,
+    "phi_inpaint": 0.46206249748273875,
+    "ctrl_inpaint_max": 0.09609520716645337,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Trees with autumn foliage",
+    "category": "environment",
+    "v_single": 0.2728250126148466,
+    "phi": 0.0541013670410896,
+    "members": [
+     "Trees with autumn foliage"
+    ],
+    "member_indices": [
+     3
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.14809125949976001,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.24232528794262193,
+    "phi_inpaint": 0.10239365769917261,
+    "ctrl_inpaint_max": 0.20593873723079328,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.01346921728992371,
+   "0,2": 0.02812008152247509,
+   "0,3": -0.008967405093739857,
+   "1,2": 0.07553703423662227,
+   "1,3": 0.005818880541423297,
+   "2,3": -0.3595789320128659
+  },
+  "empty_interaction": {
+   "0,1": -0.04611340385185572,
+   "0,2": -0.060015930994477995,
+   "0,3": -0.07169110848423699,
+   "1,2": -0.019397333139520745,
+   "1,3": -0.06370317770826373,
+   "2,3": -0.484592816217574
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.4153784017852802,
+   "vN": 1.0211708406074982
+  }
+ },
+ {
+  "image_id": "331988145_2303e98396_151_77235581@N00.jpg",
+  "place": "Scotland",
+  "country_hit": true,
+  "km_error": 194.693854259979,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.1464984272829013,
+  "cues": [
+   {
+    "cue": "Stone cairn",
+    "category": "landmarks/buildings",
+    "v_single": 0.14869247664689175,
+    "phi": 0.12094805774624451,
+    "members": [
+     "Stone cairn"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.06771377413522338,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.15459862160787097,
+    "phi_inpaint": 0.11088030991779366,
+    "ctrl_inpaint_max": 0.04054947391062976,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Sheep on hillside",
+    "category": "environment",
+    "v_single": 0.05329478843730402,
+    "phi": 0.025550369536656785,
+    "members": [
+     "Sheep on hillside"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.05574930807093726,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08118617969741725,
+    "phi_inpaint": 0.03746786800733994,
+    "ctrl_inpaint_max": 0.025190913179365053,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.055488837801294474
+  },
+  "empty_interaction": {
+   "0,1": -0.055488837801294474
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.1483481779251336
+  }
+ },
+ {
+  "image_id": "224260045_431e8a656e_72_73293249@N00.jpg",
+  "place": "Entremont",
+  "country_hit": true,
+  "km_error": 10.520806765207226,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.024290308835161104,
+  "cues": [
+   {
+    "cue": "Mountain peaks",
+    "category": "environment",
+    "v_single": 0.024290308835161104,
+    "phi": 0.024290308835161104,
+    "members": [
+     "Mountain peaks"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.038105125079061816,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.03438928793246041,
+    "phi_inpaint": 0.03438928793246041,
+    "ctrl_inpaint_max": 0.043792466844292915,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.03438928793246041
+  }
+ },
+ {
+  "image_id": "256718877_67e9b4f39b_83_50994135@N00.jpg",
+  "place": "Inverclyde",
+  "country_hit": false,
+  "km_error": 1525.7181574019198,
+  "n_cues": 4,
+  "n_cues_orig": 4,
+  "merged": false,
+  "vN": 0.21320574142440366,
+  "cues": [
+   {
+    "cue": "Wooden cabinet design",
+    "category": "architecture",
+    "v_single": 0.18551672788209397,
+    "phi": 0.14120020824306695,
+    "members": [
+     "Wooden cabinet design"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.1756689409171242,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.08097151596264536,
+    "phi_inpaint": 0.10213440964599971,
+    "ctrl_inpaint_max": 0.08580662564117741,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Decorative lamp",
+    "category": "other",
+    "v_single": 0.04681400755039675,
+    "phi": 0.03118750079809802,
+    "members": [
+     "Decorative lamp"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "other"
+    ],
+    "ctrl_gray_max": 0.05736458849264892,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.0450926035650361,
+    "phi_inpaint": 0.027726192746046152,
+    "ctrl_inpaint_max": 0.030223760788845682,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Painting style",
+    "category": "commercial/cultural",
+    "v_single": 0.054862571682398456,
+    "phi": 0.016024697514499947,
+    "members": [
+     "Painting style"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.0679967531387578,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.025546409203449284,
+    "phi_inpaint": 0.0133181757727918,
+    "ctrl_inpaint_max": 0.05866300851300713,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Clothing style",
+    "category": "commercial/cultural",
+    "v_single": 0.07430418111423699,
+    "phi": 0.024793334868738724,
+    "members": [
+     "Clothing style"
+    ],
+    "member_indices": [
+     3
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.1142511431209441,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.051978261570212965,
+    "phi_inpaint": 0.015486686535915416,
+    "ctrl_inpaint_max": 0.07200543895849015,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": 0.015213478348007438,
+   "0,2": -0.015766517910577545,
+   "0,3": -0.04909395210959458,
+   "1,2": -0.01917885936385914,
+   "1,3": -0.004076546709527387,
+   "2,3": 0.002632617876304845
+  },
+  "empty_interaction": {
+   "0,1": -0.004988018642065911,
+   "0,2": -0.06919586963832113,
+   "0,3": -0.10720453775310952,
+   "1,2": -0.04894576835159626,
+   "1,3": -0.03852468961303586,
+   "2,3": -0.06504337976487386
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.31109907542935883,
+   "vN": 0.15866546470075307
+  }
+ },
+ {
+  "image_id": "169956693_5edea53724_78_70323761@N00.jpg",
+  "place": "Chicago",
+  "country_hit": true,
+  "km_error": 8.430122718574678,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.4045869226105365,
+  "cues": [
+   {
+    "cue": "Wrigley Field text on cup",
+    "category": "text/signage",
+    "v_single": 0.4045869226105365,
+    "phi": 0.4045869226105365,
+    "members": [
+     "Wrigley Field text on cup"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.11978692920071797,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.47190817044070205,
+    "phi_inpaint": 0.47190817044070205,
+    "ctrl_inpaint_max": 0.15435963920069334,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.47190817044070205
+  }
+ },
+ {
+  "image_id": "217726612_48fdd833cd_57_63163416@N00.jpg",
+  "place": "Marmaris",
+  "country_hit": true,
+  "km_error": 612.4142780528468,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.37509331754169206,
+  "cues": [
+   {
+    "cue": "Sailboats",
+    "category": "vehicles/license plates",
+    "v_single": 0.14758282830214534,
+    "phi": 0.22227127004960484,
+    "members": [
+     "Sailboats"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "vehicles/license plates"
+    ],
+    "ctrl_gray_max": 0.08316412428277614,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.09333966213201177,
+    "phi_inpaint": 0.06842137404020233,
+    "ctrl_inpaint_max": 0.04181572637483658,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Mediterranean architecture in distant town",
+    "category": "architecture",
+    "v_single": 0.07813360574462767,
+    "phi": 0.1528220474920872,
+    "members": [
+     "Mediterranean architecture in distant town"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.04683968642730006,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.09158869709916438,
+    "phi_inpaint": 0.06667040900735495,
+    "ctrl_inpaint_max": 0.05182828046055552,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": 0.14937688349491907
+  },
+  "empty_interaction": {
+   "0,1": 0.14937688349491907
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.13509178304755728
+  }
+ },
+ {
+  "image_id": "370018459_911d2a6929_123_51162504@N00.jpg",
+  "place": "Gloucester",
+  "country_hit": false,
+  "km_error": 5465.967868757954,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.1716883218607099,
+  "cues": [
+   {
+    "cue": "calm water body",
+    "category": "environment",
+    "v_single": 0.12749398366323847,
+    "phi": 0.060360060770117005,
+    "members": [
+     "calm water body"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.07741017263349102,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.14350046627161117,
+    "phi_inpaint": 0.079843396714275,
+    "ctrl_inpaint_max": 0.018363880524309772,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "silhouette of distant land",
+    "category": "environment",
+    "v_single": 0.17846218398371436,
+    "phi": 0.11132826109059289,
+    "members": [
+     "silhouette of distant land"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.06136824848888664,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.1349681960566015,
+    "phi_inpaint": 0.07131112649926534,
+    "ctrl_inpaint_max": 0.017145069078270254,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.13426784578624293
+  },
+  "empty_interaction": {
+   "0,1": -0.13426784578624293
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.15115452321354034
+  }
+ },
+ {
+  "image_id": "482450631_9a18ceae7e_219_50435419@N00.jpg",
+  "place": "Buenos Aires",
+  "country_hit": false,
+  "km_error": 11361.611632469981,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.15847210794490996,
+  "cues": [
+   {
+    "cue": "indoor plant",
+    "category": "environment",
+    "v_single": 0.10155076581701261,
+    "phi": 0.03965422475134318,
+    "members": [
+     "indoor plant"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.19493595947470274,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.07821557595818106,
+    "phi_inpaint": 0.062254023472721715,
+    "ctrl_inpaint_max": 0.08005757560220908,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "window with view of brick building",
+    "category": "architecture",
+    "v_single": 0.12778664238682397,
+    "phi": 0.07836350401246985,
+    "members": [
+     "window with view of brick building"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.13681184912690203,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.148645918613136,
+    "phi_inpaint": 0.0875182255313754,
+    "ctrl_inpaint_max": 0.06267475438022382,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "clothing style",
+    "category": "commercial/cultural",
+    "v_single": 0.08706507602420382,
+    "phi": 0.04045437918109692,
+    "members": [
+     "clothing style"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.09787716002691316,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.05177043360891929,
+    "phi_inpaint": 0.020971230757490106,
+    "ctrl_inpaint_max": 0.09531436360976958,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.0517748570299061,
+   "0,2": -0.046149973967411675,
+   "1,2": -0.021203168584781037
+  },
+  "empty_interaction": {
+   "0,1": -0.09057723373093773,
+   "0,2": -0.08495235066844331,
+   "1,2": -0.06000554528581267
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.5618913409872877,
+   "vN": 0.1707434797615872
+  }
+ },
+ {
+  "image_id": "234333488_744cb7ae38_91_73293249@N00.jpg",
+  "place": "Anniviers",
+  "country_hit": true,
+  "km_error": 2.206885410604134,
+  "n_cues": 4,
+  "n_cues_orig": 4,
+  "merged": false,
+  "vN": 0.1705636702897102,
+  "cues": [
+   {
+    "cue": "Chalet-style wooden architecture",
+    "category": "architecture",
+    "v_single": 0.1364790119924581,
+    "phi": 0.08883398724051736,
+    "members": [
+     "Chalet-style wooden architecture"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.1364790119924581,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08569563808797291,
+    "phi_inpaint": 0.0436947348343175,
+    "ctrl_inpaint_max": 0.08569563808797291,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Flower boxes with geraniums",
+    "category": "environment",
+    "v_single": 0.025640194452895688,
+    "phi": 0.009681967448808112,
+    "members": [
+     "Flower boxes with geraniums"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.08057462193539355,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.03267279041621055,
+    "phi_inpaint": 0.009111905705077843,
+    "ctrl_inpaint_max": 0.025961694984903857,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Alpine mountain in background",
+    "category": "environment",
+    "v_single": 0.08729453646624948,
+    "phi": 0.05502386614841854,
+    "members": [
+     "Alpine mountain in background"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.10779895634466827,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08832537177879994,
+    "phi_inpaint": 0.05978327050256279,
+    "ctrl_inpaint_max": 0.03236547070239042,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Traditional Swiss bell",
+    "category": "commercial/cultural",
+    "v_single": 0.029497716073553008,
+    "phi": 0.017023849451966177,
+    "members": [
+     "Traditional Swiss bell"
+    ],
+    "member_indices": [
+     3
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.03141643659324246,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.022139262490347804,
+    "phi_inpaint": 0.01673163041331908,
+    "ctrl_inpaint_max": 0.017679207009478868,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.02851478253889323,
+   "0,2": -0.053582428554937694,
+   "0,3": -0.009478879929015959,
+   "1,2": 0.00034609441688922325,
+   "1,3": 0.0016879870656119973,
+   "2,3": -0.006484104619760423
+  },
+  "empty_interaction": {
+   "0,1": -0.0322433727943643,
+   "0,2": -0.05638874219951352,
+   "0,3": -0.021062944396826242,
+   "1,2": -0.005042910933809458,
+   "1,3": -0.012478769108321144,
+   "2,3": -0.019728584182798315
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.5976518827425742,
+   "vN": 0.12932154145527722
+  }
+ },
+ {
+  "image_id": "1055535547_d8ebd9b0ff_1005_52057668@N00.jpg",
+  "place": "Siena",
+  "country_hit": true,
+  "km_error": 137.03659120826373,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.17203193682124798,
+  "cues": [
+   {
+    "cue": "Stone columns with arches",
+    "category": "architecture",
+    "v_single": 0.17911203637890935,
+    "phi": 0.023586383582661602,
+    "members": [
+     "Stone columns with arches"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.5972800534880734,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.21833420681656868,
+    "phi_inpaint": 0.10416733140738718,
+    "ctrl_inpaint_max": 0.21046151949711636,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Romanesque architectural elements",
+    "category": "architecture",
+    "v_single": 0.30397120603483413,
+    "phi": 0.14844555323858638,
+    "members": [
+     "Romanesque architectural elements"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.3689270728825046,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.2588681983574964,
+    "phi_inpaint": 0.14470132294831495,
+    "ctrl_inpaint_max": 0.09268868036962961,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.3110513055924955
+  },
+  "empty_interaction": {
+   "0,1": -0.3110513055924955
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 1.1152700482704632e-16,
+   "vN": 0.24886865435570213
+  }
+ },
+ {
+  "image_id": "1102966083_dcc68a51a6_1086_70323761@N00.jpg",
+  "place": "New York",
+  "country_hit": true,
+  "km_error": 3.3742631147728885,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.2728654799945307,
+  "cues": [
+   {
+    "cue": "Food Network logo",
+    "category": "text/signage",
+    "v_single": 0.2728654799945307,
+    "phi": 0.2728654799945307,
+    "members": [
+     "Food Network logo"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.13674056512952415,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.2660542230412318,
+    "phi_inpaint": 0.2660542230412318,
+    "ctrl_inpaint_max": 0.08300500004202103,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.2660542230412318
+  }
+ },
+ {
+  "image_id": "271702330_bbffd58093_110_77235581@N00.jpg",
+  "place": "Scotland",
+  "country_hit": false,
+  "km_error": 962.8253727797114,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.5833280766862745,
+  "cues": [
+   {
+    "cue": "Fishing boat with registration SY",
+    "category": "vehicles/license plates",
+    "v_single": 0.19792844798943682,
+    "phi": 0.34220241975097376,
+    "members": [
+     "Fishing boat with registration SY"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "vehicles/license plates"
+    ],
+    "ctrl_gray_max": 0.12709232178904953,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.21782056741984823,
+    "phi_inpaint": 0.2880988285008709,
+    "ctrl_inpaint_max": 0.14372916917392772,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Overcast weather",
+    "category": "environment",
+    "v_single": 0.09685168517376375,
+    "phi": 0.24112565693530072,
+    "members": [
+     "Overcast weather"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.20072144620423865,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.09361614811848476,
+    "phi_inpaint": 0.16389440919950743,
+    "ctrl_inpaint_max": 0.12764005934584713,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": 0.28854794352307395
+  },
+  "empty_interaction": {
+   "0,1": 0.28854794352307395
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.4519932377003783
+  }
+ },
+ {
+  "image_id": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+  "place": "Slovenia",
+  "country_hit": true,
+  "km_error": 58.75929021356162,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 1.3460082584206818,
+  "cues": [
+   {
+    "cue": "Church on an island",
+    "category": "landmarks/buildings",
+    "v_single": 0.4639949116246433,
+    "phi": 0.7494025814152324,
+    "members": [
+     "Church on an island"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.2557361911403428,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.38169286716629214,
+    "phi_inpaint": 0.7186979377492577,
+    "ctrl_inpaint_max": 0.03861591090058669,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Mountainous forested background",
+    "category": "environment",
+    "v_single": 0.3111980072148604,
+    "phi": 0.5966056770054494,
+    "members": [
+     "Mountainous forested background"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.32072994306572966,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.3338625929367117,
+    "phi_inpaint": 0.6708676635196773,
+    "ctrl_inpaint_max": 0.04341826551302648,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": 0.5708153395811781
+  },
+  "empty_interaction": {
+   "0,1": 0.5708153395811781
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 1.389565601268935
+  }
+ },
+ {
+  "image_id": "337534295_8a12d1be27_145_65367662@N00.jpg",
+  "place": "Vallejo",
+  "country_hit": true,
+  "km_error": 4.352122164123748,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.09601311798658266,
+  "cues": [
+   {
+    "cue": "seal in water",
+    "category": "environment",
+    "v_single": 0.09601311798658266,
+    "phi": 0.09601311798658266,
+    "members": [
+     "seal in water"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.02931613564227637,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.10181624806402399,
+    "phi_inpaint": 0.10181624806402399,
+    "ctrl_inpaint_max": 0.030490997534084737,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.10181624806402399
+  }
+ },
+ {
+  "image_id": "452065902_0daa6bd4bd_219_15632944@N00.jpg",
+  "place": "Bardo",
+  "country_hit": false,
+  "km_error": 388.1398567574611,
+  "n_cues": 3,
+  "n_cues_orig": 4,
+  "merged": true,
+  "vN": 0.3265948572212874,
+  "cues": [
+   {
+    "cue": "Train model EN57 | Polish text on train",
+    "category": "vehicles/license plates",
+    "v_single": 0.26569206580549337,
+    "phi": 0.16707054183558642,
+    "members": [
+     "Train model EN57",
+     "Polish text on train"
+    ],
+    "member_indices": [
+     0,
+     1
+    ],
+    "n_members": 2,
+    "categories": [
+     "vehicles/license plates",
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.14201204345199672,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.24909558670285556,
+    "phi_inpaint": null,
+    "ctrl_inpaint_max": 0.17804390781470314,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Architecture style of buildings",
+    "category": "architecture",
+    "v_single": 0.23104364765611834,
+    "phi": 0.12965113759459834,
+    "members": [
+     "Architecture style of buildings"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.1381993701376439,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.3330030774061071,
+    "phi_inpaint": null,
+    "ctrl_inpaint_max": 0.12965829027460146,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Overhead electric lines",
+    "category": "road/infrastructure",
+    "v_single": 0.07409159839989429,
+    "phi": 0.02987317779110259,
+    "members": [
+     "Overhead electric lines"
+    ],
+    "member_indices": [
+     3
+    ],
+    "n_members": 1,
+    "categories": [
+     "road/infrastructure"
+    ],
+    "ctrl_gray_max": 0.09248823114507465,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.0441626797491253,
+    "phi_inpaint": null,
+    "ctrl_inpaint_max": 0.03250088643007625,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.15088363279679534,
+   "0,2": -0.03653545389133876,
+   "1,2": -0.042077426074564925
+  },
+  "empty_interaction": {
+   "0,1": -0.16561957467431493,
+   "0,2": -0.051271395768858335,
+   "1,2": -0.0568133679520845
+  },
+  "inpaint": {
+   "computable": false,
+   "reason": "merged subset not scored under inpaint",
+   "missing_subsets": [
+    [
+     0,
+     1,
+     2
+    ],
+    [
+     0,
+     1,
+     3
+    ]
+   ]
+  }
+ },
+ {
+  "image_id": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+  "place": "Bangkok",
+  "country_hit": true,
+  "km_error": 2.034620417147975,
+  "n_cues": 2,
+  "n_cues_orig": 3,
+  "merged": true,
+  "vN": 0.07174731765913785,
+  "cues": [
+   {
+    "cue": "Thai text on storefront signs | Fujifilm signage",
+    "category": "text/signage",
+    "v_single": 0.06325809329471191,
+    "phi": 0.045241702860131114,
+    "members": [
+     "Thai text on storefront signs",
+     "Fujifilm signage"
+    ],
+    "member_indices": [
+     0,
+     1
+    ],
+    "n_members": 2,
+    "categories": [
+     "text/signage",
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.08327618622126907,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.06758858190737536,
+    "phi_inpaint": 0.054139303981858206,
+    "ctrl_inpaint_max": 0.052370822228831417,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Left-hand traffic with vehicles",
+    "category": "vehicles/license plates",
+    "v_single": 0.04452200523358753,
+    "phi": 0.026505614799006733,
+    "members": [
+     "Left-hand traffic with vehicles"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "vehicles/license plates"
+    ],
+    "ctrl_gray_max": 0.13436915758993084,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.033893457352714686,
+    "phi_inpaint": 0.020444179427197524,
+    "ctrl_inpaint_max": 0.03826622904061369,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.03603278086916159
+  },
+  "empty_interaction": {
+   "0,1": -0.03603278086916159
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.07458348340905573
+  }
+ },
+ {
+  "image_id": "203382931_becf34eb9c_73_40829484@N00.jpg",
+  "place": "Spa",
+  "country_hit": true,
+  "km_error": 2.101478623246677,
+  "n_cues": 2,
+  "n_cues_orig": 4,
+  "merged": true,
+  "vN": 0.1423066338197635,
+  "cues": [
+   {
+    "cue": "BorgWarner Turbo & Emissions Systems logo | ET3 European Championship logo | Michelin tire logo",
+    "category": "commercial/cultural",
+    "v_single": 0.2114374275016118,
+    "phi": 0.1400723670311062,
+    "members": [
+     "BorgWarner Turbo & Emissions Systems logo",
+     "ET3 European Championship logo",
+     "Michelin tire logo"
+    ],
+    "member_indices": [
+     0,
+     1,
+     2
+    ],
+    "n_members": 3,
+    "categories": [
+     "commercial/cultural",
+     "text/signage",
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.17166758933367263,
+    "resolvable_gray": true,
+    "v_single_inpaint": null,
+    "phi_inpaint": null,
+    "ctrl_inpaint_max": 0.15048207711481357,
+    "resolvable_inpaint": null
+   },
+   {
+    "cue": "Race car with number 18",
+    "category": "vehicles/license plates",
+    "v_single": 0.07359932725916285,
+    "phi": 0.002234266788657277,
+    "members": [
+     "Race car with number 18"
+    ],
+    "member_indices": [
+     3
+    ],
+    "n_members": 1,
+    "categories": [
+     "vehicles/license plates"
+    ],
+    "ctrl_gray_max": 0.19920821012743126,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.3019847728961253,
+    "phi_inpaint": null,
+    "ctrl_inpaint_max": 0.2928626125442449,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.14273012094101115
+  },
+  "empty_interaction": {
+   "0,1": -0.14273012094101115
+  },
+  "inpaint": {
+   "computable": false,
+   "reason": "merged subset not scored under inpaint",
+   "missing_subsets": [
+    [
+     0,
+     1,
+     2
+    ]
+   ]
+  }
+ },
+ {
+  "image_id": "34489106_b6bb027a4c_23_49503208420@N01.jpg",
+  "place": "Municipio de Tilcara",
+  "country_hit": true,
+  "km_error": 3.4305165518125027,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.12115547348983599,
+  "cues": [
+   {
+    "cue": "Arid mountain landscape",
+    "category": "environment",
+    "v_single": 0.0970638156151297,
+    "phi": 0.08402473279260181,
+    "members": [
+     "Arid mountain landscape"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.15035906299371898,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08040359633610819,
+    "phi_inpaint": 0.07626598033807541,
+    "ctrl_inpaint_max": 0.06974765494235585,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Adobe-style buildings",
+    "category": "architecture",
+    "v_single": 0.050169823519762055,
+    "phi": 0.037130740697234176,
+    "members": [
+     "Adobe-style buildings"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.04409598018389465,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.03581107525836599,
+    "phi_inpaint": 0.0316734592603332,
+    "ctrl_inpaint_max": 0.04252156976015491,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.02607816564505576
+  },
+  "empty_interaction": {
+   "0,1": -0.02607816564505576
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 1.2857013024569252e-16,
+   "vN": 0.10793943959840861
+  }
+ },
+ {
+  "image_id": "294552061_7ddb16fe09_116_77235581@N00.jpg",
+  "place": "Scotland",
+  "country_hit": true,
+  "km_error": 208.941550720384,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.1718208087440001,
+  "cues": [
+   {
+    "cue": "Cluster of small houses",
+    "category": "architecture",
+    "v_single": 0.03279724963460485,
+    "phi": 0.013900742737326378,
+    "members": [
+     "Cluster of small houses"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.04294380200306634,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.05264498107110206,
+    "phi_inpaint": 0.09715829593238053,
+    "ctrl_inpaint_max": 0.028578172287311045,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Fenced fields",
+    "category": "road/infrastructure",
+    "v_single": 0.1768165729039522,
+    "phi": 0.15792006600667374,
+    "members": [
+     "Fenced fields"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "road/infrastructure"
+    ],
+    "ctrl_gray_max": 0.1622961470387389,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.16613572640915225,
+    "phi_inpaint": 0.21064904127043071,
+    "ctrl_inpaint_max": 0.10691389959839195,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.037793013794556934
+  },
+  "empty_interaction": {
+   "0,1": -0.037793013794556934
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.3078073372028112
+  }
+ },
+ {
+  "image_id": "234270041_a4787189dd_82_50994135@N00.jpg",
+  "place": "Chicago",
+  "country_hit": true,
+  "km_error": 1245.5162955851506,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.08415976014389231,
+  "cues": [
+   {
+    "cue": "Interior decor style",
+    "category": "architecture",
+    "v_single": 0.08415976014389231,
+    "phi": 0.08415976014389231,
+    "members": [
+     "Interior decor style"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.04870673555145721,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.09911080315288531,
+    "phi_inpaint": 0.09911080315288531,
+    "ctrl_inpaint_max": 0.03213381945350986,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.09911080315288531
+  }
+ },
+ {
+  "image_id": "1000269685_e60e9cdfb4_1125_78841376@N00.jpg",
+  "place": "Bermuda",
+  "country_hit": false,
+  "km_error": 1699.1488738796504,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.256149486537629,
+  "cues": [
+   {
+    "cue": "Dolphin Discovery logo on life vest",
+    "category": "commercial/cultural",
+    "v_single": 0.22987508147131977,
+    "phi": 0.1975440562198046,
+    "members": [
+     "Dolphin Discovery logo on life vest"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.08459575045918633,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.1695468097085029,
+    "phi_inpaint": 0.17336337805190563,
+    "ctrl_inpaint_max": 0.025579377040790878,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Clear turquoise water",
+    "category": "environment",
+    "v_single": 0.09093645556933955,
+    "phi": 0.05860543031782438,
+    "members": [
+     "Clear turquoise water"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.15813805274025233,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.04884227497340558,
+    "phi_inpaint": 0.05265884331680832,
+    "ctrl_inpaint_max": 0.03636786189989423,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.06466205050303034
+  },
+  "empty_interaction": {
+   "0,1": -0.06466205050303034
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.22602222136871394
+  }
+ },
+ {
+  "image_id": "71807788_2b6c93f13f_35_18684820@N00.jpg",
+  "place": "Paris",
+  "country_hit": true,
+  "km_error": 1.0767060945821199,
+  "n_cues": 3,
+  "n_cues_orig": 5,
+  "merged": true,
+  "vN": 0.3679462347978754,
+  "cues": [
+   {
+    "cue": "Bus route number and destination | French text on bus | Green and cream color scheme of bus",
+    "category": "text/signage",
+    "v_single": 0.2431768886831093,
+    "phi": 0.2047183795911535,
+    "members": [
+     "Bus route number and destination",
+     "French text on bus",
+     "Green and cream color scheme of bus"
+    ],
+    "member_indices": [
+     0,
+     1,
+     3
+    ],
+    "n_members": 3,
+    "categories": [
+     "text/signage",
+     "text/signage",
+     "vehicles/license plates"
+    ],
+    "ctrl_gray_max": 0.5112955650438527,
+    "resolvable_gray": false,
+    "v_single_inpaint": null,
+    "phi_inpaint": null,
+    "ctrl_inpaint_max": 0.378758588605259,
+    "resolvable_inpaint": null
+   },
+   {
+    "cue": "Architecture style of buildings",
+    "category": "architecture",
+    "v_single": 0.10419684152313566,
+    "phi": 0.12134859845947289,
+    "members": [
+     "Architecture style of buildings"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.07764360283517271,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.11843066136762204,
+    "phi_inpaint": null,
+    "ctrl_inpaint_max": 0.10566902330324698,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "European car models",
+    "category": "vehicles/license plates",
+    "v_single": 0.09821260316183361,
+    "phi": 0.04187925674724899,
+    "members": [
+     "European car models"
+    ],
+    "member_indices": [
+     4
+    ],
+    "n_members": 1,
+    "categories": [
+     "vehicles/license plates"
+    ],
+    "ctrl_gray_max": 0.2098602526964898,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08210189313078467,
+    "phi_inpaint": null,
+    "ctrl_inpaint_max": 0.1557778735611923,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": 0.039369608162044906,
+   "0,2": -0.10760059853979884,
+   "1,2": 0.003619933516787216
+  },
+  "empty_interaction": {
+   "0,1": 0.026340566452808467,
+   "0,2": -0.12062964024903527,
+   "1,2": -0.009409108192449223
+  },
+  "inpaint": {
+   "computable": false,
+   "reason": "merged subset not scored under inpaint",
+   "missing_subsets": [
+    [
+     0,
+     1,
+     3
+    ],
+    [
+     0,
+     1,
+     2,
+     3
+    ],
+    [
+     0,
+     1,
+     3,
+     4
+    ]
+   ]
+  }
+ },
+ {
+  "image_id": "219687801_ab67a8f5ca_70_88483799@N00.jpg",
+  "place": "Newport News",
+  "country_hit": true,
+  "km_error": 188.32719052576033,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.12381361407216887,
+  "cues": [
+   {
+    "cue": "U.S. Army uniforms",
+    "category": "commercial/cultural",
+    "v_single": 0.06284333986868669,
+    "phi": 0.036963131420627654,
+    "members": [
+     "U.S. Army uniforms"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.10644006416832313,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.09202920124364083,
+    "phi_inpaint": 0.07192278145595836,
+    "ctrl_inpaint_max": 0.04345290303483925,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Patch on uniform",
+    "category": "text/signage",
+    "v_single": 0.03211390911431552,
+    "phi": 0.015409017665641326,
+    "members": [
+     "Patch on uniform"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.09197981672188357,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.02498582381392204,
+    "phi_inpaint": 0.007251507323260207,
+    "ctrl_inpaint_max": 0.03647960231251958,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Concrete pavement and hangar",
+    "category": "landmarks/buildings",
+    "v_single": 0.08299635488314565,
+    "phi": 0.07144146498589989,
+    "members": [
+     "Concrete pavement and hangar"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.18612357678972175,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.07168037440560981,
+    "phi_inpaint": 0.06810009349575512,
+    "ctrl_inpaint_max": 0.03160719776184403,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.027719387913507587,
+   "0,2": -0.01741938481065072,
+   "1,2": 0.0009312491881189738
+  },
+  "empty_interaction": {
+   "0,1": -0.03765185417144723,
+   "0,2": -0.027351851068590366,
+   "1,2": -0.009001217069820669
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.03370307107602213,
+   "vN": 0.14727438227497366
+  }
+ },
+ {
+  "image_id": "1192463216_a5f06caf2c_1050_47311799@N00.jpg",
+  "place": "Venice",
+  "country_hit": true,
+  "km_error": 4.09318755343999,
+  "n_cues": 3,
+  "n_cues_orig": 4,
+  "merged": true,
+  "vN": 0.10338792143238928,
+  "cues": [
+   {
+    "cue": "Italian text on hotel sign",
+    "category": "text/signage",
+    "v_single": 0.09500749871919963,
+    "phi": 0.06429739633611506,
+    "members": [
+     "Italian text on hotel sign"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.05068425173115666,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.08342221177101664,
+    "phi_inpaint": null,
+    "ctrl_inpaint_max": 0.02576793955574794,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Venetian Gothic architecture | Canal-side location",
+    "category": "architecture",
+    "v_single": 0.03692459792564623,
+    "phi": 0.007428398943698551,
+    "members": [
+     "Venetian Gothic architecture",
+     "Canal-side location"
+    ],
+    "member_indices": [
+     1,
+     3
+    ],
+    "n_members": 2,
+    "categories": [
+     "architecture",
+     "environment"
+    ],
+    "ctrl_gray_max": 0.0736359969177841,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.04459142907992074,
+    "phi_inpaint": null,
+    "ctrl_inpaint_max": 0.08412474911718168,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Mediterranean pantile roof",
+    "category": "architecture",
+    "v_single": 0.05439505133364201,
+    "phi": 0.03166212615257567,
+    "members": [
+     "Mediterranean pantile roof"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.07203030755631419,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.043153008682964004,
+    "phi_inpaint": null,
+    "ctrl_inpaint_max": 0.039430054327470376,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.03136878192652244,
+   "0,2": -0.017842234324759756,
+   "1,2": -0.015414427522485976
+  },
+  "empty_interaction": {
+   "0,1": -0.04968256469885285,
+   "0,2": -0.03615601709709016,
+   "1,2": -0.03372821029481638
+  },
+  "inpaint": {
+   "computable": false,
+   "reason": "merged subset not scored under inpaint",
+   "missing_subsets": [
+    [
+     0,
+     1,
+     3
+    ],
+    [
+     1,
+     2,
+     3
+    ]
+   ]
+  }
+ },
+ {
+  "image_id": "118159659_c2cc29c6a1_52_18684820@N00.jpg",
+  "place": "Bangkok",
+  "country_hit": false,
+  "km_error": 1432.1537398818637,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.05329395842400697,
+  "cues": [
+   {
+    "cue": "Dried fish on woven bamboo tray",
+    "category": "commercial/cultural",
+    "v_single": 0.041178393832194474,
+    "phi": 0.023141991630064654,
+    "members": [
+     "Dried fish on woven bamboo tray"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.05437651898424981,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.03848627255297995,
+    "phi_inpaint": 0.027180454197907024,
+    "ctrl_inpaint_max": 0.02781062871729515,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Stacked dried fish",
+    "category": "commercial/cultural",
+    "v_single": 0.04818836899607214,
+    "phi": 0.030151966793942317,
+    "members": [
+     "Stacked dried fish"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.10227497903552998,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.043008334221262955,
+    "phi_inpaint": 0.03170251586619003,
+    "ctrl_inpaint_max": 0.09376102773686656,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.03607280440425964
+  },
+  "empty_interaction": {
+   "0,1": -0.03607280440425964
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.058882970064097054
+  }
+ },
+ {
+  "image_id": "244685754_fa9cd577a8_94_77235581@N00.jpg",
+  "place": "Scotland",
+  "country_hit": true,
+  "km_error": 212.65960281604478,
+  "n_cues": 2,
+  "n_cues_orig": 3,
+  "merged": true,
+  "vN": 0.2112207172498752,
+  "cues": [
+   {
+    "cue": "Rocky coastline with grassy hills | Sandy beach with rocks",
+    "category": "environment",
+    "v_single": 0.10374305576132405,
+    "phi": 0.10443496815942385,
+    "members": [
+     "Rocky coastline with grassy hills",
+     "Sandy beach with rocks"
+    ],
+    "member_indices": [
+     0,
+     1
+    ],
+    "n_members": 2,
+    "categories": [
+     "environment",
+     "environment"
+    ],
+    "ctrl_gray_max": 0.15758154370809457,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08197480855991444,
+    "phi_inpaint": 0.054669492711531764,
+    "ctrl_inpaint_max": 0.05308392826338867,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Overcast sky",
+    "category": "environment",
+    "v_single": 0.10609383669235155,
+    "phi": 0.10678574909045135,
+    "members": [
+     "Overcast sky"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.15914163842954748,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.05766172644315726,
+    "phi_inpaint": 0.030356410594774577,
+    "ctrl_inpaint_max": 0.38909625733479575,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": 0.001383824796199612
+  },
+  "empty_interaction": {
+   "0,1": 0.001383824796199612
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.08502590330630634
+  }
+ },
+ {
+  "image_id": "359583512_c889dcbcf3_142_77235581@N00.jpg",
+  "place": "Scotland",
+  "country_hit": false,
+  "km_error": 792.480174397731,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.07706999015276929,
+  "cues": [
+   {
+    "cue": "White daisies with yellow centers",
+    "category": "environment",
+    "v_single": 0.05709409568233293,
+    "phi": 0.029359519660931654,
+    "members": [
+     "White daisies with yellow centers"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.06654661926236467,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.04395309606734374,
+    "phi_inpaint": 0.02652585285404787,
+    "ctrl_inpaint_max": 0.045316561199847734,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Rocky ground with small stones",
+    "category": "environment",
+    "v_single": 0.07544504651323891,
+    "phi": 0.04771047049183763,
+    "members": [
+     "Rocky ground with small stones"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.11375063964760572,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.03628315916479353,
+    "phi_inpaint": 0.01885591595149766,
+    "ctrl_inpaint_max": 0.0351593445574647,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.055469152042802554
+  },
+  "empty_interaction": {
+   "0,1": -0.055469152042802554
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.04538176880554553
+  }
+ },
+ {
+  "image_id": "199300245_2b38ee3d16_78_23601949@N00.jpg",
+  "place": "Bristol",
+  "country_hit": true,
+  "km_error": 1105.3292998322227,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.3897543667460106,
+  "cues": [
+   {
+    "cue": "American flag",
+    "category": "commercial/cultural",
+    "v_single": 0.2009165376944363,
+    "phi": 0.1701344140794421,
+    "members": [
+     "American flag"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.07738133341821803,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.1872588727554022,
+    "phi_inpaint": 0.1199919423741507,
+    "ctrl_inpaint_max": 0.07385875273759167,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "English text on sign",
+    "category": "text/signage",
+    "v_single": 0.2492510065959612,
+    "phi": 0.18215401242760995,
+    "members": [
+     "English text on sign"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.18700602405905514,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.3029968770988133,
+    "phi_inpaint": 0.1694090295244522,
+    "ctrl_inpaint_max": 0.2022212416916413,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Traditional parade attire",
+    "category": "commercial/cultural",
+    "v_single": 0.1352809282024176,
+    "phi": 0.037465940238958516,
+    "members": [
+     "Traditional parade attire"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.08865987504756637,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.13828826236821945,
+    "phi_inpaint": 0.013538570725765864,
+    "ctrl_inpaint_max": 0.082200128298885,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": 0.009255953584307586,
+   "0,2": -0.05218003400590811,
+   "1,2": -0.12480977511262223
+  },
+  "empty_interaction": {
+   "0,1": -0.018704296628274136,
+   "0,2": -0.08014028421848984,
+   "1,2": -0.15277002532520395
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.7146981228386394,
+   "vN": 0.30293954262436873
+  }
+ },
+ {
+  "image_id": "264072697_0bb27f33c4_95_90833046@N00.jpg",
+  "place": "Minneapolis",
+  "country_hit": true,
+  "km_error": 1496.6345767165217,
+  "n_cues": 4,
+  "n_cues_orig": 4,
+  "merged": false,
+  "vN": 0.2580756407724878,
+  "cues": [
+   {
+    "cue": "Autumn foliage",
+    "category": "environment",
+    "v_single": 0.2198122505740765,
+    "phi": 0.09539608590439412,
+    "members": [
+     "Autumn foliage"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.15056169703060304,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.15271869494357054,
+    "phi_inpaint": 0.0632437665721077,
+    "ctrl_inpaint_max": 0.1970801644651008,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Road with bike lane",
+    "category": "road/infrastructure",
+    "v_single": 0.15601376978030213,
+    "phi": 0.055323335680692205,
+    "members": [
+     "Road with bike lane"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "road/infrastructure"
+    ],
+    "ctrl_gray_max": 0.2799909803112475,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.10619774028100645,
+    "phi_inpaint": 0.04458716590620697,
+    "ctrl_inpaint_max": 0.0880435103580301,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Stone retaining wall",
+    "category": "landmarks/buildings",
+    "v_single": 0.1942081694057284,
+    "phi": 0.07903858217872164,
+    "members": [
+     "Stone retaining wall"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.20028994906773032,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.13528522029537562,
+    "phi_inpaint": 0.062314919340435246,
+    "ctrl_inpaint_max": 0.058597173874335225,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Cars driving on the right",
+    "category": "vehicles/license plates",
+    "v_single": 0.08371399710432788,
+    "phi": 0.02831763700867981,
+    "members": [
+     "Cars driving on the right"
+    ],
+    "member_indices": [
+     3
+    ],
+    "n_members": 1,
+    "categories": [
+     "vehicles/license plates"
+    ],
+    "ctrl_gray_max": 0.045147521910086565,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.08757533401661854,
+    "phi_inpaint": 0.036299613776102024,
+    "ctrl_inpaint_max": 0.018193877552679275,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.06706403428998475,
+   "0,2": -0.10842606384943408,
+   "0,3": -0.03947186767986971,
+   "1,2": -0.06712234261050508,
+   "1,3": -0.022531370661799287,
+   "2,3": -0.019651324071321356
+  },
+  "empty_interaction": {
+   "0,1": -0.12195691401547804,
+   "0,2": -0.14903342850366078,
+   "0,3": -0.07107730311742559,
+   "1,2": -0.12391884294001357,
+   "1,3": -0.07032594177463695,
+   "2,3": -0.05316038011289244
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 1.13164766651155,
+   "vN": 0.20644546559485194
+  }
+ },
+ {
+  "image_id": "167345423_ba2914f302_59_79954435@N00.jpg",
+  "place": "Area A (Kicking Horse/Kinbasket Lake)",
+  "country_hit": true,
+  "km_error": 42.14713310285245,
+  "n_cues": 4,
+  "n_cues_orig": 4,
+  "merged": false,
+  "vN": 0.28460270398815307,
+  "cues": [
+   {
+    "cue": "Turquoise glacial lake",
+    "category": "environment",
+    "v_single": 0.06270806742178253,
+    "phi": 0.00845136535773712,
+    "members": [
+     "Turquoise glacial lake"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.08519550145189578,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.08132818763012957,
+    "phi_inpaint": 0.19556899634907493,
+    "ctrl_inpaint_max": 0.03541447967743799,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Coniferous forest",
+    "category": "environment",
+    "v_single": 0.10663748681473012,
+    "phi": 0.103023654763998,
+    "members": [
+     "Coniferous forest"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.0880735987294464,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.11202237475513951,
+    "phi_inpaint": 0.22854465215136527,
+    "ctrl_inpaint_max": 0.03121243096891842,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Rocky mountain range",
+    "category": "environment",
+    "v_single": 0.12404468160795824,
+    "phi": 0.10719761622629614,
+    "members": [
+     "Rocky mountain range"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.09444322802016497,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.12110492600043289,
+    "phi_inpaint": 0.20844108127368943,
+    "ctrl_inpaint_max": 0.03155661307765114,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Red canoes with numbers",
+    "category": "commercial/cultural",
+    "v_single": 0.0994429167013832,
+    "phi": 0.06593006764012183,
+    "members": [
+     "Red canoes with numbers"
+    ],
+    "member_indices": [
+     3
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.12536392713970704,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.06160330753916515,
+    "phi_inpaint": 0.14790458265085474,
+    "ctrl_inpaint_max": 0.028352580069560252,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.006008656695684515,
+   "0,2": -0.009992226473338937,
+   "0,3": -0.022209698447705796,
+   "1,2": 0.037315409104186,
+   "1,3": 0.020447704318857524,
+   "2,3": -0.0044018940788935895
+  },
+  "empty_interaction": {
+   "0,1": -0.06150238295806813,
+   "0,2": -0.061935900465404176,
+   "0,3": -0.08052295833902584,
+   "1,2": 0.0023527876359282357,
+   "1,3": -0.02088450304865505,
+   "2,3": -0.0421840491760878
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.8097365965364288,
+   "vN": 0.7804593124249843
+  }
+ },
+ {
+  "image_id": "1077208489_d307c44d40_1355_93455345@N00.jpg",
+  "place": "Vladivostok",
+  "country_hit": true,
+  "km_error": 4.3113972524874775,
+  "n_cues": 4,
+  "n_cues_orig": 4,
+  "merged": false,
+  "vN": 0.1786245953210502,
+  "cues": [
+   {
+    "cue": "Harbor with ships",
+    "category": "landmarks/buildings",
+    "v_single": 0.057980742258090884,
+    "phi": 0.025803174344533934,
+    "members": [
+     "Harbor with ships"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.05492815271528413,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.03776723254121544,
+    "phi_inpaint": 0.0016937526535561152,
+    "ctrl_inpaint_max": 0.03180490440227188,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Hilly terrain with urban buildings",
+    "category": "environment",
+    "v_single": 0.09819337758189285,
+    "phi": 0.06702242398083227,
+    "members": [
+     "Hilly terrain with urban buildings"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.047191203063341444,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.06965943802581799,
+    "phi_inpaint": 0.04761011334418877,
+    "ctrl_inpaint_max": 0.02564641053040771,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Soviet-style architecture",
+    "category": "architecture",
+    "v_single": 0.08701129972338882,
+    "phi": 0.05612211889873982,
+    "members": [
+     "Soviet-style architecture"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.0682893621028351,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.09182369435592996,
+    "phi_inpaint": 0.06388759622082935,
+    "ctrl_inpaint_max": 0.07091840942282947,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Lamp post design",
+    "category": "road/infrastructure",
+    "v_single": 0.04311764018838317,
+    "phi": 0.029676878096944182,
+    "members": [
+     "Lamp post design"
+    ],
+    "member_indices": [
+     3
+    ],
+    "n_members": 1,
+    "categories": [
+     "road/infrastructure"
+    ],
+    "ctrl_gray_max": 0.047812493947088266,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.05526074891437434,
+    "phi_inpaint": 0.015170966524908683,
+    "ctrl_inpaint_max": 0.05075168209760629,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.007474772434766113,
+   "0,2": -0.023284063925260584,
+   "0,3": -0.014603726455985327,
+   "1,2": -0.029824303947149723,
+   "1,3": -0.010319524307488916,
+   "2,3": 0.0011762564728410542
+  },
+  "empty_interaction": {
+   "0,1": -0.04649141274387951,
+   "0,2": -0.0549851198398925,
+   "0,3": -0.03623720183439129,
+   "1,2": -0.055121460114203435,
+   "1,3": -0.02554909993831668,
+   "2,3": -0.0067377347635052265
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.7803482619605057,
+   "vN": 0.12836242874348291
+  }
+ },
+ {
+  "image_id": "261517384_292417efcc_117_60558526@N00.jpg",
+  "place": "Okazaki",
+  "country_hit": true,
+  "km_error": 253.75237234913803,
+  "n_cues": 4,
+  "n_cues_orig": 4,
+  "merged": false,
+  "vN": 0.15141342382949008,
+  "cues": [
+   {
+    "cue": "Japanese text on festival banners",
+    "category": "text/signage",
+    "v_single": 0.08496790385883064,
+    "phi": 0.0549354257300079,
+    "members": [
+     "Japanese text on festival banners"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.09582922689827435,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.07697336546356696,
+    "phi_inpaint": 0.054883021044531174,
+    "ctrl_inpaint_max": 0.052674165479002194,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Samurai armor on a person",
+    "category": "commercial/cultural",
+    "v_single": 0.07595638901109285,
+    "phi": 0.036806519073307384,
+    "members": [
+     "Samurai armor on a person"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.07111929909561528,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.05003726658686535,
+    "phi_inpaint": 0.033668639570178904,
+    "ctrl_inpaint_max": 0.04614951008617468,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Cherry blossoms",
+    "category": "environment",
+    "v_single": 0.09242336939150192,
+    "phi": 0.050195605287729476,
+    "members": [
+     "Cherry blossoms"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.12323991941763456,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.0895315892465649,
+    "phi_inpaint": 0.05849765082630842,
+    "ctrl_inpaint_max": 0.07577572703028873,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Japanese police uniforms",
+    "category": "commercial/cultural",
+    "v_single": 0.051650043208072156,
+    "phi": 0.009475873738445334,
+    "members": [
+     "Japanese police uniforms"
+    ],
+    "member_indices": [
+     3
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.05850430811591455,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.03830632223141271,
+    "phi_inpaint": 0.030880737843378428,
+    "ctrl_inpaint_max": 0.03912574114339446,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.0017254470339478304,
+   "0,2": -0.018796434442243153,
+   "0,3": -0.02377826389854115,
+   "1,2": -0.03152932923227462,
+   "1,3": -0.0196025984700172,
+   "2,3": -0.02282320676228072
+  },
+  "empty_interaction": {
+   "0,1": -0.030372633774288754,
+   "0,2": -0.026239910129706764,
+   "0,3": -0.041478307642507005,
+   "1,2": -0.05348913630436511,
+   "1,3": -0.05181897359860994,
+   "2,3": -0.03383587083799614
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.565276945879717,
+   "vN": 0.17793004928439693
+  }
+ },
+ {
+  "image_id": "219898919_220c455b81_78_82927779@N00.jpg",
+  "place": "George",
+  "country_hit": false,
+  "km_error": 14021.499018418264,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.23988578365218402,
+  "cues": [
+   {
+    "cue": "Rasta-style beanie",
+    "category": "commercial/cultural",
+    "v_single": 0.08936205204409983,
+    "phi": 0.025994964150017667,
+    "members": [
+     "Rasta-style beanie"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.10263193308549827,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.27350901476694234,
+    "phi_inpaint": 0.06296634882402506,
+    "ctrl_inpaint_max": 0.09605347637216835,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Blue jeans and casual clothing",
+    "category": "commercial/cultural",
+    "v_single": 0.3444939784239977,
+    "phi": 0.1855840209444131,
+    "members": [
+     "Blue jeans and casual clothing"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.16038995712732096,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.32729133801140153,
+    "phi_inpaint": 0.04444114592709748,
+    "ctrl_inpaint_max": 0.19555176429818744,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Stone and brick wall",
+    "category": "architecture",
+    "v_single": 0.17575736100455336,
+    "phi": 0.02830679855775326,
+    "members": [
+     "Stone and brick wall"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.11686698308097763,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.18505792727879627,
+    "phi_inpaint": 0.0625826399090204,
+    "ctrl_inpaint_max": 0.07153166289366956,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.06282812978740994,
+   "0,2": -0.03990933972184091,
+   "1,2": -0.23099507889284582
+  },
+  "empty_interaction": {
+   "0,1": -0.09882318920578018,
+   "0,2": -0.07590439914021113,
+   "1,2": -0.26699013831121604
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 1.4539896017222753,
+   "vN": 0.16999013466014293
+  }
+ },
+ {
+  "image_id": "876438778_7c0cef320a_1036_15632944@N00.jpg",
+  "place": "Wrocław",
+  "country_hit": true,
+  "km_error": 2.5182670127702362,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.7833063991468995,
+  "cues": [
+   {
+    "cue": "Polish text on glue container",
+    "category": "text/signage",
+    "v_single": 0.7833063991468995,
+    "phi": 0.7833063991468995,
+    "members": [
+     "Polish text on glue container"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.047798592834897624,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.7331747655318779,
+    "phi_inpaint": 0.7331747655318779,
+    "ctrl_inpaint_max": 0.02970303958575146,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.7331747655318779
+  }
+ },
+ {
+  "image_id": "312579751_048cb85e3c_108_43935788@N00.jpg",
+  "place": "Miami-Dade County",
+  "country_hit": true,
+  "km_error": 10.624134504193254,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.1184104304456666,
+  "cues": [
+   {
+    "cue": "Gerenuk antelopes",
+    "category": "environment",
+    "v_single": 0.11227793820187261,
+    "phi": 0.08650159158644083,
+    "members": [
+     "Gerenuk antelopes"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.04826396947302234,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.15165049463738497,
+    "phi_inpaint": 0.12413231868211534,
+    "ctrl_inpaint_max": 0.04061808656445547,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Arid rocky environment",
+    "category": "environment",
+    "v_single": 0.057685185474657556,
+    "phi": 0.03190883885922577,
+    "members": [
+     "Arid rocky environment"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.05899685840156293,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.046096432286482934,
+    "phi_inpaint": 0.018578256331213305,
+    "ctrl_inpaint_max": 0.0375346448441005,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.05155269323086357
+  },
+  "empty_interaction": {
+   "0,1": -0.05155269323086357
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.14271057501332865
+  }
+ },
+ {
+  "image_id": "199802332_27a09191e6_64_85971448@N00.jpg",
+  "place": "Denizli",
+  "country_hit": true,
+  "km_error": 14.486974465392166,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.15347286594526532,
+  "cues": [
+   {
+    "cue": "Mountainous background",
+    "category": "environment",
+    "v_single": 0.05021564419692447,
+    "phi": 0.034088935183899945,
+    "members": [
+     "Mountainous background"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.06307282068584899,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.05359457260304645,
+    "phi_inpaint": 0.03246337637602825,
+    "ctrl_inpaint_max": 0.05660869575385853,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "Turkish text on sign",
+    "category": "text/signage",
+    "v_single": 0.1355106397743899,
+    "phi": 0.11938393076136539,
+    "members": [
+     "Turkish text on sign"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.04760612698454818,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.13474476131222862,
+    "phi_inpaint": 0.11361356508521042,
+    "ctrl_inpaint_max": 0.033428057524839655,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.032253418026049044
+  },
+  "empty_interaction": {
+   "0,1": -0.032253418026049044
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.14607694146123867
+  }
+ },
+ {
+  "image_id": "253013198_0869efe061_109_36093984@N00.jpg",
+  "place": "Colma",
+  "country_hit": true,
+  "km_error": 12.114125588796869,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.3948587357384145,
+  "cues": [
+   {
+    "cue": "Transamerica Pyramid-like building",
+    "category": "landmarks/buildings",
+    "v_single": 0.15418662107020528,
+    "phi": 0.07182765667404067,
+    "members": [
+     "Transamerica Pyramid-like building"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.4361655619904894,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.09664169439084869,
+    "phi_inpaint": 0.0814587715735761,
+    "ctrl_inpaint_max": 0.07355653791008997,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Red-flowered trees",
+    "category": "environment",
+    "v_single": 0.4192180724636569,
+    "phi": 0.28693404574386006,
+    "members": [
+     "Red-flowered trees"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.4795188721988954,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.13753693677086942,
+    "phi_inpaint": 0.1111640042439229,
+    "ctrl_inpaint_max": 0.09748267390088784,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Speed limit sign in miles per hour",
+    "category": "road/infrastructure",
+    "v_single": 0.08510809048722726,
+    "phi": 0.03609703332051374,
+    "members": [
+     "Speed limit sign in miles per hour"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "road/infrastructure"
+    ],
+    "ctrl_gray_max": 0.07547104952268358,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.07470425470801034,
+    "phi_inpaint": 0.04918564416750895,
+    "ctrl_inpaint_max": 0.03674598577632834,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.1481877167334619,
+   "0,2": 0.01835822237270468,
+   "1,2": -0.08149190227455974
+  },
+  "empty_interaction": {
+   "0,1": -0.20052036838081985,
+   "0,2": -0.03397442927465327,
+   "1,2": -0.1338245539219177
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.35520960905767895,
+   "vN": 0.24180841998500796
+  }
+ },
+ {
+  "image_id": "369043327_64ca92b933_146_13527886@N00.jpg",
+  "place": "Leh",
+  "country_hit": true,
+  "km_error": 15.848132869174618,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.12012878215275019,
+  "cues": [
+   {
+    "cue": "Mountainous terrain with barren rocky slopes",
+    "category": "environment",
+    "v_single": 0.09553863821909997,
+    "phi": 0.08288397994830436,
+    "members": [
+     "Mountainous terrain with barren rocky slopes"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.1045999590485721,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.16733640188223112,
+    "phi_inpaint": 0.16198569053668718,
+    "ctrl_inpaint_max": 0.1239298630442185,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Sparse tree cover",
+    "category": "environment",
+    "v_single": 0.049899460475241436,
+    "phi": 0.03724480220444583,
+    "members": [
+     "Sparse tree cover"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.06872873941305441,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.0245457132120354,
+    "phi_inpaint": 0.019195001866491472,
+    "ctrl_inpaint_max": 0.025760626174049048,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.025309316541591215
+  },
+  "empty_interaction": {
+   "0,1": -0.025309316541591215
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.18118069240317866
+  }
+ },
+ {
+  "image_id": "311937210_3b4a9ca55c_84_63163416@N00.jpg",
+  "place": "Jaipur Municipal Corporation",
+  "country_hit": true,
+  "km_error": 2.1325588481955102,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.06262018962377525,
+  "cues": [
+   {
+    "cue": "Jharokha-style windows",
+    "category": "architecture",
+    "v_single": 0.05195402779888004,
+    "phi": 0.03186728367805942,
+    "members": [
+     "Jharokha-style windows"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "architecture"
+    ],
+    "ctrl_gray_max": 0.0455508952570406,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.03413722388087211,
+    "phi_inpaint": 0.020017175714985284,
+    "ctrl_inpaint_max": 0.03615142077900786,
+    "resolvable_inpaint": false
+   },
+   {
+    "cue": "People in traditional Indian attire",
+    "category": "commercial/cultural",
+    "v_single": 0.05083965006653645,
+    "phi": 0.03075290594571583,
+    "members": [
+     "People in traditional Indian attire"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.0480291690154501,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.04819312145577953,
+    "phi_inpaint": 0.0340730732898927,
+    "ctrl_inpaint_max": 0.039348018852279676,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.04017348824164124
+  },
+  "empty_interaction": {
+   "0,1": -0.04017348824164124
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.05409024900487799
+  }
+ },
+ {
+  "image_id": "71812047_61e009056a_35_18684820@N00.jpg",
+  "place": "Paris",
+  "country_hit": true,
+  "km_error": 1.0767060945821199,
+  "n_cues": 1,
+  "n_cues_orig": 1,
+  "merged": false,
+  "vN": 0.04799671446812804,
+  "cues": [
+   {
+    "cue": "Statue in background",
+    "category": "landmarks/buildings",
+    "v_single": 0.04799671446812804,
+    "phi": 0.04799671446812804,
+    "members": [
+     "Statue in background"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.06065056807737384,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.041862770861391195,
+    "phi_inpaint": 0.041862770861391195,
+    "ctrl_inpaint_max": 0.04749118365881393,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {},
+  "empty_interaction": {},
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.041862770861391195
+  }
+ },
+ {
+  "image_id": "758114922_f369e388f5_1324_41894169878@N01.jpg",
+  "place": "Boulder County",
+  "country_hit": true,
+  "km_error": 646.3063462030418,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.25801769156090004,
+  "cues": [
+   {
+    "cue": "Spider-Man themed sunglasses",
+    "category": "commercial/cultural",
+    "v_single": 0.11429637675414767,
+    "phi": 0.05528072926906985,
+    "members": [
+     "Spider-Man themed sunglasses"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.16161053030707104,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.13188513015758863,
+    "phi_inpaint": 0.08947720073578203,
+    "ctrl_inpaint_max": 0.031913680541384624,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Rocky background",
+    "category": "environment",
+    "v_single": 0.261752609776908,
+    "phi": 0.2027369622918302,
+    "members": [
+     "Rocky background"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.283825045640577,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.2725621591286137,
+    "phi_inpaint": 0.2301542297068071,
+    "ctrl_inpaint_max": 0.04321941945915355,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.11803129497015563
+  },
+  "empty_interaction": {
+   "0,1": -0.11803129497015563
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.3196314304425891
+  }
+ },
+ {
+  "image_id": "203420486_c21ed696cc_65_40829484@N00.jpg",
+  "place": "Spa",
+  "country_hit": false,
+  "km_error": 582.2088644387815,
+  "n_cues": 3,
+  "n_cues_orig": 3,
+  "merged": false,
+  "vN": 0.3328759982944539,
+  "cues": [
+   {
+    "cue": "Purple Sumolux banners",
+    "category": "commercial/cultural",
+    "v_single": 0.1502585436393094,
+    "phi": 0.07158052394468573,
+    "members": [
+     "Purple Sumolux banners"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "commercial/cultural"
+    ],
+    "ctrl_gray_max": 0.2031370787860544,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.22718760684926909,
+    "phi_inpaint": 0.05817711231996195,
+    "ctrl_inpaint_max": 0.17730977214752877,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Dodge race car",
+    "category": "vehicles/license plates",
+    "v_single": 0.28823065722078545,
+    "phi": 0.18102828697563478,
+    "members": [
+     "Dodge race car"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "vehicles/license plates"
+    ],
+    "ctrl_gray_max": 0.23296202578488415,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.2920544131215239,
+    "phi_inpaint": 0.15473180899309663,
+    "ctrl_inpaint_max": 0.1601096505261764,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "French text on worker's shirt",
+    "category": "text/signage",
+    "v_single": 0.24523958335506413,
+    "phi": 0.0802671873741334,
+    "members": [
+     "French text on worker's shirt"
+    ],
+    "member_indices": [
+     2
+    ],
+    "n_members": 1,
+    "categories": [
+     "text/signage"
+    ],
+    "ctrl_gray_max": 0.1848014080891463,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.19865197927700792,
+    "phi_inpaint": 0.05902399066193885,
+    "ctrl_inpaint_max": 0.16775239606898432,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -8.054624964393131e-06,
+   "0,2": -0.11554810609652455,
+   "1,2": -0.17259680719757853
+  },
+  "empty_interaction": {
+   "0,1": -0.06270787262660199,
+   "0,2": -0.17824792409816215,
+   "1,2": -0.23529662519921613
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.4178571065928029,
+   "vN": 0.2719329119749974
+  }
+ },
+ {
+  "image_id": "270426691_42f06b31b0_106_50994135@N00.jpg",
+  "place": "Argyll and Bute",
+  "country_hit": true,
+  "km_error": 98.71735676767555,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.10746215968393111,
+  "cues": [
+   {
+    "cue": "Lake with surrounding greenery",
+    "category": "environment",
+    "v_single": 0.08106926562348137,
+    "phi": 0.06422738550430343,
+    "members": [
+     "Lake with surrounding greenery"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.08432929099958791,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.09682261294668741,
+    "phi_inpaint": 0.05788403145855446,
+    "ctrl_inpaint_max": 0.07063670586531304,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Green grassy field",
+    "category": "environment",
+    "v_single": 0.06007665429880561,
+    "phi": 0.04323477417962768,
+    "members": [
+     "Green grassy field"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.12925794929382328,
+    "resolvable_gray": false,
+    "v_single_inpaint": 0.06624516138983526,
+    "phi_inpaint": 0.027306579901702308,
+    "ctrl_inpaint_max": 0.10973258055072942,
+    "resolvable_inpaint": false
+   }
+  ],
+  "sii": {
+   "0,1": -0.03368376023835587
+  },
+  "empty_interaction": {
+   "0,1": -0.03368376023835587
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.08519061136025677
+  }
+ },
+ {
+  "image_id": "339479847_8d444a33ea_138_63163416@N00.jpg",
+  "place": "Alexandria",
+  "country_hit": true,
+  "km_error": 5.079405072732021,
+  "n_cues": 2,
+  "n_cues_orig": 2,
+  "merged": false,
+  "vN": 0.2576575141673045,
+  "cues": [
+   {
+    "cue": "Distinctive tower with crenellations",
+    "category": "landmarks/buildings",
+    "v_single": 0.2712089027074693,
+    "phi": 0.22714328519532806,
+    "members": [
+     "Distinctive tower with crenellations"
+    ],
+    "member_indices": [
+     0
+    ],
+    "n_members": 1,
+    "categories": [
+     "landmarks/buildings"
+    ],
+    "ctrl_gray_max": 0.15139857114421384,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.40293759912762056,
+    "phi_inpaint": 0.41618976246765615,
+    "ctrl_inpaint_max": 0.07143289087219579,
+    "resolvable_inpaint": true
+   },
+   {
+    "cue": "Mediterranean climate vegetation",
+    "category": "environment",
+    "v_single": 0.07457984648411763,
+    "phi": 0.030514228971976413,
+    "members": [
+     "Mediterranean climate vegetation"
+    ],
+    "member_indices": [
+     1
+    ],
+    "n_members": 1,
+    "categories": [
+     "environment"
+    ],
+    "ctrl_gray_max": 0.07235690548422334,
+    "resolvable_gray": true,
+    "v_single_inpaint": 0.09348542032633252,
+    "phi_inpaint": 0.1067375836663681,
+    "ctrl_inpaint_max": 0.035073710096553135,
+    "resolvable_inpaint": true
+   }
+  ],
+  "sii": {
+   "0,1": -0.08813123502428243
+  },
+  "empty_interaction": {
+   "0,1": -0.08813123502428243
+  },
+  "inpaint": {
+   "computable": true,
+   "residual_share": 0.0,
+   "vN": 0.5229273461340243
+  }
+ }
+]

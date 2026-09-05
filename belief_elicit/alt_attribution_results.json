@@ -1,0 +1,2442 @@
+[
+ {
+  "image": "483717602_2445d0d4ae_206_40425693@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.08795650077438771,
+  "shapley": 0.04855845867270482,
+  "banzhaf": 0.04855845867270482,
+  "additive": 0.061691139373265765,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "483717602_2445d0d4ae_206_40425693@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.10429992987505073,
+  "shapley": 0.06490188777336783,
+  "banzhaf": 0.06490188777336783,
+  "additive": 0.07803456847392883,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "217552984_53e8b16fed_71_84498284@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.04034608777547698,
+  "shapley": 0.028229107075498267,
+  "banzhaf": 0.02538457727630779,
+  "additive": 0.032195109111870936,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "217552984_53e8b16fed_71_84498284@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.06043281038558447,
+  "shapley": 0.04642886865397338,
+  "banzhaf": 0.043584338854782904,
+  "additive": 0.05039487069034615,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "217552984_53e8b16fed_71_84498284@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.14515187334269192,
+  "shapley": 0.1167885410897762,
+  "banzhaf": 0.11394401129058573,
+  "additive": 0.12075454312614894,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "415005347_2f1a541aef_183_7132415@N03.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.14458926991023363,
+  "shapley": 0.0968204700167808,
+  "banzhaf": 0.08635232785263547,
+  "additive": 0.10914527413645866,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "415005347_2f1a541aef_183_7132415@N03.jpg",
+  "cat": "environment",
+  "v_single": 0.17988657330160088,
+  "shapley": 0.12316999563587024,
+  "banzhaf": 0.1127018534717249,
+  "additive": 0.13549479975554807,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "415005347_2f1a541aef_183_7132415@N03.jpg",
+  "cat": "vehicles/license plates",
+  "v_single": 0.11106266171133632,
+  "shapley": 0.0332044689999342,
+  "banzhaf": 0.022736326835788866,
+  "additive": 0.04552927311961208,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "321720530_f2a31b2549_128_81421684@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.07634298322532922,
+  "shapley": 0.0341234477070492,
+  "banzhaf": 0.0320994257542415,
+  "additive": 0.04467833158661918,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "321720530_f2a31b2549_128_81421684@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.07634298322532922,
+  "shapley": 0.0341234477070492,
+  "banzhaf": 0.0320994257542415,
+  "additive": 0.0446783315866192,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "321720530_f2a31b2549_128_81421684@N00.jpg",
+  "cat": "road/infrastructure",
+  "v_single": 0.0870049305095251,
+  "shapley": 0.07081275488706347,
+  "banzhaf": 0.06878873293425578,
+  "additive": 0.08136763876663347,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "381147491_751c8c119c_181_57253263@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.12581625776597327,
+  "shapley": 0.03145406444149332,
+  "banzhaf": 0.01572703222074666,
+  "additive": 0.050326503106389295,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "381147491_751c8c119c_181_57253263@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.12581625776597327,
+  "shapley": 0.03145406444149332,
+  "banzhaf": 0.01572703222074666,
+  "additive": 0.05032650310638931,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "381147491_751c8c119c_181_57253263@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.12581625776597327,
+  "shapley": 0.03145406444149332,
+  "banzhaf": 0.01572703222074666,
+  "additive": 0.05032650310638932,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "381147491_751c8c119c_181_57253263@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.12581625776597327,
+  "shapley": 0.03145406444149332,
+  "banzhaf": 0.01572703222074666,
+  "additive": 0.05032650310638932,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "880710221_64f0fdd8f2_1137_85417391@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.21622386712694036,
+  "shapley": 0.13986604429875416,
+  "banzhaf": 0.13289661093745758,
+  "additive": 0.15970012171719394,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "880710221_64f0fdd8f2_1137_85417391@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.10536264684302736,
+  "shapley": 0.030254006317086996,
+  "banzhaf": 0.023284572955790412,
+  "additive": 0.050088083735526895,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "880710221_64f0fdd8f2_1137_85417391@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.13332319410066418,
+  "shapley": 0.07036157121689923,
+  "banzhaf": 0.06339213785560266,
+  "additive": 0.09019564863533915,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "446976495_afc37707e4_246_55126705@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.42282873972681173,
+  "shapley": 0.4901886285939972,
+  "banzhaf": 0.46870809243975703,
+  "additive": 0.45383925088547195,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "446976495_afc37707e4_246_55126705@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.11135872730015191,
+  "shapley": 0.004180379147570583,
+  "banzhaf": -0.017300157006669602,
+  "additive": -0.032168998560954565,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "446976495_afc37707e4_246_55126705@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.15353441834222392,
+  "shapley": 0.3123036100619006,
+  "banzhaf": 0.2908230739076605,
+  "additive": 0.2759542323533754,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "199528247_66da61f266_70_85971448@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.038864546957299025,
+  "shapley": 0.016829075478711254,
+  "banzhaf": 0.016829075478711254,
+  "additive": 0.024174232638240523,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "199528247_66da61f266_70_85971448@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.12058835196530214,
+  "shapley": 0.09855288048671437,
+  "banzhaf": 0.09855288048671437,
+  "additive": 0.10589803764624363,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "847733166_0573338bfb_1321_89904893@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.10043762416686763,
+  "shapley": 0.08687475136785142,
+  "banzhaf": 0.08687475136785142,
+  "additive": 0.09139570896752347,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "847733166_0573338bfb_1321_89904893@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.1227744819506862,
+  "shapley": 0.10921160915167,
+  "banzhaf": 0.10921160915167,
+  "additive": 0.11373256675134213,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "312179336_340ace22c6_104_36093984@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.3781445266158888,
+  "shapley": 0.26165838253331697,
+  "banzhaf": 0.2420552200312905,
+  "additive": 0.2985968638252008,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "312179336_340ace22c6_104_36093984@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.1544965258579763,
+  "shapley": -0.025034843390496466,
+  "banzhaf": -0.04463800589252292,
+  "additive": 0.011903637901387515,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "312179336_340ace22c6_104_36093984@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.3200501464654647,
+  "shapley": 0.16373450944522608,
+  "banzhaf": 0.14413134694319962,
+  "additive": 0.2006729907371101,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "271517794_bcd0d062eb_79_40829484@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.09084107589794443,
+  "shapley": 0.032851046871051115,
+  "banzhaf": 0.026566301332090567,
+  "additive": 0.047348554127774445,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "271517794_bcd0d062eb_79_40829484@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.07507294666975478,
+  "shapley": 0.02479498235807038,
+  "banzhaf": 0.01851023681910983,
+  "additive": 0.03929248961479372,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "271517794_bcd0d062eb_79_40829484@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.09084107589794443,
+  "shapley": 0.032851046871051115,
+  "banzhaf": 0.026566301332090567,
+  "additive": 0.04734855412777446,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "766351079_af0294281f_1240_16836474@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.09028714816982975,
+  "shapley": 0.07461406644384348,
+  "banzhaf": 0.07461406644384348,
+  "additive": 0.0798384270191722,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "766351079_af0294281f_1240_16836474@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.12967187626357699,
+  "shapley": 0.11399879453759072,
+  "banzhaf": 0.11399879453759072,
+  "additive": 0.1192231551129195,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "104419192_8551684362_41_64825499@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.11593832295631001,
+  "shapley": 0.08235366767261651,
+  "banzhaf": 0.08235366767261651,
+  "additive": 0.09354855276718096,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "104419192_8551684362_41_64825499@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.049127386947874094,
+  "shapley": 0.015542731664180583,
+  "banzhaf": 0.015542731664180583,
+  "additive": 0.026737616758745097,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "1300123632_36361364c9_1048_50435419@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.10623530984426713,
+  "shapley": 0.0786593388941463,
+  "banzhaf": 0.07088910763162931,
+  "additive": 0.08759318259468196,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "1300123632_36361364c9_1048_50435419@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.062123633464893156,
+  "shapley": 0.018582364158572624,
+  "banzhaf": 0.010669720271548984,
+  "additive": 0.02737379523460154,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "1300123632_36361364c9_1048_50435419@N00.jpg",
+  "cat": "road/infrastructure",
+  "v_single": 0.07125451332404951,
+  "shapley": 0.012691706937102431,
+  "banzhaf": 0.004958677505067836,
+  "additive": 0.021662752468120466,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "1300123632_36361364c9_1048_50435419@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.24008735566835712,
+  "shapley": 0.19408312550539222,
+  "banzhaf": 0.18541797196174048,
+  "additive": 0.2021220469247932,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "166869956_84928fd11b_60_55085284@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.04597937710293411,
+  "shapley": 0.02897320672489307,
+  "banzhaf": 0.02581408684130611,
+  "additive": 0.034387812074190297,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "166869956_84928fd11b_60_55085284@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.0418306225299627,
+  "shapley": 0.016303169643870942,
+  "banzhaf": 0.013144049760283983,
+  "additive": 0.021717774993168182,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "166869956_84928fd11b_60_55085284@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.06788693607161513,
+  "shapley": 0.04183075747267441,
+  "banzhaf": 0.03867163758908745,
+  "additive": 0.047245362821971656,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "244035501_3708124424_87_40829484@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.10494086324309371,
+  "shapley": 0.05598019972041089,
+  "banzhaf": 0.047713663446374274,
+  "additive": 0.0665138555857415,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "244035501_3708124424_87_40829484@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.0355484702068404,
+  "shapley": 0.014240039158888872,
+  "banzhaf": 0.005973502884852258,
+  "additive": 0.02477369502421954,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "244035501_3708124424_87_40829484@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.1624168526457295,
+  "shapley": 0.08228441010142586,
+  "banzhaf": 0.07401787382738925,
+  "additive": 0.09281806596675654,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "494612871_db624a92e7_216_62126383@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.17453554219709672,
+  "shapley": 0.17453554219709672,
+  "banzhaf": 0.17453554219709672,
+  "additive": 0.17453554219709672,
+  "n_cues": 1,
+  "hit": false
+ },
+ {
+  "image": "297636665_27042e8d0d_109_41894169878@N01.jpg",
+  "cat": "environment",
+  "v_single": 0.04860984155244572,
+  "shapley": 0.04860984155244572,
+  "banzhaf": 0.04860984155244572,
+  "additive": 0.04860984155244572,
+  "n_cues": 1,
+  "hit": false
+ },
+ {
+  "image": "227569033_4e625d93c3_74_48637819@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.06944290060954629,
+  "shapley": 0.04882019867334339,
+  "banzhaf": 0.0458266878206548,
+  "additive": 0.05355290967120088,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "227569033_4e625d93c3_74_48637819@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.03856793441363227,
+  "shapley": 0.015382712245935425,
+  "banzhaf": 0.012855018126065865,
+  "additive": 0.02058123997661194,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "227569033_4e625d93c3_74_48637819@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.036927592358166186,
+  "shapley": 0.015664701175613152,
+  "banzhaf": 0.012641188080414863,
+  "additive": 0.020367409930960943,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "227569033_4e625d93c3_74_48637819@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.052669926822957236,
+  "shapley": 0.036050287991775426,
+  "banzhaf": 0.03166294374150291,
+  "additive": 0.039389165592049,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "171046893_b97c4f0aa5_73_30571787@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.12904239812542914,
+  "shapley": 0.062271584648555686,
+  "banzhaf": 0.05750311006326877,
+  "additive": 0.07831441751012731,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "171046893_b97c4f0aa5_73_30571787@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.07365355442525508,
+  "shapley": 0.02777507276157642,
+  "banzhaf": 0.0230065981762895,
+  "additive": 0.043817905623148065,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "171046893_b97c4f0aa5_73_30571787@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.11665676661064317,
+  "shapley": 0.06281560217632674,
+  "banzhaf": 0.05804712759103982,
+  "additive": 0.07885843503789841,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "1182903598_51bdaa7836_1385_15376845@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.03102117836623212,
+  "shapley": 0.03102117836623212,
+  "banzhaf": 0.03102117836623212,
+  "additive": 0.03102117836623212,
+  "n_cues": 1,
+  "hit": true
+ },
+ {
+  "image": "43779838_1ef2e1f024_30_88483799@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.11346232413649876,
+  "shapley": 0.08946289209417826,
+  "banzhaf": 0.08709941011249274,
+  "additive": 0.08946052146806786,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "43779838_1ef2e1f024_30_88483799@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.14064921503205718,
+  "shapley": 0.13570246755386875,
+  "banzhaf": 0.1333389855721832,
+  "additive": 0.13570009692775836,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "43779838_1ef2e1f024_30_88483799@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.11958694690164745,
+  "shapley": 0.12964423557755517,
+  "banzhaf": 0.12728075359586966,
+  "additive": 0.12964186495144478,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "1297522299_1d487977b3_1008_85417391@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.11502612787865604,
+  "shapley": 0.11502612787865604,
+  "banzhaf": 0.11502612787865604,
+  "additive": 0.11502612787865604,
+  "n_cues": 1,
+  "hit": true
+ },
+ {
+  "image": "370717727_f9564e3587_150_13527886@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.38153798581191356,
+  "shapley": 0.17801413146727835,
+  "banzhaf": 0.17801413146727835,
+  "additive": 0.2458554162488234,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "370717727_f9564e3587_150_13527886@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.5441310422226275,
+  "shapley": 0.3406071878779923,
+  "banzhaf": 0.3406071878779923,
+  "additive": 0.40844847265953754,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "307499425_ed6d8712bd_111_73293249@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.06664925866511517,
+  "shapley": 0.06281595144313724,
+  "banzhaf": 0.06281595144313724,
+  "additive": 0.06409372051712987,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "307499425_ed6d8712bd_111_73293249@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.05309037286771647,
+  "shapley": 0.04925706564573855,
+  "banzhaf": 0.04925706564573855,
+  "additive": 0.050534834719731206,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "149866866_e6a46a330b_52_63163416@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.5016284236609322,
+  "shapley": 0.4552462446679868,
+  "banzhaf": 0.4552462446679868,
+  "additive": 0.4707069709989684,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "149866866_e6a46a330b_52_63163416@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.057401766230446676,
+  "shapley": 0.01101958723750129,
+  "banzhaf": 0.01101958723750129,
+  "additive": 0.026480313568483127,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "484245503_2c1739bf8b_213_50435419@N00.jpg",
+  "cat": "road/infrastructure",
+  "v_single": 0.15522362751009722,
+  "shapley": 0.06705339296623312,
+  "banzhaf": 0.06547503691686651,
+  "additive": 0.09263456673363943,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "484245503_2c1739bf8b_213_50435419@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.09358835397079912,
+  "shapley": -0.0005838103661046611,
+  "banzhaf": -0.0021621664154712963,
+  "additive": 0.02499736340130166,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "484245503_2c1739bf8b_213_50435419@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.05206161203071121,
+  "shapley": 0.017127772377295482,
+  "banzhaf": 0.015549416327928854,
+  "additive": 0.04270894614470183,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "276477189_7baf796f9d_83_12814307@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.2660024535330129,
+  "shapley": 0.13727964582892108,
+  "banzhaf": 0.13715835210865884,
+  "additive": 0.17474726358901468,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "276477189_7baf796f9d_83_12814307@N00.jpg",
+  "cat": "road/infrastructure",
+  "v_single": 0.0457091796922562,
+  "shapley": -0.001830553779027938,
+  "banzhaf": -0.0019518474992901956,
+  "additive": 0.0356370639810657,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "276477189_7baf796f9d_83_12814307@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.18639233429507154,
+  "shapley": 0.06194358362760057,
+  "banzhaf": 0.06182228990733832,
+  "additive": 0.09941120138769421,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "468278910_539810ce41_193_64825499@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.11373532330033218,
+  "shapley": 0.08232512104310177,
+  "banzhaf": 0.08019826731643152,
+  "additive": 0.09080765531057824,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "468278910_539810ce41_193_64825499@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.04657576197334566,
+  "shapley": 0.015997404723351264,
+  "banzhaf": 0.012829218483172115,
+  "additive": 0.023438606477318907,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "468278910_539810ce41_193_64825499@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.040910996434944,
+  "shapley": 0.01191980412758477,
+  "banzhaf": 0.009731802310563531,
+  "additive": 0.02034119030471035,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "468278910_539810ce41_193_64825499@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.08087656354340075,
+  "shapley": 0.060472965287241914,
+  "banzhaf": 0.058168210731380725,
+  "additive": 0.06877759872552755,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "379001279_fa81cf9ee0_155_87409164@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.036747633892623636,
+  "shapley": 0.036747633892623636,
+  "banzhaf": 0.036747633892623636,
+  "additive": 0.036747633892623636,
+  "n_cues": 1,
+  "hit": true
+ },
+ {
+  "image": "320631397_d6abc1ed08_129_82927779@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.06244576796527005,
+  "shapley": 0.06244576796527005,
+  "banzhaf": 0.06244576796527005,
+  "additive": 0.06244576796527005,
+  "n_cues": 1,
+  "hit": true
+ },
+ {
+  "image": "311344213_4b003f4ab1_114_63163416@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.09020966000534535,
+  "shapley": 0.0667335325805041,
+  "banzhaf": 0.0667335325805041,
+  "additive": 0.07455890838878448,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "311344213_4b003f4ab1_114_63163416@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.059195292803985916,
+  "shapley": 0.035719165379144664,
+  "banzhaf": 0.035719165379144664,
+  "additive": 0.0435445411874251,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "280870957_b4e009f8da_102_36093984@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.5145297851391678,
+  "shapley": 0.42831914972000007,
+  "banzhaf": 0.42831914972000007,
+  "additive": 0.4570560281930559,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "280870957_b4e009f8da_102_36093984@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.259636864785964,
+  "shapley": 0.17342622936679628,
+  "banzhaf": 0.17342622936679628,
+  "additive": 0.20216310783985222,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "1397742163_1a6b87eb5a_1164_7885919@N07.jpg",
+  "cat": "architecture",
+  "v_single": 0.0623480251501676,
+  "shapley": 0.0268779866682174,
+  "banzhaf": 0.022912857880120575,
+  "additive": 0.03454243769777478,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "1397742163_1a6b87eb5a_1164_7885919@N07.jpg",
+  "cat": "architecture",
+  "v_single": 0.06094504569056904,
+  "shapley": 0.03354817738378143,
+  "banzhaf": 0.03278441136837866,
+  "additive": 0.04441399118603286,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "1397742163_1a6b87eb5a_1164_7885919@N07.jpg",
+  "cat": "architecture",
+  "v_single": 0.03631078630368676,
+  "shapley": 0.012893008929740534,
+  "banzhaf": 0.00824506363144155,
+  "additive": 0.019874643449095737,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "1397742163_1a6b87eb5a_1164_7885919@N07.jpg",
+  "cat": "architecture",
+  "v_single": 0.04916316848604426,
+  "shapley": 0.019850524571113394,
+  "banzhaf": 0.01677471191705829,
+  "additive": 0.02840429173471249,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "449901053_f0d3dbb166_164_55126705@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.03872203426724787,
+  "shapley": 0.03872203426724787,
+  "banzhaf": 0.03872203426724787,
+  "additive": 0.03872203426724787,
+  "n_cues": 1,
+  "hit": true
+ },
+ {
+  "image": "266287734_114d6cc260_94_40829484@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.20241358222717337,
+  "shapley": 0.1899229654179706,
+  "banzhaf": 0.1899229654179706,
+  "additive": 0.1940865043543715,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "266287734_114d6cc260_94_40829484@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.06132401719474573,
+  "shapley": 0.04883340038554297,
+  "banzhaf": 0.04883340038554297,
+  "additive": 0.052996939321943916,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "486597679_e1a557718f_198_51162504@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.3968627975139283,
+  "shapley": 0.13228759917130942,
+  "banzhaf": 0.09921569937848207,
+  "additive": 0.19843139875696408,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "486597679_e1a557718f_198_51162504@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.3968627975139283,
+  "shapley": 0.13228759917130942,
+  "banzhaf": 0.09921569937848207,
+  "additive": 0.19843139875696408,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "486597679_e1a557718f_198_51162504@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.3968627975139283,
+  "shapley": 0.13228759917130942,
+  "banzhaf": 0.09921569937848207,
+  "additive": 0.1984313987569642,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "241921396_742fe1f0fd_90_82981539@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.06171698029366382,
+  "shapley": 0.01140180894737318,
+  "banzhaf": 0.007602177824990498,
+  "additive": 0.025372129009491082,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "241921396_742fe1f0fd_90_82981539@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.07998916859759012,
+  "shapley": 0.03642872507077284,
+  "banzhaf": 0.032629093948390156,
+  "additive": 0.05039904513289077,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "241921396_742fe1f0fd_90_82981539@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.0829121235780716,
+  "shapley": 0.03462812897517464,
+  "banzhaf": 0.030828497852791955,
+  "additive": 0.048598449037292595,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "499393661_a7da0fd73e_206_8255645@N03.jpg",
+  "cat": "environment",
+  "v_single": 0.3125267913305512,
+  "shapley": 0.29066548259895464,
+  "banzhaf": 0.28656761940907677,
+  "additive": 0.29845665272267935,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "499393661_a7da0fd73e_206_8255645@N03.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.05066198130971103,
+  "shapley": 0.009638304643338714,
+  "banzhaf": 0.00554044145346084,
+  "additive": 0.017429474767063302,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "499393661_a7da0fd73e_206_8255645@N03.jpg",
+  "cat": "environment",
+  "v_single": 0.07762183421201818,
+  "shapley": 0.04539455310116743,
+  "banzhaf": 0.04129668991128956,
+  "additive": 0.053185723224892026,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "453636890_c425e657ab_239_55126705@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.4594518922208718,
+  "shapley": 0.21907117284143085,
+  "banzhaf": 0.21579612078287658,
+  "additive": 0.27986326694525226,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "453636890_c425e657ab_239_55126705@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.05079823499101007,
+  "shapley": 0.021427818803912348,
+  "banzhaf": 0.01815276674535802,
+  "additive": 0.08221991290773417,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "453636890_c425e657ab_239_55126705@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.4883538211452572,
+  "shapley": 0.2455677874127877,
+  "banzhaf": 0.2422927353542334,
+  "additive": 0.30635988151660964,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "668488293_1b39338210_1369_81421684@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.13274624212920066,
+  "shapley": 0.14202559750850755,
+  "banzhaf": 0.14202559750850755,
+  "additive": 0.13893247904873854,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "668488293_1b39338210_1369_81421684@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.09184849504282333,
+  "shapley": 0.10112785042213021,
+  "banzhaf": 0.10112785042213021,
+  "additive": 0.09803473196236129,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "919126362_49e364686c_1300_50994135@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.14653930961405565,
+  "shapley": 0.08964859390617522,
+  "banzhaf": 0.08494737905347441,
+  "additive": 0.10289128138294647,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "919126362_49e364686c_1300_50994135@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.09126757494363201,
+  "shapley": 0.04457530859669653,
+  "banzhaf": 0.039874093743995705,
+  "additive": 0.0578179960734678,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "919126362_49e364686c_1300_50994135@N00.jpg",
+  "cat": "road/infrastructure",
+  "v_single": 0.07133450562599981,
+  "shapley": 0.031366269045039044,
+  "banzhaf": 0.02666505419233822,
+  "additive": 0.044608956521810336,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "203414504_6dce8e2783_60_40829484@N00.jpg",
+  "cat": "vehicles/license plates",
+  "v_single": 0.174449607705649,
+  "shapley": 0.04361240192641225,
+  "banzhaf": 0.021806200963206124,
+  "additive": 0.06977984308225954,
+  "n_cues": 4,
+  "hit": false
+ },
+ {
+  "image": "203414504_6dce8e2783_60_40829484@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.174449607705649,
+  "shapley": 0.04361240192641225,
+  "banzhaf": 0.021806200963206124,
+  "additive": 0.06977984308225967,
+  "n_cues": 4,
+  "hit": false
+ },
+ {
+  "image": "203414504_6dce8e2783_60_40829484@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.174449607705649,
+  "shapley": 0.04361240192641225,
+  "banzhaf": 0.021806200963206124,
+  "additive": 0.06977984308225961,
+  "n_cues": 4,
+  "hit": false
+ },
+ {
+  "image": "203414504_6dce8e2783_60_40829484@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.174449607705649,
+  "shapley": 0.04361240192641225,
+  "banzhaf": 0.021806200963206124,
+  "additive": 0.06977984308225965,
+  "n_cues": 4,
+  "hit": false
+ },
+ {
+  "image": "103558896_55f8059bc9_35_73293249@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.1862445298601716,
+  "shapley": 0.0931222649300858,
+  "banzhaf": 0.0931222649300858,
+  "additive": 0.12416301990678094,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "103558896_55f8059bc9_35_73293249@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.1862445298601716,
+  "shapley": 0.0931222649300858,
+  "banzhaf": 0.0931222649300858,
+  "additive": 0.12416301990678108,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "279684899_63d5dc5c9d_89_25304693@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.11618850927340263,
+  "shapley": 0.03819216598721104,
+  "banzhaf": 0.02401287556884793,
+  "additive": 0.052027430410944084,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "279684899_63d5dc5c9d_89_25304693@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.11622236207497603,
+  "shapley": 0.03242336539883443,
+  "banzhaf": 0.019579457579507645,
+  "additive": 0.047594012421603826,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "279684899_63d5dc5c9d_89_25304693@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.06286906314266935,
+  "shapley": 0.001427100481685371,
+  "banzhaf": -0.0106828923585268,
+  "additive": 0.01733166248356938,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "279684899_63d5dc5c9d_89_25304693@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.11622236207497603,
+  "shapley": 0.03242336539883443,
+  "banzhaf": 0.019579457579507645,
+  "additive": 0.04759401242160387,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "520721897_11b0c68892_243_70323761@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.07749057267387963,
+  "shapley": 0.021363069541820923,
+  "banzhaf": 0.016485346470248866,
+  "additive": 0.033443337642322095,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "520721897_11b0c68892_243_70323761@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.07495765247178134,
+  "shapley": 0.031336296612461775,
+  "banzhaf": 0.027713470108911648,
+  "additive": 0.04467146128098487,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "520721897_11b0c68892_243_70323761@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.05659429820641667,
+  "shapley": 0.017458356565503444,
+  "banzhaf": 0.013009250079965546,
+  "additive": 0.029967241252038798,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "520721897_11b0c68892_243_70323761@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.05016919542945475,
+  "shapley": 0.016729787325893378,
+  "banzhaf": 0.013579579554489825,
+  "additive": 0.030537570726563084,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "468114689_6f7d634bae_220_7885919@N07.jpg",
+  "cat": "architecture",
+  "v_single": 0.4456906218389789,
+  "shapley": 0.2773165087716258,
+  "banzhaf": 0.24620588530715307,
+  "additive": 0.2973445542966338,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "468114689_6f7d634bae_220_7885919@N07.jpg",
+  "cat": "architecture",
+  "v_single": 0.1708883059421743,
+  "shapley": 0.13461518826014085,
+  "banzhaf": 0.10350456479566811,
+  "additive": 0.15464323378514894,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "468114689_6f7d634bae_220_7885919@N07.jpg",
+  "cat": "environment",
+  "v_single": 0.1574349497594159,
+  "shapley": -0.04702717140704399,
+  "banzhaf": -0.07813779487151673,
+  "additive": -0.02699912588203586,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "181848051_3f34be1b5d_68_70323761@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.30359337586859225,
+  "shapley": 0.30835793706000825,
+  "banzhaf": 0.3042464761212251,
+  "additive": 0.31259534889252816,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "181848051_3f34be1b5d_68_70323761@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.07926649623272486,
+  "shapley": 0.042298913281322334,
+  "banzhaf": 0.038187452342539126,
+  "additive": 0.0465363251138422,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "181848051_3f34be1b5d_68_70323761@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.10794106791880166,
+  "shapley": 0.0733531075083639,
+  "banzhaf": 0.06924164656958069,
+  "additive": 0.07759051934088378,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "334797817_910e96579f_137_65367662@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.019684286526328938,
+  "shapley": 0.019684286526328938,
+  "banzhaf": 0.019684286526328938,
+  "additive": 0.019684286526328938,
+  "n_cues": 1,
+  "hit": true
+ },
+ {
+  "image": "379777984_75362fd964_150_77235581@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.05305980486674218,
+  "shapley": 0.028870811127782402,
+  "banzhaf": 0.03776129293983729,
+  "additive": 0.044318337938956544,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "379777984_75362fd964_150_77235581@N00.jpg",
+  "cat": "vehicles/license plates",
+  "v_single": 0.08353189706078482,
+  "shapley": 0.04635711952021089,
+  "banzhaf": 0.055247601332265785,
+  "additive": 0.061804646331385105,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "379777984_75362fd964_150_77235581@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.2675291858549646,
+  "shapley": 0.2764365971415438,
+  "banzhaf": 0.28532707895359866,
+  "additive": 0.291884123952718,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "357019239_3aa477b691_146_77235581@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.15439546734508,
+  "shapley": 0.1525182703346318,
+  "banzhaf": 0.14693855268340683,
+  "additive": 0.14909587813212996,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "357019239_3aa477b691_146_77235581@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.07712515355482652,
+  "shapley": 0.07662549253845577,
+  "banzhaf": 0.07104577488723082,
+  "additive": 0.07320310033595404,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "357019239_3aa477b691_146_77235581@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.03718399849147276,
+  "shapley": 0.022302252928506232,
+  "banzhaf": 0.016722535277281268,
+  "additive": 0.01887986072600447,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "158307292_d73d7226ef_73_70323761@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.15500846455800465,
+  "shapley": 0.13278290073216298,
+  "banzhaf": 0.1202492540345393,
+  "additive": 0.15940733367604937,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "158307292_d73d7226ef_73_70323761@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.0734001589298367,
+  "shapley": 0.08001009599225359,
+  "banzhaf": 0.06634339015143156,
+  "additive": 0.1055014697929414,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "158307292_d73d7226ef_73_70323761@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.7300481211417795,
+  "shapley": 0.5562565260149108,
+  "banzhaf": 0.5333411825149187,
+  "additive": 0.5724992621564289,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "158307292_d73d7226ef_73_70323761@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.2728250126148466,
+  "shapley": 0.0541013670410896,
+  "banzhaf": 0.03542140839550674,
+  "additive": 0.0745794880370168,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "331988145_2303e98396_151_77235581@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.14869247664689175,
+  "shapley": 0.12094805774624451,
+  "banzhaf": 0.12094805774624451,
+  "additive": 0.13019619737979354,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "331988145_2303e98396_151_77235581@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.05329478843730402,
+  "shapley": 0.025550369536656785,
+  "banzhaf": 0.025550369536656785,
+  "additive": 0.034798509170205896,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "224260045_431e8a656e_72_73293249@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.024290308835161104,
+  "shapley": 0.024290308835161104,
+  "banzhaf": 0.024290308835161104,
+  "additive": 0.024290308835161104,
+  "n_cues": 1,
+  "hit": true
+ },
+ {
+  "image": "256718877_67e9b4f39b_83_50994135@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.18551672788209397,
+  "shapley": 0.14120020824306695,
+  "banzhaf": 0.13145369634159462,
+  "additive": 0.14554370644488362,
+  "n_cues": 4,
+  "hit": false
+ },
+ {
+  "image": "256718877_67e9b4f39b_83_50994135@N00.jpg",
+  "cat": "other",
+  "v_single": 0.04681400755039675,
+  "shapley": 0.03118750079809802,
+  "banzhaf": 0.025384729353293434,
+  "additive": 0.03947473945658249,
+  "n_cues": 4,
+  "hit": false
+ },
+ {
+  "image": "256718877_67e9b4f39b_83_50994135@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.054862571682398456,
+  "shapley": 0.016024697514499947,
+  "banzhaf": 0.0046839502800836525,
+  "additive": 0.018773960383372715,
+  "n_cues": 4,
+  "hit": false
+ },
+ {
+  "image": "256718877_67e9b4f39b_83_50994135@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.07430418111423699,
+  "shapley": 0.024793334868738724,
+  "banzhaf": 0.012672381981693868,
+  "additive": 0.02676239208498294,
+  "n_cues": 4,
+  "hit": false
+ },
+ {
+  "image": "169956693_5edea53724_78_70323761@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.4045869226105365,
+  "shapley": 0.4045869226105365,
+  "banzhaf": 0.4045869226105365,
+  "additive": 0.4045869226105365,
+  "n_cues": 1,
+  "hit": true
+ },
+ {
+  "image": "217726612_48fdd833cd_57_63163416@N00.jpg",
+  "cat": "vehicles/license plates",
+  "v_single": 0.14758282830214534,
+  "shapley": 0.22227127004960484,
+  "banzhaf": 0.22227127004960484,
+  "additive": 0.19737512280045166,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "217726612_48fdd833cd_57_63163416@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.07813360574462767,
+  "shapley": 0.1528220474920872,
+  "banzhaf": 0.1528220474920872,
+  "additive": 0.12792590024293407,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "370018459_911d2a6929_123_51162504@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.12749398366323847,
+  "shapley": 0.060360060770117005,
+  "banzhaf": 0.060360060770117005,
+  "additive": 0.08273803506782407,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "370018459_911d2a6929_123_51162504@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.17846218398371436,
+  "shapley": 0.11132826109059289,
+  "banzhaf": 0.11132826109059289,
+  "additive": 0.1337062353883001,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "482450631_9a18ceae7e_219_50435419@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.10155076581701261,
+  "shapley": 0.03965422475134318,
+  "banzhaf": 0.03318716196783791,
+  "additive": 0.05292845900322917,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "482450631_9a18ceae7e_219_50435419@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.12778664238682397,
+  "shapley": 0.07836350401246985,
+  "banzhaf": 0.07189644122896457,
+  "additive": 0.09163773826435595,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "482450631_9a18ceae7e_219_50435419@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.08706507602420382,
+  "shapley": 0.04045437918109692,
+  "banzhaf": 0.03398731639759165,
+  "additive": 0.05372861343298297,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "234333488_744cb7ae38_91_73293249@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.1364790119924581,
+  "shapley": 0.08883398724051736,
+  "banzhaf": 0.08790549762025875,
+  "additive": 0.09839142184356564,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "234333488_744cb7ae38_91_73293249@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.025640194452895688,
+  "shapley": 0.009681967448808112,
+  "banzhaf": 0.008323029210862327,
+  "additive": 0.01880895343416924,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "234333488_744cb7ae38_91_73293249@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.08729453646624948,
+  "shapley": 0.05502386614841854,
+  "banzhaf": 0.053818640678955296,
+  "additive": 0.06430456490226225,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "234333488_744cb7ae38_91_73293249@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.029497716073553008,
+  "shapley": 0.017023849451966177,
+  "banzhaf": 0.014355665511963857,
+  "additive": 0.024841589735270807,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "1055535547_d8ebd9b0ff_1005_52057668@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.17911203637890935,
+  "shapley": 0.023586383582661602,
+  "banzhaf": 0.023586383582661602,
+  "additive": 0.07542826784807741,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "1055535547_d8ebd9b0ff_1005_52057668@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.30397120603483413,
+  "shapley": 0.14844555323858638,
+  "banzhaf": 0.14844555323858638,
+  "additive": 0.20028743750400235,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "1102966083_dcc68a51a6_1086_70323761@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.2728654799945307,
+  "shapley": 0.2728654799945307,
+  "banzhaf": 0.2728654799945307,
+  "additive": 0.2728654799945307,
+  "n_cues": 1,
+  "hit": true
+ },
+ {
+  "image": "271702330_bbffd58093_110_77235581@N00.jpg",
+  "cat": "vehicles/license plates",
+  "v_single": 0.19792844798943682,
+  "shapley": 0.34220241975097376,
+  "banzhaf": 0.34220241975097376,
+  "additive": 0.2941110958304613,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "271702330_bbffd58093_110_77235581@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.09685168517376375,
+  "shapley": 0.24112565693530072,
+  "banzhaf": 0.24112565693530072,
+  "additive": 0.19303433301478845,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.4639949116246433,
+  "shapley": 0.7494025814152324,
+  "banzhaf": 0.7494025814152324,
+  "additive": 0.6542666914850358,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "754780171_13ffd51dec_1229_78247883@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.3111980072148604,
+  "shapley": 0.5966056770054494,
+  "banzhaf": 0.5966056770054494,
+  "additive": 0.5014697870752534,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "337534295_8a12d1be27_145_65367662@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.09601311798658266,
+  "shapley": 0.09601311798658266,
+  "banzhaf": 0.09601311798658266,
+  "additive": 0.09601311798658266,
+  "n_cues": 1,
+  "hit": true
+ },
+ {
+  "image": "452065902_0daa6bd4bd_219_15632944@N00.jpg",
+  "cat": "vehicles/license plates",
+  "v_single": 0.26569206580549337,
+  "shapley": 0.0991535281418044,
+  "banzhaf": 0.08230727576133326,
+  "additive": 0.13256293071202857,
+  "n_cues": 4,
+  "hit": false
+ },
+ {
+  "image": "452065902_0daa6bd4bd_219_15632944@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.26569206580549337,
+  "shapley": 0.0991535281418044,
+  "banzhaf": 0.08230727576133326,
+  "additive": 0.1325629307120284,
+  "n_cues": 4,
+  "hit": false
+ },
+ {
+  "image": "452065902_0daa6bd4bd_219_15632944@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.23104364765611834,
+  "shapley": 0.10450386546179911,
+  "banzhaf": 0.08947423908247956,
+  "additive": 0.13972989403317482,
+  "n_cues": 4,
+  "hit": false
+ },
+ {
+  "image": "452065902_0daa6bd4bd_219_15632944@N00.jpg",
+  "cat": "road/infrastructure",
+  "v_single": 0.07409159839989429,
+  "shapley": 0.02378393547587946,
+  "banzhaf": 0.018283324005347972,
+  "additive": 0.0685389789560432,
+  "n_cues": 4,
+  "hit": false
+ },
+ {
+  "image": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.06325809329471191,
+  "shapley": 0.025623583169162356,
+  "banzhaf": 0.022620851430065557,
+  "additive": 0.03503221070054973,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.06325809329471191,
+  "shapley": 0.025623583169162356,
+  "banzhaf": 0.022620851430065557,
+  "additive": 0.035032210700549744,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "123515458_4aa6de7f6b_41_18684820@N00.jpg",
+  "cat": "vehicles/license plates",
+  "v_single": 0.04452200523358753,
+  "shapley": 0.020500151320813134,
+  "banzhaf": 0.017497419581716335,
+  "additive": 0.029908778852200526,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "203382931_becf34eb9c_73_40829484@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.2114374275016118,
+  "shapley": 0.058584965755453,
+  "banzhaf": 0.03501809175777655,
+  "additive": 0.08801033632867478,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "203382931_becf34eb9c_73_40829484@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.2114374275016118,
+  "shapley": 0.058584965755453,
+  "banzhaf": 0.03501809175777655,
+  "additive": 0.0880103363286748,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "203382931_becf34eb9c_73_40829484@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.2114374275016118,
+  "shapley": 0.058584965755453,
+  "banzhaf": 0.03501809175777655,
+  "additive": 0.08801033632867471,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "203382931_becf34eb9c_73_40829484@N00.jpg",
+  "cat": "vehicles/license plates",
+  "v_single": 0.07359932725916285,
+  "shapley": -0.0334482634465955,
+  "banzhaf": -0.05128952856422189,
+  "additive": 0.0017027160066762914,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "34489106_b6bb027a4c_23_49503208420@N01.jpg",
+  "cat": "environment",
+  "v_single": 0.0970638156151297,
+  "shapley": 0.08402473279260181,
+  "banzhaf": 0.08402473279260181,
+  "additive": 0.08837109373344443,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "34489106_b6bb027a4c_23_49503208420@N01.jpg",
+  "cat": "architecture",
+  "v_single": 0.050169823519762055,
+  "shapley": 0.037130740697234176,
+  "banzhaf": 0.037130740697234176,
+  "additive": 0.04147710163807681,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "294552061_7ddb16fe09_116_77235581@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.03279724963460485,
+  "shapley": 0.013900742737326378,
+  "banzhaf": 0.013900742737326378,
+  "additive": 0.020199578369752495,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "294552061_7ddb16fe09_116_77235581@N00.jpg",
+  "cat": "road/infrastructure",
+  "v_single": 0.1768165729039522,
+  "shapley": 0.15792006600667374,
+  "banzhaf": 0.15792006600667374,
+  "additive": 0.16421890163909994,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "234270041_a4787189dd_82_50994135@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.08415976014389231,
+  "shapley": 0.08415976014389231,
+  "banzhaf": 0.08415976014389231,
+  "additive": 0.08415976014389231,
+  "n_cues": 1,
+  "hit": true
+ },
+ {
+  "image": "1000269685_e60e9cdfb4_1125_78841376@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.22987508147131977,
+  "shapley": 0.1975440562198046,
+  "banzhaf": 0.1975440562198046,
+  "additive": 0.2083210646369762,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "1000269685_e60e9cdfb4_1125_78841376@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.09093645556933955,
+  "shapley": 0.05860543031782438,
+  "banzhaf": 0.05860543031782438,
+  "additive": 0.06938243873499615,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "71807788_2b6c93f13f_35_18684820@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.2431768886831093,
+  "shapley": 0.0740701428586333,
+  "banzhaf": 0.050636718159903525,
+  "additive": 0.09512897537929914,
+  "n_cues": 5,
+  "hit": true
+ },
+ {
+  "image": "71807788_2b6c93f13f_35_18684820@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.2431768886831093,
+  "shapley": 0.0740701428586333,
+  "banzhaf": 0.050636718159903525,
+  "additive": 0.09512897537929912,
+  "n_cues": 5,
+  "hit": true
+ },
+ {
+  "image": "71807788_2b6c93f13f_35_18684820@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.10419684152313566,
+  "shapley": 0.13097384980483018,
+  "banzhaf": 0.13394069456870034,
+  "additive": 0.1784329517880959,
+  "n_cues": 5,
+  "hit": true
+ },
+ {
+  "image": "71807788_2b6c93f13f_35_18684820@N00.jpg",
+  "cat": "vehicles/license plates",
+  "v_single": 0.2431768886831093,
+  "shapley": 0.0740701428586333,
+  "banzhaf": 0.050636718159903525,
+  "additive": 0.09512897537929911,
+  "n_cues": 5,
+  "hit": true
+ },
+ {
+  "image": "71807788_2b6c93f13f_35_18684820@N00.jpg",
+  "cat": "vehicles/license plates",
+  "v_single": 0.09821260316183361,
+  "shapley": 0.014761956417145346,
+  "banzhaf": -0.0006424746567149815,
+  "additive": 0.043849782562680614,
+  "n_cues": 5,
+  "hit": true
+ },
+ {
+  "image": "219687801_ab67a8f5ca_70_88483799@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.06284333986868669,
+  "shapley": 0.036963131420627654,
+  "banzhaf": 0.035307720377637714,
+  "additive": 0.04207521910188506,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "219687801_ab67a8f5ca_70_88483799@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.03211390911431552,
+  "shapley": 0.015409017665641326,
+  "banzhaf": 0.013753606622651387,
+  "additive": 0.020521105346898785,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "219687801_ab67a8f5ca_70_88483799@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.08299635488314565,
+  "shapley": 0.07144146498589989,
+  "banzhaf": 0.06978605394290996,
+  "additive": 0.07655355266715733,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "1192463216_a5f06caf2c_1050_47311799@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.09500749871919963,
+  "shapley": 0.05906926601502798,
+  "banzhaf": 0.053402903725762715,
+  "additive": 0.06447359703432066,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "1192463216_a5f06caf2c_1050_47311799@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.03692459792564623,
+  "shapley": 0.007612800259266644,
+  "banzhaf": 0.0021880509074884086,
+  "additive": 0.01325874421604635,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "1192463216_a5f06caf2c_1050_47311799@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.05439505133364201,
+  "shapley": 0.029093054898828016,
+  "banzhaf": 0.024756222143232448,
+  "additive": 0.03582691545179041,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "1192463216_a5f06caf2c_1050_47311799@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.03692459792564623,
+  "shapley": 0.007612800259266644,
+  "banzhaf": 0.0021880509074884086,
+  "additive": 0.013258744216046373,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "118159659_c2cc29c6a1_52_18684820@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.041178393832194474,
+  "shapley": 0.023141991630064654,
+  "banzhaf": 0.023141991630064654,
+  "additive": 0.02915412569744123,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "118159659_c2cc29c6a1_52_18684820@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.04818836899607214,
+  "shapley": 0.030151966793942317,
+  "banzhaf": 0.030151966793942317,
+  "additive": 0.03616410086131894,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "244685754_fa9cd577a8_94_77235581@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.08238769352184437,
+  "shapley": 0.03647481266204715,
+  "banzhaf": 0.03831444175594207,
+  "additive": 0.04771830508647351,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "244685754_fa9cd577a8_94_77235581@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.09797009367993127,
+  "shapley": 0.06428089730958686,
+  "banzhaf": 0.06612052640348179,
+  "additive": 0.07552438973401332,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "244685754_fa9cd577a8_94_77235581@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.10609383669235155,
+  "shapley": 0.11046500727824117,
+  "banzhaf": 0.1123046363721361,
+  "additive": 0.12170849970266762,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "359583512_c889dcbcf3_142_77235581@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.05709409568233293,
+  "shapley": 0.029359519660931654,
+  "banzhaf": 0.029359519660931654,
+  "additive": 0.038604378334732035,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "359583512_c889dcbcf3_142_77235581@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.07544504651323891,
+  "shapley": 0.04771047049183763,
+  "banzhaf": 0.04771047049183763,
+  "additive": 0.056955329165638086,
+  "n_cues": 2,
+  "hit": false
+ },
+ {
+  "image": "199300245_2b38ee3d16_78_23601949@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.2009165376944363,
+  "shapley": 0.1701344140794421,
+  "banzhaf": 0.16547437237734516,
+  "additive": 0.18993613559569564,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "199300245_2b38ee3d16_78_23601949@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.2492510065959612,
+  "shapley": 0.18215401242760995,
+  "banzhaf": 0.17749397072551298,
+  "additive": 0.20195573394386365,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "199300245_2b38ee3d16_78_23601949@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.1352809282024176,
+  "shapley": 0.037465940238958516,
+  "banzhaf": 0.03280589853686157,
+  "additive": 0.057267661755212196,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "264072697_0bb27f33c4_95_90833046@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.2198122505740765,
+  "shapley": 0.09539608590439412,
+  "banzhaf": 0.08692849502437508,
+  "additive": 0.12522102017071737,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "264072697_0bb27f33c4_95_90833046@N00.jpg",
+  "cat": "road/infrastructure",
+  "v_single": 0.15601376978030213,
+  "shapley": 0.055323335680692205,
+  "banzhaf": 0.04415755552145952,
+  "additive": 0.08245008066780182,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "264072697_0bb27f33c4_95_90833046@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.1942081694057284,
+  "shapley": 0.07903858217872164,
+  "banzhaf": 0.0702537211980334,
+  "additive": 0.10854624634437579,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "264072697_0bb27f33c4_95_90833046@N00.jpg",
+  "cat": "vehicles/license plates",
+  "v_single": 0.08371399710432788,
+  "shapley": 0.02831763700867981,
+  "banzhaf": 0.021033097564103362,
+  "additive": 0.05932562271044571,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "167345423_ba2914f302_59_79954435@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.06270806742178253,
+  "shapley": 0.00845136535773712,
+  "banzhaf": -0.009124340270103276,
+  "additive": 0.003956594955082637,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "167345423_ba2914f302_59_79954435@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.10663748681473012,
+  "shapley": 0.103023654763998,
+  "banzhaf": 0.08827812455679215,
+  "additive": 0.10135905978197807,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "167345423_ba2914f302_59_79954435@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.12404468160795824,
+  "shapley": 0.10719761622629614,
+  "banzhaf": 0.09304376139747672,
+  "additive": 0.10612469662266258,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "167345423_ba2914f302_59_79954435@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.0994429167013832,
+  "shapley": 0.06593006764012183,
+  "banzhaf": 0.0507146151614266,
+  "additive": 0.06379555038661251,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "1077208489_d307c44d40_1355_93455345@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.057980742258090884,
+  "shapley": 0.025803174344533934,
+  "banzhaf": 0.021055031091758467,
+  "additive": 0.030054204906386734,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "1077208489_d307c44d40_1355_93455345@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.09819337758189285,
+  "shapley": 0.06702242398083227,
+  "banzhaf": 0.06334159735265317,
+  "additive": 0.07234077116728145,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "1077208489_d307c44d40_1355_93455345@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.08701129972338882,
+  "shapley": 0.05612211889873982,
+  "banzhaf": 0.05366055633630764,
+  "additive": 0.0626597301509359,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "1077208489_d307c44d40_1355_93455345@N00.jpg",
+  "cat": "road/infrastructure",
+  "v_single": 0.04311764018838317,
+  "shapley": 0.029676878096944182,
+  "banzhaf": 0.02889324562388299,
+  "additive": 0.03789241943851127,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "261517384_292417efcc_117_60558526@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.08496790385883064,
+  "shapley": 0.0549354257300079,
+  "banzhaf": 0.050994223009279555,
+  "additive": 0.06602783749712876,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "261517384_292417efcc_117_60558526@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.07595638901109285,
+  "shapley": 0.036806519073307384,
+  "banzhaf": 0.030445927788474558,
+  "additive": 0.04547954227632377,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "261517384_292417efcc_117_60558526@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.09242336939150192,
+  "shapley": 0.050195605287729476,
+  "banzhaf": 0.04736896584504287,
+  "additive": 0.0624025803328921,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "261517384_292417efcc_117_60558526@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.051650043208072156,
+  "shapley": 0.009475873738445334,
+  "banzhaf": 0.004939806286341693,
+  "additive": 0.019973420774190925,
+  "n_cues": 4,
+  "hit": true
+ },
+ {
+  "image": "219898919_220c455b81_78_82927779@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.08936205204409983,
+  "shapley": 0.025994964150017667,
+  "banzhaf": 0.019995787580289297,
+  "additive": 0.06621173855784754,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "219898919_220c455b81_78_82927779@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.3444939784239977,
+  "shapley": 0.1855840209444131,
+  "banzhaf": 0.17958484437468472,
+  "additive": 0.22580079535224318,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "219898919_220c455b81_78_82927779@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.17575736100455336,
+  "shapley": 0.02830679855775326,
+  "banzhaf": 0.02230762198802489,
+  "additive": 0.0685235729655833,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "876438778_7c0cef320a_1036_15632944@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.7833063991468995,
+  "shapley": 0.7833063991468995,
+  "banzhaf": 0.7833063991468995,
+  "additive": 0.7833063991468995,
+  "n_cues": 1,
+  "hit": true
+ },
+ {
+  "image": "312579751_048cb85e3c_108_43935788@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.11227793820187261,
+  "shapley": 0.08650159158644083,
+  "banzhaf": 0.08650159158644083,
+  "additive": 0.09509370712491808,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "312579751_048cb85e3c_108_43935788@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.057685185474657556,
+  "shapley": 0.03190883885922577,
+  "banzhaf": 0.03190883885922577,
+  "additive": 0.04050095439770304,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "199802332_27a09191e6_64_85971448@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.05021564419692447,
+  "shapley": 0.034088935183899945,
+  "banzhaf": 0.034088935183899945,
+  "additive": 0.03946450485490809,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "199802332_27a09191e6_64_85971448@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.1355106397743899,
+  "shapley": 0.11938393076136539,
+  "banzhaf": 0.11938393076136539,
+  "additive": 0.12475950043237358,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "253013198_0869efe061_109_36093984@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.15418662107020528,
+  "shapley": 0.07182765667404067,
+  "banzhaf": 0.0631055480661477,
+  "additive": 0.09606230410148198,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "253013198_0869efe061_109_36093984@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.4192180724636569,
+  "shapley": 0.28693404574386006,
+  "banzhaf": 0.2782119371359671,
+  "additive": 0.31116869317130147,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "253013198_0869efe061_109_36093984@N00.jpg",
+  "cat": "road/infrastructure",
+  "v_single": 0.08510809048722726,
+  "shapley": 0.03609703332051374,
+  "banzhaf": 0.02737492471262075,
+  "additive": 0.06033168074795514,
+  "n_cues": 3,
+  "hit": true
+ },
+ {
+  "image": "369043327_64ca92b933_146_13527886@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.09553863821909997,
+  "shapley": 0.08288397994830436,
+  "banzhaf": 0.08288397994830436,
+  "additive": 0.08710219937190286,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "369043327_64ca92b933_146_13527886@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.049899460475241436,
+  "shapley": 0.03724480220444583,
+  "banzhaf": 0.03724480220444583,
+  "additive": 0.04146302162804438,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "311937210_3b4a9ca55c_84_63163416@N00.jpg",
+  "cat": "architecture",
+  "v_single": 0.05195402779888004,
+  "shapley": 0.03186728367805942,
+  "banzhaf": 0.03186728367805942,
+  "additive": 0.03856286505166628,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "311937210_3b4a9ca55c_84_63163416@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.05083965006653645,
+  "shapley": 0.03075290594571583,
+  "banzhaf": 0.03075290594571583,
+  "additive": 0.03744848731932271,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "71812047_61e009056a_35_18684820@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.04799671446812804,
+  "shapley": 0.04799671446812804,
+  "banzhaf": 0.04799671446812804,
+  "additive": 0.04799671446812804,
+  "n_cues": 1,
+  "hit": true
+ },
+ {
+  "image": "758114922_f369e388f5_1324_41894169878@N01.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.11429637675414767,
+  "shapley": 0.05528072926906985,
+  "banzhaf": 0.05528072926906985,
+  "additive": 0.07495261176409575,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "758114922_f369e388f5_1324_41894169878@N01.jpg",
+  "cat": "environment",
+  "v_single": 0.261752609776908,
+  "shapley": 0.2027369622918302,
+  "banzhaf": 0.2027369622918302,
+  "additive": 0.22240884478685624,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "203420486_c21ed696cc_65_40829484@N00.jpg",
+  "cat": "commercial/cultural",
+  "v_single": 0.1502585436393094,
+  "shapley": 0.07158052394468573,
+  "banzhaf": 0.061130554277746135,
+  "additive": 0.10498715251783418,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "203420486_c21ed696cc_65_40829484@N00.jpg",
+  "cat": "vehicles/license plates",
+  "v_single": 0.28823065722078545,
+  "shapley": 0.18102828697563478,
+  "banzhaf": 0.17057831730869522,
+  "additive": 0.21443491554878336,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "203420486_c21ed696cc_65_40829484@N00.jpg",
+  "cat": "text/signage",
+  "v_single": 0.24523958335506413,
+  "shapley": 0.0802671873741334,
+  "banzhaf": 0.06981721770719379,
+  "additive": 0.11367381594728193,
+  "n_cues": 3,
+  "hit": false
+ },
+ {
+  "image": "270426691_42f06b31b0_106_50994135@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.08106926562348137,
+  "shapley": 0.06422738550430343,
+  "banzhaf": 0.06422738550430343,
+  "additive": 0.06984134554402938,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "270426691_42f06b31b0_106_50994135@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.06007665429880561,
+  "shapley": 0.04323477417962768,
+  "banzhaf": 0.04323477417962768,
+  "additive": 0.048848734219353686,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "339479847_8d444a33ea_138_63163416@N00.jpg",
+  "cat": "landmarks/buildings",
+  "v_single": 0.2712089027074693,
+  "shapley": 0.22714328519532806,
+  "banzhaf": 0.22714328519532806,
+  "additive": 0.24183182436604173,
+  "n_cues": 2,
+  "hit": true
+ },
+ {
+  "image": "339479847_8d444a33ea_138_63163416@N00.jpg",
+  "cat": "environment",
+  "v_single": 0.07457984648411763,
+  "shapley": 0.030514228971976413,
+  "banzhaf": 0.030514228971976413,
+  "additive": 0.045202768142690176,
+  "n_cues": 2,
+  "hit": true
+ }
+]
